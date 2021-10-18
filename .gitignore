@@ -48,5 +48,4 @@ package-lock.json
 yarn.lock
 
 ### Custom Files ###
-dist/
 accessibility-reports/
