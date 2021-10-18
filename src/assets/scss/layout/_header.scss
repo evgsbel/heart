@@ -1,0 +1,36 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+//.navbar {
+//    padding: .5rem 2rem;
+//}
+//
+//.fixed-top {
+//    border-bottom: 1px solid $gray-100;
+//}
+//
+//.nav-link,
+//.dropdown-item {
+//    font-weight: 700;
+//}
+
+.header {
+  padding: 30px 0;
+  &__right {
+    justify-content: flex-end;
+  }
+  &__inner {
+    align-items: center;
+  }
+  &__phone {
+    font-size: 1.125em;
+    line-height: 1.4em;
+  }
+  &__btn {
+    margin-left: 2em;
+    padding: 10px 24px 12px;
+    font-size: 1.125em;
+    line-height: 1.4em;
+    background-color: #fff;
+  }
+}

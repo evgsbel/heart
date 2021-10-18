@@ -1,0 +1,24 @@
+<header class="header fixed-top js-header">
+  <div class="container">
+    <div class="row header__inner">
+      <div class="col-lg-2 col-xxl-2">
+        <a href="" class="logo d-flex">
+          <svg class="logo__img">
+            <use xlink:href="assets/img/sprite.svg#logo"></use>
+          </svg>
+          <p class="logo__text">Огромное сердце</p>
+        </a>
+      </div>
+      <div class="col-lg-6 col-xxl-6">
+        {{> navigation}}
+      </div>
+      <div class="col-lg-4 col-xxl-4">
+        <div class="d-flex align-items-center header__right">
+          {{> search}}
+          <a href="tel:88003505785" class="header__phone">8 800 350 57 85</a>
+          <button class="btn-reset button  header__btn">Помочь фонду</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

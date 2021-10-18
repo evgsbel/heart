@@ -1,0 +1,137 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+// HERO section
+
+.hero {
+  overflow-x: hidden;
+  &__right {
+    position: static;
+  }
+  &__title {
+    margin-bottom: 25px;
+  }
+}
+
+.articles {
+  margin-top: 2em;
+  &__list {
+    gap: 0 1em;
+  }
+  &__wr {
+    flex: 1 0 24%;
+    padding: 3px;
+    border: 1px solid #4E91F5;
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    border-radius: 14px;
+    min-height: 176px;
+  }
+  &__item {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #fff;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__caption {
+    font-size: 0.875em;
+    line-height: 1.19em;
+    font-weight: 600;
+  }
+  &__link {
+    display: block;
+    margin-top: 1.5em;
+    font-size: 1.125em;
+    line-height: 1.69em;
+    color: #2688E5;
+    width: max-content;
+  }
+}
+
+// appeal
+
+.appeal {
+  margin-top: 7em;
+  margin-bottom: 7em;
+  &__wr {
+    align-items: flex-end;
+  }
+  &__title {
+    color: #127CE1;
+  }
+  &__inn {
+    position: relative;
+    margin-top: 48px;
+    padding: 40px 48px;
+    background: linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(0deg, #F7FAFD, #F7FAFD), radial-gradient(2.8% 10.49% at 42.67% 99.46%, #99D4FF 0%, #4E91F5 100%), linear-gradient(99.4deg, #99CDFF 47.95%, #379EFF 51.08%);
+    box-shadow: 8px 8px 95px rgba(0, 102, 255, 0.05), 8px 8px 36px rgba(24, 73, 131, 0.05);
+    border-radius: 40px;
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 100px;
+      z-index: 10;
+      display: block;
+      width: 40px;
+      height: 81px;
+      background-image: url('../img/triangle.png');
+    }
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 1.375em;
+    line-height: 1.5em;
+    strong {
+      font-weight: 500;
+    }
+    &:not(:last-of-type) {
+      margin-bottom: 2.18rem;
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    color: #127CE1;
+    font-size: 1.125em;
+    margin-top: 25px;
+    &::after {
+      content: '';
+      display: block;
+      margin-left: 8px;
+      width: 19px;
+      height: 14px;
+      background-image: url('../img/link-arrow.svg');
+    }
+  }
+  &__signature {
+    position: relative;
+    text-align: right;
+    font-size: 1.875em;
+    line-height: 1.5em;
+    font-family: 'Caveat';
+    color: #2688E5;
+    &_name {
+      margin-top: 35px;
+      font-size: 2.25em;
+      &::after {
+        content: '';
+        position: absolute;
+        right: -100px;
+        top: 0;
+        display: block;
+        width: 85px;
+        height: 50px;
+        background-image: url('../img/design-arrow.png');
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+

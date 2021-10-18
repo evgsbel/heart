@@ -1,0 +1,165 @@
+.tabs {
+  &__nav {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 40px;
+  }
+  &__caption {
+    color: #000;
+  }
+  &__btn {
+    padding: 14px 24px 16px;
+    color: #6D7276;
+    font-size: 1.25em;
+    line-height: 1.4em;
+    background-color: #F7F7F7;
+    border-radius: 8px;
+    font-feature-settings: 'salt' on, 'ss01' on;
+    transition: color .3s ease-in-out;
+    &.is-active,
+    &:hover {
+      color: #000;
+    }
+  }
+  &__descr {
+    font-size: 1.125em;
+    line-height: 1.5em;
+    max-width: 545px;
+    color: #000;
+    &:not(:last-of-type) {
+      margin-bottom: 2em;
+    }
+  }
+  &__link {
+    margin-top: 2em;
+    padding: 16px 40px 20px;
+    font-weight: 500;
+    font-size: 1.25em;
+    line-height: 1.75em;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    &_white {
+      color: #fff;
+    }
+  }
+  &__content {
+    display: none;
+    & {
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        display: block;
+        width: 758px;
+        height: 758px;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      &[data-target="one"] {
+        & {
+          button {
+            background-color: #fff;
+          }
+          &::after {
+            background-image: url(../img/hero-decor-01.png);
+          }
+        }
+      }
+      &[data-target="two"] {
+        button {
+          background-color: #3FD72B;
+        }
+        &::after {
+          background-image: url(../img/hero-decor-02.png);
+        }
+      }
+      &[data-target="three"] {
+        button {
+          background-color: #D5833C;
+        }
+        &::after {
+          background-image: url(../img/hero-decor-03.png);
+        }
+      }
+      &[data-target="four"] {
+        button {
+          background-color: #38CCEE;
+        }
+        &::after {
+          background-image: url(../img/hero-decor-04.png);
+        }
+      }
+      &[data-target="five"] {
+        button {
+          background-color: #44F2E1;
+        }
+        &::after {
+          background-image: url(../img/hero-decor-05.png);
+        }
+      }
+      &[data-target="six"] {
+        button {
+          background-color: #B365F5;
+        }
+        &::after {
+          background-image: url(../img/hero-decor-06.png);
+        }
+      }
+      &[data-target="seven"] {
+        button {
+          background-color: #75BBFC;
+        }
+        &::after {
+          background-image: url(../img/hero-decor-07.png);
+        }
+      }
+      &[data-target="eight"] {
+        button {
+          background-color: #FCE51A;
+        }
+        &::after {
+          background-image: url(../img/hero-decor-08.png);
+        }
+      }
+      &[data-target="nine"] {
+        button {
+          background-color: #E8F85D;
+        }
+        &::after {
+          background-image: url(../img/hero-decor-09.png);
+        }
+      }
+      &[data-target="ten"] {
+        button {
+          background-color: #5EE8F8;
+        }
+        &::after {
+          background-image: url(../img/hero-decor-010.png);
+        }
+      }
+      &[data-target="eleven"] {
+        button {
+          background-color: #A2E550;
+        }
+        &::after {
+          background-image: url(../img/hero-decor-011.png);
+        }
+      }
+      &[data-target="twelve"] {
+        button {
+          background-color: #3777E0;
+        }
+        &::after {
+          background-image: url(../img/hero-decor-012.png);
+        }
+      }
+      &_active {
+        display: block;
+      }
+    }
+  }
+}
