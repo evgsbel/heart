@@ -34,3 +34,18 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+// help slider
+// const swiper = new Swiper('.help', {
+//   // Optional parameters
+//   speed: 400,
+//   spaceBetween: 75,
+//   loop: true,
+//   // If we need pagination
+//   pagination: {
+//     el: '.swiper-pagination',
+//     clickable: true,
+//   },
+//   autoHeight: true
+// });
+
+

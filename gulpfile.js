@@ -116,7 +116,6 @@ function jsVendor() {
       'node_modules/jquery/dist/jquery.js',
       'node_modules/popper.js/dist/umd/popper.js',
       'node_modules/bootstrap/dist/js/bootstrap.js',
-      'node_modules/swiper/swiper-bundle.min.js',
     ])
     .pipe(dest('dist/assets/vendor/js'))
     .pipe(browserSync.stream());
@@ -281,7 +280,6 @@ function concatScripts() {
       'dist/assets/vendor/js/jquery.js',
       'dist/assets/vendor/js/popper.js',
       'dist/assets/vendor/js/bootstrap.js',
-      'dist/assets/vendor/js/swiper-bundle.min.js',
       'src/assets/js/util/*',
       'src/assets/js/*'
     ])
@@ -314,7 +312,7 @@ function purgeCSS() {
     .pipe(purgecss({
       content: ['dist/*.html']
     }))
-    .pipe(dest('dist/assets/css'))
+    .pipe(dest('dist/assets/css'));
 }
 
 

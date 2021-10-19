@@ -2,5 +2,77 @@
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
 .footer {
-    border-top: 1px solid $gray-100
+  margin-top: 40px;
+  padding-top: 54px;
+  padding-bottom: 64px;
+  background-color: #3D4C5A;
+  &__social {
+    margin-top: 40px;
+  }
+  &__copy {
+    margin-top: 60px;
+    color: #CDCDCD;
+  }
+  &__caption {
+    margin-top: 24px;
+    color: #CDCDCD;
+    font-size: 1.2em;
+    line-height: 1.4em;
+  }
+  &__email {
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 1.4em;
+  }
+  &__phone {
+    position: relative;
+    display: block;
+    margin-bottom: 1em;
+    font-weight: 500;
+    font-size: 1.5em;
+    line-height: 1.4em;
+    width: max-content;
+    color: #fff;
+    span {
+      font-size: 0.8em;
+      line-height: 1.4em;
+      opacity: 0.6;
+    }
+    i {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-20%);
+      font-size: 50px;
+    }
+    &_pl {
+      padding-left: 30px;
+      margin-bottom: 0;
+    }
+  }
+  &__btn {
+    margin-top: 24px;
+    padding: 11px 24px 14px;
+    font-size: 1.2em;
+    line-height: 1.4em;
+    color: #fff;
+    background-color: #505E6A;
+    border-radius: 8px;
+  }
 }
+
+.footer-nav {
+  &__item {
+    margin-bottom: 1em;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  &__link {
+    font-weight: 500;
+    font-size: 1.5em;
+    line-height: 1.4em;
+    color: #fff;
+  }
+}
+

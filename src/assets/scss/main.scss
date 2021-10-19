@@ -12,8 +12,7 @@
 // 2. Vendors
 @import
   'vendors/normalize',
-  'vendors/bootstrap',
-  'vendors/swiper';
+  'vendors/bootstrap';
 
 // 3. Base stuff
 @import
@@ -33,6 +32,7 @@
   'components/button',
   'components/logo',
   'components/tabs',
+  'components/social',
   'components/search';
 
 // 6. Page-specific styles

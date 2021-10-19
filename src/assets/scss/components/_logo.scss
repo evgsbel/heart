@@ -14,5 +14,25 @@
     line-height: 1.3em;
     color: #13264A;
     opacity: 0.45;
+    font-feature-settings: 'salt' on, 'ss01' on;
+  }
+}
+
+.footer-logo {
+  font-size: 100%;
+  align-items: center;
+  max-width: 330px;
+  &__img {
+    flex-shrink: 0;
+    width: 110px;
+    height: 91px;
+  }
+  &__text {
+    margin-left: 10px;
+    font-weight: 500;
+    font-size: 2.312em;
+    line-height: 1.3em;
+    color: #C5C9CE;
+    font-feature-settings: 'salt' on, 'ss01' on;
   }
 }
