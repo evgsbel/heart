@@ -49,3 +49,6 @@ yarn.lock
 
 ### Custom Files ###
 accessibility-reports/
+
+### ide ###
+.idea

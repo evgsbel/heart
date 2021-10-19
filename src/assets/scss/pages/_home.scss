@@ -57,7 +57,6 @@
 
 .appeal {
   margin-top: 7em;
-  margin-bottom: 7em;
   &__wr {
     align-items: flex-end;
   }
@@ -132,6 +131,42 @@
         background-repeat: no-repeat;
       }
     }
+  }
+}
+
+// hot line
+
+.hot-line {
+  margin-top: 9.25em;
+  padding: 40px 0 25px;
+  background: radial-gradient(66.11% 246.65% at 16.11% 7.66%, #99D4FF 0%, #4E91F5 100%), radial-gradient(105.69% 109.42% at 88.35% 94.4%, #99D4FF 0%, #4E91F5 100%), linear-gradient(120.93deg, #99CDFF 14%, #379EFF 100.08%);
+  color: #fff;
+  &__img {
+    position: absolute;
+    top: -100px;
+    left: 0;
+  }
+  &__title {
+
+  }
+  &__text {
+    margin-top: 24px;
+    font-size: 1.375em;
+    line-height: 1.5em;
+
+  }
+  &__number {
+    margin-top: 24px;
+    font-weight: 700;
+    font-size: 4.375em;
+    line-height: 1.392em;
+    letter-spacing: 0.05em;
+  }
+  &__decor {
+    font-family: 'Caveat';
+    font-size: 1.75em;
+    line-height: 1.25em;
+    opacity: 0.8;
   }
 }
 
