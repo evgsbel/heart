@@ -29,6 +29,7 @@
     min-height: 176px;
   }
   &__item {
+    position: relative;
     padding: 16px;
     display: flex;
     flex-direction: column;
@@ -42,6 +43,14 @@
     font-size: 0.875em;
     line-height: 1.19em;
     font-weight: 600;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
   }
   &__link {
     display: block;
@@ -50,6 +59,88 @@
     line-height: 1.69em;
     color: #2688E5;
     width: max-content;
+  }
+}
+
+//pay
+
+.pay {
+  margin-top: 144px;
+  &__types {
+    gap: 0 8px;
+  }
+  &__types-btn {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px 14px;
+    font-size: 1.125em;
+    line-height: 1;
+    color: #6D7276;
+    background: #F7F7F7;
+    border-radius: 8px;
+    transition: color .3s ease-in-out;
+    svg {
+      margin-right: 12px;
+      stroke: currentColor;
+    }
+    &:hover, &.is-active {
+      color: #000;
+    }
+  }
+  &__btns {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  &__btn {
+    display: flex;
+    justify-content: center;
+    width: calc((100% - 1 * 12px) /2);
+    padding: 12px 0 16px;
+    font-size: 1.5em;
+    color: #127CE1;
+    background-color: #EFF7FF;
+    border-radius: 12px;
+    transition: background-color .3s ease-in-out, color .3s ease-in-out, font-weight .3s ease-in-out;
+    &.is-active,
+    &:hover {
+      font-weight: 600;
+      color: #fff;
+      background-color: #2688E5;
+    }
+  }
+  &__decor {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 2em;
+    line-height: 1.26em;
+    color: #2688E5;
+    font-family: 'Caveat', sans-serif;
+  }
+  &__result-sum {
+    font-weight: 600;
+    font-size: 5.5em;
+    line-height: 1.4em;
+    color: #2688E5;
+    font-feature-settings: 'salt' on, 'ss01' on;
+  }
+  &__result-descr {
+    font-size: 2em;
+    line-height: 1.4em;
+  }
+  &__systems {
+    margin-top: 24px;
+    justify-content: center;
+    gap: 0 32px;
+  }
+  &__systems-item {
+    color: #B6B8BB;
+    svg {
+      fill: currentColor;
+    }
   }
 }
 

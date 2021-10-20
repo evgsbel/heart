@@ -6,6 +6,17 @@ $(document).ready(function () {
   }); //removeIf(production)
 
   console.log("document ready"); //endRemoveIf(production)
+}); // fixed header
+
+$(function () {
+  var header = $('.header');
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 1) {
+      header.addClass('header_fixed');
+    } else {
+      header.removeClass('header_fixed');
+    }
+  });
 }); // tabs
 
 document.addEventListener('DOMContentLoaded', function () {
