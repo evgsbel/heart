@@ -1,0 +1,21 @@
+.slider-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 50px;
+  background-color: #F6F6F6;
+  &_next {
+    border-radius: 0px 8px 8px 0px;
+  }
+  &_prev {
+    border-radius: 8px 0px 0px 8px;
+  }
+  svg {
+    width: 10px;
+    height: 24px;
+  }
+  &.swiper-button-disabled {
+    opacity: 0.3;
+  }
+}

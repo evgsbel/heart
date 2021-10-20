@@ -34,16 +34,51 @@ document.addEventListener('DOMContentLoaded', function () {
       el.classList.add('tabs__btn_active');
     });
   });
+}); // hero slider
+
+var swiperHero = new Swiper('.hero__swiper', {
+  // Optional parameters
+  slidesPerView: 4,
+  spaceBetween: 14,
+  speed: 300,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  }
 }); // help slider
-// const swiper = new Swiper('.help', {
-//   // Optional parameters
-//   speed: 400,
-//   spaceBetween: 75,
-//   loop: true,
-//   // If we need pagination
-//   pagination: {
-//     el: '.swiper-pagination',
-//     clickable: true,
-//   },
-//   autoHeight: true
-// });
+
+var swiperHelp = new Swiper('.help__swiper', {
+  // Optional parameters
+  speed: 300,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  }
+}); // face slider
+
+var swiperFaceFirst = new Swiper('.face__swiper_one', {
+  // Optional parameters
+  speed: 300,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  }
+}); // face slider
+
+var swiperFaceSecond = new Swiper('.face__swiper_two', {
+  // Optional parameters
+  speed: 300,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  }
+}); // face slider
+
+var swiperFaceThird = new Swiper('.face__swiper_three', {
+  // Optional parameters
+  speed: 300,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  }
+});

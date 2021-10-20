@@ -9,6 +9,7 @@
 		<title>Heart-Home</title>
     <!-- build:css -->
     <link rel="stylesheet" href="assets/vendor/css/animate.css">
+    <link rel="stylesheet" href="assets/vendor/css/swiper.min.css">
 		<link rel="stylesheet" href="assets/css/main.css">
 		<!-- endbuild -->
     <link rel="stylesheet" href="assets/css/rtl.css">
@@ -108,34 +109,56 @@
                   <p class="tabs__descr">Выявление онкологии на ранней стадии значительно повышает вероятность положительного
                     исхода лечения.</p>
         
-                  <section class="section articles">
-                    <ul class="d-flex articles__list">
-                      <li class="articles__wr">
+                  <section class="section articles swiper hero__swiper">
+                    <ul class="d-flex articles__list swiper-wrapper">
+                      <li class="articles__wr swiper-slide">
                         <article class="articles__item" style="background-image: url('assets/img/hero-article-01.png')">
                           <a href="" class="articles__caption">В Москве открылся сверхсовременный Центр амбулаторной
                             онко-помощи</a>
                         </article>
                       </li>
-                      <li class="articles__wr">
+                      <li class="articles__wr swiper-slide">
                         <article class="articles__item" style="background-image: url('assets/img/hero-article-02.png')">
                           <a href="" class="articles__caption">Реконструкция молочной железы по ОМС: как получить квоту?</a>
                         </article>
                       </li>
-                      <li class="articles__wr">
+                      <li class="articles__wr swiper-slide">
                         <article class="articles__item" style="background-image: url('assets/img/hero-article-03.png')">
                           <a href="" class="articles__caption">Трудоустройство после онкологического лечения</a>
                         </article>
                       </li>
-                      <li class="articles__wr">
+                      <li class="articles__wr swiper-slide">
+                        <article class="articles__item" style="background-image: url('assets/img/hero-article-01.png')">
+                          <a href="" class="articles__caption">В Москве открылся сверхсовременный Центр амбулаторной
+                            онко-помощи</a>
+                        </article>
+                      </li>
+                      <li class="articles__wr swiper-slide">
+                        <article class="articles__item" style="background-image: url('assets/img/hero-article-03.png')">
+                          <a href="" class="articles__caption">Трудоустройство после онкологического лечения</a>
+                        </article>
+                      </li>
+                      <li class="articles__wr swiper-slide">
                         <article class="articles__item" style="background-image: url('assets/img/hero-article-01.png')">
                           <a href="" class="articles__caption">В Москве открылся сверхсовременный Центр амбулаторной
                             онко-помощи</a>
                         </article>
                       </li>
                     </ul>
+                    <div class="d-flex mt-4">
+                      <div class="swiper-button-prev slider-navigation slider-navigation_prev">
+                        <svg>
+                          <use xlink:href="assets/img/sprite.svg#sl-prev"></use>
+                        </svg>
+                      </div>
+                      <div class="swiper-button-next slider-navigation slider-navigation_next">
+                        <svg>
+                          <use xlink:href="assets/img/sprite.svg#sl-next"></use>
+                        </svg>
+                      </div>
+                    </div>
                     <a href="" class="articles__link">Смотреть все статьи</a>
                   </section>
-        
                 </div>
                 <!-- Item 1 END -->
         
@@ -457,18 +480,47 @@
           <div class="container">
             <div class="row">
               <div class="col-xxl-12">
-                <h2 class="title-h2 help__title">Мы помогли</h2>
+                <div class="d-flex align-items-center">
+                  <h2 class="title-h2 help__title mr-3">Мы помогли</h2>
+                  <div class="d-flex mt-4">
+                    <div class="swiper-button-prev slider-navigation slider-navigation_prev">
+                      <svg>
+                        <use xlink:href="assets/img/sprite.svg#sl-prev"></use>
+                      </svg>
+                    </div>
+                    <div class="swiper-button-next slider-navigation slider-navigation_next">
+                      <svg>
+                        <use xlink:href="assets/img/sprite.svg#sl-next"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="col-xxl-9">
-                <div class="help__item">
-                  <img class="help__img" src="assets/img/help-01.png" alt="">
-                  <div class="help__descr">
-                    <p class="help__text">В своём стремлении улучшить пользовательский опыт мы упускаем, что интерактивные
-                      прототипы смешаны с не уникальными данными до степени совершенной неузнаваемости.</p>
-                    <p class="help__text">Высокий уровень вовлечения представителей целевой аудитории является четким факта:
-                      экономическая повестка сегодняшнего дня влечет за собой процесс внедрения и модернизации направлений
-                      прогрессивного развития!»</p>
-                    <p class="help__name">Аничка, 41 год <span>г. Ростов-на-Дону</span></p>
+                <div class="swiper help__swiper">
+                  <div class="swiper-wrapper">
+                    <div class="help__item swiper-slide">
+                      <img class="help__img" src="assets/img/help-01.png" alt="">
+                      <div class="help__descr">
+                        <p class="help__text">В своём стремлении улучшить пользовательский опыт мы упускаем, что интерактивные
+                          прототипы смешаны с не уникальными данными до степени совершенной неузнаваемости.</p>
+                        <p class="help__text">Высокий уровень вовлечения представителей целевой аудитории является четким факта:
+                          экономическая повестка сегодняшнего дня влечет за собой процесс внедрения и модернизации направлений
+                          прогрессивного развития!»</p>
+                        <p class="help__name">Аничка, 41 год <span>г. Ростов-на-Дону</span></p>
+                      </div>
+                    </div>
+                    <div class="help__item swiper-slide">
+                      <img class="help__img" src="assets/img/help-01.png" alt="">
+                      <div class="help__descr">
+                        <p class="help__text">В своём стремлении улучшить пользовательский опыт мы упускаем, что интерактивные
+                          прототипы смешаны с не уникальными данными до степени совершенной неузнаваемости.</p>
+                        <p class="help__text">Высокий уровень вовлечения представителей целевой аудитории является четким факта:
+                          экономическая повестка сегодняшнего дня влечет за собой процесс внедрения и модернизации направлений
+                          прогрессивного развития!»</p>
+                        <p class="help__name">Аничка, 41 год <span>г. Ростов-на-Дону</span></p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -484,35 +536,93 @@
               </div>
               <div class="col-xxl-3">
                 <h3 class="face__caption">Попечительский совет</h3>
-                <div class="face__slider face__slider_01 face-slider">
-                  <div class="face-slider__item">
-                    <img src="assets/img/face-01.png" alt="" class="face__img">
-                    <div class="face__descr">
-                      <p class="face__name">Оскар Рацин</p>
-                      <p class="face__text">Вице-президент Сбера по инвестиционной деятельности, директор департамента
-                        инвестиционной деятельности, член Попечительского совета Фонда</p>
+                <div class="swiper face__swiper_one">
+                  <div class="d-flex mt-4">
+                    <div class="swiper-button-prev slider-navigation slider-navigation_prev">
+                      <svg>
+                        <use xlink:href="assets/img/sprite.svg#sl-prev"></use>
+                      </svg>
+                    </div>
+                    <div class="swiper-button-next slider-navigation slider-navigation_next">
+                      <svg>
+                        <use xlink:href="assets/img/sprite.svg#sl-next"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="face__slider face__slider_01 face-slider swiper-wrapper">
+                    <div class="face-slider__item swiper-slide">
+                      <img src="assets/img/face-01.png" alt="" class="face__img">
+                      <div class="face__descr">
+                        <p class="face__name">Оскар Рацин</p>
+                        <p class="face__text">Вице-президент Сбера по инвестиционной деятельности, директор департамента
+                          инвестиционной деятельности, член Попечительского совета Фонда</p>
+                      </div>
+                    </div>
+                    <div class="face-slider__item swiper-slide">
+                      <img src="assets/img/face-01.png" alt="" class="face__img">
+                      <div class="face__descr">
+                        <p class="face__name">Оскар Рацин</p>
+                        <p class="face__text">Вице-президент Сбера по инвестиционной деятельности, директор департамента
+                          инвестиционной деятельности, член Попечительского совета Фонда</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="col-xxl-3">
                 <h3 class="face__caption">Совет Фонда</h3>
-                <div class="face__slider face__slider_02 face-slider">
-                  <div class="face-slider__item">
-                    <img src="assets/img/face-02.png" alt="" class="face__img">
-                    <div class="face__descr">
-                      <p class="face__name">Ольга Сергеенко</p>
-                      <p class="face__text">Старший вице-президент, руководитель НБФИ Корпоративно-инвестиционного бизнеса
-                        Райффайзенбанка, основатель
-                        и президент БФ «Огромное сердце», Председатель Совета Фонда</p>
+                <div class="swiper face__swiper_two">
+                  <div class="d-flex mt-4">
+                    <div class="swiper-button-prev slider-navigation slider-navigation_prev">
+                      <svg>
+                        <use xlink:href="assets/img/sprite.svg#sl-prev"></use>
+                      </svg>
+                    </div>
+                    <div class="swiper-button-next slider-navigation slider-navigation_next">
+                      <svg>
+                        <use xlink:href="assets/img/sprite.svg#sl-next"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="face__slider face__slider_02 face-slider swiper-wrapper">
+                    <div class="face-slider__item swiper-slide">
+                      <img src="assets/img/face-02.png" alt="" class="face__img">
+                      <div class="face__descr">
+                        <p class="face__name">Ольга Сергеенко</p>
+                        <p class="face__text">Старший вице-президент, руководитель НБФИ Корпоративно-инвестиционного бизнеса
+                          Райффайзенбанка, основатель
+                          и президент БФ «Огромное сердце», Председатель Совета Фонда</p>
+                      </div>
+                    </div>
+                    <div class="face-slider__item swiper-slide">
+                      <img src="assets/img/face-02.png" alt="" class="face__img">
+                      <div class="face__descr">
+                        <p class="face__name">Ольга Сергеенко</p>
+                        <p class="face__text">Старший вице-президент, руководитель НБФИ Корпоративно-инвестиционного бизнеса
+                          Райффайзенбанка, основатель
+                          и президент БФ «Огромное сердце», Председатель Совета Фонда</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="col-xxl-3">
                 <h3 class="face__caption">Команда Фонда</h3>
-                <div class="face__slider face__slider_03 face-slider">
-                  <div class="face-slider__item">
+                <div class="swiper face__swiper_three">
+                  <div class="d-flex mt-4">
+                    <div class="swiper-button-prev slider-navigation slider-navigation_prev">
+                      <svg>
+                        <use xlink:href="assets/img/sprite.svg#sl-prev"></use>
+                      </svg>
+                    </div>
+                    <div class="swiper-button-next slider-navigation slider-navigation_next">
+                      <svg>
+                        <use xlink:href="assets/img/sprite.svg#sl-next"></use>
+                      </svg>
+                    </div>
+                  </div>
+                <div class="face__slider face__slider_03 face-slider swiper-wrapper">
+                  <div class="face-slider__item swiper-slide">
                     <img src="assets/img/face-03.png" alt="" class="face__img">
                     <div class="face__descr">
                       <p class="face__name">Юрий Смирнов</p>
@@ -520,6 +630,15 @@
                         куратор IT направления</p>
                     </div>
                   </div>
+                  <div class="face-slider__item swiper-slide">
+                    <img src="assets/img/face-03.png" alt="" class="face__img">
+                    <div class="face__descr">
+                      <p class="face__name">Юрий Смирнов</p>
+                      <p class="face__text">Заместитель президента Фонда, главный куратор по работе с медицинскими партнёрами,
+                        куратор IT направления</p>
+                    </div>
+                  </div>
+                </div>
                 </div>
               </div>
             </div>
@@ -768,6 +887,7 @@
     <script src="assets/vendor/js/jquery.js"></script>
     <script src="assets/vendor/js/popper.js"></script>
     <script src="assets/vendor/js/bootstrap.js"></script>
+    <script src="assets/vendor/js/swiper-bundle.js"></script>
     <script src="assets/js/util/autoPadding.js"></script>
     <script src="assets/js/util/crossPlatform.js"></script>
     <script src="assets/js/main.js"></script>

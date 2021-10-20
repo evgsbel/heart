@@ -48,18 +48,58 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+// hero slider
+const swiperHero = new Swiper('.hero__swiper', {
+  // Optional parameters
+  slidesPerView: 4,
+  spaceBetween: 14,
+  speed: 300,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
 // help slider
-// const swiper = new Swiper('.help', {
-//   // Optional parameters
-//   speed: 400,
-//   spaceBetween: 75,
-//   loop: true,
-//   // If we need pagination
-//   pagination: {
-//     el: '.swiper-pagination',
-//     clickable: true,
-//   },
-//   autoHeight: true
-// });
+const swiperHelp = new Swiper('.help__swiper', {
+  // Optional parameters
+  speed: 300,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+// face slider
+const swiperFaceFirst = new Swiper('.face__swiper_one', {
+  // Optional parameters
+  speed: 300,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+// face slider
+const swiperFaceSecond = new Swiper('.face__swiper_two', {
+  // Optional parameters
+  speed: 300,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+// face slider
+const swiperFaceThird = new Swiper('.face__swiper_three', {
+  // Optional parameters
+  speed: 300,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+
 
 

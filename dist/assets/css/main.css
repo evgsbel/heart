@@ -15142,6 +15142,43 @@ h3 {
   background: #374451;
 }
 
+/* line 1, src/assets/scss/components/_slider-navigation.scss */
+.slider-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 42px;
+  height: 50px;
+  background-color: #F6F6F6;
+}
+
+/* line 8, src/assets/scss/components/_slider-navigation.scss */
+.slider-navigation_next {
+  border-radius: 0px 8px 8px 0px;
+}
+
+/* line 11, src/assets/scss/components/_slider-navigation.scss */
+.slider-navigation_prev {
+  border-radius: 8px 0px 0px 8px;
+}
+
+/* line 14, src/assets/scss/components/_slider-navigation.scss */
+.slider-navigation svg {
+  width: 10px;
+  height: 24px;
+}
+
+/* line 18, src/assets/scss/components/_slider-navigation.scss */
+.slider-navigation.swiper-button-disabled {
+  opacity: 0.3;
+}
+
 /* line 1, src/assets/scss/components/_search.scss */
 .search {
   margin-right: 30px;
@@ -15173,23 +15210,21 @@ h3 {
   margin-top: 2em;
 }
 
-/* line 19, src/assets/scss/pages/_home.scss */
-.articles__list {
-  gap: 0 1em;
-}
-
 /* line 22, src/assets/scss/pages/_home.scss */
 .articles__wr {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 24%;
           flex: 1 0 24%;
+  max-width: 24%;
   padding: 3px;
   border: 1px solid #4E91F5;
   border-radius: 14px;
   min-height: 176px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-/* line 31, src/assets/scss/pages/_home.scss */
+/* line 33, src/assets/scss/pages/_home.scss */
 .articles__item {
   position: relative;
   padding: 16px;
@@ -15204,19 +15239,20 @@ h3 {
       -ms-flex-pack: end;
           justify-content: flex-end;
   color: #fff;
-  height: 100%;
+  height: 176px;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-position: center;
 }
 
-/* line 42, src/assets/scss/pages/_home.scss */
+/* line 46, src/assets/scss/pages/_home.scss */
 .articles__caption {
   font-size: 0.875em;
   line-height: 1.19em;
   font-weight: 600;
 }
 
-/* line 46, src/assets/scss/pages/_home.scss */
+/* line 50, src/assets/scss/pages/_home.scss */
 .articles__caption::before {
   content: '';
   position: absolute;
@@ -15226,7 +15262,7 @@ h3 {
   left: 0;
 }
 
-/* line 55, src/assets/scss/pages/_home.scss */
+/* line 59, src/assets/scss/pages/_home.scss */
 .articles__link {
   display: block;
   margin-top: 1.5em;
@@ -15238,17 +15274,17 @@ h3 {
   width: max-content;
 }
 
-/* line 67, src/assets/scss/pages/_home.scss */
+/* line 71, src/assets/scss/pages/_home.scss */
 .pay {
   margin-top: 144px;
 }
 
-/* line 69, src/assets/scss/pages/_home.scss */
+/* line 73, src/assets/scss/pages/_home.scss */
 .pay__types {
   gap: 0 8px;
 }
 
-/* line 72, src/assets/scss/pages/_home.scss */
+/* line 76, src/assets/scss/pages/_home.scss */
 .pay__types-btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15266,25 +15302,25 @@ h3 {
   transition: color .3s ease-in-out;
 }
 
-/* line 82, src/assets/scss/pages/_home.scss */
+/* line 86, src/assets/scss/pages/_home.scss */
 .pay__types-btn svg {
   margin-right: 12px;
   stroke: currentColor;
 }
 
-/* line 86, src/assets/scss/pages/_home.scss */
+/* line 90, src/assets/scss/pages/_home.scss */
 .pay__types-btn:hover, .pay__types-btn.is-active {
   color: #000;
 }
 
-/* line 90, src/assets/scss/pages/_home.scss */
+/* line 94, src/assets/scss/pages/_home.scss */
 .pay__btns {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 12px;
 }
 
-/* line 94, src/assets/scss/pages/_home.scss */
+/* line 98, src/assets/scss/pages/_home.scss */
 .pay__btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15302,14 +15338,14 @@ h3 {
   transition: background-color .3s ease-in-out, color .3s ease-in-out, font-weight .3s ease-in-out;
 }
 
-/* line 104, src/assets/scss/pages/_home.scss */
+/* line 108, src/assets/scss/pages/_home.scss */
 .pay__btn.is-active, .pay__btn:hover {
   font-weight: 600;
   color: #fff;
   background-color: #2688E5;
 }
 
-/* line 111, src/assets/scss/pages/_home.scss */
+/* line 115, src/assets/scss/pages/_home.scss */
 .pay__decor {
   position: relative;
   display: -webkit-box;
@@ -15332,7 +15368,7 @@ h3 {
   font-family: 'Caveat', sans-serif;
 }
 
-/* line 123, src/assets/scss/pages/_home.scss */
+/* line 127, src/assets/scss/pages/_home.scss */
 .pay__result-sum {
   font-weight: 600;
   font-size: 5.5em;
@@ -15342,13 +15378,13 @@ h3 {
           font-feature-settings: 'salt' on, 'ss01' on;
 }
 
-/* line 130, src/assets/scss/pages/_home.scss */
+/* line 134, src/assets/scss/pages/_home.scss */
 .pay__result-descr {
   font-size: 2em;
   line-height: 1.4em;
 }
 
-/* line 134, src/assets/scss/pages/_home.scss */
+/* line 138, src/assets/scss/pages/_home.scss */
 .pay__systems {
   margin-top: 24px;
   -webkit-box-pack: center;
@@ -15357,34 +15393,34 @@ h3 {
   gap: 0 32px;
 }
 
-/* line 139, src/assets/scss/pages/_home.scss */
+/* line 143, src/assets/scss/pages/_home.scss */
 .pay__systems-item {
   color: #B6B8BB;
 }
 
-/* line 141, src/assets/scss/pages/_home.scss */
+/* line 145, src/assets/scss/pages/_home.scss */
 .pay__systems-item svg {
   fill: currentColor;
 }
 
-/* line 149, src/assets/scss/pages/_home.scss */
+/* line 153, src/assets/scss/pages/_home.scss */
 .appeal {
   margin-top: 7em;
 }
 
-/* line 151, src/assets/scss/pages/_home.scss */
+/* line 155, src/assets/scss/pages/_home.scss */
 .appeal__wr {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
 }
 
-/* line 154, src/assets/scss/pages/_home.scss */
+/* line 158, src/assets/scss/pages/_home.scss */
 .appeal__title {
   color: #127CE1;
 }
 
-/* line 157, src/assets/scss/pages/_home.scss */
+/* line 161, src/assets/scss/pages/_home.scss */
 .appeal__inn {
   position: relative;
   margin-top: 48px;
@@ -15395,7 +15431,7 @@ h3 {
   border-radius: 40px;
 }
 
-/* line 164, src/assets/scss/pages/_home.scss */
+/* line 168, src/assets/scss/pages/_home.scss */
 .appeal__inn::after {
   content: '';
   position: absolute;
@@ -15408,24 +15444,24 @@ h3 {
   background-image: url("../img/triangle.png");
 }
 
-/* line 176, src/assets/scss/pages/_home.scss */
+/* line 180, src/assets/scss/pages/_home.scss */
 .appeal__text {
   font-weight: 400;
   font-size: 1.375em;
   line-height: 1.5em;
 }
 
-/* line 180, src/assets/scss/pages/_home.scss */
+/* line 184, src/assets/scss/pages/_home.scss */
 .appeal__text strong {
   font-weight: 500;
 }
 
-/* line 183, src/assets/scss/pages/_home.scss */
+/* line 187, src/assets/scss/pages/_home.scss */
 .appeal__text:not(:last-of-type) {
   margin-bottom: 2.18rem;
 }
 
-/* line 187, src/assets/scss/pages/_home.scss */
+/* line 191, src/assets/scss/pages/_home.scss */
 .appeal__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15441,7 +15477,7 @@ h3 {
   margin-top: 25px;
 }
 
-/* line 194, src/assets/scss/pages/_home.scss */
+/* line 198, src/assets/scss/pages/_home.scss */
 .appeal__link svg {
   margin-left: 8px;
   width: 19px;
@@ -15449,7 +15485,7 @@ h3 {
   stroke: currentColor;
 }
 
-/* line 201, src/assets/scss/pages/_home.scss */
+/* line 205, src/assets/scss/pages/_home.scss */
 .appeal__signature {
   position: relative;
   text-align: right;
@@ -15459,13 +15495,13 @@ h3 {
   color: #2688E5;
 }
 
-/* line 208, src/assets/scss/pages/_home.scss */
+/* line 212, src/assets/scss/pages/_home.scss */
 .appeal__signature_name {
   margin-top: 35px;
   font-size: 2.25em;
 }
 
-/* line 211, src/assets/scss/pages/_home.scss */
+/* line 215, src/assets/scss/pages/_home.scss */
 .appeal__signature_name::after {
   content: '';
   position: absolute;
@@ -15478,7 +15514,7 @@ h3 {
   background-repeat: no-repeat;
 }
 
-/* line 228, src/assets/scss/pages/_home.scss */
+/* line 232, src/assets/scss/pages/_home.scss */
 .hot-line {
   margin-top: 9.25em;
   padding: 40px 0 25px;
@@ -15486,7 +15522,7 @@ h3 {
   color: #fff;
 }
 
-/* line 233, src/assets/scss/pages/_home.scss */
+/* line 237, src/assets/scss/pages/_home.scss */
 .hot-line__img {
   position: absolute;
   top: -160px;
@@ -15495,7 +15531,7 @@ h3 {
      object-fit: cover;
 }
 
-/* line 242, src/assets/scss/pages/_home.scss */
+/* line 246, src/assets/scss/pages/_home.scss */
 .hot-line__text {
   margin-top: 24px;
   font-size: 1.375em;
@@ -15503,7 +15539,7 @@ h3 {
   max-width: 645px;
 }
 
-/* line 248, src/assets/scss/pages/_home.scss */
+/* line 252, src/assets/scss/pages/_home.scss */
 .hot-line .hot-line__bottom {
   margin-top: 24px;
   -webkit-box-align: end;
@@ -15511,7 +15547,7 @@ h3 {
           align-items: flex-end;
 }
 
-/* line 252, src/assets/scss/pages/_home.scss */
+/* line 256, src/assets/scss/pages/_home.scss */
 .hot-line__number {
   position: relative;
   margin-bottom: 15px;
@@ -15525,7 +15561,7 @@ h3 {
   letter-spacing: 0.05em;
 }
 
-/* line 261, src/assets/scss/pages/_home.scss */
+/* line 265, src/assets/scss/pages/_home.scss */
 .hot-line__number span {
   position: absolute;
   left: 0;
@@ -15535,7 +15571,7 @@ h3 {
   font-size: 100px;
 }
 
-/* line 269, src/assets/scss/pages/_home.scss */
+/* line 273, src/assets/scss/pages/_home.scss */
 .hot-line__decor {
   position: relative;
   font-family: 'Caveat';
@@ -15544,7 +15580,7 @@ h3 {
   opacity: 0.8;
 }
 
-/* line 275, src/assets/scss/pages/_home.scss */
+/* line 279, src/assets/scss/pages/_home.scss */
 .hot-line__decor::before {
   content: '';
   position: absolute;
@@ -15557,12 +15593,12 @@ h3 {
   background-repeat: no-repeat;
 }
 
-/* line 291, src/assets/scss/pages/_home.scss */
+/* line 295, src/assets/scss/pages/_home.scss */
 .community {
   margin-top: 11em;
 }
 
-/* line 293, src/assets/scss/pages/_home.scss */
+/* line 297, src/assets/scss/pages/_home.scss */
 .community__item {
   position: relative;
   margin-top: 100px;
@@ -15573,7 +15609,7 @@ h3 {
   border-radius: 8px;
 }
 
-/* line 300, src/assets/scss/pages/_home.scss */
+/* line 304, src/assets/scss/pages/_home.scss */
 .community__item::after {
   content: '';
   position: absolute;
@@ -15583,28 +15619,28 @@ h3 {
   background-repeat: no-repeat;
 }
 
-/* line 308, src/assets/scss/pages/_home.scss */
+/* line 312, src/assets/scss/pages/_home.scss */
 .community__item_01::after {
   background-image: url("../img/community-icon-01.png");
   width: 76px;
   height: 85px;
 }
 
-/* line 313, src/assets/scss/pages/_home.scss */
+/* line 317, src/assets/scss/pages/_home.scss */
 .community__item_02::after {
   background-image: url("../img/community-icon-02.png");
   width: 84px;
   height: 84px;
 }
 
-/* line 318, src/assets/scss/pages/_home.scss */
+/* line 322, src/assets/scss/pages/_home.scss */
 .community__item_03::after {
   background-image: url("../img/community-icon-03.png");
   width: 90px;
   height: 84px;
 }
 
-/* line 324, src/assets/scss/pages/_home.scss */
+/* line 328, src/assets/scss/pages/_home.scss */
 .community__title {
   font-weight: 600;
   font-size: 2em;
@@ -15612,7 +15648,7 @@ h3 {
   color: #99D4FF;
 }
 
-/* line 329, src/assets/scss/pages/_home.scss */
+/* line 333, src/assets/scss/pages/_home.scss */
 .community__title span {
   font-size: 0.75em;
   display: block;
@@ -15621,19 +15657,19 @@ h3 {
   width: max-content;
 }
 
-/* line 335, src/assets/scss/pages/_home.scss */
+/* line 339, src/assets/scss/pages/_home.scss */
 .community__descr {
   margin-top: 10px;
   font-size: 1.25em;
   line-height: 1.5em;
 }
 
-/* line 344, src/assets/scss/pages/_home.scss */
+/* line 348, src/assets/scss/pages/_home.scss */
 .help {
   margin-top: 9em;
 }
 
-/* line 346, src/assets/scss/pages/_home.scss */
+/* line 350, src/assets/scss/pages/_home.scss */
 .help__item {
   margin-top: 100px;
   display: -webkit-box;
@@ -15644,7 +15680,7 @@ h3 {
           align-items: center;
 }
 
-/* line 351, src/assets/scss/pages/_home.scss */
+/* line 355, src/assets/scss/pages/_home.scss */
 .help__descr {
   margin-left: auto;
   padding: 40px;
@@ -15656,12 +15692,12 @@ h3 {
           box-shadow: 8px 8px 36px rgba(24, 73, 131, 0.07);
 }
 
-/* line 360, src/assets/scss/pages/_home.scss */
+/* line 364, src/assets/scss/pages/_home.scss */
 .help__text {
   margin-bottom: 1.6em;
 }
 
-/* line 363, src/assets/scss/pages/_home.scss */
+/* line 367, src/assets/scss/pages/_home.scss */
 .help__name {
   font-weight: 500;
   font-size: 1.1em;
@@ -15670,36 +15706,37 @@ h3 {
           font-feature-settings: 'salt' on, 'ss01' on;
 }
 
-/* line 368, src/assets/scss/pages/_home.scss */
+/* line 372, src/assets/scss/pages/_home.scss */
 .help__name span {
   font-weight: 400;
 }
 
-/* line 376, src/assets/scss/pages/_home.scss */
+/* line 380, src/assets/scss/pages/_home.scss */
 .face {
   margin-top: 135px;
   padding: 96px 0 130px;
   background-image: url("../img/face-background.png");
+  background-repeat: no-repeat;
   color: #fff;
 }
 
-/* line 381, src/assets/scss/pages/_home.scss */
+/* line 386, src/assets/scss/pages/_home.scss */
 .face__title {
   text-align: center;
 }
 
-/* line 384, src/assets/scss/pages/_home.scss */
+/* line 389, src/assets/scss/pages/_home.scss */
 .face__img {
   margin-bottom: 40px;
 }
 
-/* line 387, src/assets/scss/pages/_home.scss */
+/* line 392, src/assets/scss/pages/_home.scss */
 .face__caption {
   margin-top: 56px;
   margin-bottom: 34px;
 }
 
-/* line 391, src/assets/scss/pages/_home.scss */
+/* line 396, src/assets/scss/pages/_home.scss */
 .face__name {
   margin-bottom: 20px;
   font-weight: 500;
@@ -15709,13 +15746,13 @@ h3 {
           font-feature-settings: 'salt' on, 'ss01' on;
 }
 
-/* line 398, src/assets/scss/pages/_home.scss */
+/* line 403, src/assets/scss/pages/_home.scss */
 .face__text {
   font-size: 1.25em;
   line-height: 1.4em;
 }
 
-/* line 402, src/assets/scss/pages/_home.scss */
+/* line 407, src/assets/scss/pages/_home.scss */
 .face__decor {
   position: relative;
   margin-top: 48px;
@@ -15726,7 +15763,7 @@ h3 {
   color: #2688E5;
 }
 
-/* line 410, src/assets/scss/pages/_home.scss */
+/* line 415, src/assets/scss/pages/_home.scss */
 .face__decor::before {
   content: '';
   position: absolute;
@@ -15739,12 +15776,12 @@ h3 {
   background-repeat: no-repeat;
 }
 
-/* line 427, src/assets/scss/pages/_home.scss */
+/* line 432, src/assets/scss/pages/_home.scss */
 .volunteering__title {
   color: #127CE1;
 }
 
-/* line 430, src/assets/scss/pages/_home.scss */
+/* line 435, src/assets/scss/pages/_home.scss */
 .volunteering__text {
   margin-top: 24px;
   max-width: 615px;
@@ -15752,7 +15789,7 @@ h3 {
   line-height: 1.5em;
 }
 
-/* line 436, src/assets/scss/pages/_home.scss */
+/* line 441, src/assets/scss/pages/_home.scss */
 .volunteering__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15768,7 +15805,7 @@ h3 {
   margin-top: 25px;
 }
 
-/* line 443, src/assets/scss/pages/_home.scss */
+/* line 448, src/assets/scss/pages/_home.scss */
 .volunteering__link svg {
   margin-left: 8px;
   width: 19px;
@@ -15776,13 +15813,13 @@ h3 {
   stroke: currentColor;
 }
 
-/* line 455, src/assets/scss/pages/_home.scss */
+/* line 460, src/assets/scss/pages/_home.scss */
 .partners {
   margin-top: 77px;
   position: relative;
 }
 
-/* line 458, src/assets/scss/pages/_home.scss */
+/* line 463, src/assets/scss/pages/_home.scss */
 .partners__descr {
   position: sticky;
   top: 150px;
@@ -15802,7 +15839,7 @@ h3 {
   color: #fff;
 }
 
-/* line 468, src/assets/scss/pages/_home.scss */
+/* line 473, src/assets/scss/pages/_home.scss */
 .partners__descr:before {
   content: '';
   position: absolute;
@@ -15816,14 +15853,14 @@ h3 {
   background: radial-gradient(66.11% 246.65% at 83.89% 92.34%, #99D4FF 0%, #4E91F5 100%);
 }
 
-/* line 481, src/assets/scss/pages/_home.scss */
+/* line 486, src/assets/scss/pages/_home.scss */
 .partners__text {
   margin-top: 24px;
   font-size: 1.25em;
   line-height: 1.5em;
 }
 
-/* line 486, src/assets/scss/pages/_home.scss */
+/* line 491, src/assets/scss/pages/_home.scss */
 .partners__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15839,7 +15876,7 @@ h3 {
   margin-top: 25px;
 }
 
-/* line 493, src/assets/scss/pages/_home.scss */
+/* line 498, src/assets/scss/pages/_home.scss */
 .partners__link svg {
   margin-left: 8px;
   width: 19px;
@@ -15847,7 +15884,7 @@ h3 {
   stroke: currentColor;
 }
 
-/* line 500, src/assets/scss/pages/_home.scss */
+/* line 505, src/assets/scss/pages/_home.scss */
 .partners__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15860,7 +15897,7 @@ h3 {
   gap: 24px;
 }
 
-/* line 507, src/assets/scss/pages/_home.scss */
+/* line 512, src/assets/scss/pages/_home.scss */
 .partners__item {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 30%;
@@ -15869,12 +15906,12 @@ h3 {
   background-color: #F7FAFD;
 }
 
-/* line 516, src/assets/scss/pages/_home.scss */
+/* line 521, src/assets/scss/pages/_home.scss */
 .bottom-btns {
   margin-top: 152px;
 }
 
-/* line 518, src/assets/scss/pages/_home.scss */
+/* line 523, src/assets/scss/pages/_home.scss */
 .bottom-btns__sum, .bottom-btns__submit {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15883,12 +15920,12 @@ h3 {
   margin-right: auto;
 }
 
-/* line 523, src/assets/scss/pages/_home.scss */
+/* line 528, src/assets/scss/pages/_home.scss */
 .bottom-btns__submit {
   margin-right: 0;
 }
 
-/* line 526, src/assets/scss/pages/_home.scss */
+/* line 531, src/assets/scss/pages/_home.scss */
 .bottom-btns__btn {
   padding: 14px 32px;
   font-size: 1.25em;
@@ -15900,7 +15937,7 @@ h3 {
   transition: background-color .3s ease-in-out, color .3s ease-in-out;
 }
 
-/* line 534, src/assets/scss/pages/_home.scss */
+/* line 539, src/assets/scss/pages/_home.scss */
 .bottom-btns__btn:hover {
   color: #fff;
   background-color: #2688E5;
