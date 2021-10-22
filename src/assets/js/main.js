@@ -51,54 +51,83 @@ document.addEventListener('DOMContentLoaded', function() {
 // hero slider
 const swiperHero = new Swiper('.hero__swiper', {
   // Optional parameters
-  slidesPerView: 4,
+
   spaceBetween: 14,
-  speed: 300,
+  speed: 500,
+  watchOverflow: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    960: {
+      slidesPerView: 2.5,
+    },
+    1441: {
+      slidesPerView: 3.5,
+    },
+    1600: {
+      slidesPerView: 4,
+    }
+  }
 });
 
 // help slider
 const swiperHelp = new Swiper('.help__swiper', {
   // Optional parameters
-  speed: 300,
+
+  speed: 800,
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".help-button-next",
+    prevEl: ".help-button-prev",
   },
+  breakpoints: {
+    1440: {
+      slidesPerView: 1,
+    },
+    1600: {
+      slidesPerView: 1.5,
+    }
+  }
+});
+
+// community slider
+const swiperCommunity = new Swiper('.community__swiper', {
+  // Optional parameters
+  speed: 500,
+  spaceBetween: 30,
+  breakpoints: {
+    1024: {
+      slidesPerView: 2.5,
+    },
+    1400: {
+      slidesPerView: 3,
+    }
+  }
 });
 
 // face slider
-const swiperFaceFirst = new Swiper('.face__swiper_one', {
+const swiperFaceFirst = new Swiper('.face__swiper', {
   // Optional parameters
-  speed: 300,
+  speed: 500,
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".face-button-next",
+    prevEl: ".face-button-prev",
   },
+  breakpoints: {
+    768: {
+      slidesPerView: 1.2,
+      spaceBetween: 30
+    },
+
+  }
 });
 
-// face slider
-const swiperFaceSecond = new Swiper('.face__swiper_two', {
-  // Optional parameters
-  speed: 300,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
-
-// face slider
-const swiperFaceThird = new Swiper('.face__swiper_three', {
-  // Optional parameters
-  speed: 300,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
 
 
 

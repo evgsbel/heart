@@ -8,6 +8,9 @@
   overflow-x: hidden;
   &__right {
     position: static;
+    @include r(1200) {
+      margin-bottom: 20px;
+    }
   }
   &__title {
     margin-bottom: 25px;
@@ -16,12 +19,7 @@
 
 .articles {
   margin-top: 2em;
-  &__list {
-
-  }
   &__wr {
-    flex: 1 0 24%;
-    max-width: 24%;
     padding: 3px;
     border: 1px solid #4E91F5;
     -webkit-border-radius: 14px;
@@ -63,6 +61,7 @@
     line-height: 1.69em;
     color: #2688E5;
     width: max-content;
+    margin-right: auto;
   }
 }
 
@@ -70,8 +69,20 @@
 
 .pay {
   margin-top: 144px;
+  @include r(1200) {
+    margin-top: 60px;
+  }
+  &__title {
+    margin-right: auto;
+    @include r(1200) {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
   &__types {
-    gap: 0 8px;
+    @include r(1200) {
+      flex-wrap: wrap;
+    }
   }
   &__types-btn {
     display: flex;
@@ -90,6 +101,12 @@
     &:hover, &.is-active {
       color: #000;
     }
+    @include r(1440) {
+      padding: 12px 18px 12px;
+    }
+    &:not(:last-of-type) {
+      margin-right: 8px;
+    }
   }
   &__btns {
     flex-wrap: wrap;
@@ -98,7 +115,7 @@
   &__btn {
     display: flex;
     justify-content: center;
-    width: calc((100% - 1 * 12px) /2);
+    width: calc((100% - 1 * 12px) / 2);
     padding: 12px 0 16px;
     font-size: 1.5em;
     color: #127CE1;
@@ -123,6 +140,10 @@
     line-height: 1.26em;
     color: #2688E5;
     font-family: 'Caveat', sans-serif;
+    @include r(1200) {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
   }
   &__result-sum {
     font-weight: 600;
@@ -200,6 +221,12 @@
       width: 19px;
       height: 14px;
       stroke: currentColor;
+      transition: transform .3s ease-in-out;
+    }
+    &:hover {
+      svg {
+        transform: translateX(7px);
+      }
     }
   }
   &__signature {
@@ -209,6 +236,9 @@
     line-height: 1.5em;
     font-family: 'Caveat';
     color: #2688E5;
+    @include r(1200) {
+      text-align: center;
+    }
     &_name {
       margin-top: 35px;
       font-size: 2.25em;
@@ -222,6 +252,9 @@
         height: 50px;
         background-image: url('../img/design-arrow.png');
         background-repeat: no-repeat;
+        @include r(1200) {
+          right: 20%;
+        }
       }
     }
   }
@@ -234,14 +267,20 @@
   padding: 40px 0 25px;
   background: radial-gradient(66.11% 246.65% at 16.11% 7.66%, #99D4FF 0%, #4E91F5 100%), radial-gradient(105.69% 109.42% at 88.35% 94.4%, #99D4FF 0%, #4E91F5 100%), linear-gradient(120.93deg, #99CDFF 14%, #379EFF 100.08%);
   color: #fff;
+  @include r(1200) {
+    padding: 0;
+  }
   &__img {
     position: absolute;
     top: -160px;
     left: 0;
+    right: 0;
+    margin: 0 auto;
     object-fit: cover;
-  }
-  &__title {
-
+    @include r(1200) {
+      position: relative;
+      top: 0;
+    }
   }
   &__text {
     margin-top: 24px;
@@ -251,17 +290,21 @@
   }
   .hot-line__bottom {
     margin-top: 24px;
+
     align-items: flex-end;
   }
   &__number {
     position: relative;
     margin-bottom: 15px;
     padding-left: 40px;
-    flex: 1 0 48%;
+    flex: 0 0 40%;
     font-weight: 700;
     font-size: 3.5em;
     line-height: 1.392em;
     letter-spacing: 0.05em;
+    @include r(1500) {
+      flex-grow: 1;
+    }
     span {
       position: absolute;
       left: 0;
@@ -275,7 +318,11 @@
     font-family: 'Caveat';
     font-size: 1.75em;
     line-height: 1.25em;
+    max-width: 315px;
     opacity: 0.8;
+    @include r(1200) {
+      display: none;
+    }
     &::before {
       content: '';
       position: absolute;
@@ -294,17 +341,25 @@
 
 .community {
   margin-top: 11em;
+  @include r(1200) {
+    margin-top: 60px;
+  }
   &__item {
     position: relative;
+    display: block;
     margin-top: 100px;
     padding: 32px;
     background: linear-gradient(0deg, #FFFFFF, #FFFFFF), radial-gradient(105.69% 109.42% at 88.35% 94.4%, #99D4FF 0%, #4E91F5 100%), linear-gradient(120.93deg, #99CDFF 14%, #379EFF 100.08%);
     box-shadow: -8px 8px 36px rgba(24, 73, 131, 0.07);
     border-radius: 8px;
+    transition: box-shadow .3s ease-in-out;
+    @include r(1200) {
+      margin-top: 60px;
+    }
     &::after {
       content: '';
       position: absolute;
-      top: 0;
+      top: -20px;
       right: 0;
       display: block;
       background-repeat: no-repeat;
@@ -324,12 +379,22 @@
       width: 90px;
       height: 84px;
     }
+    &:hover {
+      color: #fff;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), radial-gradient(105.69% 109.42% at 88.35% 94.4%, #99D4FF 0%, #4E91F5 100%);
+      background-blend-mode: overlay, normal;
+      box-shadow: 0px 8px 56px rgba(27, 127, 243, 0.36);
+      h3 {
+        color: #fff;
+      }
+    }
   }
   &__title {
     font-weight: 600;
     font-size: 2em;
     line-height: 1.5em;
     color: #99D4FF;
+    transition: color .10s ease-in-out;
     span {
       font-size: 0.75em;
       display: block;
@@ -351,6 +416,20 @@
     margin-top: 100px;
     display: flex;
     align-items: center;
+    opacity: 0.4;
+    transition: transform .5s ease-in-out, opacity .3s ease-in-out;
+    transform: scale(0.8);
+    img {
+      transition: transform .3s ease-in-out;
+      transform: scale(0.6) translateY(80%);
+    }
+    &.swiper-slide-active {
+      opacity: 1;
+      transform: scale(1);
+      img {
+        transform: scale(1) translateY(0);
+      }
+    }
   }
   &__descr {
     margin-left: auto;
@@ -382,16 +461,33 @@
   padding: 96px 0 130px;
   background-image: url('../img/face-background.png');
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   color: #fff;
   &__title {
     text-align: center;
   }
   &__img {
     margin-bottom: 40px;
+    @include r(1200) {
+      flex-grow: 0;
+      flex-shrink: 1;
+      flex-basis: 30%;
+      margin-bottom: 0;
+      max-height: 210px;
+      object-fit: contain;
+    }
   }
   &__caption {
     margin-top: 56px;
     margin-bottom: 34px;
+    font-size: 23px;
+    @include r(1500) {
+      max-width: 150px;
+    }
+    @include r(1200) {
+      max-width: 100%;
+    }
   }
   &__name {
     margin-bottom: 20px;
@@ -399,6 +495,11 @@
     font-size: 1.375em;
     line-height: 1.4em;
     font-feature-settings: 'salt' on, 'ss01' on;
+  }
+  &__descr {
+    @include r(1200) {
+      max-width: 370px;
+    }
   }
   &__text {
     font-size: 1.25em;
@@ -426,6 +527,24 @@
   }
 }
 
+.face-slider {
+  @include r(1200) {
+
+  }
+  &__item {
+    @include r(1200) {
+      display: flex;
+      align-items: center;
+      gap: 0 16px;
+      padding: 24px;
+      background: radial-gradient(148.84% 85.92% at 80.26% 82.35%, #2E78F6 0%, #6dadf9 100%);
+      mix-blend-mode: overlay;
+      border-radius: 16px;
+    }
+  }
+
+}
+
 //volunteering
 
 .volunteering {
@@ -450,6 +569,12 @@
       width: 19px;
       height: 14px;
       stroke: currentColor;
+      transition: transform .3s ease-in-out;
+    }
+    &:hover {
+      svg {
+        transform: translateX(7px);
+      }
     }
   }
 }
@@ -478,15 +603,21 @@
       z-index: -1;
       display: block;
       min-height: 460px;
-      width: 800px;
+      width: calc(100% + 100px);
       border-radius: 16px 0 0 16px;
       background: radial-gradient(66.11% 246.65% at 83.89% 92.34%, #99D4FF 0%, #4E91F5 100%);
+      @include r(1500) {
+        width: 100%;
+      }
     }
   }
   &__text {
     margin-top: 24px;
     font-size: 1.25em;
     line-height: 1.5em;
+    @include r(1440) {
+      max-width: 560px;
+    }
   }
   &__link {
     display: flex;
@@ -500,8 +631,15 @@
       width: 19px;
       height: 14px;
       stroke: currentColor;
+      transition: transform .3s ease-in-out;
+    }
+    &:hover {
+      svg {
+        transform: translateX(7px);
+      }
     }
   }
+
   &__list {
     display: flex;
     flex-wrap: wrap;
@@ -525,8 +663,16 @@
     gap: 0 1em;
     margin-right: auto;
   }
+  &__sum {
+    @include r(1200) {
+      display: none;
+    }
+  }
   &__submit {
     margin-right: 0;
+    @include r(1200) {
+      margin: 0 auto;
+    }
   }
   &__btn {
     padding: 14px 32px;
@@ -539,6 +685,9 @@
     &:hover {
       color: #fff;
       background-color: #2688E5;
+    }
+    @include r(1366) {
+      font-size: 1.125em;
     }
   }
 }

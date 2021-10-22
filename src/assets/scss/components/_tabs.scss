@@ -4,6 +4,11 @@
     display: flex;
     flex-wrap: wrap;
     gap: 16px 40px;
+    max-width: 530px;
+    @include r(1680) {
+      max-width: 100%;
+      gap: 16px;
+    }
   }
   &__caption {
     color: #000;
@@ -25,7 +30,7 @@
   &__descr {
     font-size: 1.125em;
     line-height: 1.5em;
-    max-width: 545px;
+    max-width: 425px;
     color: #000;
     &:not(:last-of-type) {
       margin-bottom: 2em;
@@ -58,6 +63,10 @@
         height: 758px;
         background-size: cover;
         background-repeat: no-repeat;
+        @include r(1440) {
+          width: 550px;
+          height: 550px;
+        }
       }
       &[data-target="one"] {
         & {

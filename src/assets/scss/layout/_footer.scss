@@ -16,8 +16,14 @@
   &__caption {
     margin-top: 24px;
     color: #CDCDCD;
-    font-size: 1.2em;
+    font-size: 1.25em;
     line-height: 1.4em;
+    @include r(1600) {
+      font-size: 1.1125em;
+    }
+    @include r(1440) {
+      font-size: 1em;
+    }
   }
   &__email {
     color: #fff;
@@ -33,6 +39,9 @@
     line-height: 1.4em;
     width: max-content;
     color: #fff;
+    @include r(1440) {
+      font-size: 1.25em;
+    }
     span {
       font-size: 0.8em;
       line-height: 1.4em;
@@ -44,6 +53,13 @@
       left: 0;
       transform: translateY(-20%);
       font-size: 50px;
+      @include r(1440) {
+        font-size: 40px;
+        transform: translateY(-10%);
+      }
+    }
+    &:hover {
+      color: #fff;
     }
     &_pl {
       padding-left: 30px;
@@ -58,6 +74,11 @@
     color: #fff;
     background-color: #505E6A;
     border-radius: 8px;
+    @include r(1600) {
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 100%;
+    }
   }
 }
 
@@ -73,6 +94,9 @@
     font-size: 1.5em;
     line-height: 1.4em;
     color: #fff;
+    @include r(1440) {
+      font-size: 1.25em;
+    }
   }
 }
 

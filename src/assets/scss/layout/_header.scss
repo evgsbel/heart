@@ -33,13 +33,37 @@
     font-size: 1.125em;
     line-height: 1.4em;
     background-color: #fff;
-    transition: transform .3s ease-in-out;
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+  }
+  &__btn-help {
+    position: absolute;
+    z-index: -1;
+    margin-left: 2em;
+    padding: 10px 24px 12px;
+    font-size: 1.125em;
+    line-height: 1.4em;
+    background-color: #EFF7FF;
+    color: #127CE1;
+    opacity: 0;
+    @include r(1200) {
+      margin: 0;
+    }
   }
   &_fixed {
-    background-color: rgba(255,255,255,.8);
+    background-color: #fff;
     .header__btn {
+      color: #fff;
+      background-color: #2688E5;
+    }
+    .header__btn-help {
+      position: relative;
+      z-index: 1;
+      opacity: 1;
+    }
+    .header__phone {
       position: absolute;
-      transform: translateX(200%);
+      opacity: 0;
+      z-index: -1;
     }
   }
 }

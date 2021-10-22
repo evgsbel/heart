@@ -4,4 +4,9 @@
       margin-right: 2em;
     }
   }
+  &__link {
+    &:hover {
+      text-shadow: 0 0 1px #000, 0 0 1px #000;
+    }
+  }
 }
