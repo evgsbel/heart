@@ -1,6 +1,9 @@
 .social {
   display: flex;
   gap: 0 8px;
+  @include r(768) {
+    justify-content: center;
+  }
   &__item {
     flex: 0 0 auto;
     display: flex;

@@ -4,16 +4,22 @@
 
 // HERO section
 
+
 .hero {
   overflow-x: hidden;
   &__right {
     position: static;
     @include r(1200) {
+      margin-top: 30px;
       margin-bottom: 20px;
+      order: -1;
     }
   }
   &__title {
     margin-bottom: 25px;
+  }
+  @include r(600) {
+    display: none;
   }
 }
 
@@ -25,23 +31,27 @@
     -webkit-border-radius: 14px;
     -moz-border-radius: 14px;
     border-radius: 14px;
-    min-height: 176px;
+    //min-height: 176px;
     box-sizing: border-box;
+    @include r(1440) {
+      min-height: auto;
+    }
   }
   &__item {
     position: relative;
-    padding: 16px;
+    padding: 3px;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
     color: #fff;
-    height: 176px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-
+  }
+  &__img {
+    width: 100%;
+    object-fit: cover;
   }
   &__caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    max-width: 75%;
     font-size: 0.875em;
     line-height: 1.19em;
     font-weight: 600;
@@ -73,7 +83,8 @@
     margin-top: 60px;
   }
   &__title {
-    margin-right: auto;
+    margin-right: 40px;
+    flex: 0 0 auto;
     @include r(1200) {
       width: 100%;
       margin-bottom: 15px;
@@ -94,6 +105,7 @@
     background: #F7F7F7;
     border-radius: 8px;
     transition: color .3s ease-in-out;
+    max-width: max-content;
     svg {
       margin-right: 12px;
       stroke: currentColor;
@@ -144,6 +156,22 @@
       flex-direction: row;
       justify-content: flex-start;
     }
+    @include r(600) {
+      justify-content: center;
+      margin: 30px auto;
+    }
+  }
+  &__result {
+    @include r(960) {
+      margin-top: 20px;
+      padding: 15px;
+      background: #fff;
+      box-shadow: 8px 8px 36px rgba(24, 73, 131, 0.07);
+      border-radius: 16px;
+    }
+    @include r(600) {
+      text-align: center;
+    }
   }
   &__result-sum {
     font-weight: 600;
@@ -151,10 +179,16 @@
     line-height: 1.4em;
     color: #2688E5;
     font-feature-settings: 'salt' on, 'ss01' on;
+    @include r(960) {
+      font-size: 2.5em;
+    }
   }
   &__result-descr {
     font-size: 2em;
     line-height: 1.4em;
+    @include r(960) {
+      font-size: 1.25em;
+    }
   }
   &__systems {
     margin-top: 24px;
@@ -186,17 +220,17 @@
     background: linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(0deg, #F7FAFD, #F7FAFD), radial-gradient(2.8% 10.49% at 42.67% 99.46%, #99D4FF 0%, #4E91F5 100%), linear-gradient(99.4deg, #99CDFF 47.95%, #379EFF 51.08%);
     box-shadow: 8px 8px 95px rgba(0, 102, 255, 0.05), 8px 8px 36px rgba(24, 73, 131, 0.05);
     border-radius: 40px;
-    &::after {
-      content: '';
-      position: absolute;
-      right: 0;
-      bottom: 100px;
-      z-index: 10;
-      display: block;
-      width: 40px;
-      height: 81px;
-      background-image: url('../img/triangle.png');
-    }
+    //&::after {
+    //  content: '';
+    //  position: absolute;
+    //  right: 0;
+    //  bottom: 100px;
+    //  z-index: 10;
+    //  display: block;
+    //  width: 40px;
+    //  height: 81px;
+    //  background-image: url('../img/triangle.png');
+    //}
   }
   &__text {
     font-weight: 400;
@@ -229,6 +263,12 @@
       }
     }
   }
+  &__img {
+    @include r(600) {
+      display: flex;
+      align-items: center;
+    }
+  }
   &__signature {
     position: relative;
     text-align: right;
@@ -238,6 +278,11 @@
     color: #2688E5;
     @include r(1200) {
       text-align: center;
+    }
+    @include r(600) {
+      text-align: left;
+      margin-left: 15px;
+      max-width: 320px;
     }
     &_name {
       margin-top: 35px;
@@ -255,6 +300,20 @@
         @include r(1200) {
           right: 20%;
         }
+        @include r(600) {
+          content: none;
+        }
+      }
+    }
+    &--mobile {
+      display: none;
+      @include r(600) {
+        display: block;
+      }
+    }
+    &--desktop {
+      @include r(600) {
+        display: none;
       }
     }
   }
@@ -270,6 +329,11 @@
   @include r(1200) {
     padding: 0;
   }
+  @include r(600) {
+    -webkit-border-radius: 32px;
+    -moz-border-radius: 32px;
+    border-radius: 32px;
+  }
   &__img {
     position: absolute;
     top: -160px;
@@ -280,6 +344,9 @@
     @include r(1200) {
       position: relative;
       top: 0;
+      display: block;
+      margin-top: -100px;
+      z-index: 10;
     }
   }
   &__text {
@@ -430,6 +497,20 @@
         transform: scale(1) translateY(0);
       }
     }
+    @include r(768) {
+      display: block;
+      padding: 32px;
+      border-radius: 40px;
+      background: linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(0deg, #F7FAFD, #F7FAFD), radial-gradient(5.29% 14.3% at 3.34% 99.27%, #99D4FF 0%, #4E91F5 100%), linear-gradient(102.92deg, #99CDFF 16.26%, #379EFF 21.86%);
+      box-shadow: 8px 8px 36px rgba(24, 73, 131, 0.07);
+    }
+  }
+  &__img {
+    flex: 0 0 auto;
+    align-items: center;
+    @include r(768) {
+      margin-bottom: 30px;
+    }
   }
   &__descr {
     margin-left: auto;
@@ -439,6 +520,14 @@
     border-radius: 40px;
     background: linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(0deg, #F7FAFD, #F7FAFD), radial-gradient(5.29% 14.3% at 3.34% 99.27%, #99D4FF 0%, #4E91F5 100%), linear-gradient(102.92deg, #99CDFF 16.26%, #379EFF 21.86%);
     box-shadow: 8px 8px 36px rgba(24, 73, 131, 0.07);
+    @include r(768) {
+      padding: 0;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+      background: none;
+      box-shadow: none;
+    }
   }
   &__text {
     margin-bottom: 1.6em;
@@ -448,8 +537,19 @@
     font-size: 1.1em;
     color: #2688E5;
     font-feature-settings: 'salt' on, 'ss01' on;
+    @include r(768) {
+      display: none;
+    }
     span {
       font-weight: 400;
+    }
+    &_mobile {
+      display: none;
+      @include r(768) {
+        display: block;
+        margin-left: 25px;
+        max-width: 180px;
+      }
     }
   }
 }
@@ -513,6 +613,9 @@
     font-size: 2em;
     line-height: 1.16em;
     color: #2688E5;
+    @include r(600) {
+      text-align: center;
+    }
     &::before {
       content: '';
       position: absolute;
@@ -523,6 +626,12 @@
       height: 85px;
       background-image: url('../img/design-arrow-vertical.png');
       background-repeat: no-repeat;
+      @include r(600) {
+        left: 0;
+        right: 0;
+        top: 32px;
+        margin: 0 auto;
+      }
     }
   }
 }
@@ -595,6 +704,9 @@
     padding-left: 48px;
     min-height: 460px;
     color: #fff;
+    @include r(600) {
+      padding: 16px;
+    }
     &:before {
       content: '';
       position: absolute;
@@ -607,8 +719,23 @@
       border-radius: 16px 0 0 16px;
       background: radial-gradient(66.11% 246.65% at 83.89% 92.34%, #99D4FF 0%, #4E91F5 100%);
       @include r(1500) {
-        width: 100%;
+        width: 105%;
       }
+      @include r(600) {
+        width: 100%;
+        background: radial-gradient(173.97% 78.31% at 50% 6.03%, #99D4FF 0%, #4E91F5 100%);
+        border-radius: 16px;
+      }
+    }
+  }
+  &__right {
+    @include r(600) {
+      order: -1;
+    }
+  }
+  &__left {
+    @include r(600) {
+      margin-top: -10px;
     }
   }
   &__text {
@@ -645,12 +772,29 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 24px;
+    @include r(1200) {
+      gap: 20px;
+    }
+    @include r(768) {
+      gap: 16px;
+    }
+    @include r(600) {
+      background: linear-gradient(0deg, #FFFFFF, #FFFFFF), #F7FAFD;
+      border-radius: 34.2857px;
+      padding-bottom: 50px;
+      max-height: 420px;
+      overflow-y: scroll;
+    }
 
   }
   &__item {
     flex: 0 0 30%;
     border-radius: 16px;
     background-color: #F7FAFD;
+    @include r(600) {
+      flex: 0 0 45%;
+      text-align: center;
+    }
   }
 }
 
@@ -658,6 +802,9 @@
 
 .bottom-btns {
   margin-top: 152px;
+  @include r(768) {
+    margin-top: 60px;
+  }
   &__sum, &__submit {
     display: flex;
     gap: 0 1em;
@@ -689,6 +836,30 @@
     @include r(1366) {
       font-size: 1.125em;
     }
+  }
+}
+
+// hero-mobile
+
+.hero-mobile {
+  position: relative;
+  display: none;
+  margin-top: -105px;
+  min-height: 352px;
+  background-image: url(../img/hero-banner.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  @include r(600) {
+    display: block;
+  }
+  &__banner {
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 1.1;
+    color: #fff;
   }
 }
 

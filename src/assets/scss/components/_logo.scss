@@ -22,6 +22,9 @@
   font-size: 100%;
   align-items: center;
   max-width: 330px;
+  @include r(768) {
+    margin: 0 auto;
+  }
   &__img {
     flex-shrink: 0;
     width: 110px;
