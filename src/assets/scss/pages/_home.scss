@@ -73,6 +73,43 @@
     width: max-content;
     margin-right: auto;
   }
+  &_mobile {
+    display: none;
+    @include r(600) {
+      display: block;
+    }
+  }
+}
+
+.mobile-types {
+  display: none;
+  @include r(600) {
+    display: block;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px 10px;
+    background: #F5F8FB;
+    border-radius: 8px;
+    @include r(325) {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+  &__img {
+    margin-right: 8px;
+  }
+  &__link {
+    font-size: 1.09em;
+    line-height: 1.4em;
+  }
 }
 
 //pay
@@ -140,6 +177,9 @@
       color: #fff;
       background-color: #2688E5;
     }
+    @include r(325) {
+      font-size: 16px;
+    }
   }
   &__decor {
     position: relative;
@@ -199,6 +239,9 @@
     color: #B6B8BB;
     svg {
       fill: currentColor;
+      @include r(600) {
+        max-width: 100%;
+      }
     }
   }
 }
@@ -236,6 +279,9 @@
     font-weight: 400;
     font-size: 1.375em;
     line-height: 1.5em;
+    @include r(325) {
+      font-size: 16px;
+    }
     strong {
       font-weight: 500;
     }
@@ -435,16 +481,31 @@
       background-image: url('../img/community-icon-01.png');
       width: 76px;
       height: 85px;
+      @include r(325) {
+        width: 50px;
+        height: 50px;
+        background-size: cover;
+    }
     }
     &_02::after {
       background-image: url('../img/community-icon-02.png');
       width: 84px;
       height: 84px;
+      @include r(325) {
+        width: 50px;
+        height: 50px;
+        background-size: cover;
+    }
     }
     &_03::after {
       background-image: url('../img/community-icon-03.png');
       width: 90px;
       height: 84px;
+      @include r(325) {
+        width: 60px;
+        height: 54px;
+        background-size: cover;
+    }
     }
     &:hover {
       color: #fff;
@@ -479,6 +540,9 @@
 
 .help {
   margin-top: 9em;
+  @include r(768) {
+    margin-top: 60px;
+  }
   &__item {
     margin-top: 100px;
     display: flex;
@@ -486,6 +550,10 @@
     opacity: 0.4;
     transition: transform .5s ease-in-out, opacity .3s ease-in-out;
     transform: scale(0.8);
+    @include r(600) {
+      box-sizing: border-box;
+      margin-top: 20px;
+    }
     img {
       transition: transform .3s ease-in-out;
       transform: scale(0.6) translateY(80%);
@@ -564,6 +632,9 @@
   background-position: center;
   background-size: cover;
   color: #fff;
+  @include r(768) {
+    margin-top: 60px;
+  }
   &__title {
     text-align: center;
   }
@@ -599,6 +670,9 @@
   &__descr {
     @include r(1200) {
       max-width: 370px;
+    }
+    @include r(600) {
+      margin-top: 20px;
     }
   }
   &__text {
@@ -637,9 +711,6 @@
 }
 
 .face-slider {
-  @include r(1200) {
-
-  }
   &__item {
     @include r(1200) {
       display: flex;
@@ -649,9 +720,12 @@
       background: radial-gradient(148.84% 85.92% at 80.26% 82.35%, #2E78F6 0%, #6dadf9 100%);
       mix-blend-mode: overlay;
       border-radius: 16px;
+      box-sizing: border-box;
+    }
+    @include r(600) {
+      flex-wrap: wrap;
     }
   }
-
 }
 
 //volunteering
@@ -844,7 +918,6 @@
 .hero-mobile {
   position: relative;
   display: none;
-  margin-top: -105px;
   min-height: 352px;
   background-image: url(../img/hero-banner.jpg);
   background-size: cover;
@@ -860,6 +933,12 @@
     font-size: 38px;
     line-height: 1.1;
     color: #fff;
+    position: absolute;
+    bottom: 32px;
+    left: 32px;
+    @include r(600) {
+      left: 12px;
+    }
   }
 }
 

@@ -23,6 +23,9 @@
   @include r(768) {
     right: 32px;
   }
+  @include r(600) {
+    top: 30px;
+  }
 }
 
 .close {

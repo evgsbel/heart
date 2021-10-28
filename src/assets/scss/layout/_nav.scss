@@ -57,6 +57,14 @@
   .logo {
     margin-right: auto;
   }
+  .logo__img {
+    fill: #13264A;
+    opacity: 0.45;
+  }
+  .logo__text {
+    color: #13264A;
+    opacity: 0.45;
+  }
   &__btns {
     position: absolute;
     bottom: 60px;

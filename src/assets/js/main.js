@@ -128,20 +128,17 @@ const swiperCommunity = new Swiper('.community__swiper', {
 const swiperFaceFirst = new Swiper('.face__swiper', {
   // Optional parameters
   speed: 500,
+  slidesPerView: 1.2,
   navigation: {
     nextEl: ".face-button-next",
     prevEl: ".face-button-prev",
   },
   breakpoints: {
-    480: {
-      slidesPerView: 'auto',
-      spaceBetween: 30
-    },
-    1200: {
+    320: {
       slidesPerView: 1.2,
       spaceBetween: 16
     },
-    1440: {
+    1200: {
       slidesPerView: 1,
       spaceBetween: 0
     }

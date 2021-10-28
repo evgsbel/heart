@@ -6,6 +6,12 @@
     flex-shrink: 0;
     width: 54px;
     height: 45px;
+    fill: #13264A;
+    opacity: 0.45;
+    @include r(600) {
+      fill: #fff;
+      opacity: 1;
+    }
   }
   &__text {
     margin-left: 10px;
@@ -15,6 +21,10 @@
     color: #13264A;
     opacity: 0.45;
     font-feature-settings: 'salt' on, 'ss01' on;
+    @include r(600) {
+      color: #fff;
+      opacity: 1;
+    }
   }
 }
 

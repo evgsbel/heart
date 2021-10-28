@@ -20,6 +20,9 @@ body {
   &.opened-menu {
     overflow: hidden;
   }
+  @include r(600) {
+    padding-top: 0 !important;
+  }
 }
 
 .container {

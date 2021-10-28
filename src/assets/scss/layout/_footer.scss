@@ -16,7 +16,6 @@
       text-align: right;
     }
     @include r(768) {
-      margin-top: 20px;
       text-align: center;
     }
   }
@@ -48,6 +47,11 @@
     color: #fff;
     @include r(1440) {
       font-size: 1.25em;
+    }
+    @include r(480) {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
     }
     span {
       font-size: 0.8em;
@@ -122,6 +126,12 @@
       flex: 0 0 50%;
       max-width: 50%;
     }
+    @include r(480) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      text-align: center;
+      margin-bottom: 15px;
+    }
   }
 }
 
@@ -129,6 +139,20 @@
   @include r(600) {
     width: 100%;
     margin: 30px 0 0;
+  }
+}
+
+.desktop-only {
+  @include r(480) {
+    display: none;
+  }
+}
+
+.mobile-only {
+  display: none;
+  text-align: center;
+  @include r(480) {
+    display: block;
   }
 }
 
