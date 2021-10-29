@@ -161,6 +161,69 @@
     flex-wrap: wrap;
     gap: 12px;
   }
+
+  &__radio-label {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: calc((100% - 1 * 12px) / 2);
+    cursor: pointer;
+  }
+
+  &__radio {
+    display: none;
+  }
+  &__radio + &__radio-pane {
+    display: block;
+    padding: 12px 0 16px;
+    width: 100%;
+    font-size: 1.5em;
+    text-align: center;
+    color: #127CE1;
+    background-color: #EFF7FF;
+    border-radius: 12px;
+    transition: background-color .3s ease-in-out, color .3s ease-in-out, font-weight .3s ease-in-out;
+    @include r(325) {
+      font-size: 16px;
+    }
+  }
+  &__radio:checked + &__radio-pane, &__radio:hover + &__radio-pane {
+    font-weight: 600;
+    color: #fff;
+    background-color: #2688E5;
+  }
+  &__input {
+    padding: 12px 0 16px;
+    font-size: 1.5em;
+    color: #127CE1;
+    text-align: center;
+    background-color: #EFF7FF;
+    border: none;
+    border-radius: 12px;
+    transition: background-color .3s ease-in-out, color .3s ease-in-out, font-weight .3s ease-in-out;
+    @include r(325) {
+      font-size: 16px;
+    }
+    &::placeholder {
+      text-align: center;
+      font-size: 1em;
+      color: #127CE1;
+      @include r(325) {
+      font-size: 16px;
+    }
+    }
+    &:hover {
+      outline: 1px solid #127CE1;
+    }
+    &:focus {
+      outline: 2px solid #127CE1;
+    }
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
   &__btn {
     display: flex;
     justify-content: center;

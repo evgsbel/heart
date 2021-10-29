@@ -188,4 +188,23 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
+// pay form
+
+const radioBtn = document.querySelectorAll('.js-radio');
+const sumText = document.querySelector('.js-pay-sum');
+const inputNum = document.querySelector('.js-input-number');
+
+radioBtn.forEach(function (el) {
+  let radioValue = el.value.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
+    el.addEventListener('click', function (event) {
+      sumText.innerHTML = radioValue + ' ₽';
+  });
+});
+
+inputNum.addEventListener('input', function() {
+  sumText.innerHTML = inputNum.value + ' ₽';
+});
+
+
+
 

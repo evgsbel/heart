@@ -164,4 +164,18 @@ for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function () {
     this.classList.toggle("is-open");
   });
-}
+} // pay form
+
+
+var radioBtn = document.querySelectorAll('.js-radio');
+var sumText = document.querySelector('.js-pay-sum');
+var inputNum = document.querySelector('.js-input-number');
+radioBtn.forEach(function (el) {
+  var radioValue = el.value.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
+  el.addEventListener('click', function (event) {
+    sumText.innerHTML = radioValue + ' ₽';
+  });
+});
+inputNum.addEventListener('input', function () {
+  sumText.innerHTML = inputNum.value + ' ₽';
+});
