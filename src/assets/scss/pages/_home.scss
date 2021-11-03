@@ -31,6 +31,9 @@
     -webkit-border-radius: 14px;
     -moz-border-radius: 14px;
     border-radius: 14px;
+    mask-image: paint(smooth-corners);
+    -webkit-mask-image: paint(smooth-corners);
+    --smooth-corners: 16;
     //min-height: 176px;
     box-sizing: border-box;
     @include r(1440) {
@@ -141,6 +144,9 @@
     color: #6D7276;
     background: #F7F7F7;
     border-radius: 8px;
+    mask-image: paint(smooth-corners);
+    -webkit-mask-image: paint(smooth-corners);
+    --smooth-corners: 7;
     transition: color .3s ease-in-out;
     max-width: max-content;
     svg {
@@ -160,7 +166,10 @@
   &__btns {
     flex-wrap: wrap;
     gap: 12px;
+
   }
+
+
 
   &__radio-label {
     position: relative;
@@ -168,6 +177,7 @@
     justify-content: center;
     width: calc((100% - 1 * 12px) / 2);
     cursor: pointer;
+    margin: 0;
   }
 
   &__radio {
@@ -175,13 +185,15 @@
   }
   &__radio + &__radio-pane {
     display: block;
-    padding: 12px 0 16px;
     width: 100%;
+    padding: 12px 0 16px;
     font-size: 1.5em;
+    border-radius: 12px;
+    mask-image: paint(smooth-corners);
+    -webkit-mask-image: paint(smooth-corners);
+    --smooth-corners: 8;
     text-align: center;
     color: #127CE1;
-    background-color: #EFF7FF;
-    border-radius: 12px;
     transition: background-color .3s ease-in-out, color .3s ease-in-out, font-weight .3s ease-in-out;
     @include r(325) {
       font-size: 16px;
@@ -200,6 +212,9 @@
     background-color: #EFF7FF;
     border: none;
     border-radius: 12px;
+    mask-image: paint(smooth-corners);
+    -webkit-mask-image: paint(smooth-corners);
+    --smooth-corners: 8;
     transition: background-color .3s ease-in-out, color .3s ease-in-out, font-weight .3s ease-in-out;
     @include r(325) {
       font-size: 16px;
@@ -209,8 +224,8 @@
       font-size: 1em;
       color: #127CE1;
       @include r(325) {
-      font-size: 16px;
-    }
+        font-size: 16px;
+      }
     }
     &:hover {
       outline: 1px solid #127CE1;
@@ -233,6 +248,9 @@
     color: #127CE1;
     background-color: #EFF7FF;
     border-radius: 12px;
+    mask-image: paint(smooth-corners);
+    -webkit-mask-image: paint(smooth-corners);
+    --smooth-corners: 8;
     transition: background-color .3s ease-in-out, color .3s ease-in-out, font-weight .3s ease-in-out;
     &.is-active,
     &:hover {
@@ -307,6 +325,9 @@
       }
     }
   }
+  &__submit {
+
+  }
 }
 
 // appeal
@@ -326,6 +347,10 @@
     background: linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(0deg, #F7FAFD, #F7FAFD), radial-gradient(2.8% 10.49% at 42.67% 99.46%, #99D4FF 0%, #4E91F5 100%), linear-gradient(99.4deg, #99CDFF 47.95%, #379EFF 51.08%);
     box-shadow: 8px 8px 95px rgba(0, 102, 255, 0.05), 8px 8px 36px rgba(24, 73, 131, 0.05);
     border-radius: 40px;
+    mask-image: paint(smooth-corners);
+    -webkit-mask-image: paint(smooth-corners);
+    --smooth-corners: 40;
+
     //&::after {
     //  content: '';
     //  position: absolute;
@@ -520,27 +545,46 @@
   @include r(1200) {
     margin-top: 60px;
   }
+  &__swiper {
+    padding: 0 8px 64px;
+  }
   &__item {
     position: relative;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin-top: 100px;
     padding: 32px;
     background: linear-gradient(0deg, #FFFFFF, #FFFFFF), radial-gradient(105.69% 109.42% at 88.35% 94.4%, #99D4FF 0%, #4E91F5 100%), linear-gradient(120.93deg, #99CDFF 14%, #379EFF 100.08%);
     box-shadow: -8px 8px 36px rgba(24, 73, 131, 0.07);
     border-radius: 8px;
-    transition: box-shadow .3s ease-in-out;
     @include r(1200) {
       margin-top: 60px;
     }
     &::after {
       content: '';
       position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), radial-gradient(105.69% 109.42% at 88.35% 94.4%, #99D4FF 0%, #4E91F5 100%);
+      background-blend-mode: overlay, normal;
+      opacity: 0;
+      transition: opacity .3s ease-in-out, transform .3s ease-in-out, box-shadow .3s ease-in-out;
+    }
+    &::before {
+      content: '';
+      position: absolute;
       top: -20px;
       right: 0;
       display: block;
       background-repeat: no-repeat;
+      z-index: 10;
+      transition: top .3s ease-in-out;
     }
-    &_01::after {
+    &_01::before {
       background-image: url('../img/community-icon-01.png');
       width: 76px;
       height: 85px;
@@ -548,9 +592,9 @@
         width: 50px;
         height: 50px;
         background-size: cover;
+      }
     }
-    }
-    &_02::after {
+    &_02::before {
       background-image: url('../img/community-icon-02.png');
       width: 84px;
       height: 84px;
@@ -558,9 +602,9 @@
         width: 50px;
         height: 50px;
         background-size: cover;
+      }
     }
-    }
-    &_03::after {
+    &_03::before {
       background-image: url('../img/community-icon-03.png');
       width: 90px;
       height: 84px;
@@ -568,16 +612,25 @@
         width: 60px;
         height: 54px;
         background-size: cover;
-    }
+      }
     }
     &:hover {
-      color: #fff;
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), radial-gradient(105.69% 109.42% at 88.35% 94.4%, #99D4FF 0%, #4E91F5 100%);
-      background-blend-mode: overlay, normal;
-      box-shadow: 0px 8px 56px rgba(27, 127, 243, 0.36);
-      h3 {
-        color: #fff;
+      box-shadow: none;
+      &::after {
+        opacity: 1;
+        box-shadow: 0px 8px 56px rgba(27, 127, 243, 0.36);
+        transform: scaleY(1.2);
       }
+      &::before {
+        top: -60px;
+      }
+      .community__descr,
+      .community__title {
+        z-index: 20;
+        color: #fff;
+        //transform: none;
+      }
+
     }
   }
   &__title {
@@ -658,6 +711,9 @@
       border-radius: 0;
       background: none;
       box-shadow: none;
+      mask-image: paint(smooth-corners);
+      -webkit-mask-image: paint(smooth-corners);
+      --smooth-corners: 40;
     }
   }
   &__text {
@@ -965,6 +1021,9 @@
     color: #127CE1;
     background: #EFF7FF;
     border-radius: 12px;
+    mask-image: paint(smooth-corners);
+    -webkit-mask-image: paint(smooth-corners);
+    --smooth-corners: 4;
     transition: background-color .3s ease-in-out, color .3s ease-in-out;
     &:hover {
       color: #fff;

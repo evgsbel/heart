@@ -504,7 +504,7 @@
             </div>
             <div class="row mt-5">
               <div class="col-lg-5 col-xl-5">
-                <div class="pay__btns d-flex">
+                <div class="pay__btns pay__btns_top d-flex mb-3">
                   <label for="frequency1" class="pay__radio-label">
                     <input type="radio" name="frequency" id="frequency1" class="pay__radio" checked>
                     <span class="pay__radio-pane">Ежемесячно</span>
@@ -513,7 +513,8 @@
                     <input type="radio" name="frequency" id="frequency2" class="pay__radio">
                     <span class="pay__radio-pane">Разово</span>
                   </label>
-        
+                </div>
+                <div class="pay__btns d-flex">
                   <label for="sum1" class="pay__radio-label">
                     <input type="radio" name="sum" id="sum1" value="500" class="pay__radio   js-radio">
                     <span class="pay__radio-pane">500 ₽</span>
@@ -531,8 +532,16 @@
                     <span class="pay__radio-pane">6 000 ₽</span>
                   </label>
         
-                  <input type="number" name="other-sum" class="pay__input w-100 js-input-number" placeholder="Другая сумма">
-                  <button class="btn-reset pay__btn w-100 is-active">Помочь Фонду</button>
+                  <input
+                    type="number"
+                    name="other-sum"
+                    class="pay__input w-100 js-input-number"
+                    placeholder="Другая сумма"
+                    maxlength="10"
+                    min="1"
+                    max="9999999999"
+                  >
+                  <button class="btn-reset pay__btn pay__submit w-100 is-active">Помочь Фонду</button>
                 </div>
         
                 <ul class="pay__systems d-flex">
@@ -566,13 +575,13 @@
                     <img src="assets/img/design-arrow.png" alt="">
                   </picture>
         
-                  Узнайте, на что идут деньги
+                  <span class="js-sum-decor">Узнайте, на что идут деньги</span>
                 </div>
               </div>
               <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
                 <div class="pay__result">
                   <p class="pay__result-sum js-pay-sum">3 200 ₽</p>
-                  <p class="pay__result-descr">одна консультация онколога</p>
+                  <p class="pay__result-descr js-sum-descr">одна консультация онколога</p>
                 </div>
               </div>
             </div>

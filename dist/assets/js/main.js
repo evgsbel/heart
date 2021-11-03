@@ -170,12 +170,32 @@ for (i = 0; i < acc.length; i++) {
 var radioBtn = document.querySelectorAll('.js-radio');
 var sumText = document.querySelector('.js-pay-sum');
 var inputNum = document.querySelector('.js-input-number');
+var sumDescr = document.querySelector('.js-sum-descr');
+var sumDecor = document.querySelector('.js-sum-decor');
 radioBtn.forEach(function (el) {
-  var radioValue = el.value.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
   el.addEventListener('click', function (event) {
-    sumText.innerHTML = radioValue + ' ₽';
+    sumText.innerHTML = el.value.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ') + ' ₽';
+    sumDecor.innerHTML = 'Узнайте, на что идут деньги';
+
+    if (el.value === '500') {
+      sumDescr.innerHTML = 'одна поездка на&nbsp;такси в&nbsp;медучреждение';
+    } else if (el.value === '2400') {
+      sumDescr.innerHTML = 'один день проживания в&nbsp;гостинице во&nbsp;время обследования';
+    } else if (el.value === '3200') {
+      sumDescr.innerHTML = 'одна консультация онколога';
+    } else if (el.value === '6000') {
+      sumDescr.innerHTML = 'одно исследование МРТ';
+    }
   });
 });
 inputNum.addEventListener('input', function () {
-  sumText.innerHTML = inputNum.value + ' ₽';
-});
+  if (this.value.length > 9) {
+    this.value = this.value.slice(0, 9);
+  }
+
+  sumText.innerHTML = inputNum.value.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ') + ' ₽';
+  sumDescr.innerHTML = 'ваш вклад поможет взрослым победить рак';
+  sumDecor.innerHTML = 'Сумма вашего перевода';
+}); // super ellipse
+
+if (CSS && 'paintWorklet' in CSS) CSS.paintWorklet.addModule('https://unpkg.com/smooth-corners');

@@ -22,6 +22,9 @@
     border-radius: 8px;
     font-feature-settings: 'salt' on, 'ss01' on;
     transition: color .3s ease-in-out;
+    mask-image: paint(smooth-corners);
+    -webkit-mask-image: paint(smooth-corners);
+    --smooth-corners: 8;
     &.is-active,
     &:hover {
       color: #000;

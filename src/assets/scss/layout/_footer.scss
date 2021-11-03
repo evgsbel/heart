@@ -85,6 +85,9 @@
     color: #fff;
     background-color: #505E6A;
     border-radius: 8px;
+    mask-image: paint(smooth-corners);
+    -webkit-mask-image: paint(smooth-corners);
+    --smooth-corners: 5;
     @include r(1600) {
       padding-left: 10px;
       padding-right: 10px;

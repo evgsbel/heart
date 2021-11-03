@@ -5,6 +5,9 @@
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
   border-radius: 12px;
+  mask-image: paint(smooth-corners);
+  -webkit-mask-image: paint(smooth-corners);
+  --smooth-corners: 6;
   &_white {
     background-color: #fff;
   }
