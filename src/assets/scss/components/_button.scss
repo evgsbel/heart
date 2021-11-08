@@ -4,10 +4,10 @@
 .button {
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
-  border-radius: 12px;
+  border-radius: 12%/50%;
   mask-image: paint(smooth-corners);
   -webkit-mask-image: paint(smooth-corners);
-  --smooth-corners: 6;
+  --smooth-corners: 8;
   &_white {
     background-color: #fff;
   }

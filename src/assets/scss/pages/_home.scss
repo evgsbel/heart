@@ -143,10 +143,10 @@
     line-height: 1;
     color: #6D7276;
     background: #F7F7F7;
-    border-radius: 8px;
+    border-radius: 3%/50%;
     mask-image: paint(smooth-corners);
     -webkit-mask-image: paint(smooth-corners);
-    --smooth-corners: 7;
+    --smooth-corners: 10;
     transition: color .3s ease-in-out;
     max-width: max-content;
     svg {
@@ -169,8 +169,6 @@
 
   }
 
-
-
   &__radio-label {
     position: relative;
     display: flex;
@@ -188,10 +186,10 @@
     width: 100%;
     padding: 12px 0 16px;
     font-size: 1.5em;
-    border-radius: 12px;
+    border-radius: 8%/50%;
     mask-image: paint(smooth-corners);
     -webkit-mask-image: paint(smooth-corners);
-    --smooth-corners: 8;
+    --smooth-corners: 10;
     text-align: center;
     color: #127CE1;
     transition: background-color .3s ease-in-out, color .3s ease-in-out, font-weight .3s ease-in-out;
@@ -211,11 +209,12 @@
     text-align: center;
     background-color: #EFF7FF;
     border: none;
-    border-radius: 12px;
+    border-radius: 5%/50%;
     mask-image: paint(smooth-corners);
     -webkit-mask-image: paint(smooth-corners);
-    --smooth-corners: 8;
+    --smooth-corners: 10;
     transition: background-color .3s ease-in-out, color .3s ease-in-out, font-weight .3s ease-in-out;
+    -moz-appearance:textfield;
     @include r(325) {
       font-size: 16px;
     }
@@ -247,10 +246,10 @@
     font-size: 1.5em;
     color: #127CE1;
     background-color: #EFF7FF;
-    border-radius: 12px;
+    border-radius: 5%/50%;
     mask-image: paint(smooth-corners);
     -webkit-mask-image: paint(smooth-corners);
-    --smooth-corners: 8;
+    --smooth-corners: 10;
     transition: background-color .3s ease-in-out, color .3s ease-in-out, font-weight .3s ease-in-out;
     &.is-active,
     &:hover {
@@ -885,8 +884,10 @@
 // partners
 
 .partners {
+  height: 700px;
   margin-top: 77px;
   position: relative;
+  overflow: hidden;
   &__descr {
     position: sticky;
     top: 150px;
@@ -965,6 +966,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 24px;
+    max-height: 100%;
+    height: 800px;
+    animation-fill-mode: backwards;
+    animation: auto-scroll 25s linear infinite;
     @include r(1200) {
       gap: 20px;
     }
@@ -988,6 +993,16 @@
       flex: 0 0 45%;
       text-align: center;
     }
+  }
+}
+
+
+@keyframes auto-scroll {
+  from {
+    transform: translate3d(0,0,0);
+  }
+  to {
+    transform: translate3d(0,-120%,0);
   }
 }
 
