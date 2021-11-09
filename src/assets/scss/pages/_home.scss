@@ -117,6 +117,20 @@
 
 //pay
 
+.highlight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: block;
+  background-color: #2688E5;
+  transition: all 0.3s;
+  border-radius: 8%/50%;
+  mask-image: paint(smooth-corners);
+  -webkit-mask-image: paint(smooth-corners);
+  --smooth-corners: 10;
+}
+
 .pay {
   margin-top: 144px;
   @include r(1200) {
@@ -166,16 +180,20 @@
   &__btns {
     flex-wrap: wrap;
     gap: 12px;
-
   }
 
   &__radio-label {
     position: relative;
     display: flex;
+    margin: 0;
     justify-content: center;
     width: calc((100% - 1 * 12px) / 2);
+    background-color: #EFF7FF;
+    border-radius: 5%/50%;
+    mask-image: paint(smooth-corners);
+    -webkit-mask-image: paint(smooth-corners);
+    --smooth-corners: 10;
     cursor: pointer;
-    margin: 0;
   }
 
   &__radio {
@@ -186,10 +204,6 @@
     width: 100%;
     padding: 12px 0 16px;
     font-size: 1.5em;
-    border-radius: 8%/50%;
-    mask-image: paint(smooth-corners);
-    -webkit-mask-image: paint(smooth-corners);
-    --smooth-corners: 10;
     text-align: center;
     color: #127CE1;
     transition: background-color .3s ease-in-out, color .3s ease-in-out, font-weight .3s ease-in-out;
@@ -197,7 +211,10 @@
       font-size: 16px;
     }
   }
-  &__radio:checked + &__radio-pane, &__radio:hover + &__radio-pane {
+  &__radio-label:hover  {
+    outline: 1px solid #127CE1;
+  }
+  &__radio:checked + &__radio-pane {
     font-weight: 600;
     color: #fff;
     background-color: #2688E5;
@@ -209,7 +226,7 @@
     text-align: center;
     background-color: #EFF7FF;
     border: none;
-    border-radius: 5%/50%;
+    border-radius: 2%/50%;
     mask-image: paint(smooth-corners);
     -webkit-mask-image: paint(smooth-corners);
     --smooth-corners: 10;
@@ -246,7 +263,7 @@
     font-size: 1.5em;
     color: #127CE1;
     background-color: #EFF7FF;
-    border-radius: 5%/50%;
+    border-radius: 5%/30%;
     mask-image: paint(smooth-corners);
     -webkit-mask-image: paint(smooth-corners);
     --smooth-corners: 10;
@@ -346,21 +363,18 @@
     background: linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(0deg, #F7FAFD, #F7FAFD), radial-gradient(2.8% 10.49% at 42.67% 99.46%, #99D4FF 0%, #4E91F5 100%), linear-gradient(99.4deg, #99CDFF 47.95%, #379EFF 51.08%);
     box-shadow: 8px 8px 95px rgba(0, 102, 255, 0.05), 8px 8px 36px rgba(24, 73, 131, 0.05);
     border-radius: 40px;
-    mask-image: paint(smooth-corners);
-    -webkit-mask-image: paint(smooth-corners);
-    --smooth-corners: 40;
-
-    //&::after {
-    //  content: '';
-    //  position: absolute;
-    //  right: 0;
-    //  bottom: 100px;
-    //  z-index: 10;
-    //  display: block;
-    //  width: 40px;
-    //  height: 81px;
-    //  background-image: url('../img/triangle.png');
-    //}
+    &::after {
+      content: '';
+      position: absolute;
+      right: -23px;
+      bottom: 5px;
+      z-index: 10;
+      display: block;
+      width: 40px;
+      height: 81px;
+      background-image: url('../img/triangle.svg');
+      background-repeat: no-repeat;
+    }
   }
   &__text {
     font-weight: 400;

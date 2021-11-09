@@ -198,4 +198,31 @@ inputNum.addEventListener('input', function () {
   sumDecor.innerHTML = 'Сумма вашего перевода';
 }); // super ellipse
 
-if (CSS && 'paintWorklet' in CSS) CSS.paintWorklet.addModule('https://unpkg.com/smooth-corners');
+if (CSS && 'paintWorklet' in CSS) CSS.paintWorklet.addModule('https://unpkg.com/smooth-corners'); // radioBackground
+
+var triggers = document.querySelectorAll('.js-radio-label');
+var highlight = document.createElement('span');
+highlight.classList.add('highlight');
+document.body.append(highlight);
+
+function highlightLink() {
+  var linkCoords = this.getBoundingClientRect();
+  console.log(linkCoords);
+  var coords = {
+    width: linkCoords.width,
+    height: linkCoords.height,
+    top: linkCoords.top + window.scrollY,
+    left: linkCoords.left + window.scrollX
+  };
+  highlight.style.width = "".concat(coords.width, "px");
+  highlight.style.height = "".concat(coords.height, "px");
+  highlight.style.transform = "translate(".concat(coords.left, "px, ").concat(coords.top, "px)");
+}
+
+triggers.forEach(function (a) {
+  return a.addEventListener('click', highlightLink);
+}); // From https://codepen.io/SJF
+
+triggers.forEach(function (a) {
+  return a.addEventListener('focus', highlightLink);
+});
