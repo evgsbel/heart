@@ -16,7 +16,7 @@ main {
 }
 
 body {
-  background-color: #fcfdff;
+  background-color: #fff;
   &.opened-menu {
     overflow: hidden;
   }
@@ -29,6 +29,15 @@ body {
   padding: 0 56px;
   @include r(768) {
     padding: 0 32px;
+  }
+  @include r(480) {
+    padding: 0 12px;
+  }
+}
+.row {
+  @include r(480) {
+    margin-left: -12px;
+    margin-right: -12px;
   }
 }
 
@@ -51,6 +60,7 @@ a {
   color: inherit;
   &:hover {
     text-decoration: none;
+    color: inherit;
   }
 }
 

@@ -3,7 +3,7 @@
     margin-top: 25px;
     display: flex;
     flex-wrap: wrap;
-    gap: 16px 40px;
+    gap: 16px;
     max-width: 530px;
     @include r(1680) {
       max-width: 100%;
@@ -13,13 +13,18 @@
   &__caption {
     color: #000;
   }
+  .tabs__item:nth-child(2) {
+    @include r(1440) {
+      margin-right: 50px;
+    }
+  }
   &__btn {
     padding: 14px 24px 16px;
     color: #6D7276;
     font-size: 1.25em;
     line-height: 1.4em;
     background-color: #F7F7F7;
-    border-radius: 8%/50%;
+    border-radius: 1%;
     font-feature-settings: 'salt' on, 'ss01' on;
     transition: color .3s ease-in-out;
     mask-image: paint(smooth-corners);

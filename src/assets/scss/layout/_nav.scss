@@ -20,9 +20,9 @@
     @include r(1200) {
       font-weight: 500;
     }
-    &:hover {
-      text-shadow: 0 0 1px #000, 0 0 1px #000;
-    }
+    //&:hover {
+    //  text-shadow: 0 0 1px #000, 0 0 1px #000;
+    //}
   }
   @include r(1200) {
     display: none;

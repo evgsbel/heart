@@ -9,20 +9,6 @@ $(document).ready(function () {
   //endRemoveIf(production)
 });
 
-// fixed header
-
-$(function () {
-  let header = $('.header');
-
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 1) {
-      header.addClass('header_fixed');
-    } else {
-      header.removeClass('header_fixed');
-    }
-  });
-});
-
 
 // tabs
 
@@ -51,10 +37,9 @@ document.addEventListener('DOMContentLoaded', function () {
 // hero slider
 const swiperHero = new Swiper('.hero__swiper', {
   // Optional parameters
-
   spaceBetween: 14,
   speed: 500,
-  watchOverflow: true,
+  watchOverflow: false,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -72,7 +57,7 @@ const swiperHero = new Swiper('.hero__swiper', {
       slidesPerView: 3.5,
     },
     1440: {
-      slidesPerView: 3,
+      slidesPerView: 2.6,
     },
     1600: {
       slidesPerView: 4,
@@ -80,24 +65,35 @@ const swiperHero = new Swiper('.hero__swiper', {
   }
 });
 
-// community slider
+// pay slider
 const swiperPay = new Swiper('.pay__swiper', {
   // Optional parameters
-  slidesPerView: 'auto',
+  watchOverflow: false,
   speed: 500,
   spaceBetween: 5,
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1.5,
+    },
+    768: {
+      slidesPerView: 'auto',
+    },
+  }
 });
 
 // help slider
 const swiperHelp = new Swiper('.help__swiper', {
   // Optional parameters
   speed: 800,
+  spaceBetween: 80,
   navigation: {
     nextEl: ".help-button-next",
     prevEl: ".help-button-prev",
   },
   breakpoints: {
     1440: {
+      spaceBetween: 0,
       slidesPerView: 1,
     },
     1600: {
@@ -127,14 +123,35 @@ const swiperCommunity = new Swiper('.community__swiper', {
 // face slider
 const swiperFaceFirst = new Swiper('.face__swiper', {
   // Optional parameters
-  speed: 500,
+  speed: 800,
   slidesPerView: 1.2,
+  // effect: "creative",
+  // creativeEffect: {
+  //   prev: {
+  //     // will set `translateZ(-400px)` on previous slides
+  //     translate: [0, 0, -400],
+  //     opacity: 0,
+  //   },
+  //   next: {
+  //     // will set `translateX(100%)` on next slides
+  //     translate: ['100%', 0, 0],
+  //     opacity: 1
+  //   },
+  // },
+  // effect: "fade",
+  // fadeEffect: {
+  //   crossFade: true
+  // },
   navigation: {
     nextEl: ".face-button-next",
     prevEl: ".face-button-prev",
   },
   breakpoints: {
     320: {
+      // effect: "fade",
+      // fadeEffect: {
+      //   crossFade: true
+      // },
       slidesPerView: 1.2,
       spaceBetween: 16
     },
@@ -199,7 +216,7 @@ const sumDecor = document.querySelector('.js-sum-decor');
 radioBtn.forEach(function (el) {
     el.addEventListener('click', function (event) {
       sumText.innerHTML = el.value.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ') + ' ₽';
-      sumDecor.innerHTML = 'Узнайте, на что идут деньги';
+      sumDecor.innerHTML = 'Узнайте, на&nbsp;что&nbsp;идут&nbsp;деньги';
       if (el.value === '500') {
         sumDescr.innerHTML = 'одна поездка на&nbsp;такси в&nbsp;медучреждение';
       } else if (el.value === '2400') {
@@ -257,6 +274,41 @@ triggers.forEach(a => a.addEventListener('click', highlightLink));
 
 // From https://codepen.io/SJF
 triggers.forEach(a => a.addEventListener('focus', highlightLink));
+
+
+
+// fixed header
+
+$(document).ready(function() {
+
+  function stickySidebar() {
+    var scrollDistance = $(document).scrollTop(),
+      headerHeight = $('.header').outerHeight(true),
+      // sidebarHeight = $('aside').outerHeight(true),
+      footerOffsetTop = $('.partners').offset().top,
+      $header = $('header');
+
+    if( scrollDistance >= headerHeight) {
+      $header.addClass('header_fixed');
+      $header.removeClass('header_hide');
+    } else {
+      $header.removeClass('header_fixed');
+    }
+
+    if ( scrollDistance + headerHeight  >= footerOffsetTop + 300) {
+      $header.removeClass('header_fixed');
+      $header.addClass('header_hide');
+    }
+
+  }
+  stickySidebar();
+
+  $(document).scroll(function() {
+    stickySidebar();
+  });
+
+});
+
 
 
 

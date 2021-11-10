@@ -4,13 +4,23 @@
   @include r(768) {
     justify-content: center;
   }
+  @include r(480) {
+    justify-content: space-between;
+  }
   &__item {
     flex: 0 0 auto;
+    width: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 10px;
-    border-radius: 12px;
     background: #374451;
+    mask-image: paint(smooth-corners);
+    -webkit-mask-image: paint(smooth-corners);
+    --smooth-corners: 4;
+    @include r(560) {
+      width: 30px;
+      height: 30px;
+    }
   }
 }

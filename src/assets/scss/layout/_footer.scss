@@ -6,6 +6,10 @@
   padding-top: 54px;
   padding-bottom: 64px;
   background-color: #3D4C5A;
+  border-radius: 16px 16px 0px 0px;
+  @include r(480) {
+    padding-bottom: 32px;
+  }
   &__social {
     margin-top: 40px;
   }
@@ -17,6 +21,9 @@
     }
     @include r(768) {
       text-align: center;
+    }
+    @include r(480) {
+      margin: 0;
     }
   }
   &__caption {
@@ -35,11 +42,14 @@
     color: #fff;
     font-size: 1.2em;
     line-height: 1.4em;
+    @include r(480) {
+      font-size: 12px;
+    }
   }
   &__phone {
     position: relative;
     display: block;
-    margin-bottom: 1em;
+    margin-bottom: 16px;
     font-weight: 500;
     font-size: 1.5em;
     line-height: 1.4em;
@@ -49,45 +59,49 @@
       font-size: 1.25em;
     }
     @include r(480) {
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
+      font-size: 18px;
     }
     span {
+      font-weight: 400;
       font-size: 0.8em;
       line-height: 1.4em;
       opacity: 0.6;
+      @include r(480) {
+        font-size: 14px;
+      }
     }
     i {
       position: absolute;
       top: 50%;
       left: 0;
-      transform: translateY(-20%);
-      font-size: 50px;
+      display: block;
+      width: 17px;
+      height: 17px;
+      background-image: url('../img/star.png');
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
       @include r(1440) {
         font-size: 40px;
-        transform: translateY(-10%);
       }
     }
     &:hover {
       color: #fff;
     }
     &_pl {
-      padding-left: 30px;
+      padding-left: 19px;
       margin-bottom: 0;
     }
   }
   &__btn {
     margin-top: 24px;
-    padding: 11px 24px 14px;
+    padding: 12px 24px 15px;
     font-size: 1.2em;
     line-height: 1.4em;
     color: #fff;
     background-color: #505E6A;
-    border-radius: 8%/50%;
     mask-image: paint(smooth-corners);
     -webkit-mask-image: paint(smooth-corners);
-    --smooth-corners: 8;
+    --smooth-corners: 11;
     @include r(1600) {
       padding-left: 10px;
       padding-right: 10px;
@@ -105,9 +119,7 @@
       display: none;
     }
   }
-
 }
-
 .footer-nav {
   &__item {
     margin-bottom: 1em;
@@ -123,17 +135,8 @@
     @include r(1440) {
       font-size: 1.25em;
     }
-  }
-  &_wr {
-    @include r(600) {
-      flex: 0 0 50%;
-      max-width: 50%;
-    }
     @include r(480) {
-      flex: 0 0 100%;
-      max-width: 100%;
-      text-align: center;
-      margin-bottom: 15px;
+      font-size: 16px;
     }
   }
 }
@@ -153,7 +156,6 @@
 
 .mobile-only {
   display: none;
-  text-align: center;
   @include r(480) {
     display: block;
   }

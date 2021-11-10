@@ -22,14 +22,35 @@
 
 .face-slider-nav {
   position: absolute;
-  top: 55%;
+  top: 320px;
   right: 0;
   z-index: 10;
   display: flex;
   @include r(1440) {
-    top: 45%;
+    top: 255px;
   }
   @include r(1200) {
+    display: none;
+  }
+}
+
+.hero {
+  &__swiper-navigation {
+    display: none;
+    @include r(1600) {
+      display: flex;
+    }
+  }
+  &__slider-navigation {
+    @include r(1440) {
+      order: -1;
+    }
+  }
+}
+
+.help-button-prev,
+.help-button-next {
+  @include r(480) {
     display: none;
   }
 }

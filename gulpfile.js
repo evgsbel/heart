@@ -105,6 +105,8 @@ function compileSCSS() {
       includePaths: bourbon
     }).on('error', sass.logError))
     .pipe(autoprefixer('last 2 versions'))
+    .pipe(sourcemaps.init())
+    .pipe(sourcemaps.write('./'))
     .pipe(dest('dist/assets/css'))
     .pipe(browserSync.stream());
 }
@@ -175,6 +177,7 @@ function watchFiles() {
   watch(['src/assets/scss/**/*.scss', 'src/assets/scss/*.scss'], compileSCSS);
   watch('src/assets/js/*.js', compileJS);
   watch('src/assets/img/**/*', copyImages);
+  watch('src/assets/img/**/*', copyImagesMin);
   watch('src/assets/img/svg/**.svg', svgSprites);
 }
 
@@ -205,6 +208,16 @@ function copyImages() {
   return src('src/assets/img/**/*.+(png|jpg|jpeg|gif|svg|ico)')
     .pipe(newer('dist/assets/img/'))
     .pipe(imagemin())
+    .pipe(dest('dist/assets/img/'))
+    .pipe(browserSync.stream());
+}
+
+// COPIES IMAGE TO DIST
+function copyImagesMin() {
+  log(chalk.red.bold('---------------COPY IMAGES---------------'));
+  return src('src/assets/img/**/*.+(png|jpg|jpeg|gif|svg|ico)')
+    .pipe(newer('dist/assets/img/'))
+    // .pipe(imagemin())
     .pipe(dest('dist/assets/img/'))
     .pipe(browserSync.stream());
 }
@@ -337,7 +350,7 @@ function minifyCSS() {
 }
 
 // DEVELOPMENT
-exports.development = series(cleanDist, copyFont, copyImages, svgSprites, compileHTML, compileSCSS, cssVendor, jsVendor, compileJS, resetPages, prettyHTML,  browserSyncInit, watchFiles);
+exports.development = series(cleanDist, copyFont, copyImagesMin, svgSprites, compileHTML, compileSCSS, cssVendor, jsVendor, compileJS, resetPages, prettyHTML,  browserSyncInit, watchFiles);
 
 // PRODUCTION
 exports.production = series(cleanDist, copyFont, copyImages, svgSprites, compileHTML, compileSCSS, cssVendor, purgeCSS, minifyCSS, jsVendor, concatScripts, minifyScripts, renameSources, prettyHTML, generateDocs, browserSyncInit);
