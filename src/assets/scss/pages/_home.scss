@@ -1102,6 +1102,12 @@
   &__title {
     color: #127CE1;
   }
+  &__img {
+    @include r(480) {
+      display: block;
+      margin: 0 auto;
+    }
+  }
   &__text {
     margin-top: 24px;
     max-width: 615px;

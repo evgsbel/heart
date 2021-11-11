@@ -1,0 +1,164 @@
+//wards nav
+
+.wards-nav {
+  &__list {
+    display: flex;
+    margin-top: 26px;
+  }
+  &__item {
+    position: relative;
+    padding-left: 24px;
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+  &__link {
+    font-size: 18px;
+    line-height: 1.4;
+    transition: text-shadow .3s ease-in-out;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -24px;
+      display: block;
+      width: 0;
+      height: 2px;
+      background-color: #2688E5;
+      transition: width .3s ease-in-out;
+    }
+    &.is-active,
+    &:hover {
+      color: #127ce1;
+      text-shadow: 0 0 1px #127ce1, 0 0 1px #127ce1;
+    }
+    &:hover::after,
+    &.is-active::after {
+      width: 120%;
+    }
+  }
+}
+
+// wards-phone
+
+.wards-phone {
+  margin-top: 80px;
+  &__title {
+    span {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 1.5;
+      color: #6D7276;
+    }
+  }
+  &__list {
+    display: flex;
+    margin-top: 24px;
+    gap: 16px;
+  }
+  &__item {
+    padding: 24px 56px 24px 24px;
+    background: #EFF7FF;
+    mask-image: paint(smooth-corners);
+    -webkit-mask-image: paint(smooth-corners);
+    --smooth-corners: 8;
+  }
+  &__caption {
+    line-height: 1.4;
+  }
+  &__link {
+    margin-top: 4px;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 1.4;
+    letter-spacing: 0.05em;
+    color: #127CE1;
+    &_star {
+      position: relative;
+      padding-left: 21px;
+      i {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        display: block;
+        width: 20px;
+        height: 21px;
+        background-image: url('../img/wards-phone-star.png');
+        background-repeat: no-repeat;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+    }
+    &:hover {
+      color: #127CE1;
+    }
+  }
+}
+
+//wards-types
+
+.wards-types {
+  margin-top: 56px;
+  &__title {
+    margin-bottom: 32px;
+  }
+  &__list {
+    gap: 18px 0;
+  }
+  &__wr {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  &__item {
+    padding: 24px 24px 68px 24px;
+    min-height: 239px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right bottom;
+    mask-image: paint(smooth-corners);
+    -webkit-mask-image: paint(smooth-corners);
+    --smooth-corners: 15;
+  }
+  &__caption {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.4;
+  }
+  &__descr {
+    margin-top: 8px;
+    font-size: 20px;
+    line-height: 140%;
+  }
+  &__link {
+    margin-top: 24px;
+    display: block;
+    font-size: 18px;
+    line-height: 140%;
+    width: max-content;
+    color: #000;
+    svg {
+      margin-left: 4px;
+      width: 19px;
+      height: 14px;
+      stroke: currentColor;
+      transition: transform .3s ease-in-out;
+    }
+    &:hover {
+      svg {
+        transform: translateX(8px);
+      }
+    }
+  }
+}
+
+//wards appeal
+
+.wards-appeal {
+  &__title {
+    margin-bottom: 24px;
+  }
+  &__btn {
+    margin-top: 32px;
+    padding: 16px 65px 20px;
+  }
+}
