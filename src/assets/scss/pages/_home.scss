@@ -936,7 +936,9 @@
   background-size: cover;
   color: #fff;
   @include r(768) {
+    height: 100%;
     margin-top: 60px;
+    background-image: url('../img/face-background-md.png');
   }
   @include r(480) {
     padding: 40px 0 56px;
@@ -1035,9 +1037,11 @@
     line-height: 1.16em;
     color: #2688E5;
     margin-left: 60px;
+    @include r(768) {
+      margin: 48px 0 48px 60px;
+    }
     @include r(480) {
       max-width: 150px;
-      margin: 48px 0 48px 180px;
       font-size: 20px;
     }
     &::before {
@@ -1091,7 +1095,7 @@
 .volunteering {
   &__descr {
     margin-top: 155px;
-    @include r(480) {
+    @include r(768) {
       margin-top: 0;
     }
   }
@@ -1154,13 +1158,10 @@
       z-index: -1;
       display: block;
       min-height: 460px;
-      width: calc(100% + 100px);
+      width: calc(100% + 50px);
       border-radius: 16px 0 0 16px;
       //background: radial-gradient(66.11% 246.65% at 83.89% 92.34%, #99D4FF 0%, #4E91F5 100%);
       background-image: url('../img/partners-background.png');
-      @include r(1500) {
-        width: 100%;
-      }
       @include r(600) {
         width: 100%;
         background: radial-gradient(173.97% 78.31% at 50% 6.03%, #99D4FF 0%, #4E91F5 100%);
@@ -1169,9 +1170,25 @@
     }
   }
   &__right {
+    padding: 50px 0;
+    height: 560px;
+    background: linear-gradient(0deg, #FFFFFF, #FFFFFF), #F7FAFD;
+    border-radius: 48px;
+    overflow: hidden;
+    margin-left: 50px;
+    mask-image: paint(smooth-corners);
+    -webkit-mask-image: paint(smooth-corners);
+    --smooth-corners: 10;
+    @include r(1440) {
+      margin-left: 0;
+    }
+    @include r(768) {
+      height: 460px;
+    }
     @include r(600) {
       order: -1;
       margin-left: 0;
+      height: 320px;
     }
   }
   &__left {
@@ -1183,6 +1200,7 @@
     margin-top: 24px;
     font-size: 1.25em;
     line-height: 1.5em;
+    max-width: 560px;
     @include r(1440) {
       max-width: 560px;
     }
@@ -1211,24 +1229,16 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     gap: 24px;
     max-height: 100%;
-    height: 800px;
+    justify-content: center;
     animation-fill-mode: backwards;
-    animation: auto-scroll 25s linear infinite;
+    animation: auto-scroll 18s linear infinite;
     @include r(1200) {
       gap: 20px;
     }
     @include r(768) {
       gap: 16px;
-    }
-    @include r(600) {
-      background: linear-gradient(0deg, #FFFFFF, #FFFFFF), #F7FAFD;
-      border-radius: 34.2857px;
-      padding-bottom: 50px;
-      height: 320px;
-      overflow-y: scroll;
     }
 
   }
@@ -1243,7 +1253,7 @@
     -webkit-mask-image: paint(smooth-corners);
     --smooth-corners: 10;
     background-color: #F7FAFD;
-    @include r(480) {
+    @include r(768) {
       width: 120px;
       height: 120px;
       padding: 8px;
@@ -1257,7 +1267,7 @@
     transform: translate3d(0,0,0);
   }
   to {
-    transform: translate3d(0,-120%,0);
+    transform: translate3d(0,-335%,0);
   }
 }
 
@@ -1283,6 +1293,11 @@
     @include r(1200) {
       margin: 0 auto;
     }
+    @include r(480) {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 0;
+    }
   }
   &__btn {
     padding: 12px 32px 14px;
@@ -1301,6 +1316,10 @@
     }
     @include r(1366) {
       font-size: 1.125em;
+    }
+    @include r(480) {
+      width: 100%;
+      --smooth-corners: 14;
     }
   }
 }

@@ -20,7 +20,7 @@
       <div class="container">
         <div class="row header__inner">
           <div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
-            <a href="" class="logo d-flex">
+            <a href="" class="logo">
               <svg class="logo__img">
                 <use xlink:href="assets/img/sprite.svg#logo"></use>
               </svg>
@@ -46,6 +46,9 @@
                   <use xlink:href="assets/img/sprite.svg#icon-search"></use>
                 </svg>
               </button>
+                <label for="search" class="mobile-nav__label">
+                  <input type="search" class="mobile-nav__input" id="search" placeholder="Поиск по сайту">
+                </label>
               </div>
               <a href="tel:88003505785" class="header__phone">8 800 350 57 85</a>
               <button class="btn-reset button  header__btn-help">Нужна помощь</button>
@@ -74,9 +77,12 @@
             <use xlink:href="assets/img/sprite.svg#icon-search"></use>
           </svg>
         </button>
+          <label for="search" class="mobile-nav__label">
+            <input type="search" class="mobile-nav__input" id="search" placeholder="Поиск по сайту">
+          </label>
         </div>
-        <a href="tel:88003505785" class="header__phone">8 800 350 57 85</a>
-        <button class="btn-reset close">
+        <a href="tel:88003505785" class="header__phone">8 800 350 57 85 <span>горячая линия</span></a>
+        <button class="btn-reset close mobile-nav__close">
           <svg width="16" height="16">
             <use xlink:href="assets/img/sprite.svg#icon-close"></use>
           </svg>
@@ -117,7 +123,7 @@
       </ul>
     
       <div class="mobile-nav__btns">
-        <button class="btn-reset button mobile-nav__btn mobile-nav__btn_blue">Помочь Фонду</button>
+        <button class="btn-reset button mobile-nav__btn mobile-nav__btn_blue">Хочу помочь</button>
         <button class="btn-reset button mobile-nav__btn">Нужна помощь</button>
       </div>
     
