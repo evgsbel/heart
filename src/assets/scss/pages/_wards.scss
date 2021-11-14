@@ -1,21 +1,68 @@
+.is-wards-page, .is-faq-page, .is-events-page {
+  .header {
+    background-color: #fff;
+    &_fixed {
+      @include r(600) {
+        background-color: transparent;
+      }
+    }
+  }
+  .burger {
+    color: #000;
+  }
+  .logo__img,
+  .logo__text {
+    fill: #13264A;
+    color: #13264A;
+    opacity: 0.45;
+  }
+}
+
 //wards nav
 
 .wards-nav {
+  padding: 22px 0 26px;
+  background-color: #f5f8fb;
+  @include r(600) {
+    margin-top: 80px;
+  }
   &__list {
     display: flex;
-    margin-top: 26px;
+    @include r(600) {
+      flex-wrap: wrap;
+      gap: 16px;
+    }
   }
   &__item {
     position: relative;
     padding-left: 24px;
+    @include r(600) {
+      background-color: #F7F7F7;
+      padding: 10px 16px 12px;
+      text-align: center;
+      max-height: 60px;
+      mask-image: paint(smooth-corners);
+      -webkit-mask-image: paint(smooth-corners);
+      --smooth-corners: 16;
+    }
     &:not(:last-child) {
       margin-right: 24px;
+      @include r(600) {
+        margin-right: 8px;
+      }
     }
   }
   &__link {
     font-size: 18px;
     line-height: 1.4;
     transition: text-shadow .3s ease-in-out;
+    @include r(1200) {
+      font-size: 16px;
+    }
+    @include r(600) {
+      font-size: 14px;
+      color: #939CA5;
+    }
     &::after {
       content: '';
       position: absolute;
@@ -26,16 +73,32 @@
       height: 2px;
       background-color: #2688E5;
       transition: width .3s ease-in-out;
+      @include r(600) {
+        content: none;
+      }
     }
     &.is-active,
     &:hover {
       color: #127ce1;
       text-shadow: 0 0 1px #127ce1, 0 0 1px #127ce1;
+      @include r(600) {
+        color: #000;
+        text-shadow: none;
+      }
     }
     &:hover::after,
     &.is-active::after {
-      width: 120%;
+      width: 110%;
     }
+  }
+  &__review-link {
+    display: block;
+    margin-left: auto;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.4;
+    text-align: right;
+    color: #127ce1;
   }
 }
 
@@ -43,18 +106,35 @@
 
 .wards-phone {
   margin-top: 80px;
+  &__inn {
+    @include r(600) {
+      padding: 24px 16px 0;
+      background-color: #EFF7FF;
+      mask-image: paint(smooth-corners);
+      -webkit-mask-image: paint(smooth-corners);
+      --smooth-corners: 20;
+    }
+  }
   &__title {
     span {
       font-weight: 400;
       font-size: 18px;
       line-height: 1.5;
       color: #6D7276;
+      @include r(600) {
+        display: block;
+        margin-top: 8px;
+      }
     }
   }
   &__list {
     display: flex;
     margin-top: 24px;
     gap: 16px;
+    @include r(600) {
+      flex-wrap: wrap;
+      padding-bottom: 44px;
+    }
   }
   &__item {
     padding: 24px 56px 24px 24px;
@@ -62,6 +142,11 @@
     mask-image: paint(smooth-corners);
     -webkit-mask-image: paint(smooth-corners);
     --smooth-corners: 8;
+    @include r(600) {
+      padding: 0;
+      width: 100%;
+      mask-image: none;
+    }
   }
   &__caption {
     line-height: 1.4;
@@ -93,6 +178,21 @@
       color: #127CE1;
     }
   }
+  &__btn {
+    display: none;
+    margin-top: -20px;
+    padding: 14px 96px 18px;
+    width: 100%;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.4;
+    mask-image: paint(smooth-corners);
+    -webkit-mask-image: paint(smooth-corners);
+    --smooth-corners: 18;
+    @include r(600) {
+      display: block;
+    }
+  }
 }
 
 //wards-types
@@ -110,6 +210,7 @@
     padding-right: 8px;
   }
   &__item {
+    position: relative;
     padding: 24px 24px 68px 24px;
     min-height: 239px;
     background-repeat: no-repeat;
@@ -118,6 +219,9 @@
     mask-image: paint(smooth-corners);
     -webkit-mask-image: paint(smooth-corners);
     --smooth-corners: 15;
+    @include r(1200) {
+      padding: 20px 16px;
+    }
   }
   &__caption {
     font-weight: 500;
@@ -136,6 +240,10 @@
     line-height: 140%;
     width: max-content;
     color: #000;
+    @include r(1200) {
+      visibility: hidden;
+      height: 0;
+    }
     svg {
       margin-left: 4px;
       width: 19px;
@@ -147,6 +255,14 @@
       svg {
         transform: translateX(8px);
       }
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
   }
 }
@@ -160,5 +276,450 @@
   &__btn {
     margin-top: 32px;
     padding: 16px 65px 20px;
+    @include r(600) {
+      width: 100%;
+      font-size: 18px;
+    }
+  }
+  .appeal__text {
+    @include r(1440) {
+      font-size: 20px;
+    }
+    @include r(768) {
+      font-size: 16px;
+    }
+  }
+  .appeal__wr {
+    @include r(768) {
+      align-items: flex-start;
+    }
+  }
+  .appeal__img {
+    @include r(768) {
+      margin-left: 20px;
+      text-align: right;
+    }
+  }
+  .appeal__signature_post {
+    @include r(768) {
+      font-size: 22px;
+      text-align: right;
+    }
+  }
+  .appeal__signature_name {
+    @include r(768) {
+      text-align: right;
+    }
+  }
+  .appeal__img {
+    @include r(600) {
+      display: none;
+    }
   }
 }
+
+
+// ------------- faq-page --------------- //
+
+// faq
+
+.faq {
+  margin-top: 56px;
+  &__wrapper {
+    &:not(:last-child) {
+      margin-bottom: 56px;
+    }
+  }
+  &__inner {
+    &:first-child {
+      margin-top: 40px;
+    }
+  }
+  &__item {
+    border-bottom: 1px solid rgba(174, 193, 210, 0.5);
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+  &__question {
+    position: relative;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 24px;
+    width: 100%;
+    text-align: left;
+    svg {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 21px;
+      height: 9px;
+      transition: transform .3s ease-in-out;
+      transform: rotate(180deg);
+    }
+    &.collapsed {
+      svg {
+        transform: rotate(0);
+      }
+    }
+  }
+  &__answer {
+    background-color: #f7fafd;
+    &-inn {
+      padding: 32px;
+    }
+  }
+}
+
+// ask
+
+.ask {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  text-align: center;
+  background: #FFFFFF;
+  box-shadow: 8px 8px 36px rgba(24, 73, 131, 0.07);
+  border-radius: 16px;
+  &_fixed {
+    position: fixed;
+    top: 100px;
+  }
+  &_hide {
+    opacity: 0;
+  }
+  &__img {
+    display: block;
+    margin-bottom: 24px;
+  }
+  &__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  &__btn {
+    margin-top: 24px;
+    padding: 16px 24px 20px;
+    color: #127ce1;
+    background-color: #eff7ff;
+    mask-image: paint(smooth-corners);
+    -webkit-mask-image: paint(smooth-corners);
+    --smooth-corners: 18;
+  }
+}
+
+
+// mobile ask
+
+.mobile-ask {
+  margin-top: 65px;
+  @include r(600) {
+    background-color: #eff7ff;
+  }
+  &__wr {
+    padding: 24px 23px 26px;
+    background: #fff;
+    box-shadow: 8px 8px 36px rgba(24, 73, 131, 0.07);
+    border-radius: 16px;
+    @include r(600) {
+      justify-content: center;
+      text-align: center;
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+  &__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.4;
+    @include r(600) {
+      margin-top: 24px;
+    }
+  }
+  &__btn {
+    padding: 16px 78px 20px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.4;
+    color: #127CE1;
+    background-color: #eff7ff;
+    mask-image: paint(smooth-corners);
+    -webkit-mask-image: paint(smooth-corners);
+    --smooth-corners: 10;
+    @include r(600) {
+      margin-top: 24px;
+      background-color: #2688E5;
+      color: #fff;
+    }
+  }
+}
+
+.is-faq-page {
+  .bottom-btns {
+    margin-top: 56px;
+  }
+}
+
+// -------------- events page ------------------- //
+
+// events
+
+.calendar {
+  margin-top: 56px;
+}
+
+.calendar {
+  &__inner {
+    margin-top: 48px;
+  }
+  &__month-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__month,
+  &__year {
+    font-size: 20px;
+    line-height: 24px;
+    color: #6D7276;
+    cursor: pointer;
+    mask-image: paint(smooth-corners);
+    -webkit-mask-image: paint(smooth-corners);
+    --smooth-corners: 8;
+    @include r(480) {
+      max-width: 35px;
+      font-size: 18px;
+    }
+  }
+  &__year {
+    display: none;
+    margin-left: 8px;
+  }
+  &__month-item {
+    display: flex;
+    justify-content: space-around;
+    transition: color .3s ease-in-out, background-color .3s ease-in-out, padding .3s ease-in-out;
+    &.is-active,
+    &.swiper-slide-active {
+      .calendar__month,
+      .calendar__year {
+        display: block;
+        padding: 12px 38px 16px;
+        color: #127CE1;
+        background-color: #EFF7FF;
+        @include r(600) {
+          padding-right: 16px;
+          padding-left: 16px;
+        }
+        @include r(480) {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  &__month-next,
+  &__month-prev {
+    position: absolute;
+    top: 50%;
+    z-index: 15;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  &__month-next {
+    right: 15px;
+  }
+  &__month-prev {
+    left: 15px;
+  }
+
+  &__day-list {
+    margin-top: 32px;
+    margin-bottom: 24px;
+    padding: 0 36px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__day {
+    padding: 0 24px;
+    font-size: 20px;
+    line-height: 24px;
+    @include r(600) {
+      font-size: 18px;
+      padding: 0;
+    }
+  }
+  &__week {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 36px;
+    mask-image: paint(smooth-corners);
+    -webkit-mask-image: paint(smooth-corners);
+    --smooth-corners: 10;
+    &:nth-child(odd) {
+      background-color: #F5F8FB;
+    }
+    &:not(:first-child) {
+      margin-top: 8px;
+    }
+  }
+
+  &__number {
+    flex: 0 0 65px;
+    text-align: center;
+    padding: 16px 24px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    cursor: pointer;
+    transition: color .3s ease-in-out, background-color .3s ease-in-out;
+    mask-image: paint(smooth-corners);
+    -webkit-mask-image: paint(smooth-corners);
+    --smooth-corners: 4;
+    @include r(600) {
+      font-size: 18px;
+      padding: 0;
+      flex: 0 0 20px;
+    }
+    &.is-active {
+      color: #127CE1;
+    }
+    &:hover,
+    &.is-focus {
+      color: #fff;
+      background-color: #2688E5;
+    }
+  }
+  &__date {
+    margin-top: 60px;
+    font-size: 28px;
+    line-height: 34px;
+    span {
+      font-weight: 600;
+      font-size: 28px;
+    }
+  }
+  &__events-list {
+    margin-top: 32px;
+  }
+  &__events-item {
+    &:not(:first-child) {
+      margin-top: 32px;
+    }
+  }
+  &__time,
+  &__place,
+  &__area {
+    font-size: 20px;
+    line-height: 150%;
+    color: #6D7276;
+  }
+  &__area {
+    margin-left: 24px;
+  }
+  &__caption {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  &__theme {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  &__link {
+    display: block;
+    margin-top: 16px;
+    font-size: 20px;
+    line-height: 1.4;
+    color: #2688E5;
+    svg {
+      margin-left: 4px;
+      width: 19px;
+      height: 14px;
+      stroke: currentColor;
+      -webkit-transition: -webkit-transform .3s ease-in-out;
+      transition: -webkit-transform .3s ease-in-out;
+      transition: transform .3s ease-in-out;
+    }
+    &:hover {
+      text-decoration: none;
+      color: #2688E5;
+      svg {
+        transform: translateX(8px);
+      }
+    }
+  }
+}
+
+
+// gallery
+
+.gallery {
+  margin-top: 80px;
+  &__item {
+    margin-top: 48px;
+  }
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__swiper {
+    margin-top: 24px;
+    width: calc(100vw - (100vw - 100%) / 2);
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 34px;
+    max-width: 95%;
+  }
+  &__link {
+    font-size: 20px;
+    line-height: 1.4;
+    color: #2688E5;
+    svg {
+      margin-left: 4px;
+      width: 19px;
+      height: 14px;
+      stroke: currentColor;
+      transition: transform .3s ease-in-out;
+    }
+    &:hover {
+      color: #2688E5;
+      svg {
+        transform: translateX(7px);
+      }
+    }
+  }
+  &__date {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+  &__navigation {
+    display: flex;
+    align-items: center;
+  }
+  &__btn {
+    display: block;
+    margin: 106px auto 0;
+    padding: 16px 182px 20px;
+    font-size: 20px;
+    line-height: 1.4;
+    color: #127CE1;
+    background-color: #eff7ff;
+    mask-image: paint(smooth-corners);
+    -webkit-mask-image: paint(smooth-corners);
+    --smooth-corners: 16;
+    max-width: 100%;
+    @include r(600) {
+      padding-right: 32px;
+      padding-left: 32px;
+    }
+  }
+}
+

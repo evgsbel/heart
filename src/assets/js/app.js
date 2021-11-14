@@ -60,17 +60,17 @@ $(document).ready(function() {
     var scrollDistance = $(document).scrollTop(),
       headerHeight = $('.header').outerHeight(true),
       // sidebarHeight = $('aside').outerHeight(true),
-      footerOffsetTop = $('.footer').offset().top,
+      footerOffsetTop = $('.js-stop-header').offset().top,
       $header = $('header');
 
-    if( scrollDistance >= headerHeight - 100) {
+    if( scrollDistance >= headerHeight) {
       $header.addClass('header_fixed');
       $header.removeClass('header_hide');
     } else {
       $header.removeClass('header_fixed');
     }
 
-    if ( scrollDistance + headerHeight  >= footerOffsetTop - 500) {
+    if ( scrollDistance + headerHeight  >= footerOffsetTop) {
       $header.removeClass('header_fixed');
       $header.addClass('header_hide');
     }

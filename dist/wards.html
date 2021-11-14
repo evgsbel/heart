@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>wards</title>
+		<title>Wards Page</title>
     <!-- build:css -->
     <link rel="stylesheet" href="assets/vendor/css/animate.css">
     <link rel="stylesheet" href="assets/vendor/css/swiper.min.css">
@@ -15,12 +15,12 @@
     <link rel="stylesheet" href="assets/css/rtl.css">
 </head>
 
-<body>
+<body class="is-wards-page">
     <header class="header js-header">
       <div class="container">
         <div class="row header__inner">
           <div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
-            <a href="" class="logo">
+            <a href="/" class="logo">
               <svg class="logo__img">
                 <use xlink:href="assets/img/sprite.svg#logo"></use>
               </svg>
@@ -31,7 +31,7 @@
             <nav class="nav">
                 <ul class="nav__list d-flex">
                   <li class="nav__item"><a href="" class="nav__link">Фонд</a></li>
-                  <li class="nav__item"><a href="" class="nav__link">Подопечным</a></li>
+                  <li class="nav__item"><a href="/wards.html" class="nav__link">Подопечным</a></li>
                   <li class="nav__item"><a href="" class="nav__link">Волонтерам</a></li>
                   <li class="nav__item"><a href="" class="nav__link">Сборы</a></li>
                   <li class="nav__item"><a href="" class="nav__link">Контакты</a></li>
@@ -52,7 +52,7 @@
               </div>
               <a href="tel:88003505785" class="header__phone">8 800 350 57 85</a>
               <button class="btn-reset button  header__btn-help">Нужна помощь</button>
-              <button class="btn-reset button  header__btn">Хочу помочь</button>
+              <button class="btn-reset button button_blue  header__btn">Хочу помочь</button>
             </div>
           </div>
           <button class="btn-reset burger">
@@ -65,7 +65,7 @@
     </header>
     <div class="mobile-nav">
       <div class="d-flex mobile-nav__top">
-        <a href="" class="logo d-flex">
+        <a href="/" class="logo d-flex">
           <svg class="logo__img">
             <use xlink:href="assets/img/sprite.svg#logo"></use>
           </svg>
@@ -104,16 +104,16 @@
           </ul>
         </li>
         <li class="nav__item sub">
-          <a href="" class="nav__link">Подопечным</a>
+          <a href="wards.html" class="nav__link">Подопечным</a>
           <ul class="sub__list">
             <li class="sub__item">
-              <a href="" class="sub__link">История</a>
+              <a href="wards.html" class="sub__link">Виды помощи</a>
             </li>
             <li class="sub__item">
-              <a href="" class="sub__link">Публикации</a>
+              <a href="events.html" class="sub__link">Мероприятия</a>
             </li>
             <li class="sub__item">
-              <a href="" class="sub__link">Отчеты</a>
+              <a href="faq.html" class="sub__link">FAQ</a>
             </li>
           </ul>
         </li>
@@ -132,37 +132,52 @@
     
     
     <main role="main" class="main">
-        <div class="container">
-          <div class="row">
-            <nav class="col-xl-12 wards-nav">
-              <ul class="wards-nav__list">
-                <li class="wards-nav__item is-active">
-                  <button class="btn-reset wards-nav__link wards-nav__link_active is-active">Виды помощи</button>
-                </li>
-                <li class="wards-nav__item">
-                  <button class="btn-reset wards-nav__link">Мероприятия</button>
-                </li>
-                <li class="wards-nav__item">
-                  <button class="btn-reset wards-nav__link">Часто задаваемые вопросы</button>
-                </li>
-              </ul>
-            </nav>
-            <div class="col-xl-12 wards-phone">
-              <h2 class="title-h2 wards-phone__title">Горячая линия
-                <span>бесплатно, ежедневно, анонимно c 8:00 до 22:00 мск</span></h2>
-              <ul class="wards-phone__list">
-                <li class="wards-phone__item">
-                  <p class="wards-phone__caption">стандартный номер</p>
-                  <a href="tel:88003505785" class="wards-phone__link">8 800 350 57 85</a>
-                </li>
-                <li class="wards-phone__item">
-                  <p class="wards-phone__caption">короткий номер</p>
-                  <a href="*5785" class="wards-phone__link wards-phone__link_star"><i></i>5785</a>
-                </li>
-              </ul>
+        
+        <section class="wards-nav">
+          <div class="container">
+            <div class="row">
+              <nav class="col-xl-10 wards-nav__swiper">
+                <ul class="wards-nav__list">
+                  <li class="wards-nav__item is-active">
+                    <a href="" class="btn-reset wards-nav__link wards-nav__link_active is-active">Виды помощи</a>
+                  </li>
+                  <li class="wards-nav__item">
+                    <a href="events.html" class="btn-reset wards-nav__link">Мероприятия</a>
+                  </li>
+                  <li class="wards-nav__item">
+                    <a href="faq.html" class="btn-reset wards-nav__link">Часто задаваемые вопросы</a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="col-xl-2 col-lg-2 col-md-2">
+                <a href="" class="wards-nav__review-link">Оставить отзыв</a>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
+        <section class="wards-phone">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-12 wards-phone__wr">
+                <div class="wards-phone__inn">
+                  <h2 class="title-h2 wards-phone__title">Горячая линия
+                    <span>бесплатно, ежедневно, анонимно c 8:00 до 22:00 мск</span></h2>
+                  <ul class="wards-phone__list">
+                    <li class="wards-phone__item">
+                      <p class="wards-phone__caption">стандартный номер</p>
+                      <a href="tel:88003505785" class="wards-phone__link">8 800 350 57 85</a>
+                    </li>
+                    <li class="wards-phone__item">
+                      <p class="wards-phone__caption">короткий номер</p>
+                      <a href="tel:*5785" class="wards-phone__link wards-phone__link_star"><i></i>5785</a>
+                    </li>
+                  </ul>
+                </div>
+                <button class="btn-reset button button_blue wards-phone__btn">Позвонить</button>
+              </div>
+            </div>
+          </div>
+        </section>
         <section class="wards-types">
           <div class="container">
             <div class="row">
@@ -171,8 +186,9 @@
               </div>
             </div>
             <div class="row wards-types__list">
-              <div class="col-xl-2 wards-types__wr">
-                <div class="wards-types__item" style="background-color: #D8FFD3; background-image: url('assets/img/wt-01.png');">
+              <div class="col-xl-2 col-lg-3 col-md-3 col-sm-4 col-6 order-sm-1  order-md-0 order-1 wards-types__wr">
+                <div class="wards-types__item"
+                     style="background-color: #D8FFD3; background-image: url('assets/img/wt-01.png');">
                   <h3 class="wards-types__caption">Психолог</h3>
                   <p class="wards-types__descr">10 бесплатных
                     консультаций</p>
@@ -183,8 +199,9 @@
                   </a>
                 </div>
               </div>
-              <div class="col-xl-2 wards-types__wr">
-                <div class="wards-types__item" style="background-color: #FFEDDE; background-image: url('assets/img/wt-02.png');">
+              <div class="col-xl-2 col-lg-3 col-md-3 col-sm-4 col-6 order-sm-4  order-md-0 order-2 wards-types__wr">
+                <div class="wards-types__item"
+                     style="background-color: #FFEDDE; background-image: url('assets/img/wt-02.png');">
                   <h3 class="wards-types__caption">Юрист</h3>
                   <p class="wards-types__descr">Бесплатные
                     консультации</p>
@@ -195,8 +212,9 @@
                   </a>
                 </div>
               </div>
-              <div class="col-xl-4 wards-types__wr">
-                <div class="wards-types__item" style="background-color: #C5F3FE; background-image: url('assets/img/wt-03.png');">
+              <div class="col-xl-4 col-lg-6 col-md-6 col-sm-8 col-12 order-sm-2  order-md-0 order-3 wards-types__wr">
+                <div class="wards-types__item"
+                     style="background-color: #C5F3FE; background-image: url('assets/img/wt-03.png');">
                   <h3 class="wards-types__caption">Равное консультирование</h3>
                   <p class="wards-types__descr">Совет от того, кто уже победил рак</p>
                   <a href="" class="wards-types__link">Подробнее
@@ -206,8 +224,9 @@
                   </a>
                 </div>
               </div>
-              <div class="col-xl-4 wards-types__wr">
-                <div class="wards-types__item" style="background-color: #D1FFFC; background-image: url('assets/img/wt-04.png');">
+              <div class="col-xl-4 col-lg-6 col-md-6 col-sm-8 col-12 order-sm-3  order-md-0 order-6 wards-types__wr">
+                <div class="wards-types__item"
+                     style="background-color: #D1FFFC; background-image: url('assets/img/wt-04.png');">
                   <h3 class="wards-types__caption">Поиск специалиста и учреждения</h3>
                   <p class="wards-types__descr">Помощь в маршрутизации</p>
                   <a href="" class="wards-types__link">Подробнее
@@ -217,8 +236,9 @@
                   </a>
                 </div>
               </div>
-              <div class="col-xl-3 wards-types__wr">
-                <div class="wards-types__item" style="background-color: #F1DAFF; background-image: url('assets/img/wt-05.png');">
+              <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6 6order-sm-5  order-md-0 order-4 wards-types__wr">
+                <div class="wards-types__item"
+                     style="background-color: #F1DAFF; background-image: url('assets/img/wt-05.png');">
                   <h3 class="wards-types__caption">Второе мнение</h3>
                   <p class="wards-types__descr">Для выбора эффективного лечения</p>
                   <a href="" class="wards-types__link">Подробнее
@@ -228,8 +248,9 @@
                   </a>
                 </div>
               </div>
-              <div class="col-xl-3 wards-types__wr">
-                <div class="wards-types__item" style="background-color: #DEF1FF; background-image: url('assets/img/wt-06.png');">
+              <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6 order-sm-6  order-md-0 order-5 wards-types__wr">
+                <div class="wards-types__item"
+                     style="background-color: #DEF1FF; background-image: url('assets/img/wt-06.png');">
                   <h3 class="wards-types__caption">Диагностика</h3>
                   <p class="wards-types__descr">Для уточнения диагноза</p>
                   <a href="" class="wards-types__link">Подробнее
@@ -239,8 +260,9 @@
                   </a>
                 </div>
               </div>
-              <div class="col-xl-2 wards-types__wr">
-                <div class="wards-types__item" style="background-color: #FFF59D; background-image: url('assets/img/wt-07.png');">
+              <div class="col-xl-2 col-lg-3 col-md-3 col-sm-4 col-6 order-sm-7  order-md-0 order-8 wards-types__wr">
+                <div class="wards-types__item"
+                     style="background-color: #FFF59D; background-image: url('assets/img/wt-07.png');">
                   <h3 class="wards-types__caption">Такси</h3>
                   <p class="wards-types__descr">До места лечения
                     или проживания</p>
@@ -251,10 +273,11 @@
                   </a>
                 </div>
               </div>
-              <div class="col-xl-4 wards-types__wr">
-                <div class="wards-types__item" style="background-color: #F7FF9D; background-image: url('assets/img/wt-08.png');">
+              <div class="col-xl-4 col-lg-6 col-md-6 col-sm-8 order-sm-8 col-12 order-md-0 order-7 wards-types__wr">
+                <div class="wards-types__item"
+                     style="background-color: #F7FF9D; background-image: url('assets/img/wt-08.png');">
                   <h3 class="wards-types__caption">Продуктовая корзина</h3>
-                  <p class="wards-types__descr"Доставка продуктов для подопечных в трудной жизненной ситуации></p>
+                  <p class="wards-types__descr">Доставка продуктов для подопечных в трудной жизненной ситуации</p>
                   <a href="" class="wards-types__link">Подробнее
                     <svg>
                       <use xlink:href="assets/img/sprite.svg#link-arrow"></use>
@@ -262,8 +285,9 @@
                   </a>
                 </div>
               </div>
-              <div class="col-xl-4 wards-types__wr">
-                <div class="wards-types__item" style="background-color: #D3FAFF; background-image: url('assets/img/wt-09.png');">
+              <div class="col-xl-4 col-lg-3 col-md-3 col-sm-4 col-6 order-sm-10 order-md-0 order-9 wards-types__wr">
+                <div class="wards-types__item"
+                     style="background-color: #D3FAFF; background-image: url('assets/img/wt-09.png');">
                   <h3 class="wards-types__caption">Трансфер</h3>
                   <p class="wards-types__descr">Оплата перелета или проезда на поезде</p>
                   <a href="" class="wards-types__link">Подробнее
@@ -273,8 +297,9 @@
                   </a>
                 </div>
               </div>
-              <div class="col-xl-4 wards-types__wr">
-                <div class="wards-types__item" style="background-color: #E9FFD3; background-image: url('assets/img/wt-010.png');">
+              <div class="col-xl-4 col-lg-6 col-md-6 col-sm-8 col-12 order-sm-9  order-md-0 order-10 wards-types__wr">
+                <div class="wards-types__item"
+                     style="background-color: #E9FFD3; background-image: url('assets/img/wt-010.png');">
                   <h3 class="wards-types__caption">Проживание</h3>
                   <p class="wards-types__descr">Оплата гостиницы в другом городе</p>
                   <a href="" class="wards-types__link">Подробнее
@@ -284,8 +309,9 @@
                   </a>
                 </div>
               </div>
-              <div class="col-xl-4 wards-types__wr">
-                <div class="wards-types__item" style="background-color: #D5E4FF; background-image: url('assets/img/wt-011.png');">
+              <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 order-sm-11 order-md-0 order-11 wards-types__wr">
+                <div class="wards-types__item"
+                     style="background-color: #D5E4FF; background-image: url('assets/img/wt-011.png');">
                   <h3 class="wards-types__caption">Трудоустройство</h3>
                   <p class="wards-types__descr">Для людей с инвалидностью
                     в следствие онкодиагноза</p>
@@ -305,7 +331,7 @@
               <div class="col-xl-12">
                 <h2 class="title-h2 wards-appeal__title">Сообщество подопечных</h2>
               </div>
-              <div class="col-sm-9 col-md-8 col-lg-9 col-xl-5">
+              <div class="col-12 col-sm-7 col-md-7 col-lg-6 col-xl-5">
                 <article class="">
                   <p class="appeal__text">В фонде «Огромное сердце» есть сообщество для людей с онкологическим диагнозом
                     и их близких. Здесь вы сможете получить поддержку или наоборот поддержать других людей, которые проходят
@@ -316,10 +342,11 @@
                 </article>
                 <button class="button btn-reset button_blue wards-appeal__btn">Вступить в чат</button>
               </div>
-              <div class="col-sm-3 col-md-4 col-lg-3 col-xl-3 ml-auto">
+              <div class="col-sm-5 col-md-5 col-lg-5 col-xl-3 ml-auto">
                 <div class="appeal__img">
                   <picture>
-                    <source srcset="assets/img/appeal-01-600.png" media="(max-width: 600px)">
+                    <source srcset="assets/img/appeal-02-768.png" media="(max-width: 768px)">
+                    <source srcset="assets/img/appeal-02-1440.png" media="(max-width: 1440px)">
                     <img src="assets/img/appeal-02.png" alt="">
                   </picture>
                   <div class="appeal__signature--mobile">
@@ -337,6 +364,7 @@
         </section>
         
     </main>
+    <div class="js-stop-header"></div>
     <footer class="footer footer_desktop">
       <div class="container">
         <div class="row">

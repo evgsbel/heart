@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>main</title>
+		<title>Home Page</title>
     <!-- build:css -->
     <link rel="stylesheet" href="assets/vendor/css/animate.css">
     <link rel="stylesheet" href="assets/vendor/css/swiper.min.css">
@@ -15,12 +15,12 @@
     <link rel="stylesheet" href="assets/css/rtl.css">
 </head>
 
-<body>
+<body class="is-index-page">
     <header class="header js-header">
       <div class="container">
         <div class="row header__inner">
           <div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
-            <a href="" class="logo">
+            <a href="/" class="logo">
               <svg class="logo__img">
                 <use xlink:href="assets/img/sprite.svg#logo"></use>
               </svg>
@@ -31,7 +31,7 @@
             <nav class="nav">
                 <ul class="nav__list d-flex">
                   <li class="nav__item"><a href="" class="nav__link">Фонд</a></li>
-                  <li class="nav__item"><a href="" class="nav__link">Подопечным</a></li>
+                  <li class="nav__item"><a href="/wards.html" class="nav__link">Подопечным</a></li>
                   <li class="nav__item"><a href="" class="nav__link">Волонтерам</a></li>
                   <li class="nav__item"><a href="" class="nav__link">Сборы</a></li>
                   <li class="nav__item"><a href="" class="nav__link">Контакты</a></li>
@@ -52,7 +52,7 @@
               </div>
               <a href="tel:88003505785" class="header__phone">8 800 350 57 85</a>
               <button class="btn-reset button  header__btn-help">Нужна помощь</button>
-              <button class="btn-reset button  header__btn">Хочу помочь</button>
+              <button class="btn-reset button button_blue  header__btn">Хочу помочь</button>
             </div>
           </div>
           <button class="btn-reset burger">
@@ -65,7 +65,7 @@
     </header>
     <div class="mobile-nav">
       <div class="d-flex mobile-nav__top">
-        <a href="" class="logo d-flex">
+        <a href="/" class="logo d-flex">
           <svg class="logo__img">
             <use xlink:href="assets/img/sprite.svg#logo"></use>
           </svg>
@@ -104,16 +104,16 @@
           </ul>
         </li>
         <li class="nav__item sub">
-          <a href="" class="nav__link">Подопечным</a>
+          <a href="wards.html" class="nav__link">Подопечным</a>
           <ul class="sub__list">
             <li class="sub__item">
-              <a href="" class="sub__link">История</a>
+              <a href="wards.html" class="sub__link">Виды помощи</a>
             </li>
             <li class="sub__item">
-              <a href="" class="sub__link">Публикации</a>
+              <a href="events.html" class="sub__link">Мероприятия</a>
             </li>
             <li class="sub__item">
-              <a href="" class="sub__link">Отчеты</a>
+              <a href="faq.html" class="sub__link">FAQ</a>
             </li>
           </ul>
         </li>
@@ -1308,6 +1308,7 @@
         </section>
         
     </main>
+    <div class="js-stop-header"></div>
     <footer class="footer footer_desktop">
       <div class="container">
         <div class="row">

@@ -1,0 +1,361 @@
+---
+layout: default
+title: Events Page
+script: wards
+---
+
+<section class="wards-nav">
+  <div class="container">
+    <div class="row">
+      <nav class="col-xl-10 col-lg-10 col-md-10 wards-nav__swiper">
+        <ul class="wards-nav__list">
+          <li class="wards-nav__item is-active">
+            <a href="wards.html" class="btn-reset wards-nav__link">Виды помощи</a>
+          </li>
+          <li class="wards-nav__item">
+            <a href="events.html" class="btn-reset wards-nav__link is-active">Мероприятия</a>
+          </li>
+          <li class="wards-nav__item">
+            <a href="faq.html" class="btn-reset wards-nav__link">Часто задаваемые вопросы</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="col-xl-2 col-lg-2 col-md-2 d-none d-md-block">
+        <a href="" class="wards-nav__review-link">Оставить отзыв</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="calendar">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12">
+        <h2 class="title-h2 calendar__title">Календарь мероприятий</h2>
+      </div>
+      <div class="col-xl-5 col-lg-6 col-md-12">
+        <div class="calendar__inner">
+
+          <!-- Месяц/год -->
+          <div class="calendar__swiper swiper">
+            <ul class="calendar__month-list swiper-wrapper">
+              <li class="calendar__month-item swiper-slide">
+                <span class="calendar__month">Январь</span>
+                <span class="calendar__year">2021</span>
+              </li>
+              <li class="calendar__month-item swiper-slide ">
+                <span class="calendar__month">Февраль</span>
+                <span class="calendar__year">2021</span>
+              </li>
+              <li class="calendar__month-item swiper-slide">
+                <span class="calendar__month">Март</span>
+                <span class="calendar__year">2021</span>
+              </li>
+              <li class="calendar__month-item swiper-slide">
+                <span class="calendar__month">Апрель</span>
+                <span class="calendar__year">2021</span>
+              </li>
+              <li class="calendar__month-item swiper-slide ">
+                <span class="calendar__month">Май</span>
+                <span class="calendar__year">2021</span>
+              </li>
+              <li class="calendar__month-item swiper-slide">
+                <span class="calendar__month">Июнь</span>
+                <span class="calendar__year">2021</span>
+              </li>
+              <li class="calendar__month-item swiper-slide">
+                <span class="calendar__month">Июль</span>
+                <span class="calendar__year">2021</span>
+              </li>
+              <li class="calendar__month-item swiper-slide ">
+                <span class="calendar__month">Август</span>
+                <span class="calendar__year">2021</span>
+              </li>
+              <li class="calendar__month-item swiper-slide">
+                <span class="calendar__month">Сентябрь</span>
+                <span class="calendar__year">2021</span>
+              </li>
+              <li class="calendar__month-item swiper-slide">
+                <span class="calendar__month">Октябрь</span>
+                <span class="calendar__year">2021</span>
+              </li>
+              <li class="calendar__month-item swiper-slide">
+                <span class="calendar__month">Ноябрь</span>
+                <span class="calendar__year">2021</span>
+              </li>
+              <li class="calendar__month-item swiper-slide">
+                <span class="calendar__month">Декабрь</span>
+                <span class="calendar__year">2021</span>
+              </li>
+            </ul>
+            <div class="calendar-button-next calendar__month-next">
+              <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 13L7 7L1 1" stroke="#6D7276" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="calendar-button-prev calendar__month-prev">
+              <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 13L1 7L7 1" stroke="#6D7276" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <!-- Месяц/год END-->
+
+          <!-- День -->
+          <ul class="calendar__day-list">
+            <li class="calendar__day">пн</li>
+            <li class="calendar__day">вт</li>
+            <li class="calendar__day">ср</li>
+            <li class="calendar__day">чт</li>
+            <li class="calendar__day">пт</li>
+            <li class="calendar__day">сб</li>
+            <li class="calendar__day">вс</li>
+          </ul>
+          <!-- День END-->
+
+          <!-- Недели -->
+          <ul class="calendar__week">
+            <li class="calendar__number">&nbsp;</li>
+            <li class="calendar__number">&nbsp;</li>
+            <li class="calendar__number">&nbsp;</li>
+            <li class="calendar__number">&nbsp;</li>
+            <li class="calendar__number">1</li>
+            <li class="calendar__number">2</li>
+            <li class="calendar__number">3</li>
+          </ul>
+          <ul class="calendar__week">
+            <li class="calendar__number is-active is-focus ">4</li>
+            <li class="calendar__number">5</li>
+            <li class="calendar__number">6</li>
+            <li class="calendar__number">7</li>
+            <li class="calendar__number">8</li>
+            <li class="calendar__number">9</li>
+            <li class="calendar__number">10</li>
+          </ul>
+          <ul class="calendar__week">
+            <li class="calendar__number">11</li>
+            <li class="calendar__number">12</li>
+            <li class="calendar__number">13</li>
+            <li class="calendar__number">14</li>
+            <li class="calendar__number is-active">15</li>
+            <li class="calendar__number">16</li>
+            <li class="calendar__number">17</li>
+          </ul>
+          <ul class="calendar__week">
+            <li class="calendar__number">18</li>
+            <li class="calendar__number">19</li>
+            <li class="calendar__number">20</li>
+            <li class="calendar__number">21</li>
+            <li class="calendar__number">22</li>
+            <li class="calendar__number is-active">23</li>
+            <li class="calendar__number">24</li>
+          </ul>
+          <ul class="calendar__week">
+            <li class="calendar__number">25</li>
+            <li class="calendar__number is-active">26</li>
+            <li class="calendar__number">27</li>
+            <li class="calendar__number">28</li>
+            <li class="calendar__number">29</li>
+            <li class="calendar__number">30</li>
+            <li class="calendar__number">31</li>
+          </ul>
+          <!-- Недели END-->
+        </div>
+      </div>
+      <div class="col-xl-5 col-lg-5 col-md-12 offset-lg-1">
+        <div class="calendar__date">События на <span>4 октября</span></div>
+        <ul class="calendar__events-list">
+          <li class="calendar__events-item">
+            <p class="calendar__time">
+              12:00–13:00
+              <span class="calendar__place">мск</span>
+              <span class="calendar__area">Zoom</span>
+            </p>
+            <p class="calendar__caption">Онлайн встреча группы взаимопомощи</p>
+            <p class="calendar__theme">Тема: «Самооценка»</p>
+            <a href="" class="calendar__link">
+              О мероприятии
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#link-arrow"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="calendar__events-item">
+            <p class="calendar__time">
+              12:00–13:00
+              <span class="calendar__place">мск</span>
+              <span class="calendar__area">Zoom</span>
+            </p>
+            <p class="calendar__caption">Онлайн встреча группы взаимопомощи</p>
+            <p class="calendar__theme">Тема: «Самооценка»</p>
+            <a href="" class="calendar__link">
+              О мероприятии
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#link-arrow"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12">
+        <h2 class="title-h2">Галерея</h2>
+      </div>
+    </div>
+    <!--    Item -->
+    <div class="row gallery__item">
+      <div class="col-xl-12">
+        <div class="gallery__heading">
+          <h3 class="gallery__caption">Beauty Day</h3>
+          <p class="gallery__date">24 ноября 2019</p>
+        </div>
+        <div class="swiper gallery__swiper">
+          <div class="galley__wrapper galley__wrapper-01 swiper-wrapper">
+            <img src="assets/img/ev-01.jpg" alt="" class="gallery__img swiper-slide">
+            <img src="assets/img/ev-02.jpg" alt="" class="gallery__img swiper-slide">
+            <img src="assets/img/ev-03.jpg" alt="" class="gallery__img swiper-slide">
+            <img src="assets/img/ev-04.jpg" alt="" class="gallery__img swiper-slide">
+            <img src="assets/img/ev-05.jpg" alt="" class="gallery__img swiper-slide">
+            <img src="assets/img/ev-06.jpg" alt="" class="gallery__img swiper-slide">
+            <img src="assets/img/ev-07.jpg" alt="" class="gallery__img swiper-slide">
+            <img src="assets/img/ev-08.jpg" alt="" class="gallery__img swiper-slide">
+          </div>
+          <div class="gallery__bottom">
+            <a href="" class="gallery__link">
+              К мероприятию
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#link-arrow"></use>
+              </svg>
+            </a>
+            <div class="gallery__navigation">
+              <div class="gallery-button-prev slider-navigation slider-navigation_prev">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#sl-prev"></use>
+                </svg>
+              </div>
+              <div class="gallery-button-next slider-navigation slider-navigation_next">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#sl-next"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--    Item END -->
+    <!--    Item -->
+    <div class="row gallery__item">
+      <div class="col-xl-12">
+        <div class="gallery__heading">
+          <h3 class="gallery__caption">Психологическая группа</h3>
+          <p class="gallery__date">23 июня 2019</p>
+        </div>
+        <div class="swiper gallery__swiper">
+          <div class="galley__wrapper galley__wrapper-02 swiper-wrapper">
+            <img src="assets/img/ev-09.jpg" alt="" class="gallery__img swiper-slide">
+            <img src="assets/img/ev-010.jpg" alt="" class="gallery__img swiper-slide">
+            <img src="assets/img/ev-011.jpg" alt="" class="gallery__img swiper-slide">
+            <img src="assets/img/ev-012.jpg" alt="" class="gallery__img swiper-slide">
+            <img src="assets/img/ev-013.jpg" alt="" class="gallery__img swiper-slide">
+          </div>
+          <div class="gallery__bottom">
+            <a href="" class="gallery__link">
+              К мероприятию
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#link-arrow"></use>
+              </svg>
+            </a>
+            <div class="gallery__navigation">
+              <div class="gallery-button-prev slider-navigation slider-navigation_prev">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#sl-prev"></use>
+                </svg>
+              </div>
+              <div class="gallery-button-next slider-navigation slider-navigation_next">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#sl-next"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--    Item END -->
+    <!--    Item -->
+    <div class="row gallery__item">
+      <div class="col-xl-12">
+        <div class="gallery__heading">
+          <h3 class="gallery__caption">Мастер-класс по питанию</h3>
+          <p class="gallery__date">3 мая 2019</p>
+        </div>
+        <div class="swiper gallery__swiper">
+          <div class="galley__wrapper galley__wrapper-03 swiper-wrapper">
+            <img src="assets/img/ev-014.jpg" alt="" class="gallery__img swiper-slide">
+            <img src="assets/img/ev-015.jpg" alt="" class="gallery__img swiper-slide">
+            <img src="assets/img/ev-016.jpg" alt="" class="gallery__img swiper-slide">
+            <img src="assets/img/ev-017.jpg" alt="" class="gallery__img swiper-slide">
+            <img src="assets/img/ev-018.jpg" alt="" class="gallery__img swiper-slide">
+          </div>
+          <div class="gallery__bottom">
+            <a href="" class="gallery__link">
+              К мероприятию
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#link-arrow"></use>
+              </svg>
+            </a>
+            <div class="gallery__navigation">
+              <div class="gallery-button-prev slider-navigation slider-navigation_prev">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#sl-prev"></use>
+                </svg>
+              </div>
+              <div class="gallery-button-next slider-navigation slider-navigation_next">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#sl-next"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--    Item END -->
+    <div class="row">
+      <div class="col-xl-12">
+        <button class="btn-reset gallery__btn">Показать еще мероприятия</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bottom-btns">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xl-12">
+        <div class="d-flex">
+          <div class="bottom-btns__sum ">
+            <button class="btn-reset bottom-btns__btn">500 <span>₽</span></button>
+            <button class="btn-reset bottom-btns__btn">2400 <span>₽</span></button>
+            <button class="btn-reset bottom-btns__btn">3200 <span>₽</span></button>
+            <button class="btn-reset bottom-btns__btn">6000 <span>₽</span></button>
+            <button class="btn-reset bottom-btns__btn">Другая сумма</button>
+          </div>
+          <div class="bottom-btns__submit">
+            <button class="btn-reset bottom-btns__btn bottom-btns__btn_blue">Хочу помочь</button>
+            <button class="btn-reset bottom-btns__btn">Нужна помощь</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+

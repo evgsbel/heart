@@ -16935,7 +16935,7 @@ h3 {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   /* line 497, src/assets/scss/pages/_home.scss */
   .appeal__signature_name::after {
     content: none;
@@ -16947,14 +16947,14 @@ h3 {
   display: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   /* line 515, src/assets/scss/pages/_home.scss */
   .appeal__signature--mobile {
     display: block;
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   /* line 521, src/assets/scss/pages/_home.scss */
   .appeal__signature--desktop {
     display: none;
@@ -18299,26 +18299,94 @@ h3 {
   padding-bottom: 20px;
 }
 
-/* line 4, src/assets/scss/pages/_wards.scss */
+/* line 2, src/assets/scss/pages/_wards.scss */
+.is-wards-page .header, .is-faq-page .header, .is-events-page .header {
+  background-color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 4, src/assets/scss/pages/_wards.scss */
+  .is-wards-page .header_fixed, .is-faq-page .header_fixed, .is-events-page .header_fixed {
+    background-color: transparent;
+  }
+}
+
+/* line 10, src/assets/scss/pages/_wards.scss */
+.is-wards-page .burger, .is-faq-page .burger, .is-events-page .burger {
+  color: #000;
+}
+
+/* line 13, src/assets/scss/pages/_wards.scss */
+.is-wards-page .logo__img,
+.is-wards-page .logo__text, .is-faq-page .logo__img,
+.is-faq-page .logo__text, .is-events-page .logo__img,
+.is-events-page .logo__text {
+  fill: #13264A;
+  color: #13264A;
+  opacity: 0.45;
+}
+
+/* line 23, src/assets/scss/pages/_wards.scss */
+.wards-nav {
+  padding: 22px 0 26px;
+  background-color: #f5f8fb;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 23, src/assets/scss/pages/_wards.scss */
+  .wards-nav {
+    margin-top: 80px;
+  }
+}
+
+/* line 29, src/assets/scss/pages/_wards.scss */
 .wards-nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 26px;
 }
 
-/* line 8, src/assets/scss/pages/_wards.scss */
+@media only screen and (max-width: 600px) {
+  /* line 29, src/assets/scss/pages/_wards.scss */
+  .wards-nav__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 16px;
+  }
+}
+
+/* line 36, src/assets/scss/pages/_wards.scss */
 .wards-nav__item {
   position: relative;
   padding-left: 24px;
 }
 
-/* line 11, src/assets/scss/pages/_wards.scss */
+@media only screen and (max-width: 600px) {
+  /* line 36, src/assets/scss/pages/_wards.scss */
+  .wards-nav__item {
+    background-color: #F7F7F7;
+    padding: 10px 16px 12px;
+    text-align: center;
+    max-height: 60px;
+    mask-image: paint(smooth-corners);
+    -webkit-mask-image: paint(smooth-corners);
+    --smooth-corners: 16;
+  }
+}
+
+/* line 48, src/assets/scss/pages/_wards.scss */
 .wards-nav__item:not(:last-child) {
   margin-right: 24px;
 }
 
-/* line 15, src/assets/scss/pages/_wards.scss */
+@media only screen and (max-width: 600px) {
+  /* line 48, src/assets/scss/pages/_wards.scss */
+  .wards-nav__item:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+/* line 55, src/assets/scss/pages/_wards.scss */
 .wards-nav__link {
   font-size: 18px;
   line-height: 1.4;
@@ -18326,7 +18394,22 @@ h3 {
   transition: text-shadow .3s ease-in-out;
 }
 
-/* line 19, src/assets/scss/pages/_wards.scss */
+@media only screen and (max-width: 1200px) {
+  /* line 55, src/assets/scss/pages/_wards.scss */
+  .wards-nav__link {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 55, src/assets/scss/pages/_wards.scss */
+  .wards-nav__link {
+    font-size: 14px;
+    color: #939CA5;
+  }
+}
+
+/* line 66, src/assets/scss/pages/_wards.scss */
 .wards-nav__link::after {
   content: '';
   position: absolute;
@@ -18340,23 +18423,60 @@ h3 {
   transition: width .3s ease-in-out;
 }
 
-/* line 30, src/assets/scss/pages/_wards.scss */
+@media only screen and (max-width: 600px) {
+  /* line 66, src/assets/scss/pages/_wards.scss */
+  .wards-nav__link::after {
+    content: none;
+  }
+}
+
+/* line 80, src/assets/scss/pages/_wards.scss */
 .wards-nav__link.is-active, .wards-nav__link:hover {
   color: #127ce1;
   text-shadow: 0 0 1px #127ce1, 0 0 1px #127ce1;
 }
 
-/* line 35, src/assets/scss/pages/_wards.scss */
-.wards-nav__link:hover::after, .wards-nav__link.is-active::after {
-  width: 120%;
+@media only screen and (max-width: 600px) {
+  /* line 80, src/assets/scss/pages/_wards.scss */
+  .wards-nav__link.is-active, .wards-nav__link:hover {
+    color: #000;
+    text-shadow: none;
+  }
 }
 
-/* line 44, src/assets/scss/pages/_wards.scss */
+/* line 89, src/assets/scss/pages/_wards.scss */
+.wards-nav__link:hover::after, .wards-nav__link.is-active::after {
+  width: 110%;
+}
+
+/* line 94, src/assets/scss/pages/_wards.scss */
+.wards-nav__review-link {
+  display: block;
+  margin-left: auto;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.4;
+  text-align: right;
+  color: #127ce1;
+}
+
+/* line 107, src/assets/scss/pages/_wards.scss */
 .wards-phone {
   margin-top: 80px;
 }
 
-/* line 47, src/assets/scss/pages/_wards.scss */
+@media only screen and (max-width: 600px) {
+  /* line 109, src/assets/scss/pages/_wards.scss */
+  .wards-phone__inn {
+    padding: 24px 16px 0;
+    background-color: #EFF7FF;
+    mask-image: paint(smooth-corners);
+    -webkit-mask-image: paint(smooth-corners);
+    --smooth-corners: 20;
+  }
+}
+
+/* line 119, src/assets/scss/pages/_wards.scss */
 .wards-phone__title span {
   font-weight: 400;
   font-size: 18px;
@@ -18364,7 +18484,15 @@ h3 {
   color: #6D7276;
 }
 
-/* line 54, src/assets/scss/pages/_wards.scss */
+@media only screen and (max-width: 600px) {
+  /* line 119, src/assets/scss/pages/_wards.scss */
+  .wards-phone__title span {
+    display: block;
+    margin-top: 8px;
+  }
+}
+
+/* line 130, src/assets/scss/pages/_wards.scss */
 .wards-phone__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -18373,7 +18501,16 @@ h3 {
   gap: 16px;
 }
 
-/* line 59, src/assets/scss/pages/_wards.scss */
+@media only screen and (max-width: 600px) {
+  /* line 130, src/assets/scss/pages/_wards.scss */
+  .wards-phone__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-bottom: 44px;
+  }
+}
+
+/* line 139, src/assets/scss/pages/_wards.scss */
 .wards-phone__item {
   padding: 24px 56px 24px 24px;
   background: #EFF7FF;
@@ -18382,12 +18519,22 @@ h3 {
   --smooth-corners: 8;
 }
 
-/* line 66, src/assets/scss/pages/_wards.scss */
+@media only screen and (max-width: 600px) {
+  /* line 139, src/assets/scss/pages/_wards.scss */
+  .wards-phone__item {
+    padding: 0;
+    width: 100%;
+    -webkit-mask-image: none;
+            mask-image: none;
+  }
+}
+
+/* line 151, src/assets/scss/pages/_wards.scss */
 .wards-phone__caption {
   line-height: 1.4;
 }
 
-/* line 69, src/assets/scss/pages/_wards.scss */
+/* line 154, src/assets/scss/pages/_wards.scss */
 .wards-phone__link {
   margin-top: 4px;
   font-weight: 600;
@@ -18397,13 +18544,13 @@ h3 {
   color: #127CE1;
 }
 
-/* line 76, src/assets/scss/pages/_wards.scss */
+/* line 161, src/assets/scss/pages/_wards.scss */
 .wards-phone__link_star {
   position: relative;
   padding-left: 21px;
 }
 
-/* line 79, src/assets/scss/pages/_wards.scss */
+/* line 164, src/assets/scss/pages/_wards.scss */
 .wards-phone__link_star i {
   position: absolute;
   top: 50%;
@@ -18417,34 +18564,56 @@ h3 {
   transform: translateY(-50%);
 }
 
-/* line 92, src/assets/scss/pages/_wards.scss */
+/* line 177, src/assets/scss/pages/_wards.scss */
 .wards-phone__link:hover {
   color: #127CE1;
 }
 
-/* line 100, src/assets/scss/pages/_wards.scss */
+/* line 181, src/assets/scss/pages/_wards.scss */
+.wards-phone__btn {
+  display: none;
+  margin-top: -20px;
+  padding: 14px 96px 18px;
+  width: 100%;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.4;
+  mask-image: paint(smooth-corners);
+  -webkit-mask-image: paint(smooth-corners);
+  --smooth-corners: 18;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 181, src/assets/scss/pages/_wards.scss */
+  .wards-phone__btn {
+    display: block;
+  }
+}
+
+/* line 200, src/assets/scss/pages/_wards.scss */
 .wards-types {
   margin-top: 56px;
 }
 
-/* line 102, src/assets/scss/pages/_wards.scss */
+/* line 202, src/assets/scss/pages/_wards.scss */
 .wards-types__title {
   margin-bottom: 32px;
 }
 
-/* line 105, src/assets/scss/pages/_wards.scss */
+/* line 205, src/assets/scss/pages/_wards.scss */
 .wards-types__list {
   gap: 18px 0;
 }
 
-/* line 108, src/assets/scss/pages/_wards.scss */
+/* line 208, src/assets/scss/pages/_wards.scss */
 .wards-types__wr {
   padding-left: 8px;
   padding-right: 8px;
 }
 
-/* line 112, src/assets/scss/pages/_wards.scss */
+/* line 212, src/assets/scss/pages/_wards.scss */
 .wards-types__item {
+  position: relative;
   padding: 24px 24px 68px 24px;
   min-height: 239px;
   background-repeat: no-repeat;
@@ -18455,21 +18624,28 @@ h3 {
   --smooth-corners: 15;
 }
 
-/* line 122, src/assets/scss/pages/_wards.scss */
+@media only screen and (max-width: 1200px) {
+  /* line 212, src/assets/scss/pages/_wards.scss */
+  .wards-types__item {
+    padding: 20px 16px;
+  }
+}
+
+/* line 226, src/assets/scss/pages/_wards.scss */
 .wards-types__caption {
   font-weight: 500;
   font-size: 24px;
   line-height: 1.4;
 }
 
-/* line 127, src/assets/scss/pages/_wards.scss */
+/* line 231, src/assets/scss/pages/_wards.scss */
 .wards-types__descr {
   margin-top: 8px;
   font-size: 20px;
   line-height: 140%;
 }
 
-/* line 132, src/assets/scss/pages/_wards.scss */
+/* line 236, src/assets/scss/pages/_wards.scss */
 .wards-types__link {
   margin-top: 24px;
   display: block;
@@ -18481,7 +18657,15 @@ h3 {
   color: #000;
 }
 
-/* line 139, src/assets/scss/pages/_wards.scss */
+@media only screen and (max-width: 1200px) {
+  /* line 236, src/assets/scss/pages/_wards.scss */
+  .wards-types__link {
+    visibility: hidden;
+    height: 0;
+  }
+}
+
+/* line 247, src/assets/scss/pages/_wards.scss */
 .wards-types__link svg {
   margin-left: 4px;
   width: 19px;
@@ -18493,21 +18677,682 @@ h3 {
   transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
 }
 
-/* line 147, src/assets/scss/pages/_wards.scss */
+/* line 255, src/assets/scss/pages/_wards.scss */
 .wards-types__link:hover svg {
   -webkit-transform: translateX(8px);
           transform: translateX(8px);
 }
 
-/* line 157, src/assets/scss/pages/_wards.scss */
+/* line 259, src/assets/scss/pages/_wards.scss */
+.wards-types__link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 273, src/assets/scss/pages/_wards.scss */
 .wards-appeal__title {
   margin-bottom: 24px;
 }
 
-/* line 160, src/assets/scss/pages/_wards.scss */
+/* line 276, src/assets/scss/pages/_wards.scss */
 .wards-appeal__btn {
   margin-top: 32px;
   padding: 16px 65px 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 276, src/assets/scss/pages/_wards.scss */
+  .wards-appeal__btn {
+    width: 100%;
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  /* line 284, src/assets/scss/pages/_wards.scss */
+  .wards-appeal .appeal__text {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 284, src/assets/scss/pages/_wards.scss */
+  .wards-appeal .appeal__text {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 292, src/assets/scss/pages/_wards.scss */
+  .wards-appeal .appeal__wr {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 297, src/assets/scss/pages/_wards.scss */
+  .wards-appeal .appeal__img {
+    margin-left: 20px;
+    text-align: right;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 303, src/assets/scss/pages/_wards.scss */
+  .wards-appeal .appeal__signature_post {
+    font-size: 22px;
+    text-align: right;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 309, src/assets/scss/pages/_wards.scss */
+  .wards-appeal .appeal__signature_name {
+    text-align: right;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 314, src/assets/scss/pages/_wards.scss */
+  .wards-appeal .appeal__img {
+    display: none;
+  }
+}
+
+/* line 326, src/assets/scss/pages/_wards.scss */
+.faq {
+  margin-top: 56px;
+}
+
+/* line 329, src/assets/scss/pages/_wards.scss */
+.faq__wrapper:not(:last-child) {
+  margin-bottom: 56px;
+}
+
+/* line 334, src/assets/scss/pages/_wards.scss */
+.faq__inner:first-child {
+  margin-top: 40px;
+}
+
+/* line 338, src/assets/scss/pages/_wards.scss */
+.faq__item {
+  border-bottom: 1px solid rgba(174, 193, 210, 0.5);
+}
+
+/* line 340, src/assets/scss/pages/_wards.scss */
+.faq__item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+/* line 344, src/assets/scss/pages/_wards.scss */
+.faq__question {
+  position: relative;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 24px;
+  width: 100%;
+  text-align: left;
+}
+
+/* line 352, src/assets/scss/pages/_wards.scss */
+.faq__question svg {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 21px;
+  height: 9px;
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+/* line 362, src/assets/scss/pages/_wards.scss */
+.faq__question.collapsed svg {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+/* line 367, src/assets/scss/pages/_wards.scss */
+.faq__answer {
+  background-color: #f7fafd;
+}
+
+/* line 369, src/assets/scss/pages/_wards.scss */
+.faq__answer-inn {
+  padding: 32px;
+}
+
+/* line 377, src/assets/scss/pages/_wards.scss */
+.ask {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 24px;
+  text-align: center;
+  background: #FFFFFF;
+  -webkit-box-shadow: 8px 8px 36px rgba(24, 73, 131, 0.07);
+          box-shadow: 8px 8px 36px rgba(24, 73, 131, 0.07);
+  border-radius: 16px;
+}
+
+/* line 386, src/assets/scss/pages/_wards.scss */
+.ask_fixed {
+  position: fixed;
+  top: 100px;
+}
+
+/* line 390, src/assets/scss/pages/_wards.scss */
+.ask_hide {
+  opacity: 0;
+}
+
+/* line 393, src/assets/scss/pages/_wards.scss */
+.ask__img {
+  display: block;
+  margin-bottom: 24px;
+}
+
+/* line 397, src/assets/scss/pages/_wards.scss */
+.ask__text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* line 402, src/assets/scss/pages/_wards.scss */
+.ask__btn {
+  margin-top: 24px;
+  padding: 16px 24px 20px;
+  color: #127ce1;
+  background-color: #eff7ff;
+  mask-image: paint(smooth-corners);
+  -webkit-mask-image: paint(smooth-corners);
+  --smooth-corners: 18;
+}
+
+/* line 416, src/assets/scss/pages/_wards.scss */
+.mobile-ask {
+  margin-top: 65px;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 416, src/assets/scss/pages/_wards.scss */
+  .mobile-ask {
+    background-color: #eff7ff;
+  }
+}
+
+/* line 421, src/assets/scss/pages/_wards.scss */
+.mobile-ask__wr {
+  padding: 24px 23px 26px;
+  background: #fff;
+  -webkit-box-shadow: 8px 8px 36px rgba(24, 73, 131, 0.07);
+          box-shadow: 8px 8px 36px rgba(24, 73, 131, 0.07);
+  border-radius: 16px;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 421, src/assets/scss/pages/_wards.scss */
+  .mobile-ask__wr {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
+/* line 433, src/assets/scss/pages/_wards.scss */
+.mobile-ask__title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 433, src/assets/scss/pages/_wards.scss */
+  .mobile-ask__title {
+    margin-top: 24px;
+  }
+}
+
+/* line 442, src/assets/scss/pages/_wards.scss */
+.mobile-ask__btn {
+  padding: 16px 78px 20px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.4;
+  color: #127CE1;
+  background-color: #eff7ff;
+  mask-image: paint(smooth-corners);
+  -webkit-mask-image: paint(smooth-corners);
+  --smooth-corners: 10;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 442, src/assets/scss/pages/_wards.scss */
+  .mobile-ask__btn {
+    margin-top: 24px;
+    background-color: #2688E5;
+    color: #fff;
+  }
+}
+
+/* line 461, src/assets/scss/pages/_wards.scss */
+.is-faq-page .bottom-btns {
+  margin-top: 56px;
+}
+
+/* line 470, src/assets/scss/pages/_wards.scss */
+.calendar {
+  margin-top: 56px;
+}
+
+/* line 475, src/assets/scss/pages/_wards.scss */
+.calendar__inner {
+  margin-top: 48px;
+}
+
+/* line 478, src/assets/scss/pages/_wards.scss */
+.calendar__month-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* line 483, src/assets/scss/pages/_wards.scss */
+.calendar__month, .calendar__year {
+  font-size: 20px;
+  line-height: 24px;
+  color: #6D7276;
+  cursor: pointer;
+  mask-image: paint(smooth-corners);
+  -webkit-mask-image: paint(smooth-corners);
+  --smooth-corners: 8;
+}
+
+@media only screen and (max-width: 480px) {
+  /* line 483, src/assets/scss/pages/_wards.scss */
+  .calendar__month, .calendar__year {
+    max-width: 35px;
+    font-size: 18px;
+  }
+}
+
+/* line 497, src/assets/scss/pages/_wards.scss */
+.calendar__year {
+  display: none;
+  margin-left: 8px;
+}
+
+/* line 501, src/assets/scss/pages/_wards.scss */
+.calendar__month-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-transition: color .3s ease-in-out, background-color .3s ease-in-out, padding .3s ease-in-out;
+  transition: color .3s ease-in-out, background-color .3s ease-in-out, padding .3s ease-in-out;
+}
+
+/* line 507, src/assets/scss/pages/_wards.scss */
+.calendar__month-item.is-active .calendar__month,
+.calendar__month-item.is-active .calendar__year, .calendar__month-item.swiper-slide-active .calendar__month,
+.calendar__month-item.swiper-slide-active .calendar__year {
+  display: block;
+  padding: 12px 38px 16px;
+  color: #127CE1;
+  background-color: #EFF7FF;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 507, src/assets/scss/pages/_wards.scss */
+  .calendar__month-item.is-active .calendar__month,
+  .calendar__month-item.is-active .calendar__year, .calendar__month-item.swiper-slide-active .calendar__month,
+  .calendar__month-item.swiper-slide-active .calendar__year {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* line 507, src/assets/scss/pages/_wards.scss */
+  .calendar__month-item.is-active .calendar__month,
+  .calendar__month-item.is-active .calendar__year, .calendar__month-item.swiper-slide-active .calendar__month,
+  .calendar__month-item.swiper-slide-active .calendar__year {
+    max-width: 100%;
+  }
+}
+
+/* line 524, src/assets/scss/pages/_wards.scss */
+.calendar__month-next, .calendar__month-prev {
+  position: absolute;
+  top: 50%;
+  z-index: 15;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/* line 532, src/assets/scss/pages/_wards.scss */
+.calendar__month-next {
+  right: 15px;
+}
+
+/* line 535, src/assets/scss/pages/_wards.scss */
+.calendar__month-prev {
+  left: 15px;
+}
+
+/* line 539, src/assets/scss/pages/_wards.scss */
+.calendar__day-list {
+  margin-top: 32px;
+  margin-bottom: 24px;
+  padding: 0 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* line 546, src/assets/scss/pages/_wards.scss */
+.calendar__day {
+  padding: 0 24px;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 546, src/assets/scss/pages/_wards.scss */
+  .calendar__day {
+    font-size: 18px;
+    padding: 0;
+  }
+}
+
+/* line 555, src/assets/scss/pages/_wards.scss */
+.calendar__week {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 8px 36px;
+  mask-image: paint(smooth-corners);
+  -webkit-mask-image: paint(smooth-corners);
+  --smooth-corners: 10;
+}
+
+/* line 562, src/assets/scss/pages/_wards.scss */
+.calendar__week:nth-child(odd) {
+  background-color: #F5F8FB;
+}
+
+/* line 565, src/assets/scss/pages/_wards.scss */
+.calendar__week:not(:first-child) {
+  margin-top: 8px;
+}
+
+/* line 570, src/assets/scss/pages/_wards.scss */
+.calendar__number {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 65px;
+          flex: 0 0 65px;
+  text-align: center;
+  padding: 16px 24px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  cursor: pointer;
+  -webkit-transition: color .3s ease-in-out, background-color .3s ease-in-out;
+  transition: color .3s ease-in-out, background-color .3s ease-in-out;
+  mask-image: paint(smooth-corners);
+  -webkit-mask-image: paint(smooth-corners);
+  --smooth-corners: 4;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 570, src/assets/scss/pages/_wards.scss */
+  .calendar__number {
+    font-size: 18px;
+    padding: 0;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 20px;
+            flex: 0 0 20px;
+  }
+}
+
+/* line 587, src/assets/scss/pages/_wards.scss */
+.calendar__number.is-active {
+  color: #127CE1;
+}
+
+/* line 590, src/assets/scss/pages/_wards.scss */
+.calendar__number:hover, .calendar__number.is-focus {
+  color: #fff;
+  background-color: #2688E5;
+}
+
+/* line 596, src/assets/scss/pages/_wards.scss */
+.calendar__date {
+  margin-top: 60px;
+  font-size: 28px;
+  line-height: 34px;
+}
+
+/* line 600, src/assets/scss/pages/_wards.scss */
+.calendar__date span {
+  font-weight: 600;
+  font-size: 28px;
+}
+
+/* line 605, src/assets/scss/pages/_wards.scss */
+.calendar__events-list {
+  margin-top: 32px;
+}
+
+/* line 609, src/assets/scss/pages/_wards.scss */
+.calendar__events-item:not(:first-child) {
+  margin-top: 32px;
+}
+
+/* line 613, src/assets/scss/pages/_wards.scss */
+.calendar__time, .calendar__place, .calendar__area {
+  font-size: 20px;
+  line-height: 150%;
+  color: #6D7276;
+}
+
+/* line 620, src/assets/scss/pages/_wards.scss */
+.calendar__area {
+  margin-left: 24px;
+}
+
+/* line 623, src/assets/scss/pages/_wards.scss */
+.calendar__caption {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+/* line 628, src/assets/scss/pages/_wards.scss */
+.calendar__theme {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+/* line 633, src/assets/scss/pages/_wards.scss */
+.calendar__link {
+  display: block;
+  margin-top: 16px;
+  font-size: 20px;
+  line-height: 1.4;
+  color: #2688E5;
+}
+
+/* line 639, src/assets/scss/pages/_wards.scss */
+.calendar__link svg {
+  margin-left: 4px;
+  width: 19px;
+  height: 14px;
+  stroke: currentColor;
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
+/* line 648, src/assets/scss/pages/_wards.scss */
+.calendar__link:hover {
+  text-decoration: none;
+  color: #2688E5;
+}
+
+/* line 651, src/assets/scss/pages/_wards.scss */
+.calendar__link:hover svg {
+  -webkit-transform: translateX(8px);
+          transform: translateX(8px);
+}
+
+/* line 661, src/assets/scss/pages/_wards.scss */
+.gallery {
+  margin-top: 80px;
+}
+
+/* line 663, src/assets/scss/pages/_wards.scss */
+.gallery__item {
+  margin-top: 48px;
+}
+
+/* line 666, src/assets/scss/pages/_wards.scss */
+.gallery__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* line 670, src/assets/scss/pages/_wards.scss */
+.gallery__swiper {
+  margin-top: 24px;
+  width: calc(100vw - (100vw - 100%) / 2);
+}
+
+/* line 674, src/assets/scss/pages/_wards.scss */
+.gallery__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 34px;
+  max-width: 95%;
+}
+
+/* line 681, src/assets/scss/pages/_wards.scss */
+.gallery__link {
+  font-size: 20px;
+  line-height: 1.4;
+  color: #2688E5;
+}
+
+/* line 685, src/assets/scss/pages/_wards.scss */
+.gallery__link svg {
+  margin-left: 4px;
+  width: 19px;
+  height: 14px;
+  stroke: currentColor;
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
+/* line 692, src/assets/scss/pages/_wards.scss */
+.gallery__link:hover {
+  color: #2688E5;
+}
+
+/* line 694, src/assets/scss/pages/_wards.scss */
+.gallery__link:hover svg {
+  -webkit-transform: translateX(7px);
+          transform: translateX(7px);
+}
+
+/* line 699, src/assets/scss/pages/_wards.scss */
+.gallery__date {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+/* line 703, src/assets/scss/pages/_wards.scss */
+.gallery__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 707, src/assets/scss/pages/_wards.scss */
+.gallery__btn {
+  display: block;
+  margin: 106px auto 0;
+  padding: 16px 182px 20px;
+  font-size: 20px;
+  line-height: 1.4;
+  color: #127CE1;
+  background-color: #eff7ff;
+  mask-image: paint(smooth-corners);
+  -webkit-mask-image: paint(smooth-corners);
+  --smooth-corners: 16;
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 707, src/assets/scss/pages/_wards.scss */
+  .gallery__btn {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
 }
 
 /*# sourceMappingURL=../../../scss */
