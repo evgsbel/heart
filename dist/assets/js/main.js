@@ -103,25 +103,12 @@ var swiperCommunity = new Swiper('.community__swiper', {
 
 var swiperFaceFirst = new Swiper('.face__swiper', {
   // Optional parameters
-  speed: 800,
-  slidesPerView: 1.2,
-  effect: "creative",
-  creativeEffect: {
-    prev: {
-      // will set `translateZ(-400px)` on previous slides
-      translate: [0, 0, -400],
-      opacity: 0
-    },
-    next: {
-      // will set `translateX(100%)` on next slides
-      translate: ['100%', 0, 0],
-      opacity: 1
-    }
+  slidesPerView: 1,
+  effect: "fade",
+  fadeEffect: {
+    crossFade: true
   },
-  // effect: "fade",
-  // fadeEffect: {
-  //   crossFade: true
-  // },
+  speed: 800,
   navigation: {
     nextEl: ".face-button-next",
     prevEl: ".face-button-prev"
