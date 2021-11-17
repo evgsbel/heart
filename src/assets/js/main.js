@@ -38,9 +38,10 @@ const swiperHero = new Swiper('.hero__swiper', {
     // when window width is >= 320px
     320: {
       slidesPerView: 1.5,
-      spaceBetween: 20
+      spaceBetween: 10
     },
     768: {
+      spaceBetween: 20,
       slidesPerView: 3,
     },
     1200: {
@@ -82,6 +83,10 @@ const swiperHelp = new Swiper('.help__swiper', {
     prevEl: ".help-button-prev",
   },
   breakpoints: {
+    320: {
+      slidesPerView: 1.1,
+      spaceBetween: 16,
+    },
     1440: {
       spaceBetween: 0,
       slidesPerView: 1,
@@ -98,8 +103,9 @@ const swiperCommunity = new Swiper('.community__swiper', {
   speed: 500,
   spaceBetween: 30,
   breakpoints: {
-    480: {
-      slidesPerView: 'auto',
+    320: {
+      slidesPerView: 1.1,
+      spaceBetween: 16,
     },
     1024: {
       slidesPerView: 2.5,
@@ -114,10 +120,11 @@ const swiperCommunity = new Swiper('.community__swiper', {
 const swiperFaceFirst = new Swiper('.face__swiper', {
   // Optional parameters
   slidesPerView: 1,
-  effect: "fade",
-  fadeEffect: {
-    crossFade: true
-  },
+  touchRatio: 2,
+  // effect: "fade",
+  // fadeEffect: {
+  //   crossFade: true
+  // },
   speed: 800,
   navigation: {
     nextEl: ".face-button-next",

@@ -25,14 +25,14 @@
   &.out {
     transform: translateY(-100%);
   }
-  @include r(600) {
+  @include r(650) {
     padding: 20px 0;
   }
   &__right {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    @include r(768) {
+    @include r(650) {
       display: none;
     }
   }
@@ -68,7 +68,7 @@
   &_fixed {
     background-color: #fff;
     border-radius: 0 0 16px 16px;
-    @include r(600) {
+    @include r(650) {
       background-color: transparent;
     }
     .header__btn {
@@ -86,7 +86,7 @@
       z-index: -1;
     }
     .logo {
-      @include r(600) {
+      @include r(650) {
         transform: translateX(-100%);
       }
     }

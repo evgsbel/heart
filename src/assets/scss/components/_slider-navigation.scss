@@ -42,6 +42,7 @@
     }
   }
   &__slider-navigation {
+    display: flex;
     @include r(1440) {
       order: -1;
     }

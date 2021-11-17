@@ -1,6 +1,6 @@
 .burger {
   position: absolute;
-  top: 30px;
+  top: 25px;
   right: 56px;
   flex-direction: column;
   justify-content: space-between;
@@ -26,7 +26,7 @@
   @include r(768) {
     right: 32px;
   }
-  @include r(600) {
+  @include r(650) {
     top: 13px;
   }
   @include r(480) {

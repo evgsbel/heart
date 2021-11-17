@@ -75,6 +75,10 @@
           width: 550px;
           height: 550px;
         }
+        @include r(768) {
+          width: 450px;
+          height: 450px;
+        }
       }
       &[data-target="one"] {
         & {

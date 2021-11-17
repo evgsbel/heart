@@ -19,9 +19,11 @@
     mask-image: paint(smooth-corners);
     -webkit-mask-image: paint(smooth-corners);
     --smooth-corners: 4;
-    @include r(560) {
-      width: 30px;
-      height: 30px;
+    @include r(650) {
+      mask-image: none;
+      border-radius: 8px;
+      width: 35px;
+      height: 35px;
     }
   }
 }
