@@ -30,7 +30,7 @@
     mask-image: paint(smooth-corners);
     -webkit-mask-image: paint(smooth-corners);
     --smooth-corners: 8;
-    &.is-active,
+    &_active,
     &:hover {
       color: #000;
     }

@@ -1,13 +1,14 @@
 "use strict";
 
-$(document).ready(function () {
-  $('body').autoPadding({
-    source: $('.js-header')
-  }); //removeIf(production)
-
-  console.log("document ready"); //endRemoveIf(production)
-}); // mobile menu
-
+// $(document).ready(function () {
+//   $('body').autoPadding({
+//     source: $('.js-header'),
+//   });
+//   //removeIf(production)
+//   console.log("document ready");
+//   //endRemoveIf(production)
+// });
+// mobile menu
 $(function () {
   var btnMenu = document.querySelector('.burger');
   var menu = document.querySelector('.mobile-nav');
@@ -51,28 +52,46 @@ for (i = 0; i < acc.length; i++) {
 if (CSS && 'paintWorklet' in CSS) CSS.paintWorklet.addModule('https://unpkg.com/smooth-corners'); // fixed header
 
 $(document).ready(function () {
-  function stickySidebar() {
-    var scrollDistance = $(document).scrollTop(),
-        headerHeight = $('.header').outerHeight(true),
-        // sidebarHeight = $('aside').outerHeight(true),
-    footerOffsetTop = $('.js-stop-header').offset().top,
-        $header = $('header');
+  // function stickySidebar() {
+  //   var scrollDistance = $(document).scrollTop(),
+  //     headerHeight = $('.header').outerHeight(true),
+  //     // sidebarHeight = $('aside').outerHeight(true),
+  //     footerOffsetTop = $('.js-stop-header').offset().top,
+  //     $header = $('header');
+  //
+  //   if( scrollDistance >= headerHeight) {
+  //     $header.addClass('header_fixed');
+  //     $header.removeClass('header_hide');
+  //   } else {
+  //     $header.removeClass('header_fixed');
+  //   }
+  //
+  //   if ( scrollDistance + headerHeight  >= footerOffsetTop) {
+  //     $header.removeClass('header_fixed');
+  //     $header.addClass('header_hide');
+  //   }
+  //
+  // }
+  // stickySidebar();
+  //
+  // $(document).scroll(function() {
+  //   stickySidebar();
+  // });
+  var header = $('.header'),
+      scrollPrev = 0;
+  $(window).scroll(function () {
+    var scrolled = $(window).scrollTop();
 
-    if (scrollDistance >= headerHeight) {
-      $header.addClass('header_fixed');
-      $header.removeClass('header_hide');
+    if (scrolled > 50 && scrolled > scrollPrev) {
+      header.addClass('out header_fixed');
     } else {
-      $header.removeClass('header_fixed');
+      header.removeClass('out');
     }
 
-    if (scrollDistance + headerHeight >= footerOffsetTop) {
-      $header.removeClass('header_fixed');
-      $header.addClass('header_hide');
+    if (scrolled < 50) {
+      header.removeClass('header_fixed');
     }
-  }
 
-  stickySidebar();
-  $(document).scroll(function () {
-    stickySidebar();
+    scrollPrev = scrolled;
   });
 });

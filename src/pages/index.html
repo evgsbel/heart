@@ -10,7 +10,7 @@ script: main
         <h1 class="title-h1">Помощь взрослым онкобольным</h1>
         <ul class="tabs__nav">
           <li class="tabs__item">
-            <button class="tabs__btn btn-reset is-active" data-path="one">Об онкологии</button>
+            <button class="tabs__btn btn-reset tabs__btn_active" data-path="one">Об онкологии</button>
           </li>
           <li class="tabs__item">
             <button class="tabs__btn btn-reset" data-path="two">Психолог</button>
@@ -530,7 +530,7 @@ script: main
           вопросы для&nbsp;медицинских экспертов, оформить запрос для&nbsp;юристов Фонда, организовать для&nbsp;вас&nbsp;индивидуальные
           сессии с&nbsp;онкопсихологом</p>
         <div class="d-flex hot-line__bottom">
-          <p class="hot-line__number"><span>*</span>&nbsp;5785</p>
+          <p class="hot-line__number"><span></span>&nbsp;5785</p>
           <p class="hot-line__decor">Да-да. Это короткий номер, который легко запомнить</p>
         </div>
       </div>
@@ -547,7 +547,7 @@ script: main
       <div class="swiper community__swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <a href="" class="community__item community__item_01">
+            <a  class="community__item community__item_01">
               <h3 class="community__title">Группа<span>взаимопомощи</span></h3>
               <p class="community__descr">Два&nbsp;раза в&nbsp;месяц для&nbsp;подопечных проводятся онлайн встречи, на&nbsp;которых
                 участники
@@ -557,7 +557,7 @@ script: main
             </a>
           </div>
           <div class="swiper-slide">
-            <a href="" class="community__item community__item_02">
+            <a  class="community__item community__item_02">
               <h3 class="community__title">Мероприятия<span>для&nbsp;подопечных</span></h3>
               <p class="community__descr">Мы&nbsp;организуем офлайн встречи, фотосессии для&nbsp;наших подопечных.
                 Активная
@@ -569,7 +569,7 @@ script: main
             </a>
           </div>
           <div class="swiper-slide">
-            <a href="" class="community__item community__item_03">
+            <a  class="community__item community__item_03">
               <h3 class="community__title">Равное<span>консультирование</span></h3>
               <p class="community__descr">Наш фонд выиграл Президентский грант на&nbsp;внедрение услуги Равное
                 консультирование,
@@ -1037,7 +1037,7 @@ script: main
 </section>
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-2 col-sm-3 col-md-3 col-lg-2 col-xl-2">
+    <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 offset-xl-3">
       <p class="face__decor">Стать частью команды</p>
     </div>
   </div>
@@ -1072,7 +1072,7 @@ script: main
   </div>
 </section>
 <section class="partners">
-  <div class="container">
+  <div class="container partners__container">
     <div class="row align-items-lg-center">
       <div class="col-sm-6 col-md-6 col-lg-6 col-xl-5 offset-xl-1 offset-lg-0 partners__left">
         <div class="partners__descr">
@@ -1143,26 +1143,5 @@ script: main
       </div>
     </div>
   </div>
-
 </section>
-<section class="bottom-btns">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-xl-12">
-        <div class="d-flex">
-          <div class="bottom-btns__sum ">
-            <button class="btn-reset bottom-btns__btn">500 <span>₽</span></button>
-            <button class="btn-reset bottom-btns__btn">2400 <span>₽</span></button>
-            <button class="btn-reset bottom-btns__btn">3200 <span>₽</span></button>
-            <button class="btn-reset bottom-btns__btn">6000 <span>₽</span></button>
-            <button class="btn-reset bottom-btns__btn">Другая сумма</button>
-          </div>
-          <div class="bottom-btns__submit">
-            <button class="btn-reset bottom-btns__btn bottom-btns__btn_blue">Хочу помочь</button>
-            <button class="btn-reset bottom-btns__btn">Нужна помощь</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+{{> bottom-btns}}

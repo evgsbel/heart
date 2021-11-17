@@ -14,7 +14,7 @@
     margin-top: 40px;
   }
   &__copy {
-    margin-top: 60px;
+    margin-top: 55px;
     color: #CDCDCD;
     @include r(1200) {
       text-align: right;
@@ -44,6 +44,9 @@
     line-height: 1.4em;
     @include r(480) {
       font-size: 12px;
+    }
+    &:hover {
+      color: #fff;
     }
   }
   &__phone {
@@ -77,13 +80,11 @@
       display: block;
       width: 17px;
       height: 17px;
-      background-image: url('../img/star.png');
+      background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.8363 8.5L17 11.7873L15.8567 13.7597L9.64327 10.3315V17H7.35672L7.40643 10.3315L1.19298 13.7597L0 11.7873L6.21345 8.5L0 5.21271L1.19298 3.19337L7.40643 6.66851L7.35672 0H9.64327V6.66851L15.8567 3.19337L17 5.21271L10.8363 8.5Z' fill='white'/%3E%3C/svg%3E%0A");
       background-repeat: no-repeat;
       transform: translateY(-50%);
-      @include r(1440) {
-        font-size: 40px;
-      }
     }
+
     &:hover {
       color: #fff;
     }
@@ -137,6 +138,9 @@
     }
     @include r(480) {
       font-size: 16px;
+    }
+    &:hover {
+      color: #fff;
     }
   }
 }

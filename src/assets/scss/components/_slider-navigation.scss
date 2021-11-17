@@ -45,6 +45,9 @@
     @include r(1440) {
       order: -1;
     }
+    @include r(768) {
+      display: none;
+    }
   }
 }
 
