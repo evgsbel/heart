@@ -110,11 +110,15 @@ var swiperCommunity = new Swiper('.community__swiper', {
 var swiperFaceFirst = new Swiper('.face__swiper', {
   // Optional parameters
   slidesPerView: 1,
-  touchRatio: 2,
-  // effect: "fade",
-  // fadeEffect: {
-  //   crossFade: true
-  // },
+  effect: "creative",
+  creativeEffect: {
+    prev: {
+      translate: [0, 0, -400]
+    },
+    next: {
+      translate: ["100%", 0, 0]
+    }
+  },
   speed: 800,
   navigation: {
     nextEl: ".face-button-next",
@@ -122,15 +126,14 @@ var swiperFaceFirst = new Swiper('.face__swiper', {
   },
   breakpoints: {
     320: {
-      // effect: "fade",
-      // fadeEffect: {
-      //   crossFade: true
-      // },
       slidesPerView: 1.2,
       spaceBetween: 16
     },
-    1200: {
+    1199: {
       slidesPerView: 1,
+      spaceBetween: 16
+    },
+    1240: {
       spaceBetween: 0
     }
   }
