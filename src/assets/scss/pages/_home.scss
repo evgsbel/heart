@@ -1515,8 +1515,12 @@
 // mobile btns top
 
 .mobile-top-btns {
+  display: none;
   margin-top: 24px;
   margin-bottom: 32px;
+  @include r(650) {
+    display: block;
+  }
   &__btn {
     display: block;
     padding: 12px 83px 16px;

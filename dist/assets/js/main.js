@@ -105,38 +105,75 @@ var swiperCommunity = new Swiper('.community__swiper', {
       slidesPerView: 3
     }
   }
-}); // face slider
+});
+$(function () {
+  function checkWidth() {
+    var windowWidth = $('body').innerWidth();
 
-var swiperFaceFirst = new Swiper('.face__swiper', {
-  // Optional parameters
-  slidesPerView: 1,
-  effect: "creative",
-  creativeEffect: {
-    prev: {
-      translate: [0, 0, -400]
-    },
-    next: {
-      translate: ["100%", 0, 0]
-    }
-  },
-  speed: 800,
-  navigation: {
-    nextEl: ".face-button-next",
-    prevEl: ".face-button-prev"
-  },
-  breakpoints: {
-    320: {
-      slidesPerView: 1.2,
-      spaceBetween: 16
-    },
-    1199: {
-      slidesPerView: 1,
-      spaceBetween: 16
-    },
-    1240: {
-      spaceBetween: 0
+    if (windowWidth < 1025) {
+      // face slider
+      var swiperFaceMob = new Swiper('.face__swiper', {
+        // Optional parameters
+        slidesPerView: 1,
+        speed: 800,
+        navigation: {
+          nextEl: ".face-button-next",
+          prevEl: ".face-button-prev"
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1.2,
+            spaceBetween: 16
+          },
+          1199: {
+            slidesPerView: 1,
+            spaceBetween: 16
+          },
+          1240: {
+            spaceBetween: 0
+          }
+        }
+      });
+    } else {
+      // face slider
+      var swiperFaceDesk = new Swiper('.face__swiper', {
+        // Optional parameters
+        slidesPerView: 1,
+        effect: "creative",
+        creativeEffect: {
+          prev: {
+            translate: [0, 0, -400]
+          },
+          next: {
+            translate: ["100%", 0, 0]
+          }
+        },
+        speed: 800,
+        navigation: {
+          nextEl: ".face-button-next",
+          prevEl: ".face-button-prev"
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1.2,
+            spaceBetween: 16
+          },
+          1199: {
+            slidesPerView: 1,
+            spaceBetween: 16
+          },
+          1240: {
+            spaceBetween: 0
+          }
+        }
+      });
     }
   }
+
+  checkWidth();
+  $(window).resize(function () {
+    checkWidth(); // проверит при изменении размера окна клиента
+  });
 }); // pay form
 
 var radioBtn = document.querySelectorAll('.js-radio');

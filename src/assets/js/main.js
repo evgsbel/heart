@@ -116,84 +116,117 @@ const swiperCommunity = new Swiper('.community__swiper', {
   }
 });
 
+
+
+$(() => {
+  function checkWidth() {
+    let windowWidth = $('body').innerWidth()
+    if (windowWidth < 1025) {
 // face slider
-const swiperFaceFirst = new Swiper('.face__swiper', {
-  // Optional parameters
-  slidesPerView: 1,
-  effect: "creative",
-  creativeEffect: {
-    prev: {
-      translate: [0, 0, -400],
-    },
-    next: {
-      translate: ["100%", 0, 0],
-    },
-  },
-  speed: 800,
-  navigation: {
-    nextEl: ".face-button-next",
-    prevEl: ".face-button-prev",
-  },
-  breakpoints: {
-    320: {
-      slidesPerView: 1.2,
-      spaceBetween: 16
-    },
-    1199: {
-      slidesPerView: 1,
-      spaceBetween: 16
-    },
-    1240: {
-      spaceBetween: 0,
+      const swiperFaceMob = new Swiper('.face__swiper', {
+        // Optional parameters
+        slidesPerView: 1,
+        speed: 800,
+        navigation: {
+          nextEl: ".face-button-next",
+          prevEl: ".face-button-prev",
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1.2,
+            spaceBetween: 16
+          },
+          1199: {
+            slidesPerView: 1,
+            spaceBetween: 16
+          },
+          1240: {
+            spaceBetween: 0,
+          }
+        }
+      });
+
+    }
+    else {
+      // face slider
+      const swiperFaceDesk = new Swiper('.face__swiper', {
+        // Optional parameters
+        slidesPerView: 1,
+        effect: "creative",
+        creativeEffect: {
+          prev: {
+            translate: [0, 0, -400],
+          },
+          next: {
+            translate: ["100%", 0, 0],
+          },
+        },
+        speed: 800,
+        navigation: {
+          nextEl: ".face-button-next",
+          prevEl: ".face-button-prev",
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1.2,
+            spaceBetween: 16
+          },
+          1199: {
+            slidesPerView: 1,
+            spaceBetween: 16
+          },
+          1240: {
+            spaceBetween: 0,
+          }
+        }
+      });
     }
   }
+    checkWidth();
+    $(window).resize(function () {
+      checkWidth(); // проверит при изменении размера окна клиента
+    });
 });
+
 
 
 
 // pay form
 
-const radioBtn = document.querySelectorAll('.js-radio');
+const radioBtn = document.querySelectorAll('.js-radio')
 const sumText = document.querySelector('.js-pay-sum');
 const inputNum = document.querySelector('.js-input-number');
 const sumDescr = document.querySelector('.js-sum-descr');
 const sumDecor = document.querySelector('.js-sum-decor');
 
 radioBtn.forEach(function (el) {
-    el.addEventListener('click', function (event) {
-      sumText.innerHTML = el.value.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ') + ' ₽';
-      sumDecor.innerHTML = 'Узнайте, на&nbsp;что&nbsp;идут&nbsp;деньги';
-      if (el.value === '500') {
-        sumDescr.innerHTML = 'одна поездка на&nbsp;такси в&nbsp;медучреждение';
-      } else if (el.value === '2400') {
-        sumDescr.innerHTML = 'один день проживания в&nbsp;гостинице во&nbsp;время обследования';
-      }
-      else if (el.value === '3200') {
-        sumDescr.innerHTML = 'одна консультация онколога';
-      }
-      else if (el.value === '6000') {
-        sumDescr.innerHTML = 'одно исследование МРТ';
-      }
+  el.addEventListener('click', function (event) {
+    sumText.innerHTML = el.value.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ') + ' ₽';
+    sumDecor.innerHTML = 'Узнайте, на&nbsp;что&nbsp;идут&nbsp;деньги';
+    if (el.value === '500') {
+      sumDescr.innerHTML = 'одна поездка на&nbsp;такси в&nbsp;медучреждение';
+    } else if (el.value === '2400') {
+      sumDescr.innerHTML = 'один день проживания в&nbsp;гостинице во&nbsp;время обследования';
+    } else if (el.value === '3200') {
+      sumDescr.innerHTML = 'одна консультация онколога';
+    } else if (el.value === '6000') {
+      sumDescr.innerHTML = 'одно исследование МРТ';
+    }
   });
 });
 
-inputNum.addEventListener('input', function() {
+inputNum.addEventListener('input', function () {
   if (this.value.length > 9) {
-     this.value = this.value.slice(0,9);
+    this.value = this.value.slice(0, 9);
   }
-  if(this.value <= 0) {
+  if (this.value <= 0) {
     sumText.innerHTML = 0 + ' ₽';
-  } else if(this.value >= 0) {
-  sumText.innerHTML = inputNum.value.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ') + ' ₽';
-  sumDescr.innerHTML = 'ваш вклад поможет взрослым победить рак';
-  sumDecor.innerHTML = 'Сумма вашего перевода';
+  } else if (this.value >= 0) {
+    sumText.innerHTML = inputNum.value.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ') + ' ₽';
+    sumDescr.innerHTML = 'ваш вклад поможет взрослым победить рак';
+    sumDecor.innerHTML = 'Сумма вашего перевода';
   }
 });
-
-
-
-
-
 
 
 // radioBackground

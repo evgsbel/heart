@@ -18648,11 +18648,19 @@ h3 {
 
 /* line 1517, src/assets/scss/pages/_home.scss */
 .mobile-top-btns {
+  display: none;
   margin-top: 24px;
   margin-bottom: 32px;
 }
 
-/* line 1520, src/assets/scss/pages/_home.scss */
+@media only screen and (max-width: 650px) {
+  /* line 1517, src/assets/scss/pages/_home.scss */
+  .mobile-top-btns {
+    display: block;
+  }
+}
+
+/* line 1524, src/assets/scss/pages/_home.scss */
 .mobile-top-btns__btn {
   display: block;
   padding: 12px 83px 16px;
@@ -18665,7 +18673,7 @@ h3 {
   --smooth-corners: 16;
 }
 
-/* line 1530, src/assets/scss/pages/_home.scss */
+/* line 1534, src/assets/scss/pages/_home.scss */
 .mobile-top-btns__btn_grey {
   margin-bottom: 0;
   color: #127ce1;
