@@ -8,20 +8,22 @@ document.addEventListener('DOMContentLoaded', function () {
     el.addEventListener('click', function (event) {
 
       tabsBtn.forEach(tabsBtn => {
-        tabsBtn.classList.remove('tabs__btn_active');
+        tabsBtn.classList.remove('is-active');
       });
 
       const path = event.currentTarget.dataset.path;
 
       document.querySelectorAll('.tabs__content').forEach(function (tabContent) {
-        tabContent.classList.remove('tabs__content_active');
+        tabContent.classList.remove('is-active');
       });
-      document.querySelector(`[data-target="${path}"]`).classList.add('tabs__content_active');
-      el.classList.add('tabs__btn_active');
+      document.querySelector(`[data-target="${path}"]`).classList.add('is-active');
+      el.classList.add('is-active');
 
     });
   });
 });
+
+
 
 
 // hero slider

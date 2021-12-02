@@ -1,0 +1,128 @@
+<section class="pay">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-xl-12">
+        <div class="pay__types swiper pay__swiper d-flex">
+          <h2 class="title-h2 pay__title">Помочь фонду</h2>
+          <div class="swiper-wrapper">
+            <button class="btn-reset pay__types-btn pay__types-btn swiper-slide is-active">
+              <svg width="24" height="18">
+                <use xlink:href="assets/img/sprite.svg#pay-types-card"></use>
+              </svg>
+              Банковская карта
+            </button>
+            <button class="btn-reset pay__types-btn pay__types-btn swiper-slide">
+              <svg width="22" height="18">
+                <use xlink:href="assets/img/sprite.svg#pay-types-transfer"></use>
+              </svg>
+              Банковский перевод
+            </button>
+            <button class="btn-reset pay__types-btn pay__types-btn swiper-slide">
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/sprite.svg#pay-types-sms"></use>
+              </svg>
+              СМС
+            </button>
+            <button class="btn-reset pay__types-btn pay__types-btn swiper-slide">
+              <svg width="24" height="20">
+                <use xlink:href="assets/img/sprite.svg#pay-types-fck"></use>
+              </svg>
+              ФЦК
+            </button>
+            <button class="btn-reset pay__types-btn pay__types-btn swiper-slide">
+              <svg width="21" height="20">
+                <use xlink:href="assets/img/sprite.svg#pay-types-volunteer"></use>
+              </svg>
+              Волонтерство
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-lg-5 col-xl-5">
+
+        <div class="pay__btns pay__btns_top d-flex mb-3">
+          <label for="frequency1" class="pay__radio-label js-radio-label">
+            <input type="radio" name="frequency" id="frequency1" class="pay__radio" checked>
+            <span class="pay__radio-pane">Ежемесячно</span>
+          </label>
+          <label for="frequency2" class="pay__radio-label js-radio-label">
+            <input type="radio" name="frequency" id="frequency2" class="pay__radio">
+            <span class="pay__radio-pane">Разово</span>
+          </label>
+        </div>
+
+        <div class="pay__btns d-flex">
+          <label for="sum1" class="pay__radio-label">
+            <input type="radio" name="sum" id="sum1" value="500" class="pay__radio   js-radio">
+            <span class="pay__radio-pane">500 ₽</span>
+          </label>
+          <label for="sum2" class="pay__radio-label">
+            <input type="radio" name="sum" id="sum2" value="2400" class="pay__radio  js-radio">
+            <span class="pay__radio-pane">2 400 ₽</span>
+          </label>
+          <label for="sum3" class="pay__radio-label">
+            <input type="radio" name="sum" id="sum3" value="3200" class="pay__radio  js-radio" checked>
+            <span class="pay__radio-pane">3 200 ₽</span>
+          </label>
+          <label for="sum4" class="pay__radio-label">
+            <input type="radio" name="sum" id="sum4" value="6000" class="pay__radio  js-radio">
+            <span class="pay__radio-pane">6 000 ₽</span>
+          </label>
+
+          <input
+            type="number"
+            name="other-sum"
+            class="pay__input w-100 js-input-number"
+            placeholder="Другая сумма"
+            maxlength="10"
+            min="1"
+            max="9999999999"
+          >
+          <button class="btn-reset pay__btn pay__submit w-100 is-active">Хочу помочь</button>
+        </div>
+
+        <ul class="pay__systems d-flex">
+          <li class="pay__systems-item">
+            <svg width="66" height="28">
+              <use xlink:href="assets/img/sprite.svg#apple-pay"></use>
+            </svg>
+          </li>
+          <li class="pay__systems-item">
+            <svg width="71" height="28">
+              <use xlink:href="assets/img/sprite.svg#google-pay"></use>
+            </svg>
+          </li>
+          <li class="pay__systems-item">
+            <svg width="79" height="28">
+              <use xlink:href="assets/img/sprite.svg#sber-pay"></use>
+            </svg>
+          </li>
+          <li class="pay__systems-item">
+            <svg width="200" height="34">
+              <use xlink:href="assets/img/sprite.svg#samsung-pay"></use>
+            </svg>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-5 col-md-5 col-lg-3 col-xl-3 order-sm-2 order-lg-0">
+        <div class="pay__decor">
+          <picture>
+            <source srcset="assets/img/design-arrow-vertical.png" media="(max-width: 600px)">
+            <source srcset="assets/img/design-arrow-1200.png" media="(max-width: 1200px)">
+            <img src="assets/img/design-arrow.png" alt="">
+          </picture>
+
+          <span class="js-sum-decor">Узнайте, на&nbsp;что&nbsp;идут&nbsp;деньги</span>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+        <div class="pay__result">
+          <p class="pay__result-sum js-pay-sum">3 200 ₽</p>
+          <p class="pay__result-descr js-sum-descr">одна консультация онколога</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

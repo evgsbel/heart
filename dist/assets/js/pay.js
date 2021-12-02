@@ -1,7 +1,6 @@
 "use strict";
 
-console.log('main'); // tabs
-
+// tabs
 document.addEventListener('DOMContentLoaded', function () {
   var tabsBtn = document.querySelectorAll('.tabs__btn');
   tabsBtn.forEach(function (el) {
@@ -17,162 +16,21 @@ document.addEventListener('DOMContentLoaded', function () {
       el.classList.add('is-active');
     });
   });
-}); // hero slider
-
-var swiperHero = new Swiper('.hero__swiper', {
-  // Optional parameters
-  spaceBetween: 14,
-  speed: 500,
-  watchOverflow: false,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
-  },
-  breakpoints: {
-    // when window width is >= 320px
-    320: {
-      slidesPerView: 1.5,
-      spaceBetween: 10
-    },
-    768: {
-      spaceBetween: 20,
-      slidesPerView: 3
-    },
-    1200: {
-      slidesPerView: 3.5
-    },
-    1440: {
-      slidesPerView: 2.6
-    },
-    1600: {
-      slidesPerView: 4
-    }
-  }
-}); // pay slider
-
-var swiperPay = new Swiper('.pay__swiper', {
-  // Optional parameters
-  watchOverflow: false,
-  speed: 500,
-  spaceBetween: 5,
-  breakpoints: {
-    // when window width is >= 320px
-    320: {
-      slidesPerView: 1.5
-    },
-    768: {
-      slidesPerView: 'auto'
-    }
-  }
-}); // help slider
-
-var swiperHelp = new Swiper('.help__swiper', {
-  // Optional parameters
-  speed: 800,
-  spaceBetween: 80,
-  navigation: {
-    nextEl: ".help-button-next",
-    prevEl: ".help-button-prev"
-  },
-  breakpoints: {
-    320: {
-      slidesPerView: 1.1,
-      spaceBetween: 16
-    },
-    1440: {
-      spaceBetween: 0,
-      slidesPerView: 1
-    },
-    1600: {
-      slidesPerView: 1.5
-    }
-  }
-}); // community slider
-
-var swiperCommunity = new Swiper('.community__swiper', {
-  // Optional parameters
-  speed: 500,
-  spaceBetween: 30,
-  breakpoints: {
-    320: {
-      slidesPerView: 1.1,
-      spaceBetween: 16
-    },
-    1024: {
-      slidesPerView: 2.5
-    },
-    1400: {
-      slidesPerView: 3
-    }
-  }
 });
-$(function () {
-  function checkWidth() {
-    var windowWidth = $('body').innerWidth();
-
-    if (windowWidth < 1025) {
-      // face slider
-      var swiperFaceMob = new Swiper('.face__swiper', {
-        // Optional parameters
-        slidesPerView: 1,
-        speed: 800,
-        navigation: {
-          nextEl: ".face-button-next",
-          prevEl: ".face-button-prev"
-        },
-        breakpoints: {
-          320: {
-            slidesPerView: 1.2,
-            spaceBetween: 16
-          },
-          1199: {
-            slidesPerView: 1,
-            spaceBetween: 16
-          },
-          1240: {
-            spaceBetween: 0
-          }
-        }
+document.addEventListener('DOMContentLoaded', function () {
+  var tabsBtn = document.querySelectorAll('.change-bank__btn');
+  tabsBtn.forEach(function (el) {
+    el.addEventListener('click', function (event) {
+      tabsBtn.forEach(function (tabsBtn) {
+        tabsBtn.classList.remove('is-active');
       });
-    } else {
-      // face slider
-      var swiperFaceDesk = new Swiper('.face__swiper', {
-        // Optional parameters
-        slidesPerView: 1,
-        effect: "creative",
-        creativeEffect: {
-          prev: {
-            translate: [0, 0, -400]
-          },
-          next: {
-            translate: ["100%", 0, 0]
-          }
-        },
-        speed: 800,
-        navigation: {
-          nextEl: ".face-button-next",
-          prevEl: ".face-button-prev"
-        },
-        breakpoints: {
-          320: {
-            slidesPerView: 1.2,
-            spaceBetween: 16
-          },
-          1199: {
-            slidesPerView: 1,
-            spaceBetween: 16
-          },
-          1240: {
-            spaceBetween: 0
-          }
-        }
+      var path = event.currentTarget.dataset.path;
+      document.querySelectorAll('.change-bank__content').forEach(function (tabContent) {
+        tabContent.classList.remove('is-active');
       });
-    }
-  }
-
-  checkWidth();
-  $(window).resize(function () {
-    checkWidth(); // проверит при изменении размера окна клиента
+      document.querySelector("[data-target=\"".concat(path, "\"]")).classList.add('is-active');
+      el.classList.add('is-active');
+    });
   });
 }); // pay form
 

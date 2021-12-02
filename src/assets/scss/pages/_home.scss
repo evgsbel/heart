@@ -313,6 +313,13 @@
       -webkit-appearance: none;
       margin: 0;
     }
+    &_grey {
+      color: #6d7276;
+      background-color: #F5F8FB;
+      &::placeholder {
+        color: #6d7276;
+      }
+    }
   }
   &__btn {
     display: flex;
@@ -422,6 +429,12 @@
   }
   &__swiper {
     width: calc(100% - (100% - 113%) / 3);
+  }
+  &__confidencial {
+    color: #848484;
+    font-size: 1em;
+    line-height: 1.4;
+    max-width: 544px;
   }
 }
 

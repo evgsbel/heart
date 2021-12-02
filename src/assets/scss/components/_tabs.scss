@@ -1,4 +1,4 @@
-.tabs {
+.hero-tabs {
   &__nav {
     margin-top: 25px;
     display: flex;
@@ -30,7 +30,7 @@
     mask-image: paint(smooth-corners);
     -webkit-mask-image: paint(smooth-corners);
     --smooth-corners: 8;
-    &_active,
+    &.is-active,
     &:hover {
       color: #000;
     }
@@ -178,9 +178,22 @@
           background-image: url(../img/hero-decor-012.png);
         }
       }
-      &_active {
+      &.is-active {
         display: block;
       }
     }
   }
 }
+
+.tabs {
+  &__content {
+    display: none;
+    &.is-active {
+      display: block;
+    }
+    &_flex.is-active {
+      display: flex;
+    }
+  }
+}
+
