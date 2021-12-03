@@ -27,7 +27,7 @@
   z-index: 10;
   display: flex;
   @include r(1440) {
-    top: 255px;
+    top: 55%;
   }
   @include r(1200) {
     display: none;

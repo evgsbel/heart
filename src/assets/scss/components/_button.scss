@@ -2,13 +2,7 @@
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
 .button {
-  mask-image: paint(smooth-corners);
-  -webkit-mask-image: paint(smooth-corners);
-  --smooth-corners: 10;
-  //background-color: transparent;
-  //background-image: url('../img/Button.png');
-  //background-repeat: no-repeat;
-  //background-position: center;
+  border-radius: 8px;
   &_white {
     background-color: #fff;
   }

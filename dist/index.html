@@ -19,26 +19,27 @@
     <header class="header js-header">
       <div class="container">
         <div class="row header__inner">
-          <div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
+          <div class="col-sm-3 col-md-3 col-lg-6 col-xl-6">
+            <div class="header__left">
             <a href="/" class="logo">
               <svg class="logo__img">
                 <use xlink:href="assets/img/sprite.svg#logo"></use>
               </svg>
               <p class="logo__text">Огромное сердце</p>
             </a>
-          </div>
-          <div class="col-md-5 col-lg-5 col-xl-5 d-sm-none d-lg-block">
             <nav class="nav">
                 <ul class="nav__list d-flex">
                   <li class="nav__item"><a href="" class="nav__link">Фонд</a></li>
                   <li class="nav__item"><a href="/wards.html" class="nav__link">Подопечным</a></li>
                   <li class="nav__item"><a href="" class="nav__link">Волонтерам</a></li>
+                  <li class="nav__item"><a href="" class="nav__link">Статьи</a></li>
                   <li class="nav__item"><a href="" class="nav__link">Сборы</a></li>
                   <li class="nav__item"><a href="" class="nav__link">Контакты</a></li>
                 </ul>
             </nav>
+            </div>
           </div>
-          <div class="col-sm-8 col-md-8 col-lg-5 col-xl-5">
+          <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
             <div class="header__right">
               <div class="search">
               <button class="btn-reset search__btn">
@@ -51,8 +52,8 @@
                 </label>
               </div>
               <a href="tel:88003505785" class="header__phone">8 800 350 57 85</a>
-              <button class="btn-reset button  header__btn-help">Нужна помощь</button>
-              <button class="btn-reset button  header__btn">Хочу помочь</button>
+              <button class="btn-reset button header__btn-help">Нужна помощь</button>
+              <button class="btn-reset button header__btn">Хочу помочь</button>
             </div>
           </div>
           <button class="btn-reset burger">
@@ -181,68 +182,74 @@
                 <!-- Item 1 -->
                 <div class="tabs__content hero-tabs__content is-active " data-target="one">
                   <h2 class="title-h2 hero__title tabs__caption hero-tabs__caption">Об онкологии</h2>
-                  <p class="tabs__descr hero-tabs__descr">Страх заболеть раком возникает от&nbsp;незнания человеком, где&nbsp;проходить чекапы и&nbsp;скрининги.
+                  <p class="tabs__descr hero-tabs__descr">Страх заболеть раком возникает от&nbsp;незнания человеком, где&nbsp;проходить
+                    чекапы и&nbsp;скрининги.
                     Забота о&nbsp;своём здоровье начинается с&nbsp;обследования.</p>
-                  <p class="tabs__descr hero-tabs__descr">Выявление онкологии на&nbsp;ранней стадии значительно повышает вероятность
+                  <p class="tabs__descr hero-tabs__descr">Выявление онкологии на&nbsp;ранней стадии значительно повышает
+                    вероятность
                     положительного
                     исхода лечения.</p>
         
-                  <section class="section articles swiper hero__swiper">
-                    <ul class="d-flex articles__list swiper-wrapper">
-                      <li class="articles__wr swiper-slide">
-                        <article class="articles__item">
-                          <img src="assets/img/hero-article-01.png" class="articles__img" alt="">
-                          <a href="" class="articles__caption">В&nbsp;Москве открылся сверхсовременный Центр амбулаторной
-                            онко-помощи</a>
-                        </article>
-                      </li>
-                      <li class="articles__wr swiper-slide">
-                        <article class="articles__item">
-                          <img src="assets/img/hero-article-02.png" class="articles__img" alt="">
-                          <a href="" class="articles__caption">Реконструкция молочной железы по ОМС: как получить квоту?</a>
-                        </article>
-                      </li>
-                      <li class="articles__wr swiper-slide">
-                        <article class="articles__item">
-                          <img src="assets/img/hero-article-03.png" class="articles__img" alt="">
-                          <a href="" class="articles__caption">Трудоустройство после онкологического лечения</a>
-                        </article>
-                      </li>
-                      <li class="articles__wr swiper-slide">
-                        <article class="articles__item">
-                          <img src="assets/img/hero-article-01.png" class="articles__img" alt="">
-                          <a href="" class="articles__caption">В&nbsp;Москве открылся сверхсовременный Центр амбулаторной
-                            онко-помощи</a>
-                        </article>
-                      </li>
-                    </ul>
-                    <div class="hero__bottom">
-                      <a href="" class="articles__link">Смотреть все статьи</a>
-                      <div class="mt-4 hero__slider-navigation">
-                        <div class="swiper-button-prev hero__swiper-navigation slider-navigation slider-navigation_prev">
-                          <svg>
-                            <use xlink:href="assets/img/sprite.svg#sl-prev"></use>
-                          </svg>
-                        </div>
-                        <div class="swiper-button-next hero__swiper-navigation slider-navigation slider-navigation_next">
-                          <svg>
-                            <use xlink:href="assets/img/sprite.svg#sl-next"></use>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
+                  <!--          <section class="section articles swiper hero__swiper">-->
+                  <!--            <ul class="d-flex articles__list swiper-wrapper">-->
+                  <!--              <li class="articles__wr swiper-slide">-->
+                  <!--                <article class="articles__item">-->
+                  <!--                  <img src="assets/img/hero-article-01.png" class="articles__img" alt="">-->
+                  <!--                  <a href="" class="articles__caption">В&nbsp;Москве открылся сверхсовременный Центр амбулаторной-->
+                  <!--                    онко-помощи</a>-->
+                  <!--                </article>-->
+                  <!--              </li>-->
+                  <!--              <li class="articles__wr swiper-slide">-->
+                  <!--                <article class="articles__item">-->
+                  <!--                  <img src="assets/img/hero-article-02.png" class="articles__img" alt="">-->
+                  <!--                  <a href="" class="articles__caption">Реконструкция молочной железы по ОМС: как получить квоту?</a>-->
+                  <!--                </article>-->
+                  <!--              </li>-->
+                  <!--              <li class="articles__wr swiper-slide">-->
+                  <!--                <article class="articles__item">-->
+                  <!--                  <img src="assets/img/hero-article-03.png" class="articles__img" alt="">-->
+                  <!--                  <a href="" class="articles__caption">Трудоустройство после онкологического лечения</a>-->
+                  <!--                </article>-->
+                  <!--              </li>-->
+                  <!--              <li class="articles__wr swiper-slide">-->
+                  <!--                <article class="articles__item">-->
+                  <!--                  <img src="assets/img/hero-article-01.png" class="articles__img" alt="">-->
+                  <!--                  <a href="" class="articles__caption">В&nbsp;Москве открылся сверхсовременный Центр амбулаторной-->
+                  <!--                    онко-помощи</a>-->
+                  <!--                </article>-->
+                  <!--              </li>-->
+                  <!--            </ul>-->
+                  <!--            <div class="hero__bottom">-->
+                  <!--              <a href="" class="articles__link">Смотреть все статьи</a>-->
+                  <!--              <div class="mt-4 hero__slider-navigation">
+          <div class="swiper-button-prev hero__swiper-navigation slider-navigation slider-navigation_prev">
+            <svg>
+              <use xlink:href="assets/img/sprite.svg#sl-prev"></use>
+            </svg>
+          </div>
+          <div class="swiper-button-next hero__swiper-navigation slider-navigation slider-navigation_next">
+            <svg>
+              <use xlink:href="assets/img/sprite.svg#sl-next"></use>
+            </svg>
+          </div>
+        </div>
+        -->
+                  <!--            </div>-->
+                  <!--          </section>-->
+                  <button class="btn-reset hero-tabs__link hero-tabs__link_white">Получить помощь</button>
                 </div>
                 <!-- Item 1 END -->
         
                 <!-- Item 2 -->
                 <div class="tabs__content hero-tabs__content" data-target="two">
                   <h2 class="title-h2 hero__title tabs__caption hero-tabs__caption">Бесплатные сеансы с психологом</h2>
-                  <p class="tabs__descr hero-tabs__descr">Психологическая поддержка особенно важна для&nbsp;людей, которые столкнулись
+                  <p class="tabs__descr hero-tabs__descr">Психологическая поддержка особенно важна для&nbsp;людей, которые
+                    столкнулись
                     с&nbsp;онкозаболеванием&nbsp;— как&nbsp;для&nbsp;самого пациента, так&nbsp;и&nbsp;для&nbsp;его&nbsp;близких.
                     Психолог поможет справиться со&nbsp;многими
                     переживаниями и&nbsp;даст надёжную поддержку.</p>
-                  <p class="tabs__descr hero-tabs__descr">В&nbsp;фонде работает команда психологов-волонтёров. Каждый обратившийся получает
+                  <p class="tabs__descr hero-tabs__descr">В&nbsp;фонде работает команда психологов-волонтёров. Каждый
+                    обратившийся получает
                     10&nbsp;бесплатных консультаций.</p>
                   <button class="btn-reset hero-tabs__link">Получить помощь</button>
                 </div>
@@ -251,12 +258,14 @@
                 <!-- Item 3 -->
                 <div class="tabs__content hero-tabs__content" data-target="three">
                   <h2 class="title-h2 hero__title tabs__caption hero-tabs__caption">Бесплатные консультации юриста</h2>
-                  <p class="tabs__descr hero-tabs__descr">В&nbsp;ходе лечения онкобольным нередко приходится решать различные организационные
+                  <p class="tabs__descr hero-tabs__descr">В&nbsp;ходе лечения онкобольным нередко приходится решать различные
+                    организационные
                     вопросы,
                     которые касаются отпуска по&nbsp;болезни, получения квоты на&nbsp;ВМП, льгот&nbsp;и&nbsp;др. Далеко не&nbsp;все&nbsp;знают
                     о&nbsp;своих правах
                     и&nbsp;умеют их&nbsp;отстаивать.</p>
-                  <p class="tabs__descr hero-tabs__descr">Юристы-волонтёры фонда оказывают бесплатные юридические консультации взрослым
+                  <p class="tabs__descr hero-tabs__descr">Юристы-волонтёры фонда оказывают бесплатные юридические консультации
+                    взрослым
                     онкобольным и&nbsp;их&nbsp;близким.</p>
                   <button class="btn-reset hero-tabs__link hero-tabs__link_white">Получить помощь</button>
                 </div>
@@ -265,9 +274,11 @@
                 <!-- Item 4 -->
                 <div class="tabs__content hero-tabs__content" data-target="four">
                   <h2 class="title-h2 hero__title tabs__caption hero-tabs__caption">Равное консультирование</h2>
-                  <p class="tabs__descr hero-tabs__descr">Человек с&nbsp;онкодиагнозом может получить консультацию от&nbsp;равного консультанта
+                  <p class="tabs__descr hero-tabs__descr">Человек с&nbsp;онкодиагнозом может получить консультацию от&nbsp;равного
+                    консультанта
                     по&nbsp;различным вопросам, касающимся как&nbsp;информационной, так&nbsp;и&nbsp;эмоциональной поддержки.</p>
-                  <p class="tabs__descr hero-tabs__descr">Спросить совета у&nbsp;того, кто&nbsp;уже победил свой рак&nbsp;и&nbsp;готов делиться
+                  <p class="tabs__descr hero-tabs__descr">Спросить совета у&nbsp;того, кто&nbsp;уже победил свой рак&nbsp;и&nbsp;готов
+                    делиться
                     этим опытом
                     с&nbsp;другими.</p>
                   <button class="btn-reset hero-tabs__link">Получить помощь</button>
@@ -277,10 +288,12 @@
                 <!-- Item 5 -->
                 <div class="tabs__content hero-tabs__content" data-target="five">
                   <h2 class="title-h2 hero__title tabs__caption hero-tabs__caption">Поиск специалиста и&nbsp;учреждения</h2>
-                  <p class="tabs__descr hero-tabs__descr">Мы&nbsp;помогаем в&nbsp;поиске врачей и&nbsp;медицинских учреждений для&nbsp;лечения
+                  <p class="tabs__descr hero-tabs__descr">Мы&nbsp;помогаем в&nbsp;поиске врачей и&nbsp;медицинских учреждений
+                    для&nbsp;лечения
                     конкретной
                     нозологии.&nbsp;</p>
-                  <p class="tabs__descr hero-tabs__descr"> Основываясь на&nbsp;внутреннем рейтинге организаций, консультанты Горячей линии могут
+                  <p class="tabs__descr hero-tabs__descr"> Основываясь на&nbsp;внутреннем рейтинге организаций, консультанты
+                    Горячей линии могут
                     подобрать список специалистов, к&nbsp;которым можно обратиться по&nbsp;ОМС.</p>
                   <button class="btn-reset hero-tabs__link">Получить помощь</button>
                 </div>
@@ -292,7 +305,8 @@
                   <p class="tabs__descr hero-tabs__descr">Диагноз «рак» выбивает из&nbsp;колеи. У&nbsp;онкобольного и&nbsp;его&nbsp;близких
                     возникает множество
                     вопросов, на&nbsp;которые в&nbsp;стрессовой ситуации важно быстро найти правильные ответы.</p>
-                  <p class="tabs__descr hero-tabs__descr"> Консультация с&nbsp;несколькими специалистами помогает в&nbsp;выборе наиболее
+                  <p class="tabs__descr hero-tabs__descr"> Консультация с&nbsp;несколькими специалистами помогает в&nbsp;выборе
+                    наиболее
                     эффективного и&nbsp;целесообразного лечения.</p>
                   <button class="btn-reset hero-tabs__link hero-tabs__link_white">Получить помощь</button>
                 </div>
@@ -301,10 +315,12 @@
                 <!-- Item 7 -->
                 <div class="tabs__content hero-tabs__content" data-target="seven">
                   <h2 class="title-h2 hero__title tabs__caption hero-tabs__caption">Диагностика</h2>
-                  <p class="tabs__descr hero-tabs__descr">Точно поставленный диагноз&nbsp;— это&nbsp;залог правильного выбора наиболее
+                  <p class="tabs__descr hero-tabs__descr">Точно поставленный диагноз&nbsp;— это&nbsp;залог правильного выбора
+                    наиболее
                     эффективного
                     лечения. Важно проходить обследования как&nbsp;можно быстрее.</p>
-                  <p class="tabs__descr hero-tabs__descr"> Всю&nbsp;необходимую медицинскую помощь онкобольной может получить бесплатно по&nbsp;ОМС,
+                  <p class="tabs__descr hero-tabs__descr"> Всю&nbsp;необходимую медицинскую помощь онкобольной может получить
+                    бесплатно по&nbsp;ОМС,
                     но&nbsp;иногда возникает необходимость в&nbsp;платных услугах.</p>
                   <p class="tabs__descr hero-tabs__descr"> Мы&nbsp;помогаем с&nbsp;оплатой диагностики, обследований и&nbsp;консультаций.</p>
                   <button class="btn-reset hero-tabs__link hero-tabs__link_white">Получить помощь</button>
@@ -314,9 +330,11 @@
                 <!-- Item 8 -->
                 <div class="tabs__content hero-tabs__content" data-target="eight">
                   <h2 class="title-h2 hero__title tabs__caption hero-tabs__caption">Бесплатное такси для&nbsp;подопечных</h2>
-                  <p class="tabs__descr hero-tabs__descr">Подопечные фонда с&nbsp;онкологическим диагнозом могут бесплатно приезжать на&nbsp;такси
+                  <p class="tabs__descr hero-tabs__descr">Подопечные фонда с&nbsp;онкологическим диагнозом могут бесплатно
+                    приезжать на&nbsp;такси
                     в&nbsp;медицинские организации с&nbsp;целью консультаций, обследований, лечения.</p>
-                  <p class="tabs__descr hero-tabs__descr"> Поездки для&nbsp;иногородних граждан от&nbsp;вокзала и&nbsp;аэропорта до&nbsp;места
+                  <p class="tabs__descr hero-tabs__descr"> Поездки для&nbsp;иногородних граждан от&nbsp;вокзала и&nbsp;аэропорта
+                    до&nbsp;места
                     лечения или&nbsp;проживания
                     и&nbsp;обратно.</p>
                   <button class="btn-reset hero-tabs__link">Получить помощь</button>
@@ -329,7 +347,8 @@
                   <p class="tabs__descr hero-tabs__descr">Онкобольные во&nbsp;время прохождения лечения нередко нуждаются в&nbsp;финансовой
                     поддержке.
                     Не&nbsp;хватает буквально самого необходимого.</p>
-                  <p class="tabs__descr hero-tabs__descr"> Мы&nbsp;собираем продуктовые корзины стоимостью до&nbsp;3 000&nbsp;₽ для&nbsp;подопечных,
+                  <p class="tabs__descr hero-tabs__descr"> Мы&nbsp;собираем продуктовые корзины стоимостью до&nbsp;3 000&nbsp;₽
+                    для&nbsp;подопечных,
                     которые
                     находятся в&nbsp;тяжёлой жизненной ситуации совместно со&nbsp;СберМаркет.</p>
                   <button class="btn-reset hero-tabs__link">Получить помощь</button>
@@ -339,7 +358,8 @@
                 <!-- Item 10 -->
                 <div class="tabs__content hero-tabs__content" data-target="ten">
                   <h2 class="title-h2 hero__title tabs__caption hero-tabs__caption">Бесплатный трансфер</h2>
-                  <p class="tabs__descr hero-tabs__descr">Проходить диагностику или&nbsp;лечение онкобольным нередко приходится в&nbsp;другом
+                  <p class="tabs__descr hero-tabs__descr">Проходить диагностику или&nbsp;лечение онкобольным нередко приходится
+                    в&nbsp;другом
                     регионе,
                     поскольку далеко не&nbsp;во&nbsp;всех даже&nbsp;крупных городах клиники оснащены современным
                     оборудованием.</p>
@@ -353,10 +373,12 @@
                 <!-- Item 11 -->
                 <div class="tabs__content hero-tabs__content" data-target="eleven">
                   <h2 class="title-h2 hero__title tabs__caption hero-tabs__caption">Проживание в&nbsp;другом городе</h2>
-                  <p class="tabs__descr hero-tabs__descr">Не&nbsp;во&nbsp;всех городах клиники оснащены современным оборудованием для&nbsp;диагностики.
+                  <p class="tabs__descr hero-tabs__descr">Не&nbsp;во&nbsp;всех городах клиники оснащены современным
+                    оборудованием для&nbsp;диагностики.
                     А&nbsp;лечение нередко требует высокотехнологичной помощи, которую оказывают только определённые медицинские
                     учреждения.</p>
-                  <p class="tabs__descr hero-tabs__descr">Мы&nbsp;оплачиваем проживание во&nbsp;время лечения или&nbsp;обследования подопечным из&nbsp;других
+                  <p class="tabs__descr hero-tabs__descr">Мы&nbsp;оплачиваем проживание во&nbsp;время лечения или&nbsp;обследования
+                    подопечным из&nbsp;других
                     регионов.</p>
                   <button class="btn-reset hero-tabs__link">Получить помощь</button>
                 </div>
@@ -390,46 +412,46 @@
           </div>
         </section>
         <section class="mobile-top-btns">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
                 <button class="button button_blue btn-reset mobile-top-btns__btn">Хочу помочь</button>
                 <button class="button btn-reset mobile-top-btns__btn mobile-top-btns__btn_grey">Нужна помощь</button>
+              </div>
             </div>
           </div>
-        </div>
         </section>
-        <section class="articles articles_mobile swiper hero__swiper pl-3">
-          <h2 class="title-h2 mb-3">Статьи</h2>
-          <ul class="d-flex articles__list swiper-wrapper">
-            <li class="articles__wr swiper-slide">
-              <article class="articles__item">
-                <img src="assets/img/hero-article-01.png" class="articles__img" alt="">
-                <a href="" class="articles__caption">В&nbsp;Москве открылся сверхсовременный Центр амбулаторной
-                  онко-помощи</a>
-              </article>
-            </li>
-            <li class="articles__wr swiper-slide">
-              <article class="articles__item">
-                <img src="assets/img/hero-article-02.png" class="articles__img" alt="">
-                <a href="" class="articles__caption">Реконструкция молочной железы по ОМС: как получить квоту?</a>
-              </article>
-            </li>
-            <li class="articles__wr swiper-slide">
-              <article class="articles__item">
-                <img src="assets/img/hero-article-03.png" class="articles__img" alt="">
-                <a href="" class="articles__caption">Трудоустройство после онкологического лечения</a>
-              </article>
-            </li>
-            <li class="articles__wr swiper-slide">
-              <article class="articles__item">
-                <img src="assets/img/hero-article-01.png" class="articles__img" alt="">
-                <a href="" class="articles__caption">В&nbsp;Москве открылся сверхсовременный Центр амбулаторной
-                  онко-помощи</a>
-              </article>
-            </li>
-          </ul>
-        </section>
+        <!--<section class="articles articles_mobile swiper hero__swiper pl-3">-->
+        <!--  <h2 class="title-h2 mb-3">Статьи</h2>-->
+        <!--  <ul class="d-flex articles__list swiper-wrapper">-->
+        <!--    <li class="articles__wr swiper-slide">-->
+        <!--      <article class="articles__item">-->
+        <!--        <img src="assets/img/hero-article-01.png" class="articles__img" alt="">-->
+        <!--        <a href="" class="articles__caption">В&nbsp;Москве открылся сверхсовременный Центр амбулаторной-->
+        <!--          онко-помощи</a>-->
+        <!--      </article>-->
+        <!--    </li>-->
+        <!--    <li class="articles__wr swiper-slide">-->
+        <!--      <article class="articles__item">-->
+        <!--        <img src="assets/img/hero-article-02.png" class="articles__img" alt="">-->
+        <!--        <a href="" class="articles__caption">Реконструкция молочной железы по ОМС: как получить квоту?</a>-->
+        <!--      </article>-->
+        <!--    </li>-->
+        <!--    <li class="articles__wr swiper-slide">-->
+        <!--      <article class="articles__item">-->
+        <!--        <img src="assets/img/hero-article-03.png" class="articles__img" alt="">-->
+        <!--        <a href="" class="articles__caption">Трудоустройство после онкологического лечения</a>-->
+        <!--      </article>-->
+        <!--    </li>-->
+        <!--    <li class="articles__wr swiper-slide">-->
+        <!--      <article class="articles__item">-->
+        <!--        <img src="assets/img/hero-article-01.png" class="articles__img" alt="">-->
+        <!--        <a href="" class="articles__caption">В&nbsp;Москве открылся сверхсовременный Центр амбулаторной-->
+        <!--          онко-помощи</a>-->
+        <!--      </article>-->
+        <!--    </li>-->
+        <!--  </ul>-->
+        <!--</section>-->
         <section class="mobile-types mt-5">
           <div class="container">
             <div class="row">
@@ -597,6 +619,7 @@
               <div class="col-sm-5 col-md-5 col-lg-3 col-xl-3 order-sm-2 order-lg-0">
                 <div class="pay__decor">
                   <picture>
+                    <source srcset="assets/img/design-arrow-vertical-sm.png" media="(max-width: 480px)">
                     <source srcset="assets/img/design-arrow-vertical.png" media="(max-width: 600px)">
                     <source srcset="assets/img/design-arrow-1200.png" media="(max-width: 1200px)">
                     <img src="assets/img/design-arrow.png" alt="">
@@ -696,8 +719,8 @@
               </div>
               <div class="swiper community__swiper">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <a  class="community__item community__item_01">
+                  <div class="swiper-slide order-3 order-md-0">
+                    <a class="community__item community__item_01">
                       <h3 class="community__title">Группа<span>взаимопомощи</span></h3>
                       <p class="community__descr">Два&nbsp;раза в&nbsp;месяц для&nbsp;подопечных проводятся онлайн встречи, на&nbsp;которых
                         участники
@@ -706,8 +729,8 @@
                         и&nbsp;закрытых&nbsp;тем.</p>
                     </a>
                   </div>
-                  <div class="swiper-slide">
-                    <a  class="community__item community__item_02">
+                  <div class="swiper-slide order-2 order-md-0">
+                    <a class="community__item community__item_02">
                       <h3 class="community__title">Мероприятия<span>для&nbsp;подопечных</span></h3>
                       <p class="community__descr">Мы&nbsp;организуем офлайн встречи, фотосессии для&nbsp;наших подопечных.
                         Активная
@@ -718,8 +741,8 @@
                         победил&nbsp;рак.</p>
                     </a>
                   </div>
-                  <div class="swiper-slide">
-                    <a  class="community__item community__item_03">
+                  <div class="swiper-slide order-1 order-md-0">
+                    <a class="community__item community__item_03">
                       <h3 class="community__title">Равное<span>консультирование</span></h3>
                       <p class="community__descr">Наш фонд выиграл Президентский грант на&nbsp;внедрение услуги Равное
                         консультирование,
@@ -754,81 +777,80 @@
                   </div>
                 </div>
               </div>
-              <div class="col-xl-12">
-                <div class="swiper help__swiper">
-                  <div class="swiper-wrapper">
-                    <div class="help__item swiper-slide">
-                      <div class="d-flex help__img">
-                        <picture class="">
-                          <source srcset="assets/img/help-01-768.png" media="(max-width: 768px)">
-                          <img class="" src="assets/img/help-01.png" alt="">
-                        </picture>
-                        <p class="help__name help__name_mobile">Аничка, 41 год <span>г. Ростов-на-Дону</span></p>
-                      </div>
-                      <div class="help__descr">
-                        <p class="help__text">В своём стремлении улучшить пользовательский опыт мы упускаем, что интерактивные
-                          прототипы смешаны с не уникальными данными до степени совершенной неузнаваемости.</p>
-                        <p class="help__text">Высокий уровень вовлечения представителей целевой аудитории является четким факта:
-                          экономическая повестка сегодняшнего дня влечет за собой процесс внедрения и&nbsp;модернизации
-                          направлений
-                          прогрессивного развития!»</p>
-                        <p class="help__name">Аничка, 41 год <span>г. Ростов-на-Дону</span></p>
-                      </div>
-                    </div>
-                    <div class="help__item swiper-slide">
-                      <div class="d-flex help__img">
-                        <picture>
-                          <source srcset="assets/img/help-01-768.png" media="(max-width: 768px)">
-                          <img class="" src="assets/img/help-02.png" alt="">
-                        </picture>
-                        <p class="help__name help__name_mobile">Аничка, 41 год <span>г. Ростов-на-Дону</span></p>
-                      </div>
-                      <div class="help__descr">
-                        <p class="help__text">В своём стремлении улучшить пользовательский опыт мы упускаем, что интерактивные
-                          прототипы смешаны с не уникальными данными до степени совершенной неузнаваемости.</p>
-                        <p class="help__text">Высокий уровень вовлечения представителей целевой аудитории является четким факта:
-                          экономическая повестка сегодняшнего дня влечет за собой процесс внедрения и&nbsp;модернизации
-                          направлений
-                          прогрессивного развития!»</p>
-                        <p class="help__name">Аничка, 41 год <span>г. Ростов-на-Дону</span></p>
-                      </div>
-                    </div>
-                    <div class="help__item swiper-slide">
-                      <div class="d-flex help__img">
-                        <picture>
-                          <source srcset="assets/img/help-01-768.png" media="(max-width: 768px)">
-                          <img class="" src="assets/img/help-01.png" alt="">
-                        </picture>
-                        <p class="help__name help__name_mobile">Аничка, 41 год <span>г. Ростов-на-Дону</span></p>
-                      </div>
-                      <div class="help__descr">
-                        <p class="help__text">В своём стремлении улучшить пользовательский опыт мы упускаем, что интерактивные
-                          прототипы смешаны с не уникальными данными до степени совершенной неузнаваемости.</p>
-                        <p class="help__text">Высокий уровень вовлечения представителей целевой аудитории является четким факта:
-                          экономическая повестка сегодняшнего дня влечет за собой процесс внедрения и&nbsp;модернизации
-                          направлений
-                          прогрессивного развития!»</p>
-                        <p class="help__name">Аничка, 41 год <span>г. Ростов-на-Дону</span></p>
-                      </div>
-                    </div>
-                    <div class="help__item swiper-slide">
-                      <div class="d-flex help__img">
-                        <picture>
-                          <source srcset="assets/img/help-01-768.png" media="(max-width: 768px)">
-                          <img class="" src="assets/img/help-02.png" alt="">
-                        </picture>
-                        <p class="help__name help__name_mobile">Аничка, 41 год <span>г. Ростов-на-Дону</span></p>
-                      </div>
-                      <div class="help__descr">
-                        <p class="help__text">В своём стремлении улучшить пользовательский опыт мы упускаем, что интерактивные
-                          прототипы смешаны с не уникальными данными до степени совершенной неузнаваемости.</p>
-                        <p class="help__text">Высокий уровень вовлечения представителей целевой аудитории является четким факта:
-                          экономическая повестка сегодняшнего дня влечет за собой процесс внедрения и&nbsp;модернизации
-                          направлений
-                          прогрессивного развития!»</p>
-                        <p class="help__name">Аничка, 41 год <span>г. Ростов-на-Дону</span></p>
-                      </div>
-                    </div>
+            </div>
+          </div>
+          <div class="swiper help__swiper">
+            <div class="swiper-wrapper">
+                <div class="help__item swiper-slide">
+                  <div class="d-flex help__img">
+                    <picture class="">
+                      <source srcset="assets/img/help-01-768.png" media="(max-width: 768px)">
+                      <img class="" src="assets/img/help-01.png" alt="">
+                    </picture>
+                    <p class="help__name help__name_mobile">Аничка, 41 год <span>г. Ростов-на-Дону</span></p>
+                  </div>
+                  <div class="help__descr">
+                    <p class="help__text">В своём стремлении улучшить пользовательский опыт мы упускаем, что интерактивные
+                      прототипы смешаны с не уникальными данными до степени совершенной неузнаваемости.</p>
+                    <p class="help__text">Высокий уровень вовлечения представителей целевой аудитории является четким факта:
+                      экономическая повестка сегодняшнего дня влечет за собой процесс внедрения и&nbsp;модернизации
+                      направлений
+                      прогрессивного развития!»</p>
+                    <p class="help__name">Аничка, 41 год <span>г. Ростов-на-Дону</span></p>
+                  </div>
+                </div>
+                <div class="help__item swiper-slide">
+                  <div class="d-flex help__img">
+                    <picture>
+                      <source srcset="assets/img/help-01-768.png" media="(max-width: 768px)">
+                      <img class="" src="assets/img/help-02.png" alt="">
+                    </picture>
+                    <p class="help__name help__name_mobile">Аничка, 41 год <span>г. Ростов-на-Дону</span></p>
+                  </div>
+                  <div class="help__descr">
+                    <p class="help__text">В своём стремлении улучшить пользовательский опыт мы упускаем, что интерактивные
+                      прототипы смешаны с не уникальными данными до степени совершенной неузнаваемости.</p>
+                    <p class="help__text">Высокий уровень вовлечения представителей целевой аудитории является четким факта:
+                      экономическая повестка сегодняшнего дня влечет за собой процесс внедрения и&nbsp;модернизации
+                      направлений
+                      прогрессивного развития!»</p>
+                    <p class="help__name">Аничка, 41 год <span>г. Ростов-на-Дону</span></p>
+                  </div>
+                </div>
+                <div class="help__item swiper-slide">
+                  <div class="d-flex help__img">
+                    <picture>
+                      <source srcset="assets/img/help-01-768.png" media="(max-width: 768px)">
+                      <img class="" src="assets/img/help-01.png" alt="">
+                    </picture>
+                    <p class="help__name help__name_mobile">Аничка, 41 год <span>г. Ростов-на-Дону</span></p>
+                  </div>
+                  <div class="help__descr">
+                    <p class="help__text">В своём стремлении улучшить пользовательский опыт мы упускаем, что интерактивные
+                      прототипы смешаны с не уникальными данными до степени совершенной неузнаваемости.</p>
+                    <p class="help__text">Высокий уровень вовлечения представителей целевой аудитории является четким факта:
+                      экономическая повестка сегодняшнего дня влечет за собой процесс внедрения и&nbsp;модернизации
+                      направлений
+                      прогрессивного развития!»</p>
+                    <p class="help__name">Аничка, 41 год <span>г. Ростов-на-Дону</span></p>
+                  </div>
+                </div>
+                <div class="help__item swiper-slide">
+                  <div class="d-flex help__img">
+                    <picture>
+                      <source srcset="assets/img/help-01-768.png" media="(max-width: 768px)">
+                      <img class="" src="assets/img/help-02.png" alt="">
+                    </picture>
+                    <p class="help__name help__name_mobile">Аничка, 41 год <span>г. Ростов-на-Дону</span></p>
+                  </div>
+                  <div class="help__descr">
+                    <p class="help__text">В своём стремлении улучшить пользовательский опыт мы упускаем, что интерактивные
+                      прототипы смешаны с не уникальными данными до степени совершенной неузнаваемости.</p>
+                    <p class="help__text">Высокий уровень вовлечения представителей целевой аудитории является четким факта:
+                      экономическая повестка сегодняшнего дня влечет за собой процесс внедрения и&nbsp;модернизации
+                      направлений
+                      прогрессивного развития!»</p>
+                    <p class="help__name">Аничка, 41 год <span>г. Ростов-на-Дону</span></p>
                   </div>
                 </div>
               </div>
@@ -842,7 +864,7 @@
               <div class="col-xl-12">
                 <h2 class="title-h2 face__title">Фонд в лицах</h2>
               </div>
-              <div class="col-lg-3 col-xl-3 order-1 order-sm-0">
+              <div class="col-xl-3 col-lg-4 col-xl-3 order-1 order-sm-0">
                 <h3 class="face__caption">Попечительский совет</h3>
                 <div class="swiper face__swiper">
                   <div class="face-slider-nav">
@@ -917,7 +939,7 @@
                 </div>
               </div>
         
-              <div class="col-lg-3 col-xl-3 order-0 order-sm-1">
+              <div class="col-xl-3 col-lg-4 order-0 order-sm-1">
                 <h3 class="face__caption">Совет Фонда</h3>
                 <div class="swiper face__swiper">
                   <div class="face-slider-nav">
@@ -979,7 +1001,7 @@
                 </div>
               </div>
         
-              <div class="col-lg-3 col-xl-3 order-2">
+              <div class="col-xl-3 col-lg-4 order-2">
                 <h3 class="face__caption">Команда Фонда</h3>
                 <div class="swiper face__swiper">
                   <div class="face-slider-nav">

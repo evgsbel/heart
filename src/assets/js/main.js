@@ -86,12 +86,12 @@ const swiperHelp = new Swiper('.help__swiper', {
   },
   breakpoints: {
     320: {
-      slidesPerView: 1.1,
+      slidesPerView: 1.2,
       spaceBetween: 16,
     },
     1440: {
-      spaceBetween: 0,
-      slidesPerView: 1,
+      spaceBetween: 10,
+      slidesPerView: 1.03,
     },
     1600: {
       slidesPerView: 1.5,
@@ -106,7 +106,7 @@ const swiperCommunity = new Swiper('.community__swiper', {
   spaceBetween: 30,
   breakpoints: {
     320: {
-      slidesPerView: 1.1,
+      slidesPerView: 1.2,
       spaceBetween: 16,
     },
     1024: {
