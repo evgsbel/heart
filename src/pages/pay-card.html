@@ -13,7 +13,7 @@ script: pay
       <div class="col-xl-12">
         <div class="pay__types swiper pay__swiper d-flex">
           <div class="swiper-wrapper">
-            <button class="tabs__btn btn-reset pay__types-btn pay__types-btn swiper-slide is-active" data-path="card">
+            <button class="tabs__btn btn-reset pay__types-btn pay__types-btn swiper-slide" data-path="card">
               <svg width="24" height="18">
                 <use xlink:href="assets/img/sprite.svg#pay-types-card"></use>
               </svg>
@@ -37,7 +37,8 @@ script: pay
               </svg>
               ФЦК
             </button>
-            <button class="tabs__btn btn-reset pay__types-btn pay__types-btn swiper-slide" data-path="volunteer">
+            <button class="tabs__btn btn-reset pay__types-btn pay__types-btn swiper-slide is-active"
+                    data-path="volunteer">
               <svg width="21" height="20">
                 <use xlink:href="assets/img/sprite.svg#pay-types-volunteer"></use>
               </svg>
@@ -47,7 +48,7 @@ script: pay
         </div>
       </div>
     </div>
-    <div class="row mt-5 pay-tabs__content tabs__content tabs__content_flex is-active" data-target="card">
+    <div class="row mt-5 pay-tabs__content tabs__content tabs__content_flex" data-target="card">
       <div class="col-lg-5 col-xl-5">
         <div class="pay__btns pay__btns_top d-flex mb-3">
           <label for="frequency1" class="pay__radio-label js-radio-label">
@@ -284,7 +285,8 @@ script: pay
       <div class="col-lg-5 col-xl-5 pay-sms">
         <p class="pay-sms__title">Отправьте сообщение на номер <span>900</span> с суммой пожертвования</p>
         <p class="pay-sms__descr">Напишите в СМС слово «сердце» и через пробел сумму перевода.</p>
-        <p class="pay-sms__descr">Допустимый размер пожертвования — от 10 до 8 000 рублей в день. В случае, если вы хотите перевести сумму больше, воспользуйтесь другими способами пожертвования.</p>
+        <p class="pay-sms__descr">Допустимый размер пожертвования — от 10 до 8 000 рублей в день. В случае,
+          если вы хотите перевести сумму больше, воспользуйтесь другими способами пожертвования.</p>
       </div>
       <div class="col-sm-5 col-md-5 col-lg-3 col-xl-2 order-sm-2 order-lg-0">
 
@@ -304,7 +306,9 @@ script: pay
     <div class="row mt-5 pay-tabs__content tabs__content tabs__content_flex pay-fck" data-target="fsc">
       <div class="col-lg-5 col-xl-5">
         <h3 class="pay-fck__title">Фонд целевого капитала</h3>
-        <p class="pay-fck__descr">Это фонд, инвестиционные активы которого направлены на поддержку БФ «Огромное сердце» и достижение уставных целей БФ «Огромное сердце». Бесконечная работа вашего пожертвования позволит Фонду стать финансово устойчивее для помощи взрослым в борьбе с онкологическими заболеваниями по всей России</p>
+        <p class="pay-fck__descr">Это фонд, инвестиционные активы которого направлены на поддержку БФ «Огромное сердце»
+          и достижение уставных целей БФ «Огромное сердце». Бесконечная работа вашего пожертвования позволит Фонду стать
+          финансово устойчивее для помощи взрослым в борьбе с онкологическими заболеваниями по всей России</p>
         <button class="pay-fck__btn btn-reset">Поддержать ФЦК «Огромное сердце»</button>
       </div>
       <div class="col-sm-5 col-md-5 col-lg-3 col-xl-3 order-sm-2 order-lg-0">
@@ -318,7 +322,133 @@ script: pay
         </div>
       </div>
     </div>
-    <div class="row mt-5 pay-tabs__content tabs__content " data-target="volunteer"><h2>Волонтерство</h2></div>
+    <div class="row mt-5 pay-tabs__content tabs__content tabs__content_flex is-active" data-target="volunteer">
+      <div class="col-10">
+        <form action="#" method="" class="vol-form" id="vol-form">
+          <h3 class="vol-form__title">Заполните анкету</h3>
+          <div id="wizard">
+
+            <h2>Данные</h2>
+            <section>
+              <div class="vol-form__group">
+                <label for="vol-fio" class="vol-form__label">
+                  ФИО
+                  <input type="text" id="vol-fio" name="vol-fio" placeholder="Иванов Иван Иванович" class="vol-form__input required">
+                </label>
+                <label for="vol-date" class="vol-form__label">
+                  Дата рождения
+                  <input type="date" id="vol-date" name="vol-date" class="vol-form__input required">
+                </label>
+              </div>
+              <label for="vol-city" class="vol-form__label">
+                Город проживания
+                <input type="text" id="vol-city" name="vol-city" placeholder="Начните вводить" class="vol-form__input required">
+              </label>
+            </section>
+
+            <h2>Контакты</h2>
+            <section>
+              <div class="vol-form__group">
+                <label for="vol-phone" class="vol-form__label">
+                  Телефон
+                  <input type="number" id="vol-phone" name="vol-phone" placeholder="+7" class="vol-form__input required">
+                </label>
+                <label for="vol-date" class="vol-form__label">
+                  Email
+                  <input type="email" id="vol-email" name="vol-email" placeholder="mail@greatheart.ru" class="vol-form__input required">
+                </label>
+                <label for="vol-tlg" class="vol-form__label">
+                  Telegram <span>необязательно</span>
+                  <input type="text" id="vol-tlg" name="vol-tlg" class="vol-form__input">
+                </label>
+              </div>
+              <div class="vol-form__group">
+                <label for="vol-vk" class="vol-form__label">
+                  VK <span>необязательно</span>
+                  <input type="text" id="vol-vk" name="vol-vk" class="vol-form__input">
+                </label>
+                <label for="vol-inst" class="vol-form__label">
+                  Instagram <span>необязательно</span>
+                  <input type="text" id="vol-inst" name="vol-inst" class="vol-form__input">
+                </label>
+              </div>
+            </section>
+
+            <h2>Работа и образование</h2>
+            <section>
+              <div class="vol-form__group">
+                <label for="vol-work" class="vol-form__label">
+                  Место работы
+                  <input type="text" id="vol-work" name="vol-work" class="vol-form__input required">
+                </label>
+                <label for="vol-position" class="vol-form__label">
+                  Должность
+                  <input type="text" id="vol-position" name="vol-position" class="vol-form__input required">
+                </label>
+                <label for="vol-no-work" class="vol-form__label vol-form__label_check">
+                  <input type="checkbox" id="vol-no-work" name="vol-no-work" class="vol-form__checkbox">
+                  <span class="vol-form__check-pane"></span>
+                  Не работаю
+                </label>
+              </div>
+              <div class="vol-form__group">
+                <label for="vol-education" class="vol-form__label">
+                  Образование
+                  <input type="text" id="vol-education" name="vol-education" class="vol-form__input required">
+                </label>
+                <label for="vol-speciality" class="vol-form__label">
+                  Специальность <span>необязательно</span>
+                  <input type="text" id="vol-speciality" name="vol-speciality" class="vol-form__input">
+                </label>
+              </div>
+            </section>
+
+            <h2>Доп. информация</h2>
+            <section>
+              <div class="vol-form__group">
+                <label for="vol-accessibility" class="vol-form__label">
+                  Доступность
+                  <select type="text" id="vol-accessibility" name="vol-accessibility" class="vol-form__select required">
+                    <option value="">Без ограничений</option>
+                    <option value="">C ограничениями</option>
+                  </select>
+                </label>
+                <label for="vol-lang" class="vol-form__label">
+                  Владение языками
+                  <input type="text" id="vol-lang" name="vol-lang" class="vol-form__input required">
+                </label>
+              </div>
+              <div class="vol-form__group">
+                <label for="vol-hobbies" class="vol-form__label">
+                  Увлечения <span>необязательно</span>
+                  <input type="text" id="vol-hobbies" name="vol-hobbies" class="vol-form__input">
+                </label>
+                <label for="vol-want" class="vol-form__label">
+                  Чем хотите помогать?
+                  <input type="text" id="vol-want" name="vol-want" class="vol-form__input required">
+                </label>
+              </div>
+            </section>
+          </div>
+        </form>
+      </div>
+      <div class="col-2">
+        <div id="vol-progress" class="vol-progress ">
+          <div id="myBar" class="vol-progress__bar progress-bar">
+           <p class="vol-progress__title">Заполнено</p>
+            <p class="vol-progress__percent">50%</p>
+          </div>
+        </div>
+        <button class="btn-reset vol-form__submit" type="submit">Отправить анкету</button>
+      </div>
+      <div class="diagram progress" data-percent="5">
+        <div class="piece left"></div>
+        <div class="piece right"></div>
+        <div class="text">
+
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 

@@ -119,6 +119,8 @@ function jsVendor() {
       'node_modules/popper.js/dist/umd/popper.js',
       'node_modules/bootstrap/dist/js/bootstrap.js',
       'node_modules/swiper/swiper-bundle.js',
+      'node_modules/jquery-steps/build/jquery.steps.min.js',
+      'node_modules/jquery-validation/dist/jquery.validate.min.js',
     ])
     .pipe(dest('dist/assets/vendor/js'))
     .pipe(browserSync.stream());
@@ -298,6 +300,8 @@ function concatScripts() {
       'dist/assets/vendor/js/popper.js',
       'dist/assets/vendor/js/bootstrap.js',
       'dist/assets/vendor/js/swiper-bundle.js',
+      'dist/assets/vendor/js/jquery.steps.min.js',
+      'dist/assets/vendor/js/jquery.validate.min.js',
       'src/assets/js/util/*',
       'src/assets/js/*'
     ])

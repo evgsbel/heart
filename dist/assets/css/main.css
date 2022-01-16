@@ -19722,7 +19722,7 @@ h3 {
 /* line 670, src/assets/scss/pages/_wards.scss */
 .gallery__swiper {
   margin-top: 24px;
-  width: calc(100vw - (100vw - 100%) / 2);
+  width: calc(100vw - (100vw - 99%) / 2);
 }
 
 /* line 674, src/assets/scss/pages/_wards.scss */
@@ -20170,6 +20170,430 @@ h3 {
   color: #fff;
   background: #2688E5;
   border-radius: 12px;
+}
+
+/* line 282, src/assets/scss/pages/_pay.scss */
+.wizard > .steps .current-info,
+.tabcontrol > .steps .current-info {
+  position: absolute;
+  left: -999em;
+}
+
+/* line 287, src/assets/scss/pages/_pay.scss */
+.wizard > .content > .title {
+  position: absolute;
+  left: -999em;
+}
+
+/* line 293, src/assets/scss/pages/_pay.scss */
+.wizard {
+  margin-top: 32px;
+}
+
+/* line 296, src/assets/scss/pages/_pay.scss */
+.wizard > .content {
+  display: block;
+  min-height: 20em;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+}
+
+/* line 303, src/assets/scss/pages/_pay.scss */
+.wizard > .content > .body {
+  position: absolute;
+}
+
+/* line 307, src/assets/scss/pages/_pay.scss */
+.wizard > .actions > ul,
+.wizard > .steps > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 312, src/assets/scss/pages/_pay.scss */
+.wizard > .steps > ul {
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+/* line 316, src/assets/scss/pages/_pay.scss */
+.wizard > .steps > ul > li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% / 4 - 3 * 8px);
+          flex: 0 0 calc(100% / 4 - 3 * 8px);
+  padding-bottom: 16px;
+  padding-left: 16px;
+  line-height: 1.4;
+  color: #6D7276;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+/* line 323, src/assets/scss/pages/_pay.scss */
+.wizard > .steps > ul > li.current {
+  color: #000;
+  border-color: currentColor;
+}
+
+/* line 327, src/assets/scss/pages/_pay.scss */
+.wizard > .steps > ul > li.done {
+  color: #2688E5;
+  border-color: currentColor;
+}
+
+/* line 331, src/assets/scss/pages/_pay.scss */
+.wizard > .steps > ul > li.error {
+  color: #ff3111;
+  border-color: currentColor;
+}
+
+/* line 337, src/assets/scss/pages/_pay.scss */
+.wizard > .actions > ul > li {
+  padding: 16px 24px 20px;
+  color: #2688E5;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+/* line 342, src/assets/scss/pages/_pay.scss */
+.wizard > .actions > ul > li.disabled {
+  display: none;
+}
+
+/* line 345, src/assets/scss/pages/_pay.scss */
+.wizard > .actions > ul > li:first-child {
+  margin-right: 24px;
+}
+
+/* line 348, src/assets/scss/pages/_pay.scss */
+.wizard > .actions > ul > li:nth-child(2) {
+  color: #fff;
+  background-color: #2688E5;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+/* line 354, src/assets/scss/pages/_pay.scss */
+.wizard > .actions > ul > li:nth-child(3) {
+  visibility: hidden;
+}
+
+/* line 360, src/assets/scss/pages/_pay.scss */
+.vol-form__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+/* line 366, src/assets/scss/pages/_pay.scss */
+.vol-form__label {
+  position: relative;
+  font-weight: 500;
+  font-size: 1.25em;
+  line-height: 1.4;
+}
+
+/* line 371, src/assets/scss/pages/_pay.scss */
+.vol-form__label_check {
+  margin-top: 50px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+/* line 376, src/assets/scss/pages/_pay.scss */
+.vol-form__label span {
+  font-size: 16px;
+  color: #939ca5;
+}
+
+/* line 380, src/assets/scss/pages/_pay.scss */
+.vol-form__label span.vol-form__error {
+  color: #ff3111;
+  font-size: 14px;
+}
+
+/* line 385, src/assets/scss/pages/_pay.scss */
+.vol-form__input {
+  display: block;
+  margin-top: 16px;
+  padding: 12px 24px 16px;
+  font-size: 1.25em;
+  line-height: 1.4;
+  color: #000;
+  border: none;
+  background-color: #F5F8FB;
+  border-radius: 12px;
+  min-width: 425px;
+  max-width: 100%;
+}
+
+/* line 397, src/assets/scss/pages/_pay.scss */
+.vol-form__input::-webkit-input-placeholder {
+  font-size: 20px;
+  line-height: 1.4;
+  color: #6D7276;
+}
+.vol-form__input::-moz-placeholder {
+  font-size: 20px;
+  line-height: 1.4;
+  color: #6D7276;
+}
+.vol-form__input:-ms-input-placeholder {
+  font-size: 20px;
+  line-height: 1.4;
+  color: #6D7276;
+}
+.vol-form__input::-ms-input-placeholder {
+  font-size: 20px;
+  line-height: 1.4;
+  color: #6D7276;
+}
+.vol-form__input::placeholder {
+  font-size: 20px;
+  line-height: 1.4;
+  color: #6D7276;
+}
+
+/* line 403, src/assets/scss/pages/_pay.scss */
+.vol-form__checkbox {
+  display: none;
+}
+
+/* line 405, src/assets/scss/pages/_pay.scss */
+.vol-form__checkbox:checked + .vol-form__check-pane {
+  border-color: #127CE1;
+}
+
+/* line 408, src/assets/scss/pages/_pay.scss */
+.vol-form__checkbox:checked + .vol-form__check-pane::before {
+  opacity: 1;
+}
+
+/* line 412, src/assets/scss/pages/_pay.scss */
+.vol-form__check-pane {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #6D7276;
+  border-radius: 4px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: border-color .3s ease-in-out;
+  transition: border-color .3s ease-in-out;
+}
+
+/* line 422, src/assets/scss/pages/_pay.scss */
+.vol-form__check-pane::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 10px;
+  height: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 1L3.8125 7L1 4.27273' stroke='%23127CE1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  -webkit-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+}
+
+/* line 438, src/assets/scss/pages/_pay.scss */
+.vol-form__select {
+  display: block;
+  background-image: url("data:image/svg+xml,%3Csvg width='17' height='8' viewBox='0 0 17 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L8.5 7L16 1' stroke='%23939CA5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A"), -webkit-gradient(linear, left top, left bottom, from(#F5F8FB), to(#F5F8FB));
+  background-image: url("data:image/svg+xml,%3Csvg width='17' height='8' viewBox='0 0 17 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L8.5 7L16 1' stroke='%23939CA5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A"), linear-gradient(to bottom, #F5F8FB 0%, #F5F8FB 100%);
+  background-repeat: no-repeat, repeat;
+  background-position: right .7em top 50%, 0 0;
+  margin-top: 16px;
+  padding: 12px 24px 16px;
+  font-size: 1.25em;
+  line-height: 1.4;
+  color: #000;
+  border: none;
+  border-radius: 12px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  min-width: 425px;
+  max-width: 100%;
+}
+
+/* line 456, src/assets/scss/pages/_pay.scss */
+.vol-form__select::-ms-expand {
+  display: none;
+}
+
+/* line 462, src/assets/scss/pages/_pay.scss */
+.vol-progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 32px;
+  text-align: center;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  border: 1px solid #EDF4FA;
+}
+
+/* line 474, src/assets/scss/pages/_pay.scss */
+.vol-progress__title {
+  margin-bottom: 4px;
+  font-size: 1.25em;
+  line-height: 1.4;
+  color: #6D7276;
+}
+
+/* line 480, src/assets/scss/pages/_pay.scss */
+.vol-progress__percent {
+  font-weight: 500;
+  font-size: 1.25em;
+  line-height: 1.4;
+  color: #6D7276;
+}
+
+/* line 488, src/assets/scss/pages/_pay.scss */
+.diagram {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: #990;
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 497, src/assets/scss/pages/_pay.scss */
+.diagram::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 50%;
+  background: #ccc;
+  z-index: 3;
+  opacity: 1;
+}
+
+/* line 511, src/assets/scss/pages/_pay.scss */
+.diagram .piece {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  position: absolute;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+/* line 520, src/assets/scss/pages/_pay.scss */
+.diagram .piece::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+}
+
+/* line 528, src/assets/scss/pages/_pay.scss */
+.diagram .piece.left {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  z-index: 2;
+  border-radius: 50%;
+  /* only FireFox < 75.0v (fix bug)*/
+}
+
+/* line 534, src/assets/scss/pages/_pay.scss */
+.diagram.over_50 .piece.left {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+/* line 538, src/assets/scss/pages/_pay.scss */
+.diagram .piece.right {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  z-index: 1;
+  border-radius: 50%;
+  /* only FireFox < 75.0v (fix bug)*/
+}
+
+/* line 544, src/assets/scss/pages/_pay.scss */
+.diagram.over_50 .piece.right {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+/* line 548, src/assets/scss/pages/_pay.scss */
+.diagram .left::before {
+  background: #059;
+}
+
+/* line 552, src/assets/scss/pages/_pay.scss */
+.diagram.over_50 .left::before {
+  background: #990;
+}
+
+/* line 556, src/assets/scss/pages/_pay.scss */
+.diagram .right::before {
+  background: #059;
+}
+
+/* line 560, src/assets/scss/pages/_pay.scss */
+.diagram .text {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* line 572, src/assets/scss/pages/_pay.scss */
+.diagram .text b {
+  font-size: 72px;
+}
+
+/* line 575, src/assets/scss/pages/_pay.scss */
+.diagram .text span {
+  font-size: 16px;
+  display: block;
 }
 
 /*# sourceMappingURL=../../../scss */
