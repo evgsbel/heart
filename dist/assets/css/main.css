@@ -19572,7 +19572,12 @@ h3 {
   padding: 32px;
 }
 
-/* line 541, src/assets/scss/pages/_wards.scss */
+/* line 536, src/assets/scss/pages/_wards.scss */
+.faq__answer-inn p:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+/* line 546, src/assets/scss/pages/_wards.scss */
 .ask {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -19592,31 +19597,31 @@ h3 {
   border-radius: 16px;
 }
 
-/* line 550, src/assets/scss/pages/_wards.scss */
+/* line 555, src/assets/scss/pages/_wards.scss */
 .ask_fixed {
   position: fixed;
   top: 100px;
 }
 
-/* line 554, src/assets/scss/pages/_wards.scss */
+/* line 559, src/assets/scss/pages/_wards.scss */
 .ask_hide {
   opacity: 0;
 }
 
-/* line 557, src/assets/scss/pages/_wards.scss */
+/* line 562, src/assets/scss/pages/_wards.scss */
 .ask__img {
   display: block;
   margin-bottom: 24px;
 }
 
-/* line 561, src/assets/scss/pages/_wards.scss */
+/* line 566, src/assets/scss/pages/_wards.scss */
 .ask__text {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.4;
 }
 
-/* line 566, src/assets/scss/pages/_wards.scss */
+/* line 571, src/assets/scss/pages/_wards.scss */
 .ask__btn {
   margin-top: 24px;
   padding: 16px 24px 20px;
@@ -19627,19 +19632,19 @@ h3 {
   --smooth-corners: 18;
 }
 
-/* line 580, src/assets/scss/pages/_wards.scss */
+/* line 585, src/assets/scss/pages/_wards.scss */
 .mobile-ask {
   margin-top: 65px;
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 580, src/assets/scss/pages/_wards.scss */
+  /* line 585, src/assets/scss/pages/_wards.scss */
   .mobile-ask {
     background-color: #eff7ff;
   }
 }
 
-/* line 585, src/assets/scss/pages/_wards.scss */
+/* line 590, src/assets/scss/pages/_wards.scss */
 .mobile-ask__wr {
   padding: 24px 23px 26px;
   background: #fff;
@@ -19649,7 +19654,7 @@ h3 {
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 585, src/assets/scss/pages/_wards.scss */
+  /* line 590, src/assets/scss/pages/_wards.scss */
   .mobile-ask__wr {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -19661,7 +19666,7 @@ h3 {
   }
 }
 
-/* line 597, src/assets/scss/pages/_wards.scss */
+/* line 602, src/assets/scss/pages/_wards.scss */
 .mobile-ask__title {
   font-style: normal;
   font-weight: 500;
@@ -19670,13 +19675,13 @@ h3 {
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 597, src/assets/scss/pages/_wards.scss */
+  /* line 602, src/assets/scss/pages/_wards.scss */
   .mobile-ask__title {
     margin-top: 24px;
   }
 }
 
-/* line 606, src/assets/scss/pages/_wards.scss */
+/* line 611, src/assets/scss/pages/_wards.scss */
 .mobile-ask__btn {
   padding: 16px 78px 20px;
   font-weight: 600;
@@ -19690,7 +19695,7 @@ h3 {
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 606, src/assets/scss/pages/_wards.scss */
+  /* line 611, src/assets/scss/pages/_wards.scss */
   .mobile-ask__btn {
     margin-top: 24px;
     background-color: #2688E5;
@@ -19698,22 +19703,22 @@ h3 {
   }
 }
 
-/* line 625, src/assets/scss/pages/_wards.scss */
+/* line 630, src/assets/scss/pages/_wards.scss */
 .is-faq-page .bottom-btns {
   margin-top: 56px;
 }
 
-/* line 634, src/assets/scss/pages/_wards.scss */
+/* line 639, src/assets/scss/pages/_wards.scss */
 .calendar {
   margin-top: 56px;
 }
 
-/* line 639, src/assets/scss/pages/_wards.scss */
+/* line 644, src/assets/scss/pages/_wards.scss */
 .calendar__inner {
   margin-top: 48px;
 }
 
-/* line 642, src/assets/scss/pages/_wards.scss */
+/* line 647, src/assets/scss/pages/_wards.scss */
 .calendar__month-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -19726,7 +19731,7 @@ h3 {
           justify-content: space-between;
 }
 
-/* line 647, src/assets/scss/pages/_wards.scss */
+/* line 652, src/assets/scss/pages/_wards.scss */
 .calendar__month, .calendar__year {
   font-size: 20px;
   line-height: 24px;
@@ -19738,20 +19743,20 @@ h3 {
 }
 
 @media only screen and (max-width: 480px) {
-  /* line 647, src/assets/scss/pages/_wards.scss */
+  /* line 652, src/assets/scss/pages/_wards.scss */
   .calendar__month, .calendar__year {
     max-width: 35px;
     font-size: 18px;
   }
 }
 
-/* line 661, src/assets/scss/pages/_wards.scss */
+/* line 666, src/assets/scss/pages/_wards.scss */
 .calendar__year {
   display: none;
   margin-left: 8px;
 }
 
-/* line 665, src/assets/scss/pages/_wards.scss */
+/* line 670, src/assets/scss/pages/_wards.scss */
 .calendar__month-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -19762,7 +19767,7 @@ h3 {
   transition: color .3s ease-in-out, background-color .3s ease-in-out, padding .3s ease-in-out;
 }
 
-/* line 671, src/assets/scss/pages/_wards.scss */
+/* line 676, src/assets/scss/pages/_wards.scss */
 .calendar__month-item.is-active .calendar__month,
 .calendar__month-item.is-active .calendar__year, .calendar__month-item.swiper-slide-active .calendar__month,
 .calendar__month-item.swiper-slide-active .calendar__year {
@@ -19773,7 +19778,7 @@ h3 {
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 671, src/assets/scss/pages/_wards.scss */
+  /* line 676, src/assets/scss/pages/_wards.scss */
   .calendar__month-item.is-active .calendar__month,
   .calendar__month-item.is-active .calendar__year, .calendar__month-item.swiper-slide-active .calendar__month,
   .calendar__month-item.swiper-slide-active .calendar__year {
@@ -19783,7 +19788,7 @@ h3 {
 }
 
 @media only screen and (max-width: 480px) {
-  /* line 671, src/assets/scss/pages/_wards.scss */
+  /* line 676, src/assets/scss/pages/_wards.scss */
   .calendar__month-item.is-active .calendar__month,
   .calendar__month-item.is-active .calendar__year, .calendar__month-item.swiper-slide-active .calendar__month,
   .calendar__month-item.swiper-slide-active .calendar__year {
@@ -19791,7 +19796,7 @@ h3 {
   }
 }
 
-/* line 688, src/assets/scss/pages/_wards.scss */
+/* line 693, src/assets/scss/pages/_wards.scss */
 .calendar__month-next, .calendar__month-prev {
   position: absolute;
   top: 50%;
@@ -19801,17 +19806,17 @@ h3 {
   cursor: pointer;
 }
 
-/* line 696, src/assets/scss/pages/_wards.scss */
+/* line 701, src/assets/scss/pages/_wards.scss */
 .calendar__month-next {
   right: 15px;
 }
 
-/* line 699, src/assets/scss/pages/_wards.scss */
+/* line 704, src/assets/scss/pages/_wards.scss */
 .calendar__month-prev {
   left: 15px;
 }
 
-/* line 703, src/assets/scss/pages/_wards.scss */
+/* line 708, src/assets/scss/pages/_wards.scss */
 .calendar__day-list {
   margin-top: 32px;
   margin-bottom: 24px;
@@ -19824,7 +19829,7 @@ h3 {
           justify-content: space-between;
 }
 
-/* line 710, src/assets/scss/pages/_wards.scss */
+/* line 715, src/assets/scss/pages/_wards.scss */
 .calendar__day {
   padding: 0 24px;
   font-size: 20px;
@@ -19832,14 +19837,14 @@ h3 {
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 710, src/assets/scss/pages/_wards.scss */
+  /* line 715, src/assets/scss/pages/_wards.scss */
   .calendar__day {
     font-size: 18px;
     padding: 0;
   }
 }
 
-/* line 719, src/assets/scss/pages/_wards.scss */
+/* line 724, src/assets/scss/pages/_wards.scss */
 .calendar__week {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -19853,17 +19858,17 @@ h3 {
   --smooth-corners: 10;
 }
 
-/* line 726, src/assets/scss/pages/_wards.scss */
+/* line 731, src/assets/scss/pages/_wards.scss */
 .calendar__week:nth-child(odd) {
   background-color: #F5F8FB;
 }
 
-/* line 729, src/assets/scss/pages/_wards.scss */
+/* line 734, src/assets/scss/pages/_wards.scss */
 .calendar__week:not(:first-child) {
   margin-top: 8px;
 }
 
-/* line 734, src/assets/scss/pages/_wards.scss */
+/* line 739, src/assets/scss/pages/_wards.scss */
 .calendar__number {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 65px;
@@ -19882,7 +19887,7 @@ h3 {
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 734, src/assets/scss/pages/_wards.scss */
+  /* line 739, src/assets/scss/pages/_wards.scss */
   .calendar__number {
     font-size: 18px;
     padding: 0;
@@ -19892,67 +19897,67 @@ h3 {
   }
 }
 
-/* line 751, src/assets/scss/pages/_wards.scss */
+/* line 756, src/assets/scss/pages/_wards.scss */
 .calendar__number.is-active {
   color: #127CE1;
 }
 
-/* line 754, src/assets/scss/pages/_wards.scss */
+/* line 759, src/assets/scss/pages/_wards.scss */
 .calendar__number:hover, .calendar__number.is-focus {
   color: #fff;
   background-color: #2688E5;
 }
 
-/* line 760, src/assets/scss/pages/_wards.scss */
+/* line 765, src/assets/scss/pages/_wards.scss */
 .calendar__date {
   margin-top: 60px;
   font-size: 28px;
   line-height: 34px;
 }
 
-/* line 764, src/assets/scss/pages/_wards.scss */
+/* line 769, src/assets/scss/pages/_wards.scss */
 .calendar__date span {
   font-weight: 600;
   font-size: 28px;
 }
 
-/* line 769, src/assets/scss/pages/_wards.scss */
+/* line 774, src/assets/scss/pages/_wards.scss */
 .calendar__events-list {
   margin-top: 32px;
 }
 
-/* line 773, src/assets/scss/pages/_wards.scss */
+/* line 778, src/assets/scss/pages/_wards.scss */
 .calendar__events-item:not(:first-child) {
   margin-top: 32px;
 }
 
-/* line 777, src/assets/scss/pages/_wards.scss */
+/* line 782, src/assets/scss/pages/_wards.scss */
 .calendar__time, .calendar__place, .calendar__area {
   font-size: 20px;
   line-height: 150%;
   color: #6D7276;
 }
 
-/* line 784, src/assets/scss/pages/_wards.scss */
+/* line 789, src/assets/scss/pages/_wards.scss */
 .calendar__area {
   margin-left: 24px;
 }
 
-/* line 787, src/assets/scss/pages/_wards.scss */
+/* line 792, src/assets/scss/pages/_wards.scss */
 .calendar__caption {
   font-weight: 600;
   font-size: 20px;
   line-height: 1.5;
 }
 
-/* line 792, src/assets/scss/pages/_wards.scss */
+/* line 797, src/assets/scss/pages/_wards.scss */
 .calendar__theme {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.5;
 }
 
-/* line 797, src/assets/scss/pages/_wards.scss */
+/* line 802, src/assets/scss/pages/_wards.scss */
 .calendar__link {
   display: block;
   margin-top: 16px;
@@ -19961,7 +19966,7 @@ h3 {
   color: #2688E5;
 }
 
-/* line 803, src/assets/scss/pages/_wards.scss */
+/* line 808, src/assets/scss/pages/_wards.scss */
 .calendar__link svg {
   margin-left: 4px;
   width: 19px;
@@ -19973,29 +19978,29 @@ h3 {
   transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
 }
 
-/* line 812, src/assets/scss/pages/_wards.scss */
+/* line 817, src/assets/scss/pages/_wards.scss */
 .calendar__link:hover {
   text-decoration: none;
   color: #2688E5;
 }
 
-/* line 815, src/assets/scss/pages/_wards.scss */
+/* line 820, src/assets/scss/pages/_wards.scss */
 .calendar__link:hover svg {
   -webkit-transform: translateX(8px);
           transform: translateX(8px);
 }
 
-/* line 825, src/assets/scss/pages/_wards.scss */
+/* line 830, src/assets/scss/pages/_wards.scss */
 .gallery {
   margin-top: 80px;
 }
 
-/* line 827, src/assets/scss/pages/_wards.scss */
+/* line 832, src/assets/scss/pages/_wards.scss */
 .gallery__item {
   margin-top: 48px;
 }
 
-/* line 830, src/assets/scss/pages/_wards.scss */
+/* line 835, src/assets/scss/pages/_wards.scss */
 .gallery__heading {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20005,13 +20010,13 @@ h3 {
           justify-content: space-between;
 }
 
-/* line 834, src/assets/scss/pages/_wards.scss */
+/* line 839, src/assets/scss/pages/_wards.scss */
 .gallery__swiper {
   margin-top: 24px;
   width: calc(100vw - (100vw - 99%) / 2);
 }
 
-/* line 838, src/assets/scss/pages/_wards.scss */
+/* line 843, src/assets/scss/pages/_wards.scss */
 .gallery__bottom {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20026,14 +20031,14 @@ h3 {
   max-width: 95%;
 }
 
-/* line 845, src/assets/scss/pages/_wards.scss */
+/* line 850, src/assets/scss/pages/_wards.scss */
 .gallery__link {
   font-size: 20px;
   line-height: 1.4;
   color: #2688E5;
 }
 
-/* line 849, src/assets/scss/pages/_wards.scss */
+/* line 854, src/assets/scss/pages/_wards.scss */
 .gallery__link svg {
   margin-left: 4px;
   width: 19px;
@@ -20045,24 +20050,24 @@ h3 {
   transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
 }
 
-/* line 856, src/assets/scss/pages/_wards.scss */
+/* line 861, src/assets/scss/pages/_wards.scss */
 .gallery__link:hover {
   color: #2688E5;
 }
 
-/* line 858, src/assets/scss/pages/_wards.scss */
+/* line 863, src/assets/scss/pages/_wards.scss */
 .gallery__link:hover svg {
   -webkit-transform: translateX(7px);
           transform: translateX(7px);
 }
 
-/* line 863, src/assets/scss/pages/_wards.scss */
+/* line 868, src/assets/scss/pages/_wards.scss */
 .gallery__date {
   font-size: 18px;
   line-height: 1.4;
 }
 
-/* line 867, src/assets/scss/pages/_wards.scss */
+/* line 872, src/assets/scss/pages/_wards.scss */
 .gallery__navigation {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20072,7 +20077,7 @@ h3 {
           align-items: center;
 }
 
-/* line 871, src/assets/scss/pages/_wards.scss */
+/* line 876, src/assets/scss/pages/_wards.scss */
 .gallery__btn {
   display: block;
   margin: 106px auto 0;
@@ -20088,11 +20093,95 @@ h3 {
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 871, src/assets/scss/pages/_wards.scss */
+  /* line 876, src/assets/scss/pages/_wards.scss */
   .gallery__btn {
     padding-right: 32px;
     padding-left: 32px;
   }
+}
+
+/* line 897, src/assets/scss/pages/_wards.scss */
+.banner {
+  margin-top: 115px;
+  padding-top: 35px;
+  background-image: url("../img/banner-bg.png");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-color: #EFF7FF;
+}
+
+/* line 904, src/assets/scss/pages/_wards.scss */
+.banner__inner {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 907, src/assets/scss/pages/_wards.scss */
+.banner__title {
+  margin-bottom: 24px;
+}
+
+/* line 910, src/assets/scss/pages/_wards.scss */
+.banner__text {
+  margin-bottom: 32px;
+  font-size: 1.375em;
+  line-height: 1.5;
+}
+
+/* line 915, src/assets/scss/pages/_wards.scss */
+.banner__btn {
+  padding: 16px 46px 20px;
+  font-weight: 600;
+  font-size: 1.25em;
+  line-height: 1.4;
+  color: #fff;
+  background: #2688E5;
+  border-radius: 12px;
+}
+
+/* line 924, src/assets/scss/pages/_wards.scss */
+.banner__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+/* line 928, src/assets/scss/pages/_wards.scss */
+.banner__design {
+  position: relative;
+  margin-right: 155px;
+  margin-bottom: 85px;
+}
+
+/* line 932, src/assets/scss/pages/_wards.scss */
+.banner__design p {
+  font-family: 'Caveat', sans-serif;
+  font-size: 2.125em;
+  line-height: 1.26;
+  text-align: right;
+  color: #2688E5;
+  mix-blend-mode: multiply;
+}
+
+/* line 939, src/assets/scss/pages/_wards.scss */
+.banner__design p span {
+  font-size: 0.76em;
+}
+
+/* line 943, src/assets/scss/pages/_wards.scss */
+.banner__design::after {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -100px;
+  display: block;
+  width: 97px;
+  height: 98px;
+  background-image: url("../img/banner-arrow.jpg");
 }
 
 /* line 1, src/assets/scss/pages/_pay.scss */

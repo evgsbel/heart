@@ -18,36 +18,36 @@ console.log('wards');
 //   }
 // });
 
-$(document).ready(function () {
-
-  function stickySidebar() {
-    var scrollDistance = $(document).scrollTop(),
-      headerHeight = $('.ask').outerHeight(true),
-      // sidebarHeight = $('aside').outerHeight(true),
-      footerOffsetTop = $('.js-stop-header').offset().top,
-      $header = $('.ask');
-
-    if (scrollDistance >= headerHeight) {
-      $header.addClass('ask_fixed');
-      $header.removeClass('ask_hide');
-    } else {
-      $header.removeClass('ask_fixed');
-    }
-
-    if (scrollDistance + headerHeight >= footerOffsetTop) {
-      $header.removeClass('ask_fixed');
-      $header.addClass('ask_hide');
-    }
-
-  }
-
-  stickySidebar();
-
-  $(document).scroll(function () {
-    stickySidebar();
-  });
-
-});
+// $(document).ready(function () {
+//
+//   function stickySidebar() {
+//     var scrollDistance = $(document).scrollTop(),
+//       headerHeight = $('.ask').outerHeight(true),
+//       // sidebarHeight = $('aside').outerHeight(true),
+//       footerOffsetTop = $('.js-stop-header').offset().top,
+//       $header = $('.ask');
+//
+//     if (scrollDistance >= headerHeight) {
+//       $header.addClass('ask_fixed');
+//       $header.removeClass('ask_hide');
+//     } else {
+//       $header.removeClass('ask_fixed');
+//     }
+//
+//     if (scrollDistance + headerHeight >= footerOffsetTop) {
+//       $header.removeClass('ask_fixed');
+//       $header.addClass('ask_hide');
+//     }
+//
+//   }
+//
+//   stickySidebar();
+//
+//   $(document).scroll(function () {
+//     stickySidebar();
+//   });
+//
+// });
 
 
 // calendar  slider

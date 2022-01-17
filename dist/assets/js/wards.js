@@ -16,33 +16,37 @@ console.log('wards'); // // pay slider
 //     },
 //   }
 // });
-
-$(document).ready(function () {
-  function stickySidebar() {
-    var scrollDistance = $(document).scrollTop(),
-        headerHeight = $('.ask').outerHeight(true),
-        // sidebarHeight = $('aside').outerHeight(true),
-    footerOffsetTop = $('.js-stop-header').offset().top,
-        $header = $('.ask');
-
-    if (scrollDistance >= headerHeight) {
-      $header.addClass('ask_fixed');
-      $header.removeClass('ask_hide');
-    } else {
-      $header.removeClass('ask_fixed');
-    }
-
-    if (scrollDistance + headerHeight >= footerOffsetTop) {
-      $header.removeClass('ask_fixed');
-      $header.addClass('ask_hide');
-    }
-  }
-
-  stickySidebar();
-  $(document).scroll(function () {
-    stickySidebar();
-  });
-}); // calendar  slider
+// $(document).ready(function () {
+//
+//   function stickySidebar() {
+//     var scrollDistance = $(document).scrollTop(),
+//       headerHeight = $('.ask').outerHeight(true),
+//       // sidebarHeight = $('aside').outerHeight(true),
+//       footerOffsetTop = $('.js-stop-header').offset().top,
+//       $header = $('.ask');
+//
+//     if (scrollDistance >= headerHeight) {
+//       $header.addClass('ask_fixed');
+//       $header.removeClass('ask_hide');
+//     } else {
+//       $header.removeClass('ask_fixed');
+//     }
+//
+//     if (scrollDistance + headerHeight >= footerOffsetTop) {
+//       $header.removeClass('ask_fixed');
+//       $header.addClass('ask_hide');
+//     }
+//
+//   }
+//
+//   stickySidebar();
+//
+//   $(document).scroll(function () {
+//     stickySidebar();
+//   });
+//
+// });
+// calendar  slider
 
 var swiperCalendarMonth = new Swiper('.calendar__swiper', {
   // Optional parameters
