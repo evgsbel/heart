@@ -137,20 +137,22 @@
         <section class="wards-nav">
           <div class="container">
             <div class="row">
-              <nav class="col-xl-10 wards-nav__swiper">
-                <ul class="wards-nav__list">
-                  <li class="wards-nav__item is-active">
-                    <a href="" class="btn-reset wards-nav__link wards-nav__link_active is-active">Виды помощи</a>
-                  </li>
-                  <li class="wards-nav__item">
-                    <a href="events.html" class="btn-reset wards-nav__link">Мероприятия</a>
-                  </li>
-                  <li class="wards-nav__item">
-                    <a href="faq.html" class="btn-reset wards-nav__link">Часто задаваемые вопросы</a>
-                  </li>
-                </ul>
+              <nav class="col-md-10 col-12">
+                <div class="swiper wards-nav__swiper">
+                  <ul class="wards-nav__list swiper-wrapper">
+                    <li class="wards-nav__item swiper-slide is-active">
+                      <a href="" class="btn-reset wards-nav__link wards-nav__link_active is-active">Виды помощи</a>
+                    </li>
+                    <li class="wards-nav__item swiper-slide">
+                      <a href="events.html" class="btn-reset wards-nav__link">Мероприятия</a>
+                    </li>
+                    <li class="wards-nav__item swiper-slide">
+                      <a href="faq.html" class="btn-reset wards-nav__link">Часто задаваемые вопросы</a>
+                    </li>
+                  </ul>
+                </div>
               </nav>
-              <div class="col-xl-2 col-lg-2 col-md-2">
+              <div class="col-md-2 d-md-block d-none">
                 <a href="" class="wards-nav__review-link">Оставить отзыв</a>
               </div>
             </div>
@@ -188,8 +190,8 @@
             </div>
             <div class="row wards-types__list">
               <div class="col-xl-2 col-lg-3 col-md-3 col-sm-4 col-6 order-sm-1  order-md-0 order-1 wards-types__wr">
-                <div class="wards-types__item"
-                     style="background-color: #D8FFD3; background-image: url('assets/img/wt-01.png');">
+                <div class="wards-types__item wards-types__item_01"
+                >
                   <h3 class="wards-types__caption">Психолог</h3>
                   <p class="wards-types__descr">10 бесплатных
                     консультаций</p>
@@ -201,8 +203,7 @@
                 </div>
               </div>
               <div class="col-xl-2 col-lg-3 col-md-3 col-sm-4 col-6 order-sm-4  order-md-0 order-2 wards-types__wr">
-                <div class="wards-types__item"
-                     style="background-color: #FFEDDE; background-image: url('assets/img/wt-02.png');">
+                <div class="wards-types__item wards-types__item_02">
                   <h3 class="wards-types__caption">Юрист</h3>
                   <p class="wards-types__descr">Бесплатные
                     консультации</p>
@@ -214,10 +215,9 @@
                 </div>
               </div>
               <div class="col-xl-4 col-lg-6 col-md-6 col-sm-8 col-12 order-sm-2  order-md-0 order-3 wards-types__wr">
-                <div class="wards-types__item"
-                     style="background-color: #C5F3FE; background-image: url('assets/img/wt-03.png');">
+                <div class="wards-types__item wards-types__item_03">
                   <h3 class="wards-types__caption">Равное консультирование</h3>
-                  <p class="wards-types__descr">Совет от того, кто уже победил рак</p>
+                  <p class="wards-types__descr">Поддержка от того, кто уже победил рак</p>
                   <a href="" class="wards-types__link">Подробнее
                     <svg>
                       <use xlink:href="assets/img/sprite.svg#link-arrow"></use>
@@ -226,9 +226,8 @@
                 </div>
               </div>
               <div class="col-xl-4 col-lg-6 col-md-6 col-sm-8 col-12 order-sm-3  order-md-0 order-6 wards-types__wr">
-                <div class="wards-types__item"
-                     style="background-color: #D1FFFC; background-image: url('assets/img/wt-04.png');">
-                  <h3 class="wards-types__caption">Поиск специалиста и учреждения</h3>
+                <div class="wards-types__item wards-types__item_04">
+                  <h3 class="wards-types__caption">Поиск специалиста и&nbsp;учреждения</h3>
                   <p class="wards-types__descr">Помощь в маршрутизации</p>
                   <a href="" class="wards-types__link">Подробнее
                     <svg>
@@ -238,10 +237,9 @@
                 </div>
               </div>
               <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6 6order-sm-5  order-md-0 order-4 wards-types__wr">
-                <div class="wards-types__item"
-                     style="background-color: #F1DAFF; background-image: url('assets/img/wt-05.png');">
+                <div class="wards-types__item wards-types__item_05">
                   <h3 class="wards-types__caption">Второе мнение</h3>
-                  <p class="wards-types__descr">Для выбора эффективного лечения</p>
+                  <p class="wards-types__descr">Помощь в&nbsp;получении и&nbsp;оплате</p>
                   <a href="" class="wards-types__link">Подробнее
                     <svg>
                       <use xlink:href="assets/img/sprite.svg#link-arrow"></use>
@@ -250,10 +248,10 @@
                 </div>
               </div>
               <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6 order-sm-6  order-md-0 order-5 wards-types__wr">
-                <div class="wards-types__item"
-                     style="background-color: #DEF1FF; background-image: url('assets/img/wt-06.png');">
+                <div class="wards-types__item wards-types__item_06"
+                     style="">
                   <h3 class="wards-types__caption">Диагностика</h3>
-                  <p class="wards-types__descr">Для уточнения диагноза</p>
+                  <p class="wards-types__descr">Оплата исследований</p>
                   <a href="" class="wards-types__link">Подробнее
                     <svg>
                       <use xlink:href="assets/img/sprite.svg#link-arrow"></use>
@@ -262,8 +260,7 @@
                 </div>
               </div>
               <div class="col-xl-2 col-lg-3 col-md-3 col-sm-4 col-6 order-sm-7  order-md-0 order-8 wards-types__wr">
-                <div class="wards-types__item"
-                     style="background-color: #FFF59D; background-image: url('assets/img/wt-07.png');">
+                <div class="wards-types__item wards-types__item_07">
                   <h3 class="wards-types__caption">Такси</h3>
                   <p class="wards-types__descr">До места лечения
                     или проживания</p>
@@ -275,10 +272,9 @@
                 </div>
               </div>
               <div class="col-xl-4 col-lg-6 col-md-6 col-sm-8 order-sm-8 col-12 order-md-0 order-7 wards-types__wr">
-                <div class="wards-types__item"
-                     style="background-color: #F7FF9D; background-image: url('assets/img/wt-08.png');">
+                <div class="wards-types__item wards-types__item_08">
                   <h3 class="wards-types__caption">Продуктовая корзина</h3>
-                  <p class="wards-types__descr">Доставка продуктов для подопечных в трудной жизненной ситуации</p>
+                  <p class="wards-types__descr">Доставка продуктов для подопечных в трудной&nbsp;жизненной ситуации</p>
                   <a href="" class="wards-types__link">Подробнее
                     <svg>
                       <use xlink:href="assets/img/sprite.svg#link-arrow"></use>
@@ -287,8 +283,7 @@
                 </div>
               </div>
               <div class="col-xl-4 col-lg-3 col-md-3 col-sm-4 col-6 order-sm-10 order-md-0 order-9 wards-types__wr">
-                <div class="wards-types__item"
-                     style="background-color: #D3FAFF; background-image: url('assets/img/wt-09.png');">
+                <div class="wards-types__item wards-types__item_09">
                   <h3 class="wards-types__caption">Трансфер</h3>
                   <p class="wards-types__descr">Оплата перелета или проезда на поезде</p>
                   <a href="" class="wards-types__link">Подробнее
@@ -299,10 +294,9 @@
                 </div>
               </div>
               <div class="col-xl-4 col-lg-6 col-md-6 col-sm-8 col-12 order-sm-9  order-md-0 order-10 wards-types__wr">
-                <div class="wards-types__item"
-                     style="background-color: #E9FFD3; background-image: url('assets/img/wt-010.png');">
+                <div class="wards-types__item wards-types__item_010">
                   <h3 class="wards-types__caption">Проживание</h3>
-                  <p class="wards-types__descr">Оплата гостиницы в другом городе</p>
+                  <p class="wards-types__descr">Оплата гостиницы в&nbsp;другом городе</p>
                   <a href="" class="wards-types__link">Подробнее
                     <svg>
                       <use xlink:href="assets/img/sprite.svg#link-arrow"></use>
@@ -311,11 +305,10 @@
                 </div>
               </div>
               <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 order-sm-11 order-md-0 order-11 wards-types__wr">
-                <div class="wards-types__item"
-                     style="background-color: #D5E4FF; background-image: url('assets/img/wt-011.png');">
+                <div class="wards-types__item wards-types__item_011">
                   <h3 class="wards-types__caption">Трудоустройство</h3>
                   <p class="wards-types__descr">Для людей с инвалидностью
-                    в следствие онкодиагноза</p>
+                    в&nbsp;следствие&nbsp;онкодиагноза</p>
                   <a href="" class="wards-types__link">Подробнее
                     <svg>
                       <use xlink:href="assets/img/sprite.svg#link-arrow"></use>
@@ -328,37 +321,27 @@
         </section>
         <section class="appeal wards-appeal">
           <div class="container">
-            <div class="row appeal__wr">
-              <div class="col-xl-12">
-                <h2 class="title-h2 wards-appeal__title">Сообщество подопечных</h2>
-              </div>
-              <div class="col-12 col-sm-7 col-md-7 col-lg-6 col-xl-5">
-                <article class="">
-                  <p class="appeal__text">В фонде «Огромное сердце» есть сообщество для людей с онкологическим диагнозом
-                    и их близких. Здесь вы сможете получить поддержку или наоборот поддержать других людей, которые проходят
-                    этот непростой путь, обменяться знаниями и рекомендациями, основываясь на личном опыте.</p>
-                  <p class="appeal__text">Сообщество Сердца имеет свой чат в Telegram, в котором уже более 500 человек.
-                    У нас душевно, тепло и уютно.</p>
-                  <a href="" class="btn-reset button appeal__btn">Всутпить в чат</a>
-                </article>
-                <button class="button btn-reset button_blue wards-appeal__btn">Вступить в чат</button>
-              </div>
-              <div class="col-sm-5 col-md-5 col-lg-5 col-xl-3 ml-auto">
-                <div class="appeal__img">
-                  <picture>
-                    <source srcset="assets/img/appeal-02-768.png" media="(max-width: 768px)">
-                    <source srcset="assets/img/appeal-02-1440.png" media="(max-width: 1440px)">
-                    <img src="assets/img/appeal-02.png" alt="">
-                  </picture>
-                  <div class="appeal__signature--mobile">
-                    <p class="appeal__signature appeal__signature_name">Александра Зиневич</p>
-                    <p class="appeal__signature appeal__signature_post">Куратор сообщества подопечных</p>
+            <div class="wards-appeal__wr">
+              <div class="row">
+                <div class="col-12 wards-appeal__inner">
+                  <article class="wards-appeal__article">
+                    <h2 class="title-h2 wards-appeal__title">Сообщество подопечных</h2>
+                    <p class="wards-appeal__text">В фонде «Огромное сердце» есть сообщество для людей с онкологическим диагнозом
+                      и их близких. Здесь вы сможете получить поддержку или наоборот поддержать других людей, которые проходят
+                      этот непростой путь, обменяться знаниями и рекомендациями, основываясь на личном опыте.</p>
+                    <p class="wards-appeal__text">Сообщество Сердца имеет свой чат в Telegram, в котором уже более 500 человек.
+                      У нас душевно, тепло и уютно.</p>
+                    <button class="button btn-reset wards-appeal__btn">Вступить в чат</button>
+                  </article>
+                  <div class="wards-appeal__img">
+                    <picture>
+                      <source srcset="assets/img/w-appeal-01-480.png" media="(max-width: 480px)">
+                      <source srcset="assets/img/w-appeal-01-768.png" media="(max-width: 768px)">
+                      <source srcset="assets/img/w-appeal-01-1440.png" media="(max-width: 1440px)">
+                      <img src="assets/img/w-appeal-01.png" alt="">
+                    </picture>
                   </div>
                 </div>
-              </div>
-              <div class="col-lg-9 col-xl-9 appeal__signature--desktop">
-                <p class="appeal__signature appeal__signature_name">Александра Зиневич</p>
-                <p class="appeal__signature appeal__signature_post">Куратор сообщества подопечных</p>
               </div>
             </div>
           </div>

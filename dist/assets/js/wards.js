@@ -76,4 +76,20 @@ var swiperGallery = new Swiper('.gallery__swiper', {
       slidesPerView: 4.2
     }
   }
+}); // wards nav slider
+// pay slider
+
+var swiperWardsNav = new Swiper('.wards-nav__swiper', {
+  // Optional parameters
+  watchOverflow: false,
+  speed: 500,
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 2.5
+    },
+    768: {
+      slidesPerView: 'auto'
+    }
+  }
 });

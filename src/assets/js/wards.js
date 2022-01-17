@@ -18,7 +18,7 @@ console.log('wards');
 //   }
 // });
 
-$(document).ready(function() {
+$(document).ready(function () {
 
   function stickySidebar() {
     var scrollDistance = $(document).scrollTop(),
@@ -27,22 +27,23 @@ $(document).ready(function() {
       footerOffsetTop = $('.js-stop-header').offset().top,
       $header = $('.ask');
 
-    if( scrollDistance >= headerHeight) {
+    if (scrollDistance >= headerHeight) {
       $header.addClass('ask_fixed');
       $header.removeClass('ask_hide');
     } else {
       $header.removeClass('ask_fixed');
     }
 
-    if ( scrollDistance + headerHeight  >= footerOffsetTop) {
+    if (scrollDistance + headerHeight >= footerOffsetTop) {
       $header.removeClass('ask_fixed');
       $header.addClass('ask_hide');
     }
 
   }
+
   stickySidebar();
 
-  $(document).scroll(function() {
+  $(document).scroll(function () {
     stickySidebar();
   });
 
@@ -83,5 +84,23 @@ const swiperGallery = new Swiper('.gallery__swiper', {
     1200: {
       slidesPerView: 4.2,
     }
+  }
+});
+
+// wards nav slider
+
+// pay slider
+const swiperWardsNav = new Swiper('.wards-nav__swiper', {
+  // Optional parameters
+  watchOverflow: false,
+  speed: 500,
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 2.5,
+    },
+    768: {
+      slidesPerView: 'auto',
+    },
   }
 });

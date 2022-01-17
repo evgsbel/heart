@@ -21,35 +21,46 @@
 //wards nav
 
 .wards-nav {
-  padding: 22px 0 26px;
   background-color: #f5f8fb;
+  margin-top: 115px;
   @include r(600) {
     margin-top: 80px;
+    background-color: transparent;
   }
   &__list {
     display: flex;
-    @include r(600) {
-      flex-wrap: wrap;
+    padding: 22px 0 26px;
+    @include r(768) {
       gap: 16px;
     }
   }
   &__item {
     position: relative;
     padding-left: 24px;
+    flex: 0 0 max-content;
+    @include r(768) {
+      padding-left: 0;
+    }
     @include r(600) {
       background-color: #F7F7F7;
       padding: 10px 16px 12px;
       text-align: center;
       max-height: 60px;
-      mask-image: paint(smooth-corners);
-      -webkit-mask-image: paint(smooth-corners);
-      --smooth-corners: 16;
+      border-radius: 8px;
     }
-    &:not(:last-child) {
-      margin-right: 24px;
-      @include r(600) {
-        margin-right: 8px;
-      }
+    //&:not(:last-child) {
+    //  margin-right: 24px;
+    //  @include r(600) {
+    //    margin-right: 8px;
+    //  }
+    //}
+  }
+  &__swiper {
+    @include r(600) {
+      width: calc(100% + 32px);
+    }
+    @include r(480) {
+      width: calc(100% + 12px);
     }
   }
   &__link {
@@ -94,11 +105,15 @@
   &__review-link {
     display: block;
     margin-left: auto;
+    padding: 22px 0 26px;
     font-weight: 500;
     font-size: 18px;
     line-height: 1.4;
     text-align: right;
     color: #127ce1;
+    @include r(1024) {
+      display: none;
+    }
   }
 }
 
@@ -110,9 +125,7 @@
     @include r(600) {
       padding: 24px 16px 0;
       background-color: #EFF7FF;
-      mask-image: paint(smooth-corners);
-      -webkit-mask-image: paint(smooth-corners);
-      --smooth-corners: 20;
+      border-radius: 8px;
     }
   }
   &__title {
@@ -121,6 +134,7 @@
       font-size: 18px;
       line-height: 1.5;
       color: #6D7276;
+      font-feature-settings: normal;
       @include r(600) {
         display: block;
         margin-top: 8px;
@@ -139,9 +153,7 @@
   &__item {
     padding: 24px 56px 24px 24px;
     background: #EFF7FF;
-    mask-image: paint(smooth-corners);
-    -webkit-mask-image: paint(smooth-corners);
-    --smooth-corners: 8;
+    border-radius: 16px;
     @include r(600) {
       padding: 0;
       width: 100%;
@@ -168,7 +180,7 @@
         display: block;
         width: 20px;
         height: 21px;
-        background-image: url('../img/wards-phone-star.png');
+        background-image: url("data:image/svg+xml,%3Csvg width='20' height='21' viewBox='0 0 20 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.7485 10.5L20 14.5608L18.655 16.9972L11.345 12.7624V21H8.65497L8.71345 12.7624L1.40351 16.9972L0 14.5608L7.30994 10.5L0 6.43923L1.40351 3.94475L8.71345 8.23757L8.65497 0H11.345V8.23757L18.655 3.94475L20 6.43923L12.7485 10.5Z' fill='%23127CE1'/%3E%3C/svg%3E%0A");
         background-repeat: no-repeat;
         -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
@@ -186,9 +198,7 @@
     font-weight: 600;
     font-size: 18px;
     line-height: 1.4;
-    mask-image: paint(smooth-corners);
-    -webkit-mask-image: paint(smooth-corners);
-    --smooth-corners: 18;
+    border-radius: 8px;
     @include r(600) {
       display: block;
     }
@@ -216,22 +226,129 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right bottom;
-    mask-image: paint(smooth-corners);
-    -webkit-mask-image: paint(smooth-corners);
-    --smooth-corners: 15;
+    border-radius: 16px;
     @include r(1200) {
       padding: 20px 16px;
+    }
+    @include r(480) {
+      padding: 16px 9px 16px 12px;
+      min-height: 150px;
+      height: 100%;
+    }
+    &_01 {
+      background-color: #D8FFD3;
+      background-image: url('../img/wt-01.png');
+      @include r(480) {
+        background-image: url('../img/wt-01-mobile.png');
+      }
+    }
+    &_02 {
+      background-color: #FFEDDE;
+      background-image: url('../img/wt-02.png');
+      @include r(480) {
+        background-image: url('../img/wt-02-mobile.png');
+      }
+    }
+    &_03 {
+      background-color: #C5F3FE;
+      background-image: url('../img/wt-03.png');
+      @include r(480) {
+        min-height: 110px;
+        background-position: right center;
+        background-image: url('../img/wt-03-mobile.png');
+        .wards-types__descr {
+          max-width: 50%;
+        }
+      }
+    }
+    &_04 {
+      background-color: #D1FFFC;
+      background-image: url('../img/wt-04.png');
+      @include r(480) {
+        min-height: 130px;
+        background-image: url('../img/wt-04-mobile.png');
+        .wards-types__descr {
+          max-width: 50%;
+        }
+      }
+    }
+    &_05 {
+      background-color: #F1DAFF;
+      background-image: url('../img/wt-05.png');
+      @include r(480) {
+        background-position: right top;
+        background-image: url('../img/wt-05-mobile.png');
+      }
+    }
+    &_06 {
+      background-color: #DEF1FF;
+      background-image: url('../img/wt-06.png');
+      @include r(480) {
+        background-image: url('../img/wt-06-mobile.png');
+      }
+    }
+    &_07 {
+      background-color: #FFF59D;
+      background-image: url('../img/wt-07.png');
+      @include r(480) {
+        background-image: url('../img/wt-07-mobile.png');
+      }
+    }
+    &_08 {
+      background-color: #F7FF9D;
+      background-image: url('../img/wt-08.png');
+      @include r(480) {
+        background-image: url('../img/wt-08-mobile.png');
+        .wards-types__descr {
+          max-width: 50%;
+        }
+      }
+    }
+    &_09 {
+      background-color: #D3FAFF;
+      background-image: url('../img/wt-09.png');
+      @include r(480) {
+        background-image: url('../img/wt-09-mobile.png');
+      }
+    }
+    &_010 {
+      background-color: #E9FFD3;
+      background-image: url('../img/wt-010.png');
+      @include r(480) {
+        min-height: 110px;
+        background-image: url('../img/wt-010-mobile.png');
+        .wards-types__descr {
+          max-width: 50%;
+        }
+      }
+    }
+    &_011 {
+      background-color: #D5E4FF;
+      background-image: url('../img/wt-011.png');
+      @include r(480) {
+        min-height: 110px;
+        background-image: url('../img/wt-011-mobile.png');
+        .wards-types__descr {
+
+        }
+      }
     }
   }
   &__caption {
     font-weight: 500;
     font-size: 24px;
     line-height: 1.4;
+    @include r(480) {
+      font-size: 15px;
+    }
   }
   &__descr {
     margin-top: 8px;
     font-size: 20px;
     line-height: 140%;
+    @include r(480) {
+      font-size: 13px;
+    }
   }
   &__link {
     margin-top: 24px;
@@ -270,18 +387,47 @@
 //wards appeal
 
 .wards-appeal {
+  &__wr {
+    padding: 72px 80px 0 80px;
+    background-image: url('../img/wards-appeal-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 16px;
+    color: #fff;
+    @include r(1024) {
+      padding: 0;
+      background-image: none;
+    }
+
+  }
   &__title {
     margin-bottom: 24px;
   }
-  &__btn {
-    margin-top: 32px;
-    padding: 16px 65px 20px;
-    @include r(600) {
-      width: 100%;
-      font-size: 18px;
+  &__article {
+    margin-right: 190px;
+    max-width: 745px;
+    @include r(1440) {
+      max-width: 685px;
+    }
+    @include r(1024) {
+      order: 2;
+      margin-right: 0;
+      max-width: 100%;
+      color: #000;
     }
   }
-  .appeal__text {
+  &__inner {
+    display: flex;
+    align-items: flex-end;
+    @include r(1024) {
+      flex-direction: column;
+    }
+  }
+  &__text {
+    margin-bottom: 32px;
+    font-weight: 500;
+    font-size: 1.25em;
+    line-height: 1.5;
     @include r(1440) {
       font-size: 20px;
     }
@@ -289,15 +435,37 @@
       font-size: 16px;
     }
   }
+  &__btn {
+    padding: 16px 65px 20px;
+    font-weight: 600;
+    font-size: 1.25em;
+    line-height: 1.4;
+    color: #2688E5;
+    background-color: #fff;
+    border-radius: 12px;
+    @include r(1400) {
+      margin-bottom: 32px;
+    }
+    @include r(1024) {
+      font-size: 18px;
+      color: #fff;
+      background-color: #2688E5;
+    }
+  }
+  &__img {
+    flex-shrink: 0;
+    @include r(1024) {
+      width: 100%;
+      margin-bottom: 32px;
+      padding: 25px 50px 0 25px;
+      border-radius: 16px;
+      background-image: url('../img/wards-appeal-bg.png');
+    }
+  }
+
   .appeal__wr {
     @include r(768) {
       align-items: flex-start;
-    }
-  }
-  .appeal__img {
-    @include r(768) {
-      margin-left: 20px;
-      text-align: right;
     }
   }
   .appeal__signature_post {
@@ -311,11 +479,7 @@
       text-align: right;
     }
   }
-  .appeal__img {
-    @include r(600) {
-      display: none;
-    }
-  }
+
 }
 
 
