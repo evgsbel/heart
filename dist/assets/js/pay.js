@@ -197,6 +197,10 @@ $(function () {
       if (currentIndex === 2 && priorIndex === 3) {
         form.steps("previous");
       }
+
+      if (currentIndex === 3) {
+        $('.vol-form__submit').removeAttr('disabled');
+      }
     },
     onFinishing: function onFinishing(event, currentIndex) {
       form.validate().settings.ignore = ":disabled";
@@ -227,10 +231,9 @@ $(function () {
   function setProgressBar(currentIndex) {
     var percent = parseFloat(100 / wizardLength) * (currentIndex + 1);
     percent = percent.toFixed();
-    $(".vol-progress__percent").html(percent + "%");
-    $(".diagram .text").html(percent + "%");
-    $(".progress").attr("data-percent", "".concat(percent));
-    $(".vol-progress__bar").css("width", percent + "%");
+    $(".vol-progress__percent").html(percent + "%"); // $(".diagram .text").html(percent + "%")
+
+    $(".progress").attr("data-percent", "".concat(percent)); // $(".vol-progress__bar").css("width", percent + "%")
   }
 
   jQuery.extend(jQuery.validator.messages, {

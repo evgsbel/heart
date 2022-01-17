@@ -457,6 +457,21 @@
       display: none;
     }
   }
+  &__submit {
+    display: block;
+    padding: 16px 10px 20px;
+    width: 100%;
+    font-weight: 600;
+    font-size: 1.25em;
+    line-height: 1.4;
+    color: #fff;
+    background-color: #2688E5;
+    border-radius: 12px;
+    &:disabled {
+      color: #AEC1D2;
+      background-color: #F5F8FB;
+    }
+  }
 }
 
 .vol-progress {
@@ -472,24 +487,25 @@
   border: 1px solid #EDF4FA;
 
   &__title {
+    display: block;
     margin-bottom: 4px;
-    font-size: 1.25em;
+    font-size: 20px;
     line-height: 1.4;
     color: #6D7276;
   }
   &__percent {
     font-weight: 500;
-    font-size: 1.25em;
+    font-size: 24px;
     line-height: 1.4;
     color: #6D7276;
   }
 }
 
 .diagram {
-  width: 250px;
-  height:250px;
+  width: 240px;
+  height:240px;
   border-radius: 50%;
-  background: #990;
+  background: #2688E5;
   position: relative;
   overflow: hidden;
 
@@ -498,12 +514,12 @@
   content: '';
   display: block;
   position: absolute;
-  top:20px;
-  left:20px;
-  right:20px;
-  bottom:20px;
+  top:5px;
+  left:5px;
+  right:5px;
+  bottom:5px;
   border-radius: 50%;
-  background: #ccc;
+  background: #fff;
   z-index: 3;
   opacity: 1;
 
@@ -515,7 +531,7 @@
   right: 0;
   overflow: hidden;
   position: absolute;
-  transition: all .5s ease-in-out;
+
 }
 .diagram .piece::before {
   content: '';
@@ -546,15 +562,14 @@
 
 }
 .diagram .left::before {
-  background: #059;
+  background: #EDF4FA;
 
 }
 .diagram.over_50 .left::before {
-  background: #990;
-
+  background: #2688E5;
 }
 .diagram .right::before {
-  background: #059;
+  background: #EDF4FA;
 
 }
 .diagram .text {
@@ -564,15 +579,10 @@
   bottom: 0;
   left:0;
   right:0;
+  display: flex;
+  flex-direction: column;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.diagram .text b {
-  font-size: 72px;
-}
-.diagram .text span {
-  font-size: 16px;
-  display: block;
 }

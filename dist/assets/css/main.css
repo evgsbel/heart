@@ -20435,7 +20435,26 @@ h3 {
   display: none;
 }
 
-/* line 462, src/assets/scss/pages/_pay.scss */
+/* line 460, src/assets/scss/pages/_pay.scss */
+.vol-form__submit {
+  display: block;
+  padding: 16px 10px 20px;
+  width: 100%;
+  font-weight: 600;
+  font-size: 1.25em;
+  line-height: 1.4;
+  color: #fff;
+  background-color: #2688E5;
+  border-radius: 12px;
+}
+
+/* line 470, src/assets/scss/pages/_pay.scss */
+.vol-form__submit:disabled {
+  color: #AEC1D2;
+  background-color: #F5F8FB;
+}
+
+/* line 477, src/assets/scss/pages/_pay.scss */
 .vol-progress {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20458,48 +20477,49 @@ h3 {
   border: 1px solid #EDF4FA;
 }
 
-/* line 474, src/assets/scss/pages/_pay.scss */
+/* line 489, src/assets/scss/pages/_pay.scss */
 .vol-progress__title {
+  display: block;
   margin-bottom: 4px;
-  font-size: 1.25em;
+  font-size: 20px;
   line-height: 1.4;
   color: #6D7276;
 }
 
-/* line 480, src/assets/scss/pages/_pay.scss */
+/* line 496, src/assets/scss/pages/_pay.scss */
 .vol-progress__percent {
   font-weight: 500;
-  font-size: 1.25em;
+  font-size: 24px;
   line-height: 1.4;
   color: #6D7276;
 }
 
-/* line 488, src/assets/scss/pages/_pay.scss */
+/* line 504, src/assets/scss/pages/_pay.scss */
 .diagram {
-  width: 250px;
-  height: 250px;
+  width: 240px;
+  height: 240px;
   border-radius: 50%;
-  background: #990;
+  background: #2688E5;
   position: relative;
   overflow: hidden;
 }
 
-/* line 497, src/assets/scss/pages/_pay.scss */
+/* line 513, src/assets/scss/pages/_pay.scss */
 .diagram::before {
   content: '';
   display: block;
   position: absolute;
-  top: 20px;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
   border-radius: 50%;
-  background: #ccc;
+  background: #fff;
   z-index: 3;
   opacity: 1;
 }
 
-/* line 511, src/assets/scss/pages/_pay.scss */
+/* line 527, src/assets/scss/pages/_pay.scss */
 .diagram .piece {
   width: 100%;
   height: 100%;
@@ -20507,11 +20527,9 @@ h3 {
   right: 0;
   overflow: hidden;
   position: absolute;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
 }
 
-/* line 520, src/assets/scss/pages/_pay.scss */
+/* line 536, src/assets/scss/pages/_pay.scss */
 .diagram .piece::before {
   content: '';
   display: block;
@@ -20520,7 +20538,7 @@ h3 {
   height: 100%;
 }
 
-/* line 528, src/assets/scss/pages/_pay.scss */
+/* line 544, src/assets/scss/pages/_pay.scss */
 .diagram .piece.left {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
@@ -20529,13 +20547,13 @@ h3 {
   /* only FireFox < 75.0v (fix bug)*/
 }
 
-/* line 534, src/assets/scss/pages/_pay.scss */
+/* line 550, src/assets/scss/pages/_pay.scss */
 .diagram.over_50 .piece.left {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-/* line 538, src/assets/scss/pages/_pay.scss */
+/* line 554, src/assets/scss/pages/_pay.scss */
 .diagram .piece.right {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -20544,28 +20562,28 @@ h3 {
   /* only FireFox < 75.0v (fix bug)*/
 }
 
-/* line 544, src/assets/scss/pages/_pay.scss */
+/* line 560, src/assets/scss/pages/_pay.scss */
 .diagram.over_50 .piece.right {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
 
-/* line 548, src/assets/scss/pages/_pay.scss */
+/* line 564, src/assets/scss/pages/_pay.scss */
 .diagram .left::before {
-  background: #059;
+  background: #EDF4FA;
 }
 
-/* line 552, src/assets/scss/pages/_pay.scss */
+/* line 568, src/assets/scss/pages/_pay.scss */
 .diagram.over_50 .left::before {
-  background: #990;
+  background: #2688E5;
 }
 
-/* line 556, src/assets/scss/pages/_pay.scss */
+/* line 571, src/assets/scss/pages/_pay.scss */
 .diagram .right::before {
-  background: #059;
+  background: #EDF4FA;
 }
 
-/* line 560, src/assets/scss/pages/_pay.scss */
+/* line 575, src/assets/scss/pages/_pay.scss */
 .diagram .text {
   position: absolute;
   z-index: 3;
@@ -20573,9 +20591,14 @@ h3 {
   bottom: 0;
   left: 0;
   right: 0;
-  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -20583,17 +20606,6 @@ h3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-/* line 572, src/assets/scss/pages/_pay.scss */
-.diagram .text b {
-  font-size: 72px;
-}
-
-/* line 575, src/assets/scss/pages/_pay.scss */
-.diagram .text span {
-  font-size: 16px;
-  display: block;
 }
 
 /*# sourceMappingURL=../../../scss */

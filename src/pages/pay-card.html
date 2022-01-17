@@ -13,7 +13,7 @@ script: pay
       <div class="col-xl-12">
         <div class="pay__types swiper pay__swiper d-flex">
           <div class="swiper-wrapper">
-            <button class="tabs__btn btn-reset pay__types-btn pay__types-btn swiper-slide is-active" data-path="card">
+            <button class="tabs__btn btn-reset pay__types-btn pay__types-btn swiper-slide " data-path="card">
               <svg width="24" height="18">
                 <use xlink:href="assets/img/sprite.svg#pay-types-card"></use>
               </svg>
@@ -37,7 +37,7 @@ script: pay
               </svg>
               ФЦК
             </button>
-            <button class="tabs__btn btn-reset pay__types-btn pay__types-btn swiper-slide "
+            <button class="tabs__btn btn-reset pay__types-btn pay__types-btn swiper-slide is-active"
                     data-path="volunteer">
               <svg width="21" height="20">
                 <use xlink:href="assets/img/sprite.svg#pay-types-volunteer"></use>
@@ -48,7 +48,7 @@ script: pay
         </div>
       </div>
     </div>
-    <div class="row mt-5 pay-tabs__content tabs__content tabs__content_flex is-active" data-target="card">
+    <div class="row mt-5 pay-tabs__content tabs__content tabs__content_flex " data-target="card">
       <div class="col-lg-5 col-xl-5">
         <div class="pay__btns pay__btns_top d-flex mb-3">
           <label for="frequency1" class="pay__radio-label js-radio-label">
@@ -322,7 +322,7 @@ script: pay
         </div>
       </div>
     </div>
-    <div class="row mt-5 pay-tabs__content tabs__content tabs__content_flex" data-target="volunteer">
+    <div class="row mt-5 pay-tabs__content tabs__content tabs__content_flex is-active" data-target="volunteer">
       <div class="col-10">
         <form action="#" method="" class="vol-form" id="vol-form">
           <h3 class="vol-form__title">Заполните анкету</h3>
@@ -333,7 +333,8 @@ script: pay
               <div class="vol-form__group">
                 <label for="vol-fio" class="vol-form__label">
                   ФИО
-                  <input type="text" id="vol-fio" name="vol-fio" placeholder="Иванов Иван Иванович" class="vol-form__input required">
+                  <input type="text" id="vol-fio" name="vol-fio" placeholder="Иванов Иван Иванович"
+                         class="vol-form__input required">
                 </label>
                 <label for="vol-date" class="vol-form__label">
                   Дата рождения
@@ -342,7 +343,8 @@ script: pay
               </div>
               <label for="vol-city" class="vol-form__label">
                 Город проживания
-                <input type="text" id="vol-city" name="vol-city" placeholder="Начните вводить" class="vol-form__input required">
+                <input type="text" id="vol-city" name="vol-city" placeholder="Начните вводить"
+                       class="vol-form__input required">
               </label>
             </section>
 
@@ -351,11 +353,13 @@ script: pay
               <div class="vol-form__group">
                 <label for="vol-phone" class="vol-form__label">
                   Телефон
-                  <input type="number" id="vol-phone" name="vol-phone" placeholder="+7" class="vol-form__input required">
+                  <input type="number" id="vol-phone" name="vol-phone" placeholder="+7"
+                         class="vol-form__input required">
                 </label>
                 <label for="vol-date" class="vol-form__label">
                   Email
-                  <input type="email" id="vol-email" name="vol-email" placeholder="mail@greatheart.ru" class="vol-form__input required">
+                  <input type="email" id="vol-email" name="vol-email" placeholder="mail@greatheart.ru"
+                         class="vol-form__input required">
                 </label>
                 <label for="vol-tlg" class="vol-form__label">
                   Telegram <span>необязательно</span>
@@ -433,15 +437,18 @@ script: pay
         </form>
       </div>
       <div class="col-2">
-        <div id="vol-progress" class="vol-progress ">
-          <div id="myBar" class="vol-progress__bar">
-           <p class="vol-progress__title">Заполнено</p>
-            <p class="vol-progress__percent">50%</p>
+        <div id="vol-progress" class="vol-progress" data-percent="5">
+          <div id="myBar" class="vol-progress__bar diagram progress">
+            <div class="piece left"></div>
+            <div class="piece right"></div>
+            <div class="text">
+              <p class="vol-progress__title">Заполнено</p>
+              <p class="vol-progress__percent">50%</p>
+            </div>
           </div>
         </div>
-        <button class="btn-reset vol-form__submit" type="submit">Отправить анкету</button>
+        <button class="btn-reset vol-form__submit" type="submit" disabled>Отправить анкету</button>
       </div>
-
     </div>
   </div>
 </section>
