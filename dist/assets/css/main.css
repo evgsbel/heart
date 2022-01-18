@@ -19453,13 +19453,7 @@ h3 {
   color: #2688E5;
   background-color: #fff;
   border-radius: 12px;
-}
-
-@media only screen and (max-width: 1400px) {
-  /* line 442, src/assets/scss/pages/_wards.scss */
-  .wards-appeal__btn {
-    margin-bottom: 32px;
-  }
+  margin-bottom: 32px;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -19471,14 +19465,14 @@ h3 {
   }
 }
 
-/* line 459, src/assets/scss/pages/_wards.scss */
+/* line 457, src/assets/scss/pages/_wards.scss */
 .wards-appeal__img {
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 459, src/assets/scss/pages/_wards.scss */
+  /* line 457, src/assets/scss/pages/_wards.scss */
   .wards-appeal__img {
     width: 100%;
     margin-bottom: 32px;
@@ -19489,7 +19483,7 @@ h3 {
 }
 
 @media only screen and (max-width: 768px) {
-  /* line 470, src/assets/scss/pages/_wards.scss */
+  /* line 468, src/assets/scss/pages/_wards.scss */
   .wards-appeal .appeal__wr {
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -19498,7 +19492,7 @@ h3 {
 }
 
 @media only screen and (max-width: 768px) {
-  /* line 475, src/assets/scss/pages/_wards.scss */
+  /* line 473, src/assets/scss/pages/_wards.scss */
   .wards-appeal .appeal__signature_post {
     font-size: 22px;
     text-align: right;
@@ -19506,38 +19500,38 @@ h3 {
 }
 
 @media only screen and (max-width: 768px) {
-  /* line 481, src/assets/scss/pages/_wards.scss */
+  /* line 479, src/assets/scss/pages/_wards.scss */
   .wards-appeal .appeal__signature_name {
     text-align: right;
   }
 }
 
-/* line 494, src/assets/scss/pages/_wards.scss */
+/* line 492, src/assets/scss/pages/_wards.scss */
 .faq {
   margin-top: 56px;
 }
 
-/* line 497, src/assets/scss/pages/_wards.scss */
+/* line 495, src/assets/scss/pages/_wards.scss */
 .faq__wrapper:not(:last-child) {
   margin-bottom: 56px;
 }
 
-/* line 502, src/assets/scss/pages/_wards.scss */
+/* line 500, src/assets/scss/pages/_wards.scss */
 .faq__inner:first-child {
   margin-top: 40px;
 }
 
-/* line 506, src/assets/scss/pages/_wards.scss */
+/* line 504, src/assets/scss/pages/_wards.scss */
 .faq__item {
   border-bottom: 1px solid rgba(174, 193, 210, 0.5);
 }
 
-/* line 508, src/assets/scss/pages/_wards.scss */
+/* line 506, src/assets/scss/pages/_wards.scss */
 .faq__item:not(:last-child) {
   margin-bottom: 24px;
 }
 
-/* line 512, src/assets/scss/pages/_wards.scss */
+/* line 510, src/assets/scss/pages/_wards.scss */
 .faq__question {
   position: relative;
   font-weight: 500;
@@ -19549,19 +19543,19 @@ h3 {
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 512, src/assets/scss/pages/_wards.scss */
+  /* line 510, src/assets/scss/pages/_wards.scss */
   .faq__question {
     font-size: 16px;
   }
 }
 
-/* line 523, src/assets/scss/pages/_wards.scss */
+/* line 521, src/assets/scss/pages/_wards.scss */
 .faq__question span {
   display: block;
   max-width: 90%;
 }
 
-/* line 527, src/assets/scss/pages/_wards.scss */
+/* line 525, src/assets/scss/pages/_wards.scss */
 .faq__question svg {
   position: absolute;
   right: 0;
@@ -19576,28 +19570,28 @@ h3 {
           transform: rotate(180deg);
 }
 
-/* line 537, src/assets/scss/pages/_wards.scss */
+/* line 535, src/assets/scss/pages/_wards.scss */
 .faq__question.collapsed svg {
   -webkit-transform: rotate(0);
           transform: rotate(0);
 }
 
-/* line 542, src/assets/scss/pages/_wards.scss */
+/* line 540, src/assets/scss/pages/_wards.scss */
 .faq__answer {
   background-color: #f7fafd;
 }
 
-/* line 544, src/assets/scss/pages/_wards.scss */
+/* line 542, src/assets/scss/pages/_wards.scss */
 .faq__answer-inn {
   padding: 32px;
 }
 
-/* line 547, src/assets/scss/pages/_wards.scss */
+/* line 545, src/assets/scss/pages/_wards.scss */
 .faq__answer-inn p:not(:last-child) {
   margin-bottom: 10px;
 }
 
-/* line 557, src/assets/scss/pages/_wards.scss */
+/* line 555, src/assets/scss/pages/_wards.scss */
 .ask {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -19617,31 +19611,31 @@ h3 {
   border-radius: 16px;
 }
 
-/* line 566, src/assets/scss/pages/_wards.scss */
+/* line 564, src/assets/scss/pages/_wards.scss */
 .ask_fixed {
   position: fixed;
   top: 100px;
 }
 
-/* line 570, src/assets/scss/pages/_wards.scss */
+/* line 568, src/assets/scss/pages/_wards.scss */
 .ask_hide {
   opacity: 0;
 }
 
-/* line 573, src/assets/scss/pages/_wards.scss */
+/* line 571, src/assets/scss/pages/_wards.scss */
 .ask__img {
   display: block;
   margin-bottom: 24px;
 }
 
-/* line 577, src/assets/scss/pages/_wards.scss */
+/* line 575, src/assets/scss/pages/_wards.scss */
 .ask__text {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.4;
 }
 
-/* line 582, src/assets/scss/pages/_wards.scss */
+/* line 580, src/assets/scss/pages/_wards.scss */
 .ask__btn {
   margin-top: 24px;
   padding: 16px 24px 20px;
@@ -19650,19 +19644,19 @@ h3 {
   border-radius: 8px;
 }
 
-/* line 594, src/assets/scss/pages/_wards.scss */
+/* line 592, src/assets/scss/pages/_wards.scss */
 .mobile-ask {
   margin-top: 65px;
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 594, src/assets/scss/pages/_wards.scss */
+  /* line 592, src/assets/scss/pages/_wards.scss */
   .mobile-ask {
     background-color: #eff7ff;
   }
 }
 
-/* line 599, src/assets/scss/pages/_wards.scss */
+/* line 597, src/assets/scss/pages/_wards.scss */
 .mobile-ask__wr {
   padding: 24px 23px 26px;
   background: #fff;
@@ -19672,7 +19666,7 @@ h3 {
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 599, src/assets/scss/pages/_wards.scss */
+  /* line 597, src/assets/scss/pages/_wards.scss */
   .mobile-ask__wr {
     padding-right: 0;
     padding-left: 0;
@@ -19686,7 +19680,7 @@ h3 {
   }
 }
 
-/* line 613, src/assets/scss/pages/_wards.scss */
+/* line 611, src/assets/scss/pages/_wards.scss */
 .mobile-ask__title {
   font-style: normal;
   font-weight: 500;
@@ -19695,14 +19689,14 @@ h3 {
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 613, src/assets/scss/pages/_wards.scss */
+  /* line 611, src/assets/scss/pages/_wards.scss */
   .mobile-ask__title {
     margin-top: 24px;
     font-size: 18px;
   }
 }
 
-/* line 623, src/assets/scss/pages/_wards.scss */
+/* line 621, src/assets/scss/pages/_wards.scss */
 .mobile-ask__btn {
   padding: 16px 78px 20px;
   font-weight: 600;
@@ -19714,7 +19708,7 @@ h3 {
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 623, src/assets/scss/pages/_wards.scss */
+  /* line 621, src/assets/scss/pages/_wards.scss */
   .mobile-ask__btn {
     margin-top: 24px;
     background-color: #2688E5;
@@ -19723,29 +19717,29 @@ h3 {
 }
 
 @media only screen and (max-width: 480px) {
-  /* line 623, src/assets/scss/pages/_wards.scss */
+  /* line 621, src/assets/scss/pages/_wards.scss */
   .mobile-ask__btn {
     padding: 16px 40px 20px;
     font-size: 18px;
   }
 }
 
-/* line 644, src/assets/scss/pages/_wards.scss */
+/* line 642, src/assets/scss/pages/_wards.scss */
 .is-faq-page .bottom-btns {
   margin-top: 56px;
 }
 
-/* line 653, src/assets/scss/pages/_wards.scss */
+/* line 651, src/assets/scss/pages/_wards.scss */
 .calendar {
   margin-top: 56px;
 }
 
-/* line 658, src/assets/scss/pages/_wards.scss */
+/* line 656, src/assets/scss/pages/_wards.scss */
 .calendar__inner {
   margin-top: 48px;
 }
 
-/* line 661, src/assets/scss/pages/_wards.scss */
+/* line 659, src/assets/scss/pages/_wards.scss */
 .calendar__month-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -19758,7 +19752,7 @@ h3 {
           justify-content: space-between;
 }
 
-/* line 666, src/assets/scss/pages/_wards.scss */
+/* line 664, src/assets/scss/pages/_wards.scss */
 .calendar__month, .calendar__year {
   font-size: 20px;
   line-height: 24px;
@@ -19770,20 +19764,20 @@ h3 {
 }
 
 @media only screen and (max-width: 480px) {
-  /* line 666, src/assets/scss/pages/_wards.scss */
+  /* line 664, src/assets/scss/pages/_wards.scss */
   .calendar__month, .calendar__year {
     max-width: 35px;
     font-size: 18px;
   }
 }
 
-/* line 680, src/assets/scss/pages/_wards.scss */
+/* line 678, src/assets/scss/pages/_wards.scss */
 .calendar__year {
   display: none;
   margin-left: 8px;
 }
 
-/* line 684, src/assets/scss/pages/_wards.scss */
+/* line 682, src/assets/scss/pages/_wards.scss */
 .calendar__month-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -19794,7 +19788,7 @@ h3 {
   transition: color .3s ease-in-out, background-color .3s ease-in-out, padding .3s ease-in-out;
 }
 
-/* line 690, src/assets/scss/pages/_wards.scss */
+/* line 688, src/assets/scss/pages/_wards.scss */
 .calendar__month-item.is-active .calendar__month,
 .calendar__month-item.is-active .calendar__year, .calendar__month-item.swiper-slide-active .calendar__month,
 .calendar__month-item.swiper-slide-active .calendar__year {
@@ -19805,7 +19799,7 @@ h3 {
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 690, src/assets/scss/pages/_wards.scss */
+  /* line 688, src/assets/scss/pages/_wards.scss */
   .calendar__month-item.is-active .calendar__month,
   .calendar__month-item.is-active .calendar__year, .calendar__month-item.swiper-slide-active .calendar__month,
   .calendar__month-item.swiper-slide-active .calendar__year {
@@ -19815,7 +19809,7 @@ h3 {
 }
 
 @media only screen and (max-width: 480px) {
-  /* line 690, src/assets/scss/pages/_wards.scss */
+  /* line 688, src/assets/scss/pages/_wards.scss */
   .calendar__month-item.is-active .calendar__month,
   .calendar__month-item.is-active .calendar__year, .calendar__month-item.swiper-slide-active .calendar__month,
   .calendar__month-item.swiper-slide-active .calendar__year {
@@ -19823,7 +19817,7 @@ h3 {
   }
 }
 
-/* line 707, src/assets/scss/pages/_wards.scss */
+/* line 705, src/assets/scss/pages/_wards.scss */
 .calendar__month-next, .calendar__month-prev {
   position: absolute;
   top: 50%;
@@ -19833,17 +19827,17 @@ h3 {
   cursor: pointer;
 }
 
-/* line 715, src/assets/scss/pages/_wards.scss */
+/* line 713, src/assets/scss/pages/_wards.scss */
 .calendar__month-next {
   right: 15px;
 }
 
-/* line 718, src/assets/scss/pages/_wards.scss */
+/* line 716, src/assets/scss/pages/_wards.scss */
 .calendar__month-prev {
   left: 15px;
 }
 
-/* line 722, src/assets/scss/pages/_wards.scss */
+/* line 720, src/assets/scss/pages/_wards.scss */
 .calendar__day-list {
   margin-top: 32px;
   margin-bottom: 24px;
@@ -19856,7 +19850,7 @@ h3 {
           justify-content: space-between;
 }
 
-/* line 729, src/assets/scss/pages/_wards.scss */
+/* line 727, src/assets/scss/pages/_wards.scss */
 .calendar__day {
   padding: 0 24px;
   font-size: 20px;
@@ -19864,14 +19858,14 @@ h3 {
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 729, src/assets/scss/pages/_wards.scss */
+  /* line 727, src/assets/scss/pages/_wards.scss */
   .calendar__day {
     font-size: 18px;
     padding: 0;
   }
 }
 
-/* line 738, src/assets/scss/pages/_wards.scss */
+/* line 736, src/assets/scss/pages/_wards.scss */
 .calendar__week {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -19885,17 +19879,17 @@ h3 {
   --smooth-corners: 10;
 }
 
-/* line 745, src/assets/scss/pages/_wards.scss */
+/* line 743, src/assets/scss/pages/_wards.scss */
 .calendar__week:nth-child(odd) {
   background-color: #F5F8FB;
 }
 
-/* line 748, src/assets/scss/pages/_wards.scss */
+/* line 746, src/assets/scss/pages/_wards.scss */
 .calendar__week:not(:first-child) {
   margin-top: 8px;
 }
 
-/* line 753, src/assets/scss/pages/_wards.scss */
+/* line 751, src/assets/scss/pages/_wards.scss */
 .calendar__number {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 65px;
@@ -19914,7 +19908,7 @@ h3 {
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 753, src/assets/scss/pages/_wards.scss */
+  /* line 751, src/assets/scss/pages/_wards.scss */
   .calendar__number {
     font-size: 18px;
     padding: 0;
@@ -19924,67 +19918,67 @@ h3 {
   }
 }
 
-/* line 770, src/assets/scss/pages/_wards.scss */
+/* line 768, src/assets/scss/pages/_wards.scss */
 .calendar__number.is-active {
   color: #127CE1;
 }
 
-/* line 773, src/assets/scss/pages/_wards.scss */
+/* line 771, src/assets/scss/pages/_wards.scss */
 .calendar__number:hover, .calendar__number.is-focus {
   color: #fff;
   background-color: #2688E5;
 }
 
-/* line 779, src/assets/scss/pages/_wards.scss */
+/* line 777, src/assets/scss/pages/_wards.scss */
 .calendar__date {
   margin-top: 60px;
   font-size: 28px;
   line-height: 34px;
 }
 
-/* line 783, src/assets/scss/pages/_wards.scss */
+/* line 781, src/assets/scss/pages/_wards.scss */
 .calendar__date span {
   font-weight: 600;
   font-size: 28px;
 }
 
-/* line 788, src/assets/scss/pages/_wards.scss */
+/* line 786, src/assets/scss/pages/_wards.scss */
 .calendar__events-list {
   margin-top: 32px;
 }
 
-/* line 792, src/assets/scss/pages/_wards.scss */
+/* line 790, src/assets/scss/pages/_wards.scss */
 .calendar__events-item:not(:first-child) {
   margin-top: 32px;
 }
 
-/* line 796, src/assets/scss/pages/_wards.scss */
+/* line 794, src/assets/scss/pages/_wards.scss */
 .calendar__time, .calendar__place, .calendar__area {
   font-size: 20px;
   line-height: 150%;
   color: #6D7276;
 }
 
-/* line 803, src/assets/scss/pages/_wards.scss */
+/* line 801, src/assets/scss/pages/_wards.scss */
 .calendar__area {
   margin-left: 24px;
 }
 
-/* line 806, src/assets/scss/pages/_wards.scss */
+/* line 804, src/assets/scss/pages/_wards.scss */
 .calendar__caption {
   font-weight: 600;
   font-size: 20px;
   line-height: 1.5;
 }
 
-/* line 811, src/assets/scss/pages/_wards.scss */
+/* line 809, src/assets/scss/pages/_wards.scss */
 .calendar__theme {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.5;
 }
 
-/* line 816, src/assets/scss/pages/_wards.scss */
+/* line 814, src/assets/scss/pages/_wards.scss */
 .calendar__link {
   display: block;
   margin-top: 16px;
@@ -19993,7 +19987,7 @@ h3 {
   color: #2688E5;
 }
 
-/* line 822, src/assets/scss/pages/_wards.scss */
+/* line 820, src/assets/scss/pages/_wards.scss */
 .calendar__link svg {
   margin-left: 4px;
   width: 19px;
@@ -20005,29 +19999,29 @@ h3 {
   transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
 }
 
-/* line 831, src/assets/scss/pages/_wards.scss */
+/* line 829, src/assets/scss/pages/_wards.scss */
 .calendar__link:hover {
   text-decoration: none;
   color: #2688E5;
 }
 
-/* line 834, src/assets/scss/pages/_wards.scss */
+/* line 832, src/assets/scss/pages/_wards.scss */
 .calendar__link:hover svg {
   -webkit-transform: translateX(8px);
           transform: translateX(8px);
 }
 
-/* line 844, src/assets/scss/pages/_wards.scss */
+/* line 842, src/assets/scss/pages/_wards.scss */
 .gallery {
   margin-top: 80px;
 }
 
-/* line 846, src/assets/scss/pages/_wards.scss */
+/* line 844, src/assets/scss/pages/_wards.scss */
 .gallery__item {
   margin-top: 48px;
 }
 
-/* line 849, src/assets/scss/pages/_wards.scss */
+/* line 847, src/assets/scss/pages/_wards.scss */
 .gallery__heading {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20037,13 +20031,13 @@ h3 {
           justify-content: space-between;
 }
 
-/* line 853, src/assets/scss/pages/_wards.scss */
+/* line 851, src/assets/scss/pages/_wards.scss */
 .gallery__swiper {
   margin-top: 24px;
   width: calc(100vw - (100vw - 99%) / 2);
 }
 
-/* line 857, src/assets/scss/pages/_wards.scss */
+/* line 855, src/assets/scss/pages/_wards.scss */
 .gallery__bottom {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20058,14 +20052,14 @@ h3 {
   max-width: 95%;
 }
 
-/* line 864, src/assets/scss/pages/_wards.scss */
+/* line 862, src/assets/scss/pages/_wards.scss */
 .gallery__link {
   font-size: 20px;
   line-height: 1.4;
   color: #2688E5;
 }
 
-/* line 868, src/assets/scss/pages/_wards.scss */
+/* line 866, src/assets/scss/pages/_wards.scss */
 .gallery__link svg {
   margin-left: 4px;
   width: 19px;
@@ -20077,24 +20071,24 @@ h3 {
   transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
 }
 
-/* line 875, src/assets/scss/pages/_wards.scss */
+/* line 873, src/assets/scss/pages/_wards.scss */
 .gallery__link:hover {
   color: #2688E5;
 }
 
-/* line 877, src/assets/scss/pages/_wards.scss */
+/* line 875, src/assets/scss/pages/_wards.scss */
 .gallery__link:hover svg {
   -webkit-transform: translateX(7px);
           transform: translateX(7px);
 }
 
-/* line 882, src/assets/scss/pages/_wards.scss */
+/* line 880, src/assets/scss/pages/_wards.scss */
 .gallery__date {
   font-size: 18px;
   line-height: 1.4;
 }
 
-/* line 886, src/assets/scss/pages/_wards.scss */
+/* line 884, src/assets/scss/pages/_wards.scss */
 .gallery__navigation {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20104,7 +20098,7 @@ h3 {
           align-items: center;
 }
 
-/* line 890, src/assets/scss/pages/_wards.scss */
+/* line 888, src/assets/scss/pages/_wards.scss */
 .gallery__btn {
   display: block;
   margin: 106px auto 0;
@@ -20120,14 +20114,14 @@ h3 {
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 890, src/assets/scss/pages/_wards.scss */
+  /* line 888, src/assets/scss/pages/_wards.scss */
   .gallery__btn {
     padding-right: 32px;
     padding-left: 32px;
   }
 }
 
-/* line 911, src/assets/scss/pages/_wards.scss */
+/* line 909, src/assets/scss/pages/_wards.scss */
 .banner {
   position: relative;
   margin-top: 115px;
@@ -20138,7 +20132,7 @@ h3 {
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 911, src/assets/scss/pages/_wards.scss */
+  /* line 909, src/assets/scss/pages/_wards.scss */
   .banner {
     margin-top: 80px;
     padding-top: 0;
@@ -20147,18 +20141,18 @@ h3 {
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 923, src/assets/scss/pages/_wards.scss */
+  /* line 921, src/assets/scss/pages/_wards.scss */
   .banner .container {
     padding: 0;
   }
 }
 
-/* line 928, src/assets/scss/pages/_wards.scss */
+/* line 926, src/assets/scss/pages/_wards.scss */
 .banner .row {
   margin: 0;
 }
 
-/* line 931, src/assets/scss/pages/_wards.scss */
+/* line 929, src/assets/scss/pages/_wards.scss */
 .banner__inner {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -20166,7 +20160,7 @@ h3 {
 }
 
 @media only screen and (max-width: 1440px) {
-  /* line 931, src/assets/scss/pages/_wards.scss */
+  /* line 929, src/assets/scss/pages/_wards.scss */
   .banner__inner {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -20174,27 +20168,27 @@ h3 {
   }
 }
 
-/* line 937, src/assets/scss/pages/_wards.scss */
+/* line 935, src/assets/scss/pages/_wards.scss */
 .banner__title {
   margin-bottom: 24px;
 }
 
 @media only screen and (max-width: 1440px) {
-  /* line 937, src/assets/scss/pages/_wards.scss */
+  /* line 935, src/assets/scss/pages/_wards.scss */
   .banner__title {
     font-size: 1.8em;
   }
 }
 
 @media only screen and (max-width: 1366px) {
-  /* line 937, src/assets/scss/pages/_wards.scss */
+  /* line 935, src/assets/scss/pages/_wards.scss */
   .banner__title {
     font-size: 1.7em;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 937, src/assets/scss/pages/_wards.scss */
+  /* line 935, src/assets/scss/pages/_wards.scss */
   .banner__title {
     font-size: 2em;
     padding: 0 16px;
@@ -20202,13 +20196,13 @@ h3 {
 }
 
 @media only screen and (max-width: 480px) {
-  /* line 937, src/assets/scss/pages/_wards.scss */
+  /* line 935, src/assets/scss/pages/_wards.scss */
   .banner__title {
     padding: 0;
   }
 }
 
-/* line 953, src/assets/scss/pages/_wards.scss */
+/* line 951, src/assets/scss/pages/_wards.scss */
 .banner__text {
   margin-bottom: 32px;
   font-size: 1.375em;
@@ -20216,21 +20210,21 @@ h3 {
 }
 
 @media only screen and (max-width: 1440px) {
-  /* line 953, src/assets/scss/pages/_wards.scss */
+  /* line 951, src/assets/scss/pages/_wards.scss */
   .banner__text {
     font-size: 1.25em;
   }
 }
 
 @media only screen and (max-width: 1366px) {
-  /* line 953, src/assets/scss/pages/_wards.scss */
+  /* line 951, src/assets/scss/pages/_wards.scss */
   .banner__text {
     font-size: 1.12em;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 953, src/assets/scss/pages/_wards.scss */
+  /* line 951, src/assets/scss/pages/_wards.scss */
   .banner__text {
     font-size: 1.25em;
     padding: 0 16px;
@@ -20238,13 +20232,13 @@ h3 {
 }
 
 @media only screen and (max-width: 480px) {
-  /* line 953, src/assets/scss/pages/_wards.scss */
+  /* line 951, src/assets/scss/pages/_wards.scss */
   .banner__text {
     padding: 0;
   }
 }
 
-/* line 971, src/assets/scss/pages/_wards.scss */
+/* line 969, src/assets/scss/pages/_wards.scss */
 .banner__btn {
   padding: 16px 46px 20px;
   font-weight: 600;
@@ -20257,20 +20251,20 @@ h3 {
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 971, src/assets/scss/pages/_wards.scss */
+  /* line 969, src/assets/scss/pages/_wards.scss */
   .banner__btn {
     margin: 0 16px 0;
   }
 }
 
 @media only screen and (max-width: 480px) {
-  /* line 971, src/assets/scss/pages/_wards.scss */
+  /* line 969, src/assets/scss/pages/_wards.scss */
   .banner__btn {
     margin: 0;
   }
 }
 
-/* line 987, src/assets/scss/pages/_wards.scss */
+/* line 985, src/assets/scss/pages/_wards.scss */
 .banner__link {
   margin-left: 24px;
   font-weight: 600;
@@ -20283,7 +20277,7 @@ h3 {
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 987, src/assets/scss/pages/_wards.scss */
+  /* line 985, src/assets/scss/pages/_wards.scss */
   .banner__link {
     display: block;
     margin-top: -20px;
@@ -20292,7 +20286,7 @@ h3 {
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 987, src/assets/scss/pages/_wards.scss */
+  /* line 985, src/assets/scss/pages/_wards.scss */
   .banner__link {
     margin: 16px 16px 0;
     padding: 14px 38px 18px;
@@ -20303,13 +20297,13 @@ h3 {
 }
 
 @media only screen and (max-width: 480px) {
-  /* line 987, src/assets/scss/pages/_wards.scss */
+  /* line 985, src/assets/scss/pages/_wards.scss */
   .banner__link {
     margin: 16px 0 0;
   }
 }
 
-/* line 1010, src/assets/scss/pages/_wards.scss */
+/* line 1008, src/assets/scss/pages/_wards.scss */
 .banner__right {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20320,7 +20314,7 @@ h3 {
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1010, src/assets/scss/pages/_wards.scss */
+  /* line 1008, src/assets/scss/pages/_wards.scss */
   .banner__right {
     position: static;
     -webkit-box-ordinal-group: 0;
@@ -20340,7 +20334,7 @@ h3 {
   }
 }
 
-/* line 1025, src/assets/scss/pages/_wards.scss */
+/* line 1023, src/assets/scss/pages/_wards.scss */
 .banner__design {
   position: relative;
   margin-right: 145px;
@@ -20348,20 +20342,20 @@ h3 {
 }
 
 @media only screen and (max-width: 1680px) {
-  /* line 1025, src/assets/scss/pages/_wards.scss */
+  /* line 1023, src/assets/scss/pages/_wards.scss */
   .banner__design {
     margin-right: 0;
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 1025, src/assets/scss/pages/_wards.scss */
+  /* line 1023, src/assets/scss/pages/_wards.scss */
   .banner__design {
     margin-bottom: 16px;
   }
 }
 
-/* line 1035, src/assets/scss/pages/_wards.scss */
+/* line 1033, src/assets/scss/pages/_wards.scss */
 .banner__design p {
   font-family: 'Caveat', sans-serif;
   font-size: 2.125em;
@@ -20371,12 +20365,12 @@ h3 {
   mix-blend-mode: multiply;
 }
 
-/* line 1042, src/assets/scss/pages/_wards.scss */
+/* line 1040, src/assets/scss/pages/_wards.scss */
 .banner__design p span {
   font-size: 0.76em;
 }
 
-/* line 1046, src/assets/scss/pages/_wards.scss */
+/* line 1044, src/assets/scss/pages/_wards.scss */
 .banner__design::after {
   content: '';
   position: absolute;
@@ -20389,28 +20383,28 @@ h3 {
 }
 
 @media only screen and (max-width: 1680px) {
-  /* line 1046, src/assets/scss/pages/_wards.scss */
+  /* line 1044, src/assets/scss/pages/_wards.scss */
   .banner__design::after {
     right: -50px;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1046, src/assets/scss/pages/_wards.scss */
+  /* line 1044, src/assets/scss/pages/_wards.scss */
   .banner__design::after {
     content: none;
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 1062, src/assets/scss/pages/_wards.scss */
+  /* line 1060, src/assets/scss/pages/_wards.scss */
   .banner__design_desktop {
     display: none;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1062, src/assets/scss/pages/_wards.scss */
+  /* line 1060, src/assets/scss/pages/_wards.scss */
   .banner__design_desktop {
     display: block;
     -webkit-box-ordinal-group: 3;
@@ -20418,46 +20412,46 @@ h3 {
             order: 2;
     padding-top: 32px;
   }
-  /* line 1070, src/assets/scss/pages/_wards.scss */
+  /* line 1068, src/assets/scss/pages/_wards.scss */
   .banner__design_desktop p {
     text-align: left;
   }
 }
 
 @media only screen and (max-width: 600px) and (max-width: 480px) {
-  /* line 1070, src/assets/scss/pages/_wards.scss */
+  /* line 1068, src/assets/scss/pages/_wards.scss */
   .banner__design_desktop p {
     font-size: 18px;
   }
 }
 
 @media only screen and (max-width: 600px) and (max-width: 480px) {
-  /* line 1075, src/assets/scss/pages/_wards.scss */
+  /* line 1073, src/assets/scss/pages/_wards.scss */
   .banner__design_desktop p span {
     font-size: 16px;
   }
 }
 
-/* line 1083, src/assets/scss/pages/_wards.scss */
+/* line 1081, src/assets/scss/pages/_wards.scss */
 .banner__design_laptop {
   display: none;
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 1083, src/assets/scss/pages/_wards.scss */
+  /* line 1081, src/assets/scss/pages/_wards.scss */
   .banner__design_laptop {
     display: block;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1083, src/assets/scss/pages/_wards.scss */
+  /* line 1081, src/assets/scss/pages/_wards.scss */
   .banner__design_laptop {
     display: none;
   }
 }
 
-/* line 1095, src/assets/scss/pages/_wards.scss */
+/* line 1093, src/assets/scss/pages/_wards.scss */
 .psychology-letter {
   position: relative;
   margin-top: 105px;
@@ -20470,7 +20464,7 @@ h3 {
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1095, src/assets/scss/pages/_wards.scss */
+  /* line 1093, src/assets/scss/pages/_wards.scss */
   .psychology-letter {
     margin-top: 135px;
     padding-top: 0;
@@ -20478,12 +20472,12 @@ h3 {
   }
 }
 
-/* line 1109, src/assets/scss/pages/_wards.scss */
+/* line 1107, src/assets/scss/pages/_wards.scss */
 .psychology-letter__left {
   position: static;
 }
 
-/* line 1112, src/assets/scss/pages/_wards.scss */
+/* line 1110, src/assets/scss/pages/_wards.scss */
 .psychology-letter__img {
   position: absolute;
   top: -40px;
@@ -20492,21 +20486,21 @@ h3 {
 }
 
 @media only screen and (max-width: 1440px) {
-  /* line 1112, src/assets/scss/pages/_wards.scss */
+  /* line 1110, src/assets/scss/pages/_wards.scss */
   .psychology-letter__img {
     left: -50px;
   }
 }
 
 @media only screen and (max-width: 1200px) {
-  /* line 1112, src/assets/scss/pages/_wards.scss */
+  /* line 1110, src/assets/scss/pages/_wards.scss */
   .psychology-letter__img {
     left: -20%;
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 1112, src/assets/scss/pages/_wards.scss */
+  /* line 1110, src/assets/scss/pages/_wards.scss */
   .psychology-letter__img {
     top: 50%;
     left: 0;
@@ -20516,7 +20510,7 @@ h3 {
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1112, src/assets/scss/pages/_wards.scss */
+  /* line 1110, src/assets/scss/pages/_wards.scss */
   .psychology-letter__img {
     position: relative;
     margin: -50px auto 0;
@@ -20524,23 +20518,23 @@ h3 {
   }
 }
 
-/* line 1133, src/assets/scss/pages/_wards.scss */
+/* line 1131, src/assets/scss/pages/_wards.scss */
 .psychology-letter__title {
   margin-bottom: 24px;
 }
 
-/* line 1136, src/assets/scss/pages/_wards.scss */
+/* line 1134, src/assets/scss/pages/_wards.scss */
 .psychology-letter__text {
   font-size: 1.25em;
   line-height: 1.5;
 }
 
-/* line 1139, src/assets/scss/pages/_wards.scss */
+/* line 1137, src/assets/scss/pages/_wards.scss */
 .psychology-letter__text:not(:last-child) {
   margin-bottom: 16px;
 }
 
-/* line 1143, src/assets/scss/pages/_wards.scss */
+/* line 1141, src/assets/scss/pages/_wards.scss */
 .psychology-letter__btn {
   display: block;
   margin-top: 32px;
@@ -20554,33 +20548,33 @@ h3 {
 }
 
 @media only screen and (max-width: 480px) {
-  /* line 1143, src/assets/scss/pages/_wards.scss */
+  /* line 1141, src/assets/scss/pages/_wards.scss */
   .psychology-letter__btn {
     margin: 32px auto 0;
   }
 }
 
-/* line 1162, src/assets/scss/pages/_wards.scss */
+/* line 1160, src/assets/scss/pages/_wards.scss */
 .is-psychology-page .banner {
   background-image: url("../img/banner-bg.png");
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 1162, src/assets/scss/pages/_wards.scss */
+  /* line 1160, src/assets/scss/pages/_wards.scss */
   .is-psychology-page .banner {
     background-image: url("../img/banner-bg-768.png");
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1162, src/assets/scss/pages/_wards.scss */
+  /* line 1160, src/assets/scss/pages/_wards.scss */
   .is-psychology-page .banner {
     background-image: none;
   }
 }
 
 @media only screen and (max-width: 1440px) {
-  /* line 1171, src/assets/scss/pages/_wards.scss */
+  /* line 1169, src/assets/scss/pages/_wards.scss */
   .is-psychology-page .banner__inner {
     -webkit-box-align: end;
         -ms-flex-align: end;
@@ -20589,7 +20583,7 @@ h3 {
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1176, src/assets/scss/pages/_wards.scss */
+  /* line 1174, src/assets/scss/pages/_wards.scss */
   .is-psychology-page .banner__right {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -20599,25 +20593,25 @@ h3 {
   }
 }
 
-/* line 1183, src/assets/scss/pages/_wards.scss */
+/* line 1181, src/assets/scss/pages/_wards.scss */
 .is-psychology-page .banner__btn {
   margin-bottom: 0;
 }
 
 @media only screen and (max-width: 1440px) {
-  /* line 1183, src/assets/scss/pages/_wards.scss */
+  /* line 1181, src/assets/scss/pages/_wards.scss */
   .is-psychology-page .banner__btn {
     margin-bottom: 50px;
   }
 }
 
-/* line 1192, src/assets/scss/pages/_wards.scss */
+/* line 1190, src/assets/scss/pages/_wards.scss */
 .is-lawyer-page .banner {
   background-image: url("../img/lawyer-banner-bg.png");
 }
 
 @media only screen and (max-width: 1440px) {
-  /* line 1192, src/assets/scss/pages/_wards.scss */
+  /* line 1190, src/assets/scss/pages/_wards.scss */
   .is-lawyer-page .banner {
     background-image: url("../img/lawyer-banner-bg-1440.png");
     background-size: contain;
@@ -20625,21 +20619,21 @@ h3 {
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 1192, src/assets/scss/pages/_wards.scss */
+  /* line 1190, src/assets/scss/pages/_wards.scss */
   .is-lawyer-page .banner {
     background-image: url("../img/lawyer-banner-bg-768.png");
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1192, src/assets/scss/pages/_wards.scss */
+  /* line 1190, src/assets/scss/pages/_wards.scss */
   .is-lawyer-page .banner {
     background-image: none;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1205, src/assets/scss/pages/_wards.scss */
+  /* line 1203, src/assets/scss/pages/_wards.scss */
   .is-lawyer-page .banner__right {
     background-image: url("../img/lawyer-banner-bg-480.png");
     background-size: contain;
@@ -20647,13 +20641,13 @@ h3 {
   }
 }
 
-/* line 1215, src/assets/scss/pages/_wards.scss */
+/* line 1213, src/assets/scss/pages/_wards.scss */
 .is-specialist-page .banner {
   background-image: url("../img/specialist-banner-bg.png");
 }
 
 @media only screen and (max-width: 1440px) {
-  /* line 1215, src/assets/scss/pages/_wards.scss */
+  /* line 1213, src/assets/scss/pages/_wards.scss */
   .is-specialist-page .banner {
     background-image: url("../img/specialist-banner-bg-1440.png");
     background-size: contain;
@@ -20661,21 +20655,21 @@ h3 {
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 1215, src/assets/scss/pages/_wards.scss */
+  /* line 1213, src/assets/scss/pages/_wards.scss */
   .is-specialist-page .banner {
     background-image: url("../img/specialist-banner-bg-768.png");
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1215, src/assets/scss/pages/_wards.scss */
+  /* line 1213, src/assets/scss/pages/_wards.scss */
   .is-specialist-page .banner {
     background-image: none;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1228, src/assets/scss/pages/_wards.scss */
+  /* line 1226, src/assets/scss/pages/_wards.scss */
   .is-specialist-page .banner__right {
     background-image: url("../img/specialist-banner-bg-480.png");
     background-size: contain;
@@ -20683,34 +20677,34 @@ h3 {
   }
 }
 
-/* line 1238, src/assets/scss/pages/_wards.scss */
+/* line 1236, src/assets/scss/pages/_wards.scss */
 .is-consultation-page .banner {
   background-image: url("../img/consultation-banner-bg.png");
 }
 
 @media only screen and (max-width: 1440px) {
-  /* line 1238, src/assets/scss/pages/_wards.scss */
+  /* line 1236, src/assets/scss/pages/_wards.scss */
   .is-consultation-page .banner {
     background-image: url("../img/consultation-banner-bg-1440.png");
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 1238, src/assets/scss/pages/_wards.scss */
+  /* line 1236, src/assets/scss/pages/_wards.scss */
   .is-consultation-page .banner {
     background-image: url("../img/consultation-banner-bg-768.png");
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1238, src/assets/scss/pages/_wards.scss */
+  /* line 1236, src/assets/scss/pages/_wards.scss */
   .is-consultation-page .banner {
     background-image: none;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1250, src/assets/scss/pages/_wards.scss */
+  /* line 1248, src/assets/scss/pages/_wards.scss */
   .is-consultation-page .banner__right {
     background-image: url("../img/consultation-banner-bg-480.png");
     background-size: contain;
@@ -20718,34 +20712,34 @@ h3 {
   }
 }
 
-/* line 1260, src/assets/scss/pages/_wards.scss */
+/* line 1258, src/assets/scss/pages/_wards.scss */
 .is-diagnostic-page .banner {
   background-image: url("../img/diagnostic-banner-bg.png");
 }
 
 @media only screen and (max-width: 1440px) {
-  /* line 1260, src/assets/scss/pages/_wards.scss */
+  /* line 1258, src/assets/scss/pages/_wards.scss */
   .is-diagnostic-page .banner {
     background-image: url("../img/diagnostic-banner-bg-1440.png");
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 1260, src/assets/scss/pages/_wards.scss */
+  /* line 1258, src/assets/scss/pages/_wards.scss */
   .is-diagnostic-page .banner {
     background-image: url("../img/diagnostic-banner-bg-768.png");
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1260, src/assets/scss/pages/_wards.scss */
+  /* line 1258, src/assets/scss/pages/_wards.scss */
   .is-diagnostic-page .banner {
     background-image: none;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1272, src/assets/scss/pages/_wards.scss */
+  /* line 1270, src/assets/scss/pages/_wards.scss */
   .is-diagnostic-page .banner__right {
     background-image: url("../img/diagnostic-banner-bg-480.png");
     background-size: contain;
@@ -20753,34 +20747,34 @@ h3 {
   }
 }
 
-/* line 1282, src/assets/scss/pages/_wards.scss */
+/* line 1280, src/assets/scss/pages/_wards.scss */
 .is-taxi-page .banner {
   background-image: url("../img/taxi-banner-bg.png");
 }
 
 @media only screen and (max-width: 1440px) {
-  /* line 1282, src/assets/scss/pages/_wards.scss */
+  /* line 1280, src/assets/scss/pages/_wards.scss */
   .is-taxi-page .banner {
     background-image: url("../img/taxi-banner-bg-1440.png");
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 1282, src/assets/scss/pages/_wards.scss */
+  /* line 1280, src/assets/scss/pages/_wards.scss */
   .is-taxi-page .banner {
     background-image: url("../img/taxi-banner-bg-768.png");
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1282, src/assets/scss/pages/_wards.scss */
+  /* line 1280, src/assets/scss/pages/_wards.scss */
   .is-taxi-page .banner {
     background-image: none;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1294, src/assets/scss/pages/_wards.scss */
+  /* line 1292, src/assets/scss/pages/_wards.scss */
   .is-taxi-page .banner__right {
     background-image: url("../img/taxi-banner-bg-480.png");
     background-size: contain;
@@ -20788,34 +20782,34 @@ h3 {
   }
 }
 
-/* line 1304, src/assets/scss/pages/_wards.scss */
+/* line 1302, src/assets/scss/pages/_wards.scss */
 .is-basket-page .banner {
   background-image: url("../img/basket-banner-bg.png");
 }
 
 @media only screen and (max-width: 1440px) {
-  /* line 1304, src/assets/scss/pages/_wards.scss */
+  /* line 1302, src/assets/scss/pages/_wards.scss */
   .is-basket-page .banner {
     background-image: url("../img/basket-banner-bg-1440.png");
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 1304, src/assets/scss/pages/_wards.scss */
+  /* line 1302, src/assets/scss/pages/_wards.scss */
   .is-basket-page .banner {
     background-image: url("../img/basket-banner-bg-768.png");
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1304, src/assets/scss/pages/_wards.scss */
+  /* line 1302, src/assets/scss/pages/_wards.scss */
   .is-basket-page .banner {
     background-image: none;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1316, src/assets/scss/pages/_wards.scss */
+  /* line 1314, src/assets/scss/pages/_wards.scss */
   .is-basket-page .banner__right {
     background-image: url("../img/basket-banner-bg-480.png");
     background-size: contain;
