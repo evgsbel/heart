@@ -912,17 +912,12 @@
   position: relative;
   margin-top: 115px;
   padding-top: 35px;
-  background-image: url('../img/banner-bg.png');
   background-position: right bottom;
   background-repeat: no-repeat;
   background-color: #EFF7FF;
-  @include r(1024) {
-    background-image: url('../img/banner-bg-768.png');
-  }
   @include r(600) {
     margin-top: 80px;
     padding-top: 0;
-    background-image: none;
     background-color: transparent;
   }
   .container {
@@ -936,7 +931,7 @@
   &__inner {
     align-items: center;
     @include r(1440) {
-      align-items: flex-end;
+      align-items: center;
     }
   }
   &__title {
@@ -981,14 +976,35 @@
     color: #fff;
     background: #2688E5;
     border-radius: 12px;
-    @include r(1440) {
-      margin-bottom: 50px;
-    }
+    margin-bottom: 50px;
     @include r(600) {
       margin: 0 16px 0;
     }
     @include r(480) {
       margin: 0;
+    }
+  }
+  &__link {
+    margin-left: 24px;
+    font-weight: 600;
+    font-size: 1.125em;
+    line-height: 1.4;
+    color: #2688E5;
+    width: max-content;
+    @include r(1024) {
+      display: block;
+      margin-top: -20px;
+      margin-bottom: 32px;
+    }
+    @include r(600) {
+      margin: 16px 16px 0;
+      padding: 14px 38px 18px;
+      background: #EFF7FF;
+      border-radius: 8px;
+      color: #127CE1;
+    }
+    @include r(480) {
+      margin: 16px 0 0;
     }
   }
   &__right {
@@ -998,19 +1014,12 @@
       position: static;
       order: -1;
       align-items: flex-start;
+      justify-content: center;
       margin-bottom: 32px;
-      padding: 0;
-      background-image: url('../img/banner-bg-480.png');
+      padding: 20px 0 0 0;
       background-repeat: no-repeat;
       background-size: cover;
       background-color: #EFF7FF;
-    }
-  }
-  &__img {
-    @include r(600) {
-
-      left: 0;
-      top: 0;
     }
   }
   &__design {
@@ -1147,3 +1156,170 @@
     }
   }
 }
+
+
+.is-psychology-page {
+  .banner {
+    background-image: url('../img/banner-bg.png');
+    @include r(1024) {
+      background-image: url('../img/banner-bg-768.png');
+    }
+    @include r(600) {
+      background-image: none;
+    }
+  }
+  .banner__inner {
+    @include r(1440) {
+      align-items: flex-end;
+    }
+  }
+  .banner__right {
+    @include r(600) {
+      justify-content: flex-start;
+      padding: 0;
+      background-image: url('../img/lawyer-banner-bg-480.png');
+    }
+  }
+  .banner__btn {
+    margin-bottom: 0;
+    @include r(1440) {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.is-lawyer-page {
+  .banner {
+    background-image: url('../img/lawyer-banner-bg.png');
+    @include r(1440) {
+      background-image: url('../img/lawyer-banner-bg-1440.png');
+      background-size: contain;
+    }
+    @include r(1024) {
+      background-image: url('../img/lawyer-banner-bg-768.png');
+    }
+    @include r(600) {
+      background-image: none;
+    }
+  }
+  .banner__right {
+    @include r(600) {
+      background-image: url('../img/lawyer-banner-bg-480.png');
+      background-size: contain;
+      background-position: right center;
+    }
+  }
+}
+
+.is-specialist-page {
+  .banner {
+    background-image: url('../img/specialist-banner-bg.png');
+    @include r(1440) {
+      background-image: url('../img/specialist-banner-bg-1440.png');
+      background-size: contain;
+    }
+    @include r(1024) {
+      background-image: url('../img/specialist-banner-bg-768.png');
+    }
+    @include r(600) {
+      background-image: none;
+    }
+  }
+  .banner__right {
+    @include r(600) {
+      background-image: url('../img/specialist-banner-bg-480.png');
+      background-size: contain;
+      background-position: right center;
+    }
+  }
+}
+
+.is-consultation-page {
+  .banner {
+    background-image: url('../img/consultation-banner-bg.png');
+    @include r(1440) {
+      background-image: url('../img/consultation-banner-bg-1440.png');
+    }
+    @include r(1024) {
+      background-image: url('../img/consultation-banner-bg-768.png');
+    }
+    @include r(600) {
+      background-image: none;
+    }
+  }
+  .banner__right {
+    @include r(600) {
+      background-image: url('../img/consultation-banner-bg-480.png');
+      background-size: contain;
+      background-position: right center;
+    }
+  }
+}
+
+.is-diagnostic-page {
+  .banner {
+    background-image: url('../img/diagnostic-banner-bg.png');
+    @include r(1440) {
+      background-image: url('../img/diagnostic-banner-bg-1440.png');
+    }
+    @include r(1024) {
+      background-image: url('../img/diagnostic-banner-bg-768.png');
+    }
+    @include r(600) {
+      background-image: none;
+    }
+  }
+  .banner__right {
+    @include r(600) {
+      background-image: url('../img/diagnostic-banner-bg-480.png');
+      background-size: contain;
+      background-position: right center;
+    }
+  }
+}
+
+.is-taxi-page {
+  .banner {
+    background-image: url('../img/taxi-banner-bg.png');
+    @include r(1440) {
+      background-image: url('../img/taxi-banner-bg-1440.png');
+    }
+    @include r(1024) {
+      background-image: url('../img/taxi-banner-bg-768.png');
+    }
+    @include r(600) {
+      background-image: none;
+    }
+  }
+  .banner__right {
+    @include r(600) {
+      background-image: url('../img/taxi-banner-bg-480.png');
+      background-size: contain;
+      background-position: right center;
+    }
+  }
+}
+
+.is-basket-page {
+  .banner {
+    background-image: url('../img/basket-banner-bg.png');
+    @include r(1440) {
+      background-image: url('../img/basket-banner-bg-1440.png');
+    }
+    @include r(1024) {
+      background-image: url('../img/basket-banner-bg-768.png');
+    }
+    @include r(600) {
+      background-image: none;
+    }
+  }
+  .banner__right {
+    @include r(600) {
+      background-image: url('../img/basket-banner-bg-480.png');
+      background-size: contain;
+      background-position: right center;
+    }
+  }
+}
+
+
