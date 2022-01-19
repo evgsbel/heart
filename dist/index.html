@@ -10,6 +10,7 @@
     <!-- build:css -->
     <link rel="stylesheet" href="assets/vendor/css/animate.css">
     <link rel="stylesheet" href="assets/vendor/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/vendor/css/jquery.fancybox.min.css">
 		<link rel="stylesheet" href="assets/css/main.css">
 		<!-- endbuild -->
     <link rel="stylesheet" href="assets/css/rtl.css">
@@ -52,8 +53,8 @@
                 </label>
               </div>
               <a href="tel:88003505785" class="header__phone">8 800 350 57 85</a>
-              <button class="btn-reset button header__btn-help">Нужна помощь</button>
-              <button class="btn-reset button header__btn">Хочу помочь</button>
+              <button class="btn-reset button header__btn-help" data-fancybox="" data-src="#popup-help">Нужна помощь</button>
+              <a href="pay-card.html" class="btn-reset button header__btn">Хочу помочь</a>
             </div>
           </div>
           <button class="btn-reset burger">
@@ -1598,11 +1599,85 @@
       </div>
     </footer>
     
+    <div id="popup-help" class="popup" style="display:none;">
+      <h2 class="title-h2 popup__title">Заполните форму</h2>
+      <form action="" class="popup__form">
+        <div class="popup__group">
+          <label for="popup-name" class="popup__label">
+            <p class="popup__caption">Ваше имя</p>
+            <input type="text" id="popup-name" name="popup-name" class="popup__input js-popup-help-input" required>
+          </label>
+          <label for="popup-email" class="popup__label">
+            <p class="popup__caption">Email</p>
+            <input type="email" id="popup-email" name="popup-email" class="popup__input js-popup-help-input popup__input_email" placeholder="mail@greatheart.ru" required>
+          </label>
+          <label for="popup-phone" class="popup__label">
+            <p class="popup__caption">Телефон</p>
+            <input type="tel" id="popup-phone" name="popup-phone" class="popup__input js-popup-help-input popup__input_phone" placeholder="+7" required>
+          </label>
+        </div>
+        <label for="popup-message" class="popup__label popup__label_message">
+          <p class="popup__caption">Ваш вопрос</p>
+          <textarea name="popup-message" id="popup-message" class="popup__textarea js-popup-help-textarea" placeholder="Вы можете задать любой вопрос" required></textarea>
+        </label>
+        <div class="popup__bottom">
+          <a class="btn-reset popup__close js-close-popup">
+            <svg>
+              <use xlink:href="assets/img/sprite.svg#arrow-left"></use>
+            </svg>
+            Закрыть форму
+          </a>
+          <p class="popup__conf js-popup-help-conf">Нажимая на кнопку, вы даете согласие на обработку <a href="">персональных данных</a></p>
+          <input class="btn-reset popup__btn js-popup-help-submit"  value="Отправить вопрос" type="submit" disabled="disabled">
+        </div>
+      </form>
+    </div>
+    
+    <div id="popup-reviews" class="popup" style="display:none;">
+      <h2 class="title-h2 popup__title">Заполните форму</h2>
+      <form action="" class="popup__form">
+        <div class="popup__group">
+          <label for="reviews-name" class="popup__label">
+            <p class="popup__caption">Ваше имя</p>
+            <input type="text" id="reviews-name" name="reviews-name" class="popup__input js-popup-reviews-input" required>
+          </label>
+          <label for="reviews-email" class="popup__label">
+            <p class="popup__caption">Email</p>
+            <input type="email" id="reviews-email" name="reviews-email" class="popup__input js-popup-reviews-input popup__input_email" placeholder="mail@greatheart.ru" required>
+          </label>
+        </div>
+        <div class="popup__group">
+          <label for="reviews-city" class="popup__label">
+            <p class="popup__caption">Город проживания</p>
+            <input type="text" id="reviews-city" name="reviews-city" class="popup__input js-popup-reviews-input" placeholder="Начните вводить" required>
+          </label>
+          <label for="reviews-year" class="popup__label">
+            <p class="popup__caption">Возраст</p>
+            <input type="number" id="reviews-year" name="reviews-year" class="popup__input js-popup-reviews-input" placeholder="Полных лет" required>
+          </label>
+        </div>
+        <label for="popup-message" class="popup__label popup__label_message">
+          <p class="popup__caption">Отзыв</p>
+          <textarea name="reviews-message" id="reviews--message" class="popup__textarea js-popup-reviews-textarea" placeholder="Напишите отзыв о нас" required></textarea>
+        </label>
+        <div class="popup__bottom">
+          <a class="btn-reset popup__close js-close-popup">
+            <svg>
+              <use xlink:href="assets/img/sprite.svg#arrow-left"></use>
+            </svg>
+            Закрыть форму
+          </a>
+          <p class="popup__conf js-popup-reviews-conf">Нажимая на кнопку, вы даете согласие на обработку <a href="">персональных данных</a></p>
+          <input class="btn-reset popup__btn js-popup-reviews-submit"  value="Отправить вопрос" type="submit" disabled="disabled">
+        </div>
+      </form>
+    </div>
     <!-- build:js -->
     <script src="assets/vendor/js/jquery.js"></script>
     <script src="assets/vendor/js/popper.js"></script>
     <script src="assets/vendor/js/bootstrap.js"></script>
     <script src="assets/vendor/js/swiper-bundle.js"></script>
+    <script src="assets/vendor/js/jquery.fancybox.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.js"></script>
     <script src="assets/vendor/js/jquery.steps.min.js"></script>
     <!--<script src="assets/js/util/autoPadding.js"></script>-->

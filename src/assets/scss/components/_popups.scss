@@ -1,0 +1,111 @@
+.popup {
+  width: 1133px;
+  max-width: 100%;
+  padding: 40px 32px 70px;
+  background: #fff;
+  box-shadow: 8px 8px 36px rgba(24, 73, 131, 0.07);
+  border-radius: 16px;
+  &__title {
+    margin-bottom: 40px;
+  }
+  &__group {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 40px;
+  }
+  &__label {
+    flex: 0 0 calc((100% - 32px * 2) / 3);
+    &_message {
+      width: 100%;
+      margin-bottom: 42px;
+    }
+  }
+  &__input,
+  &__textarea {
+    padding: 12px 24px 16px;
+    background-color: #f5f8fb;
+    border: none;
+    border-radius: 12px;
+    width: 100%;
+    font-size: 1.25em;
+    line-height: 1.4;
+    color: #000;
+    box-sizing: border-box;
+    &::placeholder {
+      font-size: 1.25em;
+      line-height: 1.4;
+      color: #7B8086;
+    }
+    &_phone {
+      &::placeholder {
+        color: #000;
+      }
+    }
+  }
+  &__textarea {
+    height: 124px;
+    resize: none;
+  }
+  &__caption {
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 1.25em;
+    line-height: 1.4;
+    color: #000;
+  }
+  &__bottom {
+    display: flex;
+    align-items: center;
+  }
+  &__close {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    font-size: 1.25em;
+    line-height: 1.4;
+    color: #2688e5;
+    svg {
+      margin-right: 8px;
+      width: 19px;
+      height: 14px;
+      transition: transform .3s ease-in-out;
+    }
+    &:hover {
+      color: #2688e5;
+      svg {
+        transform: translateX(-10px);
+      }
+    }
+  }
+  &__conf {
+    margin-right: 24px;
+    font-size: 0.875em;
+    line-height: 1.4;
+    color: #848484;
+    text-align: right;
+    max-width: 287px;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    &.is-visible {
+      opacity: 1;
+    }
+    a {
+      color: #127ce1;
+    }
+  }
+  &__btn {
+    padding: 16px 57px 20px;
+    font-weight: 600;
+    font-size: 1.25em;
+    line-height: 1.4;
+    color: #fff;
+    background: #2688e5;
+    border-radius: 12px;
+    &:disabled {
+      background-color: #f5f8fb;
+    }
+  }
+  button[data-fancybox-close] {
+    display: none;
+  }
+}

@@ -13,7 +13,7 @@ script: pay
       <div class="col-xl-12">
         <div class="pay__types swiper pay__swiper d-flex">
           <div class="swiper-wrapper">
-            <button class="tabs__btn btn-reset pay__types-btn pay__types-btn swiper-slide " data-path="card">
+            <button class="tabs__btn btn-reset pay__types-btn pay__types-btn swiper-slide is-active" data-path="card">
               <svg width="24" height="18">
                 <use xlink:href="assets/img/sprite.svg#pay-types-card"></use>
               </svg>
@@ -37,7 +37,7 @@ script: pay
               </svg>
               ФЦК
             </button>
-            <button class="tabs__btn btn-reset pay__types-btn pay__types-btn swiper-slide is-active"
+            <button class="tabs__btn btn-reset pay__types-btn pay__types-btn swiper-slide "
                     data-path="volunteer">
               <svg width="21" height="20">
                 <use xlink:href="assets/img/sprite.svg#pay-types-volunteer"></use>
@@ -48,7 +48,7 @@ script: pay
         </div>
       </div>
     </div>
-    <div class="row mt-5 pay-tabs__content tabs__content tabs__content_flex " data-target="card">
+    <div class="row mt-5 pay-tabs__content tabs__content tabs__content_flex is-active" data-target="card">
       <div class="col-lg-5 col-xl-5">
         <div class="pay__btns pay__btns_top d-flex mb-3">
           <label for="frequency1" class="pay__radio-label js-radio-label">
@@ -322,7 +322,7 @@ script: pay
         </div>
       </div>
     </div>
-    <div class="row mt-5 pay-tabs__content tabs__content tabs__content_flex is-active" data-target="volunteer">
+    <div class="row mt-5 pay-tabs__content tabs__content tabs__content_flex " data-target="volunteer">
       <div class="col-10">
         <form action="#" method="" class="vol-form" id="vol-form">
           <h3 class="vol-form__title">Заполните анкету</h3>

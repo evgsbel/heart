@@ -16101,6 +16101,207 @@ h3 {
   height: 18px;
 }
 
+/* line 1, src/assets/scss/components/_popups.scss */
+.popup {
+  width: 1133px;
+  max-width: 100%;
+  padding: 40px 32px 70px;
+  background: #fff;
+  -webkit-box-shadow: 8px 8px 36px rgba(24, 73, 131, 0.07);
+          box-shadow: 8px 8px 36px rgba(24, 73, 131, 0.07);
+  border-radius: 16px;
+}
+
+/* line 8, src/assets/scss/components/_popups.scss */
+.popup__title {
+  margin-bottom: 40px;
+}
+
+/* line 11, src/assets/scss/components/_popups.scss */
+.popup__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+/* line 16, src/assets/scss/components/_popups.scss */
+.popup__label {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc((100% - 32px * 2) / 3);
+          flex: 0 0 calc((100% - 32px * 2) / 3);
+}
+
+/* line 18, src/assets/scss/components/_popups.scss */
+.popup__label_message {
+  width: 100%;
+  margin-bottom: 42px;
+}
+
+/* line 23, src/assets/scss/components/_popups.scss */
+.popup__input, .popup__textarea {
+  padding: 12px 24px 16px;
+  background-color: #f5f8fb;
+  border: none;
+  border-radius: 12px;
+  width: 100%;
+  font-size: 1.25em;
+  line-height: 1.4;
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* line 34, src/assets/scss/components/_popups.scss */
+.popup__input::-webkit-input-placeholder, .popup__textarea::-webkit-input-placeholder {
+  font-size: 1.25em;
+  line-height: 1.4;
+  color: #7B8086;
+}
+.popup__input::-moz-placeholder, .popup__textarea::-moz-placeholder {
+  font-size: 1.25em;
+  line-height: 1.4;
+  color: #7B8086;
+}
+.popup__input:-ms-input-placeholder, .popup__textarea:-ms-input-placeholder {
+  font-size: 1.25em;
+  line-height: 1.4;
+  color: #7B8086;
+}
+.popup__input::-ms-input-placeholder, .popup__textarea::-ms-input-placeholder {
+  font-size: 1.25em;
+  line-height: 1.4;
+  color: #7B8086;
+}
+.popup__input::placeholder, .popup__textarea::placeholder {
+  font-size: 1.25em;
+  line-height: 1.4;
+  color: #7B8086;
+}
+
+/* line 40, src/assets/scss/components/_popups.scss */
+.popup__input_phone::-webkit-input-placeholder, .popup__textarea_phone::-webkit-input-placeholder {
+  color: #000;
+}
+.popup__input_phone::-moz-placeholder, .popup__textarea_phone::-moz-placeholder {
+  color: #000;
+}
+.popup__input_phone:-ms-input-placeholder, .popup__textarea_phone:-ms-input-placeholder {
+  color: #000;
+}
+.popup__input_phone::-ms-input-placeholder, .popup__textarea_phone::-ms-input-placeholder {
+  color: #000;
+}
+.popup__input_phone::placeholder, .popup__textarea_phone::placeholder {
+  color: #000;
+}
+
+/* line 45, src/assets/scss/components/_popups.scss */
+.popup__textarea {
+  height: 124px;
+  resize: none;
+}
+
+/* line 49, src/assets/scss/components/_popups.scss */
+.popup__caption {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 1.25em;
+  line-height: 1.4;
+  color: #000;
+}
+
+/* line 56, src/assets/scss/components/_popups.scss */
+.popup__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 60, src/assets/scss/components/_popups.scss */
+.popup__close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: auto;
+  font-size: 1.25em;
+  line-height: 1.4;
+  color: #2688e5;
+}
+
+/* line 67, src/assets/scss/components/_popups.scss */
+.popup__close svg {
+  margin-right: 8px;
+  width: 19px;
+  height: 14px;
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
+/* line 73, src/assets/scss/components/_popups.scss */
+.popup__close:hover {
+  color: #2688e5;
+}
+
+/* line 75, src/assets/scss/components/_popups.scss */
+.popup__close:hover svg {
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+}
+
+/* line 80, src/assets/scss/components/_popups.scss */
+.popup__conf {
+  margin-right: 24px;
+  font-size: 0.875em;
+  line-height: 1.4;
+  color: #848484;
+  text-align: right;
+  max-width: 287px;
+  opacity: 0;
+  -webkit-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+}
+
+/* line 89, src/assets/scss/components/_popups.scss */
+.popup__conf.is-visible {
+  opacity: 1;
+}
+
+/* line 92, src/assets/scss/components/_popups.scss */
+.popup__conf a {
+  color: #127ce1;
+}
+
+/* line 96, src/assets/scss/components/_popups.scss */
+.popup__btn {
+  padding: 16px 57px 20px;
+  font-weight: 600;
+  font-size: 1.25em;
+  line-height: 1.4;
+  color: #fff;
+  background: #2688e5;
+  border-radius: 12px;
+}
+
+/* line 104, src/assets/scss/components/_popups.scss */
+.popup__btn:disabled {
+  background-color: #f5f8fb;
+}
+
+/* line 108, src/assets/scss/components/_popups.scss */
+.popup button[data-fancybox-close] {
+  display: none;
+}
+
 /* line 1, src/assets/scss/components/_burger.scss */
 .burger {
   position: absolute;
@@ -20147,12 +20348,14 @@ h3 {
   }
 }
 
-/* line 926, src/assets/scss/pages/_wards.scss */
-.banner .row {
-  margin: 0;
+@media only screen and (max-width: 600px) {
+  /* line 926, src/assets/scss/pages/_wards.scss */
+  .banner .row {
+    margin: 0;
+  }
 }
 
-/* line 929, src/assets/scss/pages/_wards.scss */
+/* line 931, src/assets/scss/pages/_wards.scss */
 .banner__inner {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -20160,7 +20363,7 @@ h3 {
 }
 
 @media only screen and (max-width: 1440px) {
-  /* line 929, src/assets/scss/pages/_wards.scss */
+  /* line 931, src/assets/scss/pages/_wards.scss */
   .banner__inner {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -20168,27 +20371,27 @@ h3 {
   }
 }
 
-/* line 935, src/assets/scss/pages/_wards.scss */
+/* line 937, src/assets/scss/pages/_wards.scss */
 .banner__title {
   margin-bottom: 24px;
 }
 
 @media only screen and (max-width: 1440px) {
-  /* line 935, src/assets/scss/pages/_wards.scss */
+  /* line 937, src/assets/scss/pages/_wards.scss */
   .banner__title {
     font-size: 1.8em;
   }
 }
 
 @media only screen and (max-width: 1366px) {
-  /* line 935, src/assets/scss/pages/_wards.scss */
+  /* line 937, src/assets/scss/pages/_wards.scss */
   .banner__title {
     font-size: 1.7em;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 935, src/assets/scss/pages/_wards.scss */
+  /* line 937, src/assets/scss/pages/_wards.scss */
   .banner__title {
     font-size: 2em;
     padding: 0 16px;
@@ -20196,13 +20399,13 @@ h3 {
 }
 
 @media only screen and (max-width: 480px) {
-  /* line 935, src/assets/scss/pages/_wards.scss */
+  /* line 937, src/assets/scss/pages/_wards.scss */
   .banner__title {
     padding: 0;
   }
 }
 
-/* line 951, src/assets/scss/pages/_wards.scss */
+/* line 953, src/assets/scss/pages/_wards.scss */
 .banner__text {
   margin-bottom: 32px;
   font-size: 1.375em;
@@ -20210,21 +20413,21 @@ h3 {
 }
 
 @media only screen and (max-width: 1440px) {
-  /* line 951, src/assets/scss/pages/_wards.scss */
+  /* line 953, src/assets/scss/pages/_wards.scss */
   .banner__text {
     font-size: 1.25em;
   }
 }
 
 @media only screen and (max-width: 1366px) {
-  /* line 951, src/assets/scss/pages/_wards.scss */
+  /* line 953, src/assets/scss/pages/_wards.scss */
   .banner__text {
     font-size: 1.12em;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 951, src/assets/scss/pages/_wards.scss */
+  /* line 953, src/assets/scss/pages/_wards.scss */
   .banner__text {
     font-size: 1.25em;
     padding: 0 16px;
@@ -20232,14 +20435,16 @@ h3 {
 }
 
 @media only screen and (max-width: 480px) {
-  /* line 951, src/assets/scss/pages/_wards.scss */
+  /* line 953, src/assets/scss/pages/_wards.scss */
   .banner__text {
     padding: 0;
   }
 }
 
-/* line 969, src/assets/scss/pages/_wards.scss */
+/* line 971, src/assets/scss/pages/_wards.scss */
 .banner__btn {
+  display: block;
+  margin-bottom: 50px;
   padding: 16px 46px 20px;
   font-weight: 600;
   font-size: 1.25em;
@@ -20247,24 +20452,31 @@ h3 {
   color: #fff;
   background: #2688E5;
   border-radius: 12px;
-  margin-bottom: 50px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 969, src/assets/scss/pages/_wards.scss */
+  /* line 971, src/assets/scss/pages/_wards.scss */
   .banner__btn {
     margin: 0 16px 0;
   }
 }
 
 @media only screen and (max-width: 480px) {
-  /* line 969, src/assets/scss/pages/_wards.scss */
+  /* line 971, src/assets/scss/pages/_wards.scss */
   .banner__btn {
     margin: 0;
   }
 }
 
-/* line 985, src/assets/scss/pages/_wards.scss */
+/* line 988, src/assets/scss/pages/_wards.scss */
+.banner__btn:hover {
+  color: #fff;
+}
+
+/* line 992, src/assets/scss/pages/_wards.scss */
 .banner__link {
   margin-left: 24px;
   font-weight: 600;
@@ -20277,7 +20489,7 @@ h3 {
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 985, src/assets/scss/pages/_wards.scss */
+  /* line 992, src/assets/scss/pages/_wards.scss */
   .banner__link {
     display: block;
     margin-top: -20px;
@@ -20286,7 +20498,7 @@ h3 {
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 985, src/assets/scss/pages/_wards.scss */
+  /* line 992, src/assets/scss/pages/_wards.scss */
   .banner__link {
     margin: 16px 16px 0;
     padding: 14px 38px 18px;
@@ -20297,13 +20509,13 @@ h3 {
 }
 
 @media only screen and (max-width: 480px) {
-  /* line 985, src/assets/scss/pages/_wards.scss */
+  /* line 992, src/assets/scss/pages/_wards.scss */
   .banner__link {
     margin: 16px 0 0;
   }
 }
 
-/* line 1008, src/assets/scss/pages/_wards.scss */
+/* line 1015, src/assets/scss/pages/_wards.scss */
 .banner__right {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20314,7 +20526,7 @@ h3 {
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1008, src/assets/scss/pages/_wards.scss */
+  /* line 1015, src/assets/scss/pages/_wards.scss */
   .banner__right {
     position: static;
     -webkit-box-ordinal-group: 0;
@@ -20334,7 +20546,7 @@ h3 {
   }
 }
 
-/* line 1023, src/assets/scss/pages/_wards.scss */
+/* line 1030, src/assets/scss/pages/_wards.scss */
 .banner__design {
   position: relative;
   margin-right: 145px;
@@ -20342,20 +20554,20 @@ h3 {
 }
 
 @media only screen and (max-width: 1680px) {
-  /* line 1023, src/assets/scss/pages/_wards.scss */
+  /* line 1030, src/assets/scss/pages/_wards.scss */
   .banner__design {
     margin-right: 0;
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 1023, src/assets/scss/pages/_wards.scss */
+  /* line 1030, src/assets/scss/pages/_wards.scss */
   .banner__design {
     margin-bottom: 16px;
   }
 }
 
-/* line 1033, src/assets/scss/pages/_wards.scss */
+/* line 1040, src/assets/scss/pages/_wards.scss */
 .banner__design p {
   font-family: 'Caveat', sans-serif;
   font-size: 2.125em;
@@ -20365,12 +20577,12 @@ h3 {
   mix-blend-mode: multiply;
 }
 
-/* line 1040, src/assets/scss/pages/_wards.scss */
+/* line 1047, src/assets/scss/pages/_wards.scss */
 .banner__design p span {
   font-size: 0.76em;
 }
 
-/* line 1044, src/assets/scss/pages/_wards.scss */
+/* line 1051, src/assets/scss/pages/_wards.scss */
 .banner__design::after {
   content: '';
   position: absolute;
@@ -20383,28 +20595,28 @@ h3 {
 }
 
 @media only screen and (max-width: 1680px) {
-  /* line 1044, src/assets/scss/pages/_wards.scss */
+  /* line 1051, src/assets/scss/pages/_wards.scss */
   .banner__design::after {
     right: -50px;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1044, src/assets/scss/pages/_wards.scss */
+  /* line 1051, src/assets/scss/pages/_wards.scss */
   .banner__design::after {
     content: none;
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 1060, src/assets/scss/pages/_wards.scss */
+  /* line 1067, src/assets/scss/pages/_wards.scss */
   .banner__design_desktop {
     display: none;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1060, src/assets/scss/pages/_wards.scss */
+  /* line 1067, src/assets/scss/pages/_wards.scss */
   .banner__design_desktop {
     display: block;
     -webkit-box-ordinal-group: 3;
@@ -20412,46 +20624,46 @@ h3 {
             order: 2;
     padding-top: 32px;
   }
-  /* line 1068, src/assets/scss/pages/_wards.scss */
+  /* line 1075, src/assets/scss/pages/_wards.scss */
   .banner__design_desktop p {
     text-align: left;
   }
 }
 
 @media only screen and (max-width: 600px) and (max-width: 480px) {
-  /* line 1068, src/assets/scss/pages/_wards.scss */
+  /* line 1075, src/assets/scss/pages/_wards.scss */
   .banner__design_desktop p {
     font-size: 18px;
   }
 }
 
 @media only screen and (max-width: 600px) and (max-width: 480px) {
-  /* line 1073, src/assets/scss/pages/_wards.scss */
+  /* line 1080, src/assets/scss/pages/_wards.scss */
   .banner__design_desktop p span {
     font-size: 16px;
   }
 }
 
-/* line 1081, src/assets/scss/pages/_wards.scss */
+/* line 1088, src/assets/scss/pages/_wards.scss */
 .banner__design_laptop {
   display: none;
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 1081, src/assets/scss/pages/_wards.scss */
+  /* line 1088, src/assets/scss/pages/_wards.scss */
   .banner__design_laptop {
     display: block;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1081, src/assets/scss/pages/_wards.scss */
+  /* line 1088, src/assets/scss/pages/_wards.scss */
   .banner__design_laptop {
     display: none;
   }
 }
 
-/* line 1093, src/assets/scss/pages/_wards.scss */
+/* line 1100, src/assets/scss/pages/_wards.scss */
 .psychology-letter {
   position: relative;
   margin-top: 105px;
@@ -20464,7 +20676,7 @@ h3 {
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1093, src/assets/scss/pages/_wards.scss */
+  /* line 1100, src/assets/scss/pages/_wards.scss */
   .psychology-letter {
     margin-top: 135px;
     padding-top: 0;
@@ -20472,12 +20684,12 @@ h3 {
   }
 }
 
-/* line 1107, src/assets/scss/pages/_wards.scss */
+/* line 1114, src/assets/scss/pages/_wards.scss */
 .psychology-letter__left {
   position: static;
 }
 
-/* line 1110, src/assets/scss/pages/_wards.scss */
+/* line 1117, src/assets/scss/pages/_wards.scss */
 .psychology-letter__img {
   position: absolute;
   top: -40px;
@@ -20486,21 +20698,21 @@ h3 {
 }
 
 @media only screen and (max-width: 1440px) {
-  /* line 1110, src/assets/scss/pages/_wards.scss */
+  /* line 1117, src/assets/scss/pages/_wards.scss */
   .psychology-letter__img {
     left: -50px;
   }
 }
 
 @media only screen and (max-width: 1200px) {
-  /* line 1110, src/assets/scss/pages/_wards.scss */
+  /* line 1117, src/assets/scss/pages/_wards.scss */
   .psychology-letter__img {
     left: -20%;
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 1110, src/assets/scss/pages/_wards.scss */
+  /* line 1117, src/assets/scss/pages/_wards.scss */
   .psychology-letter__img {
     top: 50%;
     left: 0;
@@ -20510,7 +20722,7 @@ h3 {
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1110, src/assets/scss/pages/_wards.scss */
+  /* line 1117, src/assets/scss/pages/_wards.scss */
   .psychology-letter__img {
     position: relative;
     margin: -50px auto 0;
@@ -20518,23 +20730,23 @@ h3 {
   }
 }
 
-/* line 1131, src/assets/scss/pages/_wards.scss */
+/* line 1138, src/assets/scss/pages/_wards.scss */
 .psychology-letter__title {
   margin-bottom: 24px;
 }
 
-/* line 1134, src/assets/scss/pages/_wards.scss */
+/* line 1141, src/assets/scss/pages/_wards.scss */
 .psychology-letter__text {
   font-size: 1.25em;
   line-height: 1.5;
 }
 
-/* line 1137, src/assets/scss/pages/_wards.scss */
+/* line 1144, src/assets/scss/pages/_wards.scss */
 .psychology-letter__text:not(:last-child) {
   margin-bottom: 16px;
 }
 
-/* line 1141, src/assets/scss/pages/_wards.scss */
+/* line 1148, src/assets/scss/pages/_wards.scss */
 .psychology-letter__btn {
   display: block;
   margin-top: 32px;
@@ -20548,33 +20760,33 @@ h3 {
 }
 
 @media only screen and (max-width: 480px) {
-  /* line 1141, src/assets/scss/pages/_wards.scss */
+  /* line 1148, src/assets/scss/pages/_wards.scss */
   .psychology-letter__btn {
     margin: 32px auto 0;
   }
 }
 
-/* line 1160, src/assets/scss/pages/_wards.scss */
+/* line 1167, src/assets/scss/pages/_wards.scss */
 .is-psychology-page .banner {
   background-image: url("../img/banner-bg.png");
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 1160, src/assets/scss/pages/_wards.scss */
+  /* line 1167, src/assets/scss/pages/_wards.scss */
   .is-psychology-page .banner {
     background-image: url("../img/banner-bg-768.png");
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1160, src/assets/scss/pages/_wards.scss */
+  /* line 1167, src/assets/scss/pages/_wards.scss */
   .is-psychology-page .banner {
     background-image: none;
   }
 }
 
 @media only screen and (max-width: 1440px) {
-  /* line 1169, src/assets/scss/pages/_wards.scss */
+  /* line 1176, src/assets/scss/pages/_wards.scss */
   .is-psychology-page .banner__inner {
     -webkit-box-align: end;
         -ms-flex-align: end;
@@ -20583,7 +20795,7 @@ h3 {
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1174, src/assets/scss/pages/_wards.scss */
+  /* line 1181, src/assets/scss/pages/_wards.scss */
   .is-psychology-page .banner__right {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -20593,25 +20805,25 @@ h3 {
   }
 }
 
-/* line 1181, src/assets/scss/pages/_wards.scss */
+/* line 1188, src/assets/scss/pages/_wards.scss */
 .is-psychology-page .banner__btn {
   margin-bottom: 0;
 }
 
 @media only screen and (max-width: 1440px) {
-  /* line 1181, src/assets/scss/pages/_wards.scss */
+  /* line 1188, src/assets/scss/pages/_wards.scss */
   .is-psychology-page .banner__btn {
     margin-bottom: 50px;
   }
 }
 
-/* line 1190, src/assets/scss/pages/_wards.scss */
+/* line 1197, src/assets/scss/pages/_wards.scss */
 .is-lawyer-page .banner {
   background-image: url("../img/lawyer-banner-bg.png");
 }
 
 @media only screen and (max-width: 1440px) {
-  /* line 1190, src/assets/scss/pages/_wards.scss */
+  /* line 1197, src/assets/scss/pages/_wards.scss */
   .is-lawyer-page .banner {
     background-image: url("../img/lawyer-banner-bg-1440.png");
     background-size: contain;
@@ -20619,21 +20831,21 @@ h3 {
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 1190, src/assets/scss/pages/_wards.scss */
+  /* line 1197, src/assets/scss/pages/_wards.scss */
   .is-lawyer-page .banner {
     background-image: url("../img/lawyer-banner-bg-768.png");
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1190, src/assets/scss/pages/_wards.scss */
+  /* line 1197, src/assets/scss/pages/_wards.scss */
   .is-lawyer-page .banner {
     background-image: none;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1203, src/assets/scss/pages/_wards.scss */
+  /* line 1210, src/assets/scss/pages/_wards.scss */
   .is-lawyer-page .banner__right {
     background-image: url("../img/lawyer-banner-bg-480.png");
     background-size: contain;
@@ -20641,13 +20853,13 @@ h3 {
   }
 }
 
-/* line 1213, src/assets/scss/pages/_wards.scss */
+/* line 1220, src/assets/scss/pages/_wards.scss */
 .is-specialist-page .banner {
   background-image: url("../img/specialist-banner-bg.png");
 }
 
 @media only screen and (max-width: 1440px) {
-  /* line 1213, src/assets/scss/pages/_wards.scss */
+  /* line 1220, src/assets/scss/pages/_wards.scss */
   .is-specialist-page .banner {
     background-image: url("../img/specialist-banner-bg-1440.png");
     background-size: contain;
@@ -20655,21 +20867,21 @@ h3 {
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 1213, src/assets/scss/pages/_wards.scss */
+  /* line 1220, src/assets/scss/pages/_wards.scss */
   .is-specialist-page .banner {
     background-image: url("../img/specialist-banner-bg-768.png");
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1213, src/assets/scss/pages/_wards.scss */
+  /* line 1220, src/assets/scss/pages/_wards.scss */
   .is-specialist-page .banner {
     background-image: none;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1226, src/assets/scss/pages/_wards.scss */
+  /* line 1233, src/assets/scss/pages/_wards.scss */
   .is-specialist-page .banner__right {
     background-image: url("../img/specialist-banner-bg-480.png");
     background-size: contain;
@@ -20677,34 +20889,34 @@ h3 {
   }
 }
 
-/* line 1236, src/assets/scss/pages/_wards.scss */
+/* line 1243, src/assets/scss/pages/_wards.scss */
 .is-consultation-page .banner {
   background-image: url("../img/consultation-banner-bg.png");
 }
 
 @media only screen and (max-width: 1440px) {
-  /* line 1236, src/assets/scss/pages/_wards.scss */
+  /* line 1243, src/assets/scss/pages/_wards.scss */
   .is-consultation-page .banner {
     background-image: url("../img/consultation-banner-bg-1440.png");
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 1236, src/assets/scss/pages/_wards.scss */
+  /* line 1243, src/assets/scss/pages/_wards.scss */
   .is-consultation-page .banner {
     background-image: url("../img/consultation-banner-bg-768.png");
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1236, src/assets/scss/pages/_wards.scss */
+  /* line 1243, src/assets/scss/pages/_wards.scss */
   .is-consultation-page .banner {
     background-image: none;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1248, src/assets/scss/pages/_wards.scss */
+  /* line 1255, src/assets/scss/pages/_wards.scss */
   .is-consultation-page .banner__right {
     background-image: url("../img/consultation-banner-bg-480.png");
     background-size: contain;
@@ -20712,34 +20924,34 @@ h3 {
   }
 }
 
-/* line 1258, src/assets/scss/pages/_wards.scss */
+/* line 1265, src/assets/scss/pages/_wards.scss */
 .is-diagnostic-page .banner {
   background-image: url("../img/diagnostic-banner-bg.png");
 }
 
 @media only screen and (max-width: 1440px) {
-  /* line 1258, src/assets/scss/pages/_wards.scss */
+  /* line 1265, src/assets/scss/pages/_wards.scss */
   .is-diagnostic-page .banner {
     background-image: url("../img/diagnostic-banner-bg-1440.png");
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 1258, src/assets/scss/pages/_wards.scss */
+  /* line 1265, src/assets/scss/pages/_wards.scss */
   .is-diagnostic-page .banner {
     background-image: url("../img/diagnostic-banner-bg-768.png");
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1258, src/assets/scss/pages/_wards.scss */
+  /* line 1265, src/assets/scss/pages/_wards.scss */
   .is-diagnostic-page .banner {
     background-image: none;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1270, src/assets/scss/pages/_wards.scss */
+  /* line 1277, src/assets/scss/pages/_wards.scss */
   .is-diagnostic-page .banner__right {
     background-image: url("../img/diagnostic-banner-bg-480.png");
     background-size: contain;
@@ -20747,34 +20959,34 @@ h3 {
   }
 }
 
-/* line 1280, src/assets/scss/pages/_wards.scss */
+/* line 1287, src/assets/scss/pages/_wards.scss */
 .is-taxi-page .banner {
   background-image: url("../img/taxi-banner-bg.png");
 }
 
 @media only screen and (max-width: 1440px) {
-  /* line 1280, src/assets/scss/pages/_wards.scss */
+  /* line 1287, src/assets/scss/pages/_wards.scss */
   .is-taxi-page .banner {
     background-image: url("../img/taxi-banner-bg-1440.png");
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 1280, src/assets/scss/pages/_wards.scss */
+  /* line 1287, src/assets/scss/pages/_wards.scss */
   .is-taxi-page .banner {
     background-image: url("../img/taxi-banner-bg-768.png");
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1280, src/assets/scss/pages/_wards.scss */
+  /* line 1287, src/assets/scss/pages/_wards.scss */
   .is-taxi-page .banner {
     background-image: none;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1292, src/assets/scss/pages/_wards.scss */
+  /* line 1299, src/assets/scss/pages/_wards.scss */
   .is-taxi-page .banner__right {
     background-image: url("../img/taxi-banner-bg-480.png");
     background-size: contain;
@@ -20782,34 +20994,34 @@ h3 {
   }
 }
 
-/* line 1302, src/assets/scss/pages/_wards.scss */
+/* line 1309, src/assets/scss/pages/_wards.scss */
 .is-basket-page .banner {
   background-image: url("../img/basket-banner-bg.png");
 }
 
 @media only screen and (max-width: 1440px) {
-  /* line 1302, src/assets/scss/pages/_wards.scss */
+  /* line 1309, src/assets/scss/pages/_wards.scss */
   .is-basket-page .banner {
     background-image: url("../img/basket-banner-bg-1440.png");
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 1302, src/assets/scss/pages/_wards.scss */
+  /* line 1309, src/assets/scss/pages/_wards.scss */
   .is-basket-page .banner {
     background-image: url("../img/basket-banner-bg-768.png");
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1302, src/assets/scss/pages/_wards.scss */
+  /* line 1309, src/assets/scss/pages/_wards.scss */
   .is-basket-page .banner {
     background-image: none;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1314, src/assets/scss/pages/_wards.scss */
+  /* line 1321, src/assets/scss/pages/_wards.scss */
   .is-basket-page .banner__right {
     background-image: url("../img/basket-banner-bg-480.png");
     background-size: contain;
@@ -20817,34 +21029,34 @@ h3 {
   }
 }
 
-/* line 1324, src/assets/scss/pages/_wards.scss */
+/* line 1331, src/assets/scss/pages/_wards.scss */
 .is-transfer-page .banner {
   background-image: url("../img/transfer-banner-bg.png");
 }
 
 @media only screen and (max-width: 1440px) {
-  /* line 1324, src/assets/scss/pages/_wards.scss */
+  /* line 1331, src/assets/scss/pages/_wards.scss */
   .is-transfer-page .banner {
     background-image: url("../img/transfer-banner-bg-1440.png");
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 1324, src/assets/scss/pages/_wards.scss */
+  /* line 1331, src/assets/scss/pages/_wards.scss */
   .is-transfer-page .banner {
     background-image: url("../img/transfer-banner-bg-768.png");
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1324, src/assets/scss/pages/_wards.scss */
+  /* line 1331, src/assets/scss/pages/_wards.scss */
   .is-transfer-page .banner {
     background-image: none;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1336, src/assets/scss/pages/_wards.scss */
+  /* line 1343, src/assets/scss/pages/_wards.scss */
   .is-transfer-page .banner__right {
     background-image: url("../img/transfer-banner-bg-480.png");
     background-size: contain;
@@ -20852,34 +21064,34 @@ h3 {
   }
 }
 
-/* line 1346, src/assets/scss/pages/_wards.scss */
+/* line 1353, src/assets/scss/pages/_wards.scss */
 .is-residence-page .banner {
   background-image: url("../img/residence-banner-bg.png");
 }
 
 @media only screen and (max-width: 1440px) {
-  /* line 1346, src/assets/scss/pages/_wards.scss */
+  /* line 1353, src/assets/scss/pages/_wards.scss */
   .is-residence-page .banner {
     background-image: url("../img/residence-banner-bg-1440.png");
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 1346, src/assets/scss/pages/_wards.scss */
+  /* line 1353, src/assets/scss/pages/_wards.scss */
   .is-residence-page .banner {
     background-image: url("../img/residence-banner-bg-768.png");
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1346, src/assets/scss/pages/_wards.scss */
+  /* line 1353, src/assets/scss/pages/_wards.scss */
   .is-residence-page .banner {
     background-image: none;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1358, src/assets/scss/pages/_wards.scss */
+  /* line 1365, src/assets/scss/pages/_wards.scss */
   .is-residence-page .banner__right {
     background-image: url("../img/residence-banner-bg-480.png");
     background-size: contain;
@@ -20887,34 +21099,34 @@ h3 {
   }
 }
 
-/* line 1368, src/assets/scss/pages/_wards.scss */
+/* line 1375, src/assets/scss/pages/_wards.scss */
 .is-employment-page .banner {
   background-image: url("../img/employment-banner-bg.png");
 }
 
 @media only screen and (max-width: 1440px) {
-  /* line 1368, src/assets/scss/pages/_wards.scss */
+  /* line 1375, src/assets/scss/pages/_wards.scss */
   .is-employment-page .banner {
     background-image: url("../img/employment-banner-bg-1440.png");
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 1368, src/assets/scss/pages/_wards.scss */
+  /* line 1375, src/assets/scss/pages/_wards.scss */
   .is-employment-page .banner {
     background-image: url("../img/employment-banner-bg-768.png");
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1368, src/assets/scss/pages/_wards.scss */
+  /* line 1375, src/assets/scss/pages/_wards.scss */
   .is-employment-page .banner {
     background-image: none;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1380, src/assets/scss/pages/_wards.scss */
+  /* line 1387, src/assets/scss/pages/_wards.scss */
   .is-employment-page .banner__right {
     background-image: url("../img/employment-banner-bg-480.png");
     background-size: contain;
@@ -20922,39 +21134,44 @@ h3 {
   }
 }
 
-/* line 1390, src/assets/scss/pages/_wards.scss */
+/* line 1397, src/assets/scss/pages/_wards.scss */
 .is-equal-counseling-page .banner {
   background-image: url("../img/equal-counseling-banner-bg.png");
 }
 
 @media only screen and (max-width: 1440px) {
-  /* line 1390, src/assets/scss/pages/_wards.scss */
+  /* line 1397, src/assets/scss/pages/_wards.scss */
   .is-equal-counseling-page .banner {
     background-image: url("../img/equal-counseling-banner-bg-1440.png");
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 1390, src/assets/scss/pages/_wards.scss */
+  /* line 1397, src/assets/scss/pages/_wards.scss */
   .is-equal-counseling-page .banner {
     background-image: url("../img/equal-counseling-banner-bg-768.png");
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1390, src/assets/scss/pages/_wards.scss */
+  /* line 1397, src/assets/scss/pages/_wards.scss */
   .is-equal-counseling-page .banner {
     background-image: none;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 1402, src/assets/scss/pages/_wards.scss */
+  /* line 1409, src/assets/scss/pages/_wards.scss */
   .is-equal-counseling-page .banner__right {
     background-image: url("../img/equal-counseling-banner-bg-480.png");
     background-size: contain;
     background-position: right center;
   }
+}
+
+/* line 1421, src/assets/scss/pages/_wards.scss */
+.volunteering-questionnaire {
+  margin-top: 115px;
 }
 
 /* line 1, src/assets/scss/pages/_pay.scss */
@@ -21347,12 +21564,40 @@ h3 {
   width: auto;
 }
 
-/* line 303, src/assets/scss/pages/_pay.scss */
+@media only screen and (max-width: 1440px) {
+  /* line 296, src/assets/scss/pages/_pay.scss */
+  .wizard > .content {
+    min-height: 30em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 296, src/assets/scss/pages/_pay.scss */
+  .wizard > .content {
+    min-height: 35em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 296, src/assets/scss/pages/_pay.scss */
+  .wizard > .content {
+    min-height: 40em;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* line 296, src/assets/scss/pages/_pay.scss */
+  .wizard > .content {
+    min-height: 55em;
+  }
+}
+
+/* line 315, src/assets/scss/pages/_pay.scss */
 .wizard > .content > .body {
   position: absolute;
 }
 
-/* line 307, src/assets/scss/pages/_pay.scss */
+/* line 319, src/assets/scss/pages/_pay.scss */
 .wizard > .actions > ul,
 .wizard > .steps > ul {
   display: -webkit-box;
@@ -21360,13 +21605,32 @@ h3 {
   display: flex;
 }
 
-/* line 312, src/assets/scss/pages/_pay.scss */
+@media only screen and (max-width: 1024px) {
+  /* line 319, src/assets/scss/pages/_pay.scss */
+  .wizard > .actions > ul,
+  .wizard > .steps > ul {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+/* line 327, src/assets/scss/pages/_pay.scss */
+.wizard > .actions > ul {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+/* line 332, src/assets/scss/pages/_pay.scss */
 .wizard > .steps > ul {
   gap: 8px;
   margin-bottom: 40px;
 }
 
-/* line 316, src/assets/scss/pages/_pay.scss */
+/* line 336, src/assets/scss/pages/_pay.scss */
 .wizard > .steps > ul > li {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(100% / 4 - 3 * 8px);
@@ -21378,25 +21642,50 @@ h3 {
   border-bottom: 1px solid #d9d9d9;
 }
 
-/* line 323, src/assets/scss/pages/_pay.scss */
+@media only screen and (max-width: 480px) {
+  /* line 336, src/assets/scss/pages/_pay.scss */
+  .wizard > .steps > ul > li {
+    display: none;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  /* line 336, src/assets/scss/pages/_pay.scss */
+  .wizard > .steps > ul > li {
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
+/* line 351, src/assets/scss/pages/_pay.scss */
 .wizard > .steps > ul > li.current {
   color: #000;
   border-color: currentColor;
 }
 
-/* line 327, src/assets/scss/pages/_pay.scss */
+@media only screen and (max-width: 480px) {
+  /* line 351, src/assets/scss/pages/_pay.scss */
+  .wizard > .steps > ul > li.current {
+    display: block;
+  }
+}
+
+/* line 358, src/assets/scss/pages/_pay.scss */
 .wizard > .steps > ul > li.done {
   color: #2688E5;
   border-color: currentColor;
 }
 
-/* line 331, src/assets/scss/pages/_pay.scss */
+/* line 362, src/assets/scss/pages/_pay.scss */
 .wizard > .steps > ul > li.error {
   color: #ff3111;
   border-color: currentColor;
 }
 
-/* line 337, src/assets/scss/pages/_pay.scss */
+/* line 368, src/assets/scss/pages/_pay.scss */
 .wizard > .actions > ul > li {
   padding: 16px 24px 20px;
   color: #2688E5;
@@ -21404,17 +21693,35 @@ h3 {
   line-height: 1.4;
 }
 
-/* line 342, src/assets/scss/pages/_pay.scss */
+@media only screen and (max-width: 600px) {
+  /* line 368, src/assets/scss/pages/_pay.scss */
+  .wizard > .actions > ul > li {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 45%;
+            flex: 0 0 45%;
+    font-size: 14px;
+    padding: 5px;
+  }
+}
+
+/* line 378, src/assets/scss/pages/_pay.scss */
 .wizard > .actions > ul > li.disabled {
   display: none;
 }
 
-/* line 345, src/assets/scss/pages/_pay.scss */
+/* line 381, src/assets/scss/pages/_pay.scss */
 .wizard > .actions > ul > li:first-child {
   margin-right: 24px;
 }
 
-/* line 348, src/assets/scss/pages/_pay.scss */
+@media only screen and (max-width: 600px) {
+  /* line 381, src/assets/scss/pages/_pay.scss */
+  .wizard > .actions > ul > li:first-child {
+    margin-right: 0;
+  }
+}
+
+/* line 387, src/assets/scss/pages/_pay.scss */
 .wizard > .actions > ul > li:nth-child(2) {
   color: #fff;
   background-color: #2688E5;
@@ -21422,12 +21729,7 @@ h3 {
   font-weight: 600;
 }
 
-/* line 354, src/assets/scss/pages/_pay.scss */
-.wizard > .actions > ul > li:nth-child(3) {
-  visibility: hidden;
-}
-
-/* line 360, src/assets/scss/pages/_pay.scss */
+/* line 399, src/assets/scss/pages/_pay.scss */
 .vol-form__group {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -21439,7 +21741,15 @@ h3 {
   margin-bottom: 40px;
 }
 
-/* line 366, src/assets/scss/pages/_pay.scss */
+@media only screen and (max-width: 1440px) {
+  /* line 399, src/assets/scss/pages/_pay.scss */
+  .vol-form__group {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+/* line 408, src/assets/scss/pages/_pay.scss */
 .vol-form__label {
   position: relative;
   font-weight: 500;
@@ -21447,26 +21757,26 @@ h3 {
   line-height: 1.4;
 }
 
-/* line 371, src/assets/scss/pages/_pay.scss */
+/* line 413, src/assets/scss/pages/_pay.scss */
 .vol-form__label_check {
   margin-top: 50px;
   padding-left: 30px;
   cursor: pointer;
 }
 
-/* line 376, src/assets/scss/pages/_pay.scss */
+/* line 418, src/assets/scss/pages/_pay.scss */
 .vol-form__label span {
   font-size: 16px;
   color: #939ca5;
 }
 
-/* line 380, src/assets/scss/pages/_pay.scss */
+/* line 422, src/assets/scss/pages/_pay.scss */
 .vol-form__label span.vol-form__error {
   color: #ff3111;
   font-size: 14px;
 }
 
-/* line 385, src/assets/scss/pages/_pay.scss */
+/* line 427, src/assets/scss/pages/_pay.scss */
 .vol-form__input {
   display: block;
   margin-top: 16px;
@@ -21481,7 +21791,14 @@ h3 {
   max-width: 100%;
 }
 
-/* line 397, src/assets/scss/pages/_pay.scss */
+@media only screen and (max-width: 1200px) {
+  /* line 427, src/assets/scss/pages/_pay.scss */
+  .vol-form__input {
+    min-width: auto;
+  }
+}
+
+/* line 442, src/assets/scss/pages/_pay.scss */
 .vol-form__input::-webkit-input-placeholder {
   font-size: 20px;
   line-height: 1.4;
@@ -21508,22 +21825,22 @@ h3 {
   color: #6D7276;
 }
 
-/* line 403, src/assets/scss/pages/_pay.scss */
+/* line 448, src/assets/scss/pages/_pay.scss */
 .vol-form__checkbox {
   display: none;
 }
 
-/* line 405, src/assets/scss/pages/_pay.scss */
+/* line 450, src/assets/scss/pages/_pay.scss */
 .vol-form__checkbox:checked + .vol-form__check-pane {
   border-color: #127CE1;
 }
 
-/* line 408, src/assets/scss/pages/_pay.scss */
+/* line 453, src/assets/scss/pages/_pay.scss */
 .vol-form__checkbox:checked + .vol-form__check-pane::before {
   opacity: 1;
 }
 
-/* line 412, src/assets/scss/pages/_pay.scss */
+/* line 457, src/assets/scss/pages/_pay.scss */
 .vol-form__check-pane {
   position: absolute;
   top: 50%;
@@ -21538,7 +21855,7 @@ h3 {
   transition: border-color .3s ease-in-out;
 }
 
-/* line 422, src/assets/scss/pages/_pay.scss */
+/* line 467, src/assets/scss/pages/_pay.scss */
 .vol-form__check-pane::before {
   content: '';
   position: absolute;
@@ -21556,7 +21873,7 @@ h3 {
   transition: opacity .3s ease-in-out;
 }
 
-/* line 438, src/assets/scss/pages/_pay.scss */
+/* line 483, src/assets/scss/pages/_pay.scss */
 .vol-form__select {
   display: block;
   background-image: url("data:image/svg+xml,%3Csvg width='17' height='8' viewBox='0 0 17 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L8.5 7L16 1' stroke='%23939CA5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A"), -webkit-gradient(linear, left top, left bottom, from(#F5F8FB), to(#F5F8FB));
@@ -21578,12 +21895,12 @@ h3 {
   max-width: 100%;
 }
 
-/* line 456, src/assets/scss/pages/_pay.scss */
+/* line 501, src/assets/scss/pages/_pay.scss */
 .vol-form__select::-ms-expand {
   display: none;
 }
 
-/* line 460, src/assets/scss/pages/_pay.scss */
+/* line 505, src/assets/scss/pages/_pay.scss */
 .vol-form__submit {
   display: block;
   padding: 16px 10px 20px;
@@ -21596,13 +21913,20 @@ h3 {
   border-radius: 12px;
 }
 
-/* line 470, src/assets/scss/pages/_pay.scss */
+@media only screen and (max-width: 768px) {
+  /* line 505, src/assets/scss/pages/_pay.scss */
+  .vol-form__submit {
+    font-size: 18px;
+  }
+}
+
+/* line 518, src/assets/scss/pages/_pay.scss */
 .vol-form__submit:disabled {
   color: #AEC1D2;
   background-color: #F5F8FB;
 }
 
-/* line 477, src/assets/scss/pages/_pay.scss */
+/* line 525, src/assets/scss/pages/_pay.scss */
 .vol-progress {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -21625,7 +21949,22 @@ h3 {
   border: 1px solid #EDF4FA;
 }
 
-/* line 489, src/assets/scss/pages/_pay.scss */
+@media only screen and (max-width: 1366px) {
+  /* line 525, src/assets/scss/pages/_pay.scss */
+  .vol-progress {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  /* line 525, src/assets/scss/pages/_pay.scss */
+  .vol-progress {
+    display: none;
+  }
+}
+
+/* line 544, src/assets/scss/pages/_pay.scss */
 .vol-progress__title {
   display: block;
   margin-bottom: 4px;
@@ -21634,7 +21973,7 @@ h3 {
   color: #6D7276;
 }
 
-/* line 496, src/assets/scss/pages/_pay.scss */
+/* line 551, src/assets/scss/pages/_pay.scss */
 .vol-progress__percent {
   font-weight: 500;
   font-size: 24px;
@@ -21642,7 +21981,7 @@ h3 {
   color: #6D7276;
 }
 
-/* line 504, src/assets/scss/pages/_pay.scss */
+/* line 559, src/assets/scss/pages/_pay.scss */
 .diagram {
   width: 240px;
   height: 240px;
@@ -21652,7 +21991,15 @@ h3 {
   overflow: hidden;
 }
 
-/* line 513, src/assets/scss/pages/_pay.scss */
+@media only screen and (max-width: 1366px) {
+  /* line 559, src/assets/scss/pages/_pay.scss */
+  .diagram {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* line 572, src/assets/scss/pages/_pay.scss */
 .diagram::before {
   content: '';
   display: block;
@@ -21667,7 +22014,7 @@ h3 {
   opacity: 1;
 }
 
-/* line 527, src/assets/scss/pages/_pay.scss */
+/* line 586, src/assets/scss/pages/_pay.scss */
 .diagram .piece {
   width: 100%;
   height: 100%;
@@ -21677,7 +22024,7 @@ h3 {
   position: absolute;
 }
 
-/* line 536, src/assets/scss/pages/_pay.scss */
+/* line 595, src/assets/scss/pages/_pay.scss */
 .diagram .piece::before {
   content: '';
   display: block;
@@ -21686,7 +22033,7 @@ h3 {
   height: 100%;
 }
 
-/* line 544, src/assets/scss/pages/_pay.scss */
+/* line 603, src/assets/scss/pages/_pay.scss */
 .diagram .piece.left {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
@@ -21695,13 +22042,13 @@ h3 {
   /* only FireFox < 75.0v (fix bug)*/
 }
 
-/* line 550, src/assets/scss/pages/_pay.scss */
+/* line 609, src/assets/scss/pages/_pay.scss */
 .diagram.over_50 .piece.left {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-/* line 554, src/assets/scss/pages/_pay.scss */
+/* line 613, src/assets/scss/pages/_pay.scss */
 .diagram .piece.right {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -21710,28 +22057,28 @@ h3 {
   /* only FireFox < 75.0v (fix bug)*/
 }
 
-/* line 560, src/assets/scss/pages/_pay.scss */
+/* line 619, src/assets/scss/pages/_pay.scss */
 .diagram.over_50 .piece.right {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
 
-/* line 564, src/assets/scss/pages/_pay.scss */
+/* line 623, src/assets/scss/pages/_pay.scss */
 .diagram .left::before {
   background: #EDF4FA;
 }
 
-/* line 568, src/assets/scss/pages/_pay.scss */
+/* line 627, src/assets/scss/pages/_pay.scss */
 .diagram.over_50 .left::before {
   background: #2688E5;
 }
 
-/* line 571, src/assets/scss/pages/_pay.scss */
+/* line 630, src/assets/scss/pages/_pay.scss */
 .diagram .right::before {
   background: #EDF4FA;
 }
 
-/* line 575, src/assets/scss/pages/_pay.scss */
+/* line 634, src/assets/scss/pages/_pay.scss */
 .diagram .text {
   position: absolute;
   z-index: 3;

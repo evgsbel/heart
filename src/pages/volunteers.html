@@ -1,29 +1,28 @@
 ---
 layout: default
-title: Wards Page
+title: Волонтерам
 script: wards
+bodyClass: inner
+bannerImg: assets/img/volunteers
 ---
 
-<section class="wards-nav">
+
+<section class="banner">
   <div class="container">
-    <div class="row">
-      <nav class="col-md-10 col-12">
-        <div class="swiper wards-nav__swiper">
-          <ul class="wards-nav__list swiper-wrapper">
-            <li class="wards-nav__item swiper-slide is-active">
-              <a href="" class="btn-reset wards-nav__link wards-nav__link_active ">Виды помощи</a>
-            </li>
-<!--            <li class="wards-nav__item swiper-slide">-->
-<!--              <a href="events.html" class="btn-reset wards-nav__link">Мероприятия</a>-->
-<!--            </li>-->
-            <li class="wards-nav__item swiper-slide">
-              <a href="faq.html" class="btn-reset wards-nav__link is-active">Часто задаваемые вопросы</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <div class="col-md-2 d-md-block d-none">
-        <a href="" class="wards-nav__review-link">Оставить отзыв</a>
+    <div class="row banner__inner">
+      <div class="col-12 col-sm-6 col-lg-6 col-xl-5">
+        <h1 class="banner__title title-h2">{{title}}</h1>
+        <p class="banner__text">Благотворительный фонд «Огромное сердце» развивает систему интеллектуального волонтерства, привлекая профессионалов и тех, кто хочет учиться и расти вместе с нашей командой. </p>
+        <p class="banner__text">Волонтёр — человек с огромным сердцем. Если вы хотите помогать взрослым в борьбе с онкологическими заболеваниями, присоединяетесь к команде волонтёров.</p>
+        <a href="#volunteering-questionnaire" class="btn-reset banner__btn">Заполнить анкету</a>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 offset-lg-2 banner__right">
+        <picture>
+          <source srcset="{{bannerImg}}-480.png" media="(max-width: 600px)">
+          <source srcset="{{bannerImg}}-768.png" media="(max-width: 1024px)">
+          <source srcset="{{bannerImg}}-1440.png" media="(max-width: 1440px)">
+          <img class="banner__img" src="{{bannerImg}}.png" alt="{{title}}">
+        </picture>
       </div>
     </div>
   </div>
@@ -33,7 +32,7 @@ script: wards
   <div class="container faq__wrapper">
     <div class="row">
       <div class="col-xl-12">
-        <h2 class="title-h2 faq__title">Заголовок</h2>
+        <h2 class="title-h2 faq__title">Часто задаваемые вопросы</h2>
       </div>
     </div>
     <div class="row">
@@ -142,25 +141,6 @@ script: wards
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-xl-2 col-lg-3 d-none d-lg-block">
-        <div class="ask">
-          <img src="assets/img/ask-img.png" alt="" class="ask__img">
-          <p class="ask__text">Нет ответа на ваш вопрос?</p>
-          <p class="ask__text">Спросите у нас</p>
-          <button class="ask__btn btn-reset">Задать вопрос</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container faq__wrapper">
-    <div class="row">
-      <div class="col-xl-12">
-        <h2 class="title-h2 faq__title">Заголовок</h2>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col xl-10 col-lg-9 col-md-12 accordion faq__inner">
         <div class="faq__item" id="accordionExample5">
           <div class="faq__heading" id="heading5">
             <button
@@ -213,6 +193,42 @@ script: wards
             </div>
           </div>
         </div>
+      </div>
+      <div class="col-xl-2 col-lg-3 d-none d-lg-block">
+        <div class="ask">
+          <img src="assets/img/ask-img.png" alt="" class="ask__img">
+          <p class="ask__text">Нет ответа на ваш вопрос?</p>
+          <p class="ask__text">Спросите у нас</p>
+          <button class="ask__btn btn-reset">Задать вопрос</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="mobile-ask d-lg-none">
+  <div class="container">
+    <div class="row mobile-ask__wr">
+      <div class="col-md-6 col-sm-6 col-12">
+        <img src="assets/img/ask-img-mobile.png" alt="" class="d-sm-none mobile-ask__img">
+        <p class="mobile-ask__title">Нет ответа на ваш вопрос?</p>
+        <p class="mobile-ask__title">Спросите у нас</p>
+      </div>
+      <div class="col-md-6 col-sm-6 col-12">
+        <button class="btn-reset mobile-ask__btn">Задать вопрос</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq vacancies">
+  <div class="container faq__wrapper">
+    <div class="row">
+      <div class="col-xl-12">
+        <h2 class="title-h2 faq__title">Открытые вакансии</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col xl-10 col-lg-9 col-md-12 accordion faq__inner">
         <div class="faq__item" id="accordionExample7">
           <div class="faq__heading" id="heading7">
             <button
@@ -222,7 +238,7 @@ script: wards
               data-target="#collapse7"
               aria-expanded="true"
               aria-controls="collapse7">
-              <span>Куда пойдут собранные средства?</span>
+              <span>Дизайнер</span>
               <svg>
                 <use xlink:href="assets/img/sprite.svg#faq-arrow"></use>
               </svg>
@@ -248,7 +264,7 @@ script: wards
               data-target="#collapse8"
               aria-expanded="true"
               aria-controls="collapse8">
-              <span>Куда пойдут собранные средства?</span>
+              <span>Копирайтер</span>
               <svg>
                 <use xlink:href="assets/img/sprite.svg#faq-arrow"></use>
               </svg>
@@ -274,7 +290,7 @@ script: wards
               data-target="#collapse9"
               aria-expanded="true"
               aria-controls="collapse9">
-              <span>Куда пойдут собранные средства?</span>
+              <span>Психолог</span>
               <svg>
                 <use xlink:href="assets/img/sprite.svg#faq-arrow"></use>
               </svg>
@@ -300,140 +316,28 @@ script: wards
               data-target="#collapse10"
               aria-expanded="true"
               aria-controls="collapse10">
-              <span>Куда пойдут собранные средства?</span>
+              <span>Юрист</span>
               <svg>
                 <use xlink:href="assets/img/sprite.svg#faq-arrow"></use>
               </svg>
             </button>
           </div>
-          <div id="collapse10" class="faq__answer collapse" aria-labelledby="heading10"
+          <div id="collapse10" class="faq__answer collapse show" aria-labelledby="heading10"
                data-parent="#accordionExample10">
             <div class="faq__answer-inn">
-              <p>Вот вам яркий пример современных тенденций - разбавленное изрядной долей эмпатии, рациональное мышление
-                позволяет оценить значение поэтапного и последовательного развития общества. Но действия представителей
-                оппозиции освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы,
-                разумеется, своевременно верифицированы. Каждый из нас понимает очевидную вещь: высокое качество
-                позиционных исследований требует от нас анализа системы массового участия. Следует отметить, что граница
-                обучения кадров выявляет срочную потребность кластеризации усилий.</p>
-            </div>
-          </div>
-        </div>
-        <div class="faq__item" id="accordionExample11">
-          <div class="faq__heading" id="heading11">
-            <button
-              class="btn-reset faq__question collapsed"
-              type="button"
-              data-toggle="collapse"
-              data-target="#collapse11"
-              aria-expanded="true"
-              aria-controls="collapse11">
-              <span>Куда пойдут собранные средства?</span>
-              <svg>
-                <use xlink:href="assets/img/sprite.svg#faq-arrow"></use>
-              </svg>
-            </button>
-          </div>
-          <div id="collapse11" class="faq__answer collapse" aria-labelledby="heading11"
-               data-parent="#accordionExample11">
-            <div class="faq__answer-inn">
-              <p>Вот вам яркий пример современных тенденций - разбавленное изрядной долей эмпатии, рациональное мышление
-                позволяет оценить значение поэтапного и последовательного развития общества. Но действия представителей
-                оппозиции освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы,
-                разумеется, своевременно верифицированы. Каждый из нас понимает очевидную вещь: высокое качество
-                позиционных исследований требует от нас анализа системы массового участия. Следует отметить, что граница
-                обучения кадров выявляет срочную потребность кластеризации усилий.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container faq__wrapper">
-    <div class="row">
-      <div class="col-xl-12">
-        <h2 class="title-h2 faq__title">Заголовок</h2>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col xl-10 col-lg-9 col-md-12 accordion faq__inner">
-        <div class="faq__item" id="accordionExample12">
-          <div class="faq__heading" id="heading12">
-            <button
-              class="btn-reset faq__question collapsed"
-              type="button"
-              data-toggle="collapse"
-              data-target="#collapse12"
-              aria-expanded="true"
-              aria-controls="collapse12">
-              <span>Куда пойдут собранные средства?</span>
-              <svg>
-                <use xlink:href="assets/img/sprite.svg#faq-arrow"></use>
-              </svg>
-            </button>
-          </div>
-          <div id="collapse12" class="faq__answer collapse" aria-labelledby="heading12"
-               data-parent="#accordionExample12">
-            <div class="faq__answer-inn">
-              <p>Вот вам яркий пример современных тенденций - разбавленное изрядной долей эмпатии, рациональное мышление
-                позволяет оценить значение поэтапного и последовательного развития общества. Но действия представителей
-                оппозиции освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы,
-                разумеется, своевременно верифицированы. Каждый из нас понимает очевидную вещь: высокое качество
-                позиционных исследований требует от нас анализа системы массового участия. Следует отметить, что граница
-                обучения кадров выявляет срочную потребность кластеризации усилий.</p>
-            </div>
-          </div>
-        </div>
-        <div class="faq__item" id="accordionExample13">
-          <div class="faq__heading" id="heading13">
-            <button
-              class="btn-reset faq__question collapsed"
-              type="button"
-              data-toggle="collapse"
-              data-target="#collapse13"
-              aria-expanded="true"
-              aria-controls="collapse13">
-              <span>Куда пойдут собранные средства?</span>
-              <svg>
-                <use xlink:href="assets/img/sprite.svg#faq-arrow"></use>
-              </svg>
-            </button>
-          </div>
-          <div id="collapse13" class="faq__answer collapse" aria-labelledby="heading13"
-               data-parent="#accordionExample13">
-            <div class="faq__answer-inn">
-              <p>Вот вам яркий пример современных тенденций - разбавленное изрядной долей эмпатии, рациональное мышление
-                позволяет оценить значение поэтапного и последовательного развития общества. Но действия представителей
-                оппозиции освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы,
-                разумеется, своевременно верифицированы. Каждый из нас понимает очевидную вещь: высокое качество
-                позиционных исследований требует от нас анализа системы массового участия. Следует отметить, что граница
-                обучения кадров выявляет срочную потребность кластеризации усилий.</p>
-            </div>
-          </div>
-        </div>
-        <div class="faq__item" id="accordionExample14">
-          <div class="faq__heading" id="heading14">
-            <button
-              class="btn-reset faq__question collapsed"
-              type="button"
-              data-toggle="collapse"
-              data-target="#collapse14"
-              aria-expanded="true"
-              aria-controls="collapse14">
-              <span>Куда пойдут собранные средства?</span>
-              <svg>
-                <use xlink:href="assets/img/sprite.svg#faq-arrow"></use>
-              </svg>
-            </button>
-          </div>
-          <div id="collapse14" class="faq__answer collapse" aria-labelledby="heading4"
-               data-parent="#accordionExample14">
-            <div class="faq__answer-inn">
-              <p>Вот вам яркий пример современных тенденций - разбавленное изрядной долей эмпатии, рациональное мышление
-                позволяет оценить значение поэтапного и последовательного развития общества. Но действия представителей
-                оппозиции освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы,
-                разумеется, своевременно верифицированы. Каждый из нас понимает очевидную вещь: высокое качество
-                позиционных исследований требует от нас анализа системы массового участия. Следует отметить, что граница
-                обучения кадров выявляет срочную потребность кластеризации усилий.</p>
+              <p><b>Требования</b></p>
+              <p>Наличие опыта в организационной деятельности</p>
+              <p>Опыт работы юристом не менее 3 лет</p>
+              <p>Перфекционизм, внимание к деталям</p>
+              <p>Дисциплинированность</p>
+              <p>Грамотная устная и письменная речь</p>
+              <p>Ответственность, исполнительность, честность</p>
+              <p>Вовлечённость в проект</p>
+              <p><b>Задачи</b></p>
+              <p>Обработка юридических обращений, поступающих на Горячую линию фонда</p>
+              <p><b>Условия</b></p>
+              <p>Возможность стать частью команды фонда</p>
+              <p>График помощи свободный</p>
             </div>
           </div>
         </div>
@@ -441,18 +345,135 @@ script: wards
     </div>
   </div>
 </section>
-<section class="mobile-ask d-lg-none">
+
+<section id="volunteering-questionnaire" class="volunteering-questionnaire">
   <div class="container">
-    <div class="row mobile-ask__wr">
-      <div class="col-md-6 col-sm-6 col-12">
-        <img src="assets/img/ask-img-mobile.png" alt="" class="d-sm-none mobile-ask__img">
-        <p class="mobile-ask__title">Нет ответа на ваш вопрос?</p>
-        <p class="mobile-ask__title">Спросите у нас</p>
+    <div class="row" >
+      <div class="col-12 col-md-10">
+        <form action="#" method="" class="vol-form" id="vol-form">
+          <h2 class="title-h2 vol-form__title">Заполните анкету</h2>
+          <div id="wizard">
+
+            <h2>Данные</h2>
+            <section>
+              <div class="vol-form__group">
+                <label for="vol-fio" class="vol-form__label">
+                  ФИО
+                  <input type="text" id="vol-fio" name="vol-fio" placeholder="Иванов Иван Иванович"
+                         class="vol-form__input required">
+                </label>
+                <label for="vol-date" class="vol-form__label">
+                  Дата рождения
+                  <input type="date" id="vol-date" name="vol-date" class="vol-form__input required">
+                </label>
+              </div>
+              <label for="vol-city" class="vol-form__label">
+                Город проживания
+                <input type="text" id="vol-city" name="vol-city" placeholder="Начните вводить"
+                       class="vol-form__input required">
+              </label>
+            </section>
+
+            <h2>Контакты</h2>
+            <section>
+              <div class="vol-form__group">
+                <label for="vol-phone" class="vol-form__label">
+                  Телефон
+                  <input type="number" id="vol-phone" name="vol-phone" placeholder="+7"
+                         class="vol-form__input required">
+                </label>
+                <label for="vol-date" class="vol-form__label">
+                  Email
+                  <input type="email" id="vol-email" name="vol-email" placeholder="mail@greatheart.ru"
+                         class="vol-form__input required">
+                </label>
+                <label for="vol-tlg" class="vol-form__label">
+                  Telegram <span>необязательно</span>
+                  <input type="text" id="vol-tlg" name="vol-tlg" class="vol-form__input">
+                </label>
+              </div>
+              <div class="vol-form__group">
+                <label for="vol-vk" class="vol-form__label">
+                  VK <span>необязательно</span>
+                  <input type="text" id="vol-vk" name="vol-vk" class="vol-form__input">
+                </label>
+                <label for="vol-inst" class="vol-form__label">
+                  Instagram <span>необязательно</span>
+                  <input type="text" id="vol-inst" name="vol-inst" class="vol-form__input">
+                </label>
+              </div>
+            </section>
+
+            <h2>Работа и образование</h2>
+            <section>
+              <div class="vol-form__group">
+                <label for="vol-work" class="vol-form__label">
+                  Место работы
+                  <input type="text" id="vol-work" name="vol-work" class="vol-form__input required">
+                </label>
+                <label for="vol-position" class="vol-form__label">
+                  Должность
+                  <input type="text" id="vol-position" name="vol-position" class="vol-form__input required">
+                </label>
+                <label for="vol-no-work" class="vol-form__label vol-form__label_check">
+                  <input type="checkbox" id="vol-no-work" name="vol-no-work" class="vol-form__checkbox">
+                  <span class="vol-form__check-pane"></span>
+                  Не работаю
+                </label>
+              </div>
+              <div class="vol-form__group">
+                <label for="vol-education" class="vol-form__label">
+                  Образование
+                  <input type="text" id="vol-education" name="vol-education" class="vol-form__input required">
+                </label>
+                <label for="vol-speciality" class="vol-form__label">
+                  Специальность <span>необязательно</span>
+                  <input type="text" id="vol-speciality" name="vol-speciality" class="vol-form__input">
+                </label>
+              </div>
+            </section>
+
+            <h2>Доп. информация</h2>
+            <section>
+              <div class="vol-form__group">
+                <label for="vol-accessibility" class="vol-form__label">
+                  Доступность
+                  <select type="text" id="vol-accessibility" name="vol-accessibility" class="vol-form__select required">
+                    <option value="">Без ограничений</option>
+                    <option value="">C ограничениями</option>
+                  </select>
+                </label>
+                <label for="vol-lang" class="vol-form__label">
+                  Владение языками
+                  <input type="text" id="vol-lang" name="vol-lang" class="vol-form__input required">
+                </label>
+              </div>
+              <div class="vol-form__group">
+                <label for="vol-hobbies" class="vol-form__label">
+                  Увлечения <span>необязательно</span>
+                  <input type="text" id="vol-hobbies" name="vol-hobbies" class="vol-form__input">
+                </label>
+                <label for="vol-want" class="vol-form__label">
+                  Чем хотите помогать?
+                  <input type="text" id="vol-want" name="vol-want" class="vol-form__input required">
+                </label>
+              </div>
+            </section>
+          </div>
+        </form>
       </div>
-      <div class="col-md-6 col-sm-6 col-12">
-        <button class="btn-reset mobile-ask__btn">Задать вопрос</button>
+      <div class="col-2">
+        <div id="vol-progress" class="vol-progress" data-percent="5">
+          <div id="myBar" class="vol-progress__bar diagram progress">
+            <div class="piece left"></div>
+            <div class="piece right"></div>
+            <div class="text">
+              <p class="vol-progress__title">Заполнено</p>
+              <p class="vol-progress__percent">50%</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
-{{> bottom-btns}}
