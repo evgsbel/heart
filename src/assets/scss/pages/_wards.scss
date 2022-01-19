@@ -1320,4 +1320,93 @@
   }
 }
 
+.is-transfer-page {
+  .banner {
+    background-image: url('../img/transfer-banner-bg.png');
+    @include r(1440) {
+      background-image: url('../img/transfer-banner-bg-1440.png');
+    }
+    @include r(1024) {
+      background-image: url('../img/transfer-banner-bg-768.png');
+    }
+    @include r(600) {
+      background-image: none;
+    }
+  }
+  .banner__right {
+    @include r(600) {
+      background-image: url('../img/transfer-banner-bg-480.png');
+      background-size: contain;
+      background-position: right center;
+    }
+  }
+}
+
+.is-residence-page {
+  .banner {
+    background-image: url('../img/residence-banner-bg.png');
+    @include r(1440) {
+      background-image: url('../img/residence-banner-bg-1440.png');
+    }
+    @include r(1024) {
+      background-image: url('../img/residence-banner-bg-768.png');
+    }
+    @include r(600) {
+      background-image: none;
+    }
+  }
+  .banner__right {
+    @include r(600) {
+      background-image: url('../img/residence-banner-bg-480.png');
+      background-size: contain;
+      background-position: right center;
+    }
+  }
+}
+
+.is-employment-page {
+  .banner {
+    background-image: url('../img/employment-banner-bg.png');
+    @include r(1440) {
+      background-image: url('../img/employment-banner-bg-1440.png');
+    }
+    @include r(1024) {
+      background-image: url('../img/employment-banner-bg-768.png');
+    }
+    @include r(600) {
+      background-image: none;
+    }
+  }
+  .banner__right {
+    @include r(600) {
+      background-image: url('../img/employment-banner-bg-480.png');
+      background-size: contain;
+      background-position: right center;
+    }
+  }
+}
+
+.is-equal-counseling-page {
+  .banner {
+    background-image: url('../img/equal-counseling-banner-bg.png');
+    @include r(1440) {
+      background-image: url('../img/equal-counseling-banner-bg-1440.png');
+    }
+    @include r(1024) {
+      background-image: url('../img/equal-counseling-banner-bg-768.png');
+    }
+    @include r(600) {
+      background-image: none;
+    }
+  }
+  .banner__right {
+    @include r(600) {
+      background-image: url('../img/equal-counseling-banner-bg-480.png');
+      background-size: contain;
+      background-position: right center;
+    }
+  }
+}
+
+
 

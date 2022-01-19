@@ -20817,6 +20817,146 @@ h3 {
   }
 }
 
+/* line 1324, src/assets/scss/pages/_wards.scss */
+.is-transfer-page .banner {
+  background-image: url("../img/transfer-banner-bg.png");
+}
+
+@media only screen and (max-width: 1440px) {
+  /* line 1324, src/assets/scss/pages/_wards.scss */
+  .is-transfer-page .banner {
+    background-image: url("../img/transfer-banner-bg-1440.png");
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  /* line 1324, src/assets/scss/pages/_wards.scss */
+  .is-transfer-page .banner {
+    background-image: url("../img/transfer-banner-bg-768.png");
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 1324, src/assets/scss/pages/_wards.scss */
+  .is-transfer-page .banner {
+    background-image: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 1336, src/assets/scss/pages/_wards.scss */
+  .is-transfer-page .banner__right {
+    background-image: url("../img/transfer-banner-bg-480.png");
+    background-size: contain;
+    background-position: right center;
+  }
+}
+
+/* line 1346, src/assets/scss/pages/_wards.scss */
+.is-residence-page .banner {
+  background-image: url("../img/residence-banner-bg.png");
+}
+
+@media only screen and (max-width: 1440px) {
+  /* line 1346, src/assets/scss/pages/_wards.scss */
+  .is-residence-page .banner {
+    background-image: url("../img/residence-banner-bg-1440.png");
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  /* line 1346, src/assets/scss/pages/_wards.scss */
+  .is-residence-page .banner {
+    background-image: url("../img/residence-banner-bg-768.png");
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 1346, src/assets/scss/pages/_wards.scss */
+  .is-residence-page .banner {
+    background-image: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 1358, src/assets/scss/pages/_wards.scss */
+  .is-residence-page .banner__right {
+    background-image: url("../img/residence-banner-bg-480.png");
+    background-size: contain;
+    background-position: right center;
+  }
+}
+
+/* line 1368, src/assets/scss/pages/_wards.scss */
+.is-employment-page .banner {
+  background-image: url("../img/employment-banner-bg.png");
+}
+
+@media only screen and (max-width: 1440px) {
+  /* line 1368, src/assets/scss/pages/_wards.scss */
+  .is-employment-page .banner {
+    background-image: url("../img/employment-banner-bg-1440.png");
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  /* line 1368, src/assets/scss/pages/_wards.scss */
+  .is-employment-page .banner {
+    background-image: url("../img/employment-banner-bg-768.png");
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 1368, src/assets/scss/pages/_wards.scss */
+  .is-employment-page .banner {
+    background-image: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 1380, src/assets/scss/pages/_wards.scss */
+  .is-employment-page .banner__right {
+    background-image: url("../img/employment-banner-bg-480.png");
+    background-size: contain;
+    background-position: right center;
+  }
+}
+
+/* line 1390, src/assets/scss/pages/_wards.scss */
+.is-equal-counseling-page .banner {
+  background-image: url("../img/equal-counseling-banner-bg.png");
+}
+
+@media only screen and (max-width: 1440px) {
+  /* line 1390, src/assets/scss/pages/_wards.scss */
+  .is-equal-counseling-page .banner {
+    background-image: url("../img/equal-counseling-banner-bg-1440.png");
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  /* line 1390, src/assets/scss/pages/_wards.scss */
+  .is-equal-counseling-page .banner {
+    background-image: url("../img/equal-counseling-banner-bg-768.png");
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 1390, src/assets/scss/pages/_wards.scss */
+  .is-equal-counseling-page .banner {
+    background-image: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 1402, src/assets/scss/pages/_wards.scss */
+  .is-equal-counseling-page .banner__right {
+    background-image: url("../img/equal-counseling-banner-bg-480.png");
+    background-size: contain;
+    background-position: right center;
+  }
+}
+
 /* line 1, src/assets/scss/pages/_pay.scss */
 .qr-code {
   margin-top: 120px;

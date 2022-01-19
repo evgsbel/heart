@@ -6,818 +6,844 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pay Cards</title>
+		<title>Pay Cards</title>
     <!-- build:css -->
     <link rel="stylesheet" href="assets/vendor/css/animate.css">
     <link rel="stylesheet" href="assets/vendor/css/swiper.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <!-- endbuild -->
+		<link rel="stylesheet" href="assets/css/main.css">
+		<!-- endbuild -->
     <link rel="stylesheet" href="assets/css/rtl.css">
 </head>
 
 <body class="is-pay-card-page is--page">
     <header class="header js-header">
-        <div class="container">
-            <div class="row header__inner">
-                <div class="col-sm-3 col-md-3 col-lg-6 col-xl-6">
-                    <div class="header__left">
-                        <a href="/" class="logo">
-                            <svg class="logo__img">
-                                <use xlink:href="assets/img/sprite.svg#logo"></use>
-                            </svg>
-                            <p class="logo__text">Огромное сердце</p>
-                        </a>
-                        <nav class="nav">
-                            <ul class="nav__list d-flex">
-                                <li class="nav__item"><a href="" class="nav__link">Фонд</a></li>
-                                <li class="nav__item"><a href="/wards.html" class="nav__link">Подопечным</a></li>
-                                <li class="nav__item"><a href="" class="nav__link">Волонтерам</a></li>
-                                <li class="nav__item"><a href="" class="nav__link">Статьи</a></li>
-                                <li class="nav__item"><a href="" class="nav__link">Сборы</a></li>
-                                <li class="nav__item"><a href="" class="nav__link">Контакты</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
-                    <div class="header__right">
-                        <div class="search">
-                            <button class="btn-reset search__btn">
-                                <svg class="search__icon">
-                                    <use xlink:href="assets/img/sprite.svg#icon-search"></use>
-                                </svg>
-                            </button>
-                            <label for="search" class="mobile-nav__label">
-                                <input type="search" class="mobile-nav__input" id="search" placeholder="Поиск по сайту">
-                            </label>
-                        </div>
-                        <a href="tel:88003505785" class="header__phone">8 800 350 57 85</a>
-                        <button class="btn-reset button header__btn-help">Нужна помощь</button>
-                        <button class="btn-reset button header__btn">Хочу помочь</button>
-                    </div>
-                </div>
-                <button class="btn-reset burger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+      <div class="container">
+        <div class="row header__inner">
+          <div class="col-sm-3 col-md-3 col-lg-6 col-xl-6">
+            <div class="header__left">
+            <a href="/" class="logo">
+              <svg class="logo__img">
+                <use xlink:href="assets/img/sprite.svg#logo"></use>
+              </svg>
+              <p class="logo__text">Огромное сердце</p>
+            </a>
+            <nav class="nav">
+                <ul class="nav__list d-flex">
+                  <li class="nav__item"><a href="" class="nav__link">Фонд</a></li>
+                  <li class="nav__item"><a href="/wards.html" class="nav__link">Подопечным</a></li>
+                  <li class="nav__item"><a href="" class="nav__link">Волонтерам</a></li>
+                  <li class="nav__item"><a href="" class="nav__link">Статьи</a></li>
+                  <li class="nav__item"><a href="" class="nav__link">Сборы</a></li>
+                  <li class="nav__item"><a href="" class="nav__link">Контакты</a></li>
+                </ul>
+            </nav>
             </div>
+          </div>
+          <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+            <div class="header__right">
+              <div class="search">
+              <button class="btn-reset search__btn">
+                <svg class="search__icon">
+                  <use xlink:href="assets/img/sprite.svg#icon-search"></use>
+                </svg>
+              </button>
+                <label for="search" class="mobile-nav__label">
+                  <input type="search" class="mobile-nav__input" id="search" placeholder="Поиск по сайту">
+                </label>
+              </div>
+              <a href="tel:88003505785" class="header__phone">8 800 350 57 85</a>
+              <button class="btn-reset button header__btn-help">Нужна помощь</button>
+              <button class="btn-reset button header__btn">Хочу помочь</button>
+            </div>
+          </div>
+          <button class="btn-reset burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
+      </div>
     </header>
     <div class="mobile-nav">
-        <div class="d-flex mobile-nav__top">
-            <a href="/" class="logo d-flex">
-                <svg class="logo__img">
-                    <use xlink:href="assets/img/sprite.svg#logo"></use>
-                </svg>
-                <p class="logo__text">Огромное сердце</p>
-            </a>
-            <div class="search">
-                <button class="btn-reset search__btn">
-                    <svg class="search__icon">
-                        <use xlink:href="assets/img/sprite.svg#icon-search"></use>
-                    </svg>
-                </button>
-                <label for="search" class="mobile-nav__label">
-                    <input type="search" class="mobile-nav__input" id="search" placeholder="Поиск по сайту">
-                </label>
-            </div>
-            <a href="tel:88003505785" class="header__phone">8 800 350 57 85 <span>горячая линия</span></a>
-            <button class="btn-reset close mobile-nav__close">
-                <svg width="16" height="16">
-                    <use xlink:href="assets/img/sprite.svg#icon-close"></use>
-                </svg>
-            </button>
+      <div class="d-flex mobile-nav__top">
+        <a href="/" class="logo d-flex">
+          <svg class="logo__img">
+            <use xlink:href="assets/img/sprite.svg#logo"></use>
+          </svg>
+          <p class="logo__text">Огромное сердце</p>
+        </a>
+        <div class="search">
+        <button class="btn-reset search__btn">
+          <svg class="search__icon">
+            <use xlink:href="assets/img/sprite.svg#icon-search"></use>
+          </svg>
+        </button>
+          <label for="search" class="mobile-nav__label">
+            <input type="search" class="mobile-nav__input" id="search" placeholder="Поиск по сайту">
+          </label>
         </div>
-        <ul class="nav__list d-flex">
-            <li class="nav__item sub">
-                <a href="" class="nav__link">Фонд</a>
-                <ul class="sub__list">
-                    <li class="sub__item">
-                        <a href="" class="sub__link">История</a>
-                    </li>
-                    <li class="sub__item">
-                        <a href="" class="sub__link">Публикации</a>
-                    </li>
-                    <li class="sub__item">
-                        <a href="" class="sub__link">Отчеты</a>
-                    </li>
-                </ul>
+        <a href="tel:88003505785" class="header__phone">8 800 350 57 85 <span>горячая линия</span></a>
+        <button class="btn-reset close mobile-nav__close">
+          <svg width="16" height="16">
+            <use xlink:href="assets/img/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+      <ul class="nav__list d-flex">
+        <li class="nav__item sub">
+          <a href="" class="nav__link">Фонд</a>
+          <ul class="sub__list">
+            <li class="sub__item">
+              <a href="" class="sub__link">История</a>
             </li>
-            <li class="nav__item sub">
-                <a href="wards.html" class="nav__link">Подопечным</a>
-                <ul class="sub__list">
-                    <li class="sub__item">
-                        <a href="wards.html" class="sub__link">Виды помощи</a>
-                    </li>
-                    <li class="sub__item">
-                        <a href="events.html" class="sub__link">Мероприятия</a>
-                    </li>
-                    <li class="sub__item">
-                        <a href="faq.html" class="sub__link">FAQ</a>
-                    </li>
-                </ul>
+            <li class="sub__item">
+              <a href="" class="sub__link">Публикации</a>
             </li>
-            <li class="nav__item"><a href="" class="nav__link">Волонтерам</a></li>
-            <li class="nav__item"><a href="" class="nav__link">Сборы</a></li>
-            <li class="nav__item"><a href="" class="nav__link">Контакты</a></li>
-        </ul>
-
-        <div class="mobile-nav__btns">
-            <button class="btn-reset button mobile-nav__btn mobile-nav__btn_blue">Хочу помочь</button>
-            <button class="btn-reset button mobile-nav__btn">Нужна помощь</button>
-        </div>
-
+            <li class="sub__item">
+              <a href="" class="sub__link">Отчеты</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav__item sub">
+          <a href="wards.html" class="nav__link">Подопечным</a>
+          <ul class="sub__list">
+            <li class="sub__item">
+              <a href="wards.html" class="sub__link">Виды помощи</a>
+            </li>
+            <li class="sub__item">
+              <a href="events.html" class="sub__link">Мероприятия</a>
+            </li>
+            <li class="sub__item">
+              <a href="faq.html" class="sub__link">FAQ</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav__item"><a href="" class="nav__link">Волонтерам</a></li>
+        <li class="nav__item"><a href="" class="nav__link">Сборы</a></li>
+        <li class="nav__item"><a href="" class="nav__link">Контакты</a></li>
+      </ul>
+    
+      <div class="mobile-nav__btns">
+        <button class="btn-reset button mobile-nav__btn mobile-nav__btn_blue">Хочу помочь</button>
+        <button class="btn-reset button mobile-nav__btn">Нужна помощь</button>
+      </div>
+    
     </div>
-
-
-
+    
+    
+    
     <main role="main" class="main">
-
+        
         <section class="pay">
-            <div class="container">
-                <div class="row align-items-center tabs pay-tabs">
-                    <div class="col-xl-12">
-                        <h2 class="title-h2 pay__title mb-5">Помочь фонду</h2>
-                    </div>
-                    <div class="col-xl-12">
-                        <div class="pay__types swiper pay__swiper d-flex">
-                            <div class="swiper-wrapper">
-                                <button class="tabs__btn btn-reset pay__types-btn pay__types-btn swiper-slide " data-path="card">
-                                    <svg width="24" height="18">
-                                        <use xlink:href="assets/img/sprite.svg#pay-types-card"></use>
-                                    </svg>
-                                    Банковская карта
-                                </button>
-                                <button class="tabs__btn btn-reset pay__types-btn pay__types-btn swiper-slide" data-path="transfer">
-                                    <svg width="22" height="18">
-                                        <use xlink:href="assets/img/sprite.svg#pay-types-transfer"></use>
-                                    </svg>
-                                    Банковский перевод
-                                </button>
-                                <button class="tabs__btn btn-reset pay__types-btn pay__types-btn swiper-slide" data-path="sms">
-                                    <svg width="20" height="20">
-                                        <use xlink:href="assets/img/sprite.svg#pay-types-sms"></use>
-                                    </svg>
-                                    СМС
-                                </button>
-                                <button class="tabs__btn btn-reset pay__types-btn pay__types-btn swiper-slide" data-path="fsc">
-                                    <svg width="24" height="20">
-                                        <use xlink:href="assets/img/sprite.svg#pay-types-fck"></use>
-                                    </svg>
-                                    ФЦК
-                                </button>
-                                <button class="tabs__btn btn-reset pay__types-btn pay__types-btn swiper-slide is-active" data-path="volunteer">
-                                    <svg width="21" height="20">
-                                        <use xlink:href="assets/img/sprite.svg#pay-types-volunteer"></use>
-                                    </svg>
-                                    Волонтерство
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+          <div class="container">
+            <div class="row align-items-center tabs pay-tabs">
+              <div class="col-xl-12">
+                <h2 class="title-h2 pay__title mb-5">Помочь фонду</h2>
+              </div>
+              <div class="col-xl-12">
+                <div class="pay__types swiper pay__swiper d-flex">
+                  <div class="swiper-wrapper">
+                    <button class="tabs__btn btn-reset pay__types-btn pay__types-btn swiper-slide " data-path="card">
+                      <svg width="24" height="18">
+                        <use xlink:href="assets/img/sprite.svg#pay-types-card"></use>
+                      </svg>
+                      Банковская карта
+                    </button>
+                    <button class="tabs__btn btn-reset pay__types-btn pay__types-btn swiper-slide" data-path="transfer">
+                      <svg width="22" height="18">
+                        <use xlink:href="assets/img/sprite.svg#pay-types-transfer"></use>
+                      </svg>
+                      Банковский перевод
+                    </button>
+                    <button class="tabs__btn btn-reset pay__types-btn pay__types-btn swiper-slide" data-path="sms">
+                      <svg width="20" height="20">
+                        <use xlink:href="assets/img/sprite.svg#pay-types-sms"></use>
+                      </svg>
+                      СМС
+                    </button>
+                    <button class="tabs__btn btn-reset pay__types-btn pay__types-btn swiper-slide" data-path="fsc">
+                      <svg width="24" height="20">
+                        <use xlink:href="assets/img/sprite.svg#pay-types-fck"></use>
+                      </svg>
+                      ФЦК
+                    </button>
+                    <button class="tabs__btn btn-reset pay__types-btn pay__types-btn swiper-slide is-active"
+                            data-path="volunteer">
+                      <svg width="21" height="20">
+                        <use xlink:href="assets/img/sprite.svg#pay-types-volunteer"></use>
+                      </svg>
+                      Волонтерство
+                    </button>
+                  </div>
                 </div>
-                <div class="row mt-5 pay-tabs__content tabs__content tabs__content_flex " data-target="card">
-                    <div class="col-lg-5 col-xl-5">
-                        <div class="pay__btns pay__btns_top d-flex mb-3">
-                            <label for="frequency1" class="pay__radio-label js-radio-label">
-                                <input type="radio" name="frequency" id="frequency1" class="pay__radio" checked>
-                                <span class="pay__radio-pane">Ежемесячно</span>
-                            </label>
-                            <label for="frequency2" class="pay__radio-label js-radio-label">
-                                <input type="radio" name="frequency" id="frequency2" class="pay__radio">
-                                <span class="pay__radio-pane">Разово</span>
-                            </label>
-                        </div>
-
-                        <div class="pay__btns d-flex">
-                            <label for="sum1" class="pay__radio-label">
-                                <input type="radio" name="sum" id="sum1" value="500" class="pay__radio   js-radio">
-                                <span class="pay__radio-pane">500 ₽</span>
-                            </label>
-                            <label for="sum2" class="pay__radio-label">
-                                <input type="radio" name="sum" id="sum2" value="2400" class="pay__radio  js-radio">
-                                <span class="pay__radio-pane">2 400 ₽</span>
-                            </label>
-                            <label for="sum3" class="pay__radio-label">
-                                <input type="radio" name="sum" id="sum3" value="3200" class="pay__radio  js-radio" checked>
-                                <span class="pay__radio-pane">3 200 ₽</span>
-                            </label>
-                            <label for="sum4" class="pay__radio-label">
-                                <input type="radio" name="sum" id="sum4" value="6000" class="pay__radio  js-radio">
-                                <span class="pay__radio-pane">6 000 ₽</span>
-                            </label>
-
-                            <input type="number" name="other-sum" class="pay__input pay__input_grey w-100 js-input-number" placeholder="Другая сумма" maxlength="10" min="1" max="9999999999">
-
-                            <div class="commission">
-                                <label for="commission" class="commission__label">
-                                    <input type="checkbox" id="commission" class="commission__input" />
-                                    <span class="commission__pane"></span>
-                                    <p class="commission__text">Я хочу взять на себя комиссию за перевод <span class="commission__count">57.6 ₽</span>
-                                    </p>
-                                </label>
-                                <p class="commission__descr">Вы можете отменить ежемесячные переводы,
-                                    написав нам на <a href="" class="commission__link">donation@greatheart.ru</a></p>
-                            </div>
-                            <h2 class="title-h2 pay__title data__title">Ваши данные</h2>
-                            <div class="data pay__data">
-                                <input type="text" name="name" class="pay__input data__input pay__input_grey" placeholder="Ваше имя">
-                                <input type="email" name="email" class="pay__input data__input pay__input_grey" placeholder="Email">
-                            </div>
-                            <button class="btn-reset pay__btn pay__submit w-100 is-active">Хочу помочь</button>
-                            <p class="pay__confidencial">Нажимая на кнопку, вы даете согласие на обработку
-                                <a href="" class="commission__link">персональных&nbsp;данных</a> и соглашаетесь с <a href="" class="commission__link">офертой</a>
-                            </p>
-                        </div>
-
-                    </div>
-                    <div class="col-sm-5 col-md-5 col-lg-3 col-xl-3 order-sm-2 order-lg-0">
-                        <div class="pay__decor">
-                            <picture>
-                                <source srcset="assets/img/design-arrow-vertical.png" media="(max-width: 600px)">
-                                <source srcset="assets/img/design-arrow-1200.png" media="(max-width: 1200px)">
-                                <img src="assets/img/design-arrow.png" alt="">
-                            </picture>
-
-                            <span class="js-sum-decor">Узнайте, на&nbsp;что&nbsp;идут&nbsp;деньги</span>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                        <div class="pay__result">
-                            <p class="pay__result-sum js-pay-sum">3 200 ₽</p>
-                            <p class="pay__result-descr js-sum-descr">одна консультация онколога</p>
-                        </div>
-
-                        <div class="qr-code">
-                            <p class="qr-code__caption">Нет карты под рукой?</p>
-                            <p class="qr-code__descr">Отсканируйте QR-код и переведите средства в приложении вашего банка без комиссии</p>
-                            <div class="qr-code__images">
-                                <img src="assets/img/qr-code.png" alt="">
-                                <img src="assets/img/qr-spb.png" alt="">
-                            </div>
-                            <p class="qr-code__service-caption">Сервисы и способы оплаты</p>
-                            <ul class="pay__systems qr-code__service d-flex">
-                                <li class="pay__systems-item">
-                                    <svg width="74" height="24">
-                                        <use xlink:href="assets/img/sprite.svg#visa-pay"></use>
-                                    </svg>
-                                </li>
-                                <li class="pay__systems-item">
-                                    <svg width="40" height="32">
-                                        <use xlink:href="assets/img/sprite.svg#master-card-pay"></use>
-                                    </svg>
-                                </li>
-                                <li class="pay__systems-item">
-                                    <svg width="41" height="32">
-                                        <use xlink:href="assets/img/sprite.svg#maestro-pay"></use>
-                                    </svg>
-                                </li>
-                                <li class="pay__systems-item">
-                                    <svg width="85" height="24">
-                                        <use xlink:href="assets/img/sprite.svg#mir-pay"></use>
-                                    </svg>
-                                </li>
-                                <li class="pay__systems-item">
-                                    <svg width="57" height="32">
-                                        <use xlink:href="assets/img/sprite.svg#spb-pay"></use>
-                                    </svg>
-                                </li>
-                            </ul>
-                            <ul class="pay__systems qr-code__service d-flex">
-                                <li class="pay__systems-item">
-                                    <svg width="66" height="28">
-                                        <use xlink:href="assets/img/sprite.svg#apple-pay"></use>
-                                    </svg>
-                                </li>
-                                <li class="pay__systems-item">
-                                    <svg width="71" height="28">
-                                        <use xlink:href="assets/img/sprite.svg#google-pay"></use>
-                                    </svg>
-                                </li>
-                                <li class="pay__systems-item">
-                                    <svg width="79" height="28">
-                                        <use xlink:href="assets/img/sprite.svg#sber-pay"></use>
-                                    </svg>
-                                </li>
-                                <li class="pay__systems-item">
-                                    <svg width="200" height="34">
-                                        <use xlink:href="assets/img/sprite.svg#samsung-pay"></use>
-                                    </svg>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt-5 pay-tabs__content tabs__content tabs__content_flex change-bank" data-target="transfer">
-                    <div class="col-lg-5 col-xl-5">
-                        <h3 class="change-bank__title">Выберие банк</h3>
-                        <ul class="change-bank__nav">
-                            <li class="change-bank__item">
-                                <button class="btn-reset change-bank__btn is-active" data-path="sber">Сбер</button>
-                            </li>
-                            <li class="change-bank__item">
-                                <button class="btn-reset change-bank__btn" data-path="raiffaizen">Райффайзенбанк</button>
-                            </li>
-                            <li class="change-bank__item">
-                                <button class="btn-reset change-bank__btn" data-path="reco">Ресо</button>
-                            </li>
-                        </ul>
-                        <div class="change-bank__content requisite is-active" data-target="sber">
-                            <p class="requisite__caption">Реквизиты Фонда в ПАО «Сбербанк»</p>
-                            <ul class="requisite__list">
-                                <li class="requisite__item">Благотворительный фонд помощи взрослым онкобольным «Огромное сердце» Ольги
-                                    Сергеенко
-                                </li>
-                                <li class="requisite__item"><span>ИНН:</span> 7703 4770 54</li>
-                                <li class="requisite__item"><span>КПП:</span> 770 501 001</li>
-                                <li class="requisite__item"><span>ОГРН:</span> 1197 7000 08780</li>
-                                <li class="requisite__item"><span>Расчетный счет:</span> 4070 3810 3000 2000 0058</li>
-                                <li class="requisite__item"><span>Корр. счет:</span> 3010 1810 4000 0000 0225</li>
-                                <li class="requisite__item"><span>БИК:</span> 044 525 225</li>
-                                <li class="requisite__item">ПАО Сбербанк России, г. Москва</li>
-                            </ul>
-                            <p class="requisite__caption">Назначение платежа</p>
-                            <p class="requisite__appointment">Благотворительный взнос на уставную деятельность фонда «Огромное сердце»</p>
-                        </div>
-                        <div class="change-bank__content requisite" data-target="raiffaizen">
-                            <p class="requisite__caption">Реквизиты Фонда в АО «Райффайзенбанк»</p>
-                            <ul class="requisite__list">
-                                <li class="requisite__item">Благотворительный фонд помощи взрослым онкобольным «Огромное сердце» Ольги
-                                    Сергеенко
-                                </li>
-                                <li class="requisite__item"><span>ИНН:</span> 7703 4770 54</li>
-                                <li class="requisite__item"><span>КПП:</span> 770 501 001</li>
-                                <li class="requisite__item"><span>ОГРН:</span> 1197 7000 08780</li>
-                                <li class="requisite__item"><span>Расчетный счет:</span> 4070 3810 7000 0000 2720</li>
-                                <li class="requisite__item"><span>Корр. счет:</span> 3010 1810 2000 0000 0700</li>
-                                <li class="requisite__item"><span>БИК:</span> 044 525 700</li>
-                                <li class="requisite__item">АО «Райффайзенбанк», г. Москва</li>
-                            </ul>
-                            <p class="requisite__caption">Назначение платежа</p>
-                            <p class="requisite__appointment">Благотворительный взнос на уставную деятельность фонда «Огромное сердце»</p>
-                        </div>
-                        <div class="change-bank__content requisite" data-target="reco">
-                            <p class="requisite__caption">Реквизиты Фонда в АО «Ресо»</p>
-                            <ul class="requisite__list">
-                                <li class="requisite__item">Благотворительный фонд помощи взрослым онкобольным «Огромное сердце» Ольги
-                                    Сергеенко
-                                </li>
-                                <li class="requisite__item"><span>ИНН:</span></li>
-                                <li class="requisite__item"><span>КПП:</span></li>
-                                <li class="requisite__item"><span>ОГРН:</span></li>
-                                <li class="requisite__item"><span>Расчетный счет:</span></li>
-                                <li class="requisite__item"><span>Корр. счет:</span></li>
-                                <li class="requisite__item"><span>БИК:</span></li>
-                                <li class="requisite__item">АО «Ресо», г. Москва</li>
-                            </ul>
-                            <p class="requisite__caption">Назначение платежа</p>
-                            <p class="requisite__appointment">Благотворительный взнос на уставную деятельность фонда «Огромное сердце»</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-5 col-md-5 col-lg-3 col-xl-3 order-sm-2 order-lg-0">
-                        <div class="pay__decor">
-                            <picture>
-                                <source srcset="assets/img/design-arrow-vertical.png" media="(max-width: 600px)">
-                                <source srcset="assets/img/design-arrow-1200.png" media="(max-width: 1200px)">
-                                <img src="assets/img/design-arrow.png" alt="">
-                            </picture>
-
-                            <span class="js-sum-decor">Станьте чуточку <br/> счастливее</span>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                        <p class="change-bank__description">Услуги Фонда для всех, обратившихся к нему за помощью, оказываются
-                            бесплатно. Основной источник финансирования нашей деятельности — благотворительные пожертвования.</p>
-                    </div>
-                </div>
-                <div class="row mt-5 pay-tabs__content tabs__content tabs__content_flex" data-target="sms">
-                    <div class="col-lg-5 col-xl-5 pay-sms">
-                        <p class="pay-sms__title">Отправьте сообщение на номер <span>900</span> с суммой пожертвования</p>
-                        <p class="pay-sms__descr">Напишите в СМС слово «сердце» и через пробел сумму перевода.</p>
-                        <p class="pay-sms__descr">Допустимый размер пожертвования — от 10 до 8 000 рублей в день. В случае,
-                            если вы хотите перевести сумму больше, воспользуйтесь другими способами пожертвования.</p>
-                    </div>
-                    <div class="col-sm-5 col-md-5 col-lg-3 col-xl-2 order-sm-2 order-lg-0">
-
-                    </div>
-                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-5">
-                        <div class="pay-sms__example sms-example">
-                            <p class="sms-example__caption">Правильно</p>
-                            <p class="sms-example__good">Сердце 100</p>
-                            <p class="sms-example__caption">Не правильно</p>
-                            <div class="sms-example__wr">
-                                <p class="sms-example__bad">❤️ 100</p>
-                                <p class="sms-example__bad">Сердце сто</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt-5 pay-tabs__content tabs__content tabs__content_flex pay-fck" data-target="fsc">
-                    <div class="col-lg-5 col-xl-5">
-                        <h3 class="pay-fck__title">Фонд целевого капитала</h3>
-                        <p class="pay-fck__descr">Это фонд, инвестиционные активы которого направлены на поддержку БФ «Огромное сердце»
-                            и достижение уставных целей БФ «Огромное сердце». Бесконечная работа вашего пожертвования позволит Фонду стать
-                            финансово устойчивее для помощи взрослым в борьбе с онкологическими заболеваниями по всей России</p>
-                        <button class="pay-fck__btn btn-reset">Поддержать ФЦК «Огромное сердце»</button>
-                    </div>
-                    <div class="col-sm-5 col-md-5 col-lg-3 col-xl-3 order-sm-2 order-lg-0">
-                        <div class="pay__decor">
-                            <picture>
-                                <source srcset="assets/img/design-arrow-vertical.png" media="(max-width: 600px)">
-                                <source srcset="assets/img/design-arrow-1200.png" media="(max-width: 1200px)">
-                                <img src="assets/img/design-arrow-fck.png" alt="">
-                            </picture>
-                            <span class="">Сделайте бесконечный вклад</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt-5 pay-tabs__content tabs__content tabs__content_flex is-active" data-target="volunteer">
-                    <div class="col-10">
-                        <form action="#" method="" class="vol-form" id="vol-form">
-                            <h3 class="vol-form__title">Заполните анкету</h3>
-                            <div id="wizard">
-
-                                <h2>Данные</h2>
-                                <section>
-                                    <div class="vol-form__group">
-                                        <label for="vol-fio" class="vol-form__label">
-                                            ФИО
-                                            <input type="text" id="vol-fio" name="vol-fio" placeholder="Иванов Иван Иванович" class="vol-form__input required">
-                                        </label>
-                                        <label for="vol-date" class="vol-form__label">
-                                            Дата рождения
-                                            <input type="date" id="vol-date" name="vol-date" class="vol-form__input required">
-                                        </label>
-                                    </div>
-                                    <label for="vol-city" class="vol-form__label">
-                                        Город проживания
-                                        <input type="text" id="vol-city" name="vol-city" placeholder="Начните вводить" class="vol-form__input required">
-                                    </label>
-                                </section>
-
-                                <h2>Контакты</h2>
-                                <section>
-                                    <div class="vol-form__group">
-                                        <label for="vol-phone" class="vol-form__label">
-                                            Телефон
-                                            <input type="number" id="vol-phone" name="vol-phone" placeholder="+7" class="vol-form__input required">
-                                        </label>
-                                        <label for="vol-date" class="vol-form__label">
-                                            Email
-                                            <input type="email" id="vol-email" name="vol-email" placeholder="mail@greatheart.ru" class="vol-form__input required">
-                                        </label>
-                                        <label for="vol-tlg" class="vol-form__label">
-                                            Telegram <span>необязательно</span>
-                                            <input type="text" id="vol-tlg" name="vol-tlg" class="vol-form__input">
-                                        </label>
-                                    </div>
-                                    <div class="vol-form__group">
-                                        <label for="vol-vk" class="vol-form__label">
-                                            VK <span>необязательно</span>
-                                            <input type="text" id="vol-vk" name="vol-vk" class="vol-form__input">
-                                        </label>
-                                        <label for="vol-inst" class="vol-form__label">
-                                            Instagram <span>необязательно</span>
-                                            <input type="text" id="vol-inst" name="vol-inst" class="vol-form__input">
-                                        </label>
-                                    </div>
-                                </section>
-
-                                <h2>Работа и образование</h2>
-                                <section>
-                                    <div class="vol-form__group">
-                                        <label for="vol-work" class="vol-form__label">
-                                            Место работы
-                                            <input type="text" id="vol-work" name="vol-work" class="vol-form__input required">
-                                        </label>
-                                        <label for="vol-position" class="vol-form__label">
-                                            Должность
-                                            <input type="text" id="vol-position" name="vol-position" class="vol-form__input required">
-                                        </label>
-                                        <label for="vol-no-work" class="vol-form__label vol-form__label_check">
-                                            <input type="checkbox" id="vol-no-work" name="vol-no-work" class="vol-form__checkbox">
-                                            <span class="vol-form__check-pane"></span>
-                                            Не работаю
-                                        </label>
-                                    </div>
-                                    <div class="vol-form__group">
-                                        <label for="vol-education" class="vol-form__label">
-                                            Образование
-                                            <input type="text" id="vol-education" name="vol-education" class="vol-form__input required">
-                                        </label>
-                                        <label for="vol-speciality" class="vol-form__label">
-                                            Специальность <span>необязательно</span>
-                                            <input type="text" id="vol-speciality" name="vol-speciality" class="vol-form__input">
-                                        </label>
-                                    </div>
-                                </section>
-
-                                <h2>Доп. информация</h2>
-                                <section>
-                                    <div class="vol-form__group">
-                                        <label for="vol-accessibility" class="vol-form__label">
-                                            Доступность
-                                            <select type="text" id="vol-accessibility" name="vol-accessibility" class="vol-form__select required">
-                                                <option value="">Без ограничений</option>
-                                                <option value="">C ограничениями</option>
-                                            </select>
-                                        </label>
-                                        <label for="vol-lang" class="vol-form__label">
-                                            Владение языками
-                                            <input type="text" id="vol-lang" name="vol-lang" class="vol-form__input required">
-                                        </label>
-                                    </div>
-                                    <div class="vol-form__group">
-                                        <label for="vol-hobbies" class="vol-form__label">
-                                            Увлечения <span>необязательно</span>
-                                            <input type="text" id="vol-hobbies" name="vol-hobbies" class="vol-form__input">
-                                        </label>
-                                        <label for="vol-want" class="vol-form__label">
-                                            Чем хотите помогать?
-                                            <input type="text" id="vol-want" name="vol-want" class="vol-form__input required">
-                                        </label>
-                                    </div>
-                                </section>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-2">
-                        <div id="vol-progress" class="vol-progress" data-percent="5">
-                            <div id="myBar" class="vol-progress__bar diagram progress">
-                                <div class="piece left"></div>
-                                <div class="piece right"></div>
-                                <div class="text">
-                                    <p class="vol-progress__title">Заполнено</p>
-                                    <p class="vol-progress__percent">50%</p>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="btn-reset vol-form__submit" type="submit" disabled>Отправить анкету</button>
-                    </div>
-                </div>
+              </div>
             </div>
+            <div class="row mt-5 pay-tabs__content tabs__content tabs__content_flex " data-target="card">
+              <div class="col-lg-5 col-xl-5">
+                <div class="pay__btns pay__btns_top d-flex mb-3">
+                  <label for="frequency1" class="pay__radio-label js-radio-label">
+                    <input type="radio" name="frequency" id="frequency1" class="pay__radio" checked>
+                    <span class="pay__radio-pane">Ежемесячно</span>
+                  </label>
+                  <label for="frequency2" class="pay__radio-label js-radio-label">
+                    <input type="radio" name="frequency" id="frequency2" class="pay__radio">
+                    <span class="pay__radio-pane">Разово</span>
+                  </label>
+                </div>
+        
+                <div class="pay__btns d-flex">
+                  <label for="sum1" class="pay__radio-label">
+                    <input type="radio" name="sum" id="sum1" value="500" class="pay__radio   js-radio">
+                    <span class="pay__radio-pane">500 ₽</span>
+                  </label>
+                  <label for="sum2" class="pay__radio-label">
+                    <input type="radio" name="sum" id="sum2" value="2400" class="pay__radio  js-radio">
+                    <span class="pay__radio-pane">2 400 ₽</span>
+                  </label>
+                  <label for="sum3" class="pay__radio-label">
+                    <input type="radio" name="sum" id="sum3" value="3200" class="pay__radio  js-radio" checked>
+                    <span class="pay__radio-pane">3 200 ₽</span>
+                  </label>
+                  <label for="sum4" class="pay__radio-label">
+                    <input type="radio" name="sum" id="sum4" value="6000" class="pay__radio  js-radio">
+                    <span class="pay__radio-pane">6 000 ₽</span>
+                  </label>
+        
+                  <input
+                    type="number"
+                    name="other-sum"
+                    class="pay__input pay__input_grey w-100 js-input-number"
+                    placeholder="Другая сумма"
+                    maxlength="10"
+                    min="1"
+                    max="9999999999"
+                  >
+        
+                  <div class="commission">
+                    <label for="commission" class="commission__label">
+                      <input type="checkbox" id="commission" class="commission__input"/>
+                      <span class="commission__pane"></span>
+                      <p class="commission__text">Я хочу взять на себя комиссию за перевод <span class="commission__count">57.6 ₽</span>
+                      </p>
+                    </label>
+                    <p class="commission__descr">Вы можете отменить ежемесячные переводы,
+                      написав нам на <a href="" class="commission__link">donation@greatheart.ru</a></p>
+                  </div>
+                  <h2 class="title-h2 pay__title data__title">Ваши данные</h2>
+                  <div class="data pay__data">
+                    <input
+                      type="text"
+                      name="name"
+                      class="pay__input data__input pay__input_grey"
+                      placeholder="Ваше имя"
+                    >
+                    <input
+                      type="email"
+                      name="email"
+                      class="pay__input data__input pay__input_grey"
+                      placeholder="Email"
+                    >
+                  </div>
+                  <button class="btn-reset pay__btn pay__submit w-100 is-active">Хочу помочь</button>
+                  <p class="pay__confidencial">Нажимая на кнопку, вы даете согласие на обработку
+                    <a href="" class="commission__link">персональных&nbsp;данных</a> и соглашаетесь с <a href=""
+                                                                                                         class="commission__link">офертой</a>
+                  </p>
+                </div>
+        
+              </div>
+              <div class="col-sm-5 col-md-5 col-lg-3 col-xl-3 order-sm-2 order-lg-0">
+                <div class="pay__decor">
+                  <picture>
+                    <source srcset="assets/img/design-arrow-vertical.png" media="(max-width: 600px)">
+                    <source srcset="assets/img/design-arrow-1200.png" media="(max-width: 1200px)">
+                    <img src="assets/img/design-arrow.png" alt="">
+                  </picture>
+        
+                  <span class="js-sum-decor">Узнайте, на&nbsp;что&nbsp;идут&nbsp;деньги</span>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                <div class="pay__result">
+                  <p class="pay__result-sum js-pay-sum">3 200 ₽</p>
+                  <p class="pay__result-descr js-sum-descr">одна консультация онколога</p>
+                </div>
+        
+                <div class="qr-code">
+                  <p class="qr-code__caption">Нет карты под рукой?</p>
+                  <p class="qr-code__descr">Отсканируйте QR-код и переведите средства в приложении вашего банка без комиссии</p>
+                  <div class="qr-code__images">
+                    <img src="assets/img/qr-code.png" alt="">
+                    <img src="assets/img/qr-spb.png" alt="">
+                  </div>
+                  <p class="qr-code__service-caption">Сервисы и способы оплаты</p>
+                  <ul class="pay__systems qr-code__service d-flex">
+                    <li class="pay__systems-item">
+                      <svg width="74" height="24">
+                        <use xlink:href="assets/img/sprite.svg#visa-pay"></use>
+                      </svg>
+                    </li>
+                    <li class="pay__systems-item">
+                      <svg width="40" height="32">
+                        <use xlink:href="assets/img/sprite.svg#master-card-pay"></use>
+                      </svg>
+                    </li>
+                    <li class="pay__systems-item">
+                      <svg width="41" height="32">
+                        <use xlink:href="assets/img/sprite.svg#maestro-pay"></use>
+                      </svg>
+                    </li>
+                    <li class="pay__systems-item">
+                      <svg width="85" height="24">
+                        <use xlink:href="assets/img/sprite.svg#mir-pay"></use>
+                      </svg>
+                    </li>
+                    <li class="pay__systems-item">
+                      <svg width="57" height="32">
+                        <use xlink:href="assets/img/sprite.svg#spb-pay"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                  <ul class="pay__systems qr-code__service d-flex">
+                    <li class="pay__systems-item">
+                      <svg width="66" height="28">
+                        <use xlink:href="assets/img/sprite.svg#apple-pay"></use>
+                      </svg>
+                    </li>
+                    <li class="pay__systems-item">
+                      <svg width="71" height="28">
+                        <use xlink:href="assets/img/sprite.svg#google-pay"></use>
+                      </svg>
+                    </li>
+                    <li class="pay__systems-item">
+                      <svg width="79" height="28">
+                        <use xlink:href="assets/img/sprite.svg#sber-pay"></use>
+                      </svg>
+                    </li>
+                    <li class="pay__systems-item">
+                      <svg width="200" height="34">
+                        <use xlink:href="assets/img/sprite.svg#samsung-pay"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-5 pay-tabs__content tabs__content tabs__content_flex change-bank" data-target="transfer">
+              <div class="col-lg-5 col-xl-5">
+                <h3 class="change-bank__title">Выберие банк</h3>
+                <ul class="change-bank__nav">
+                  <li class="change-bank__item">
+                    <button class="btn-reset change-bank__btn is-active" data-path="sber">Сбер</button>
+                  </li>
+                  <li class="change-bank__item">
+                    <button class="btn-reset change-bank__btn" data-path="raiffaizen">Райффайзенбанк</button>
+                  </li>
+                  <li class="change-bank__item">
+                    <button class="btn-reset change-bank__btn" data-path="reco">Ресо</button>
+                  </li>
+                </ul>
+                <div class="change-bank__content requisite is-active" data-target="sber">
+                  <p class="requisite__caption">Реквизиты Фонда в ПАО «Сбербанк»</p>
+                  <ul class="requisite__list">
+                    <li class="requisite__item">Благотворительный фонд помощи взрослым онкобольным «Огромное сердце» Ольги
+                      Сергеенко
+                    </li>
+                    <li class="requisite__item"><span>ИНН:</span> 7703 4770 54</li>
+                    <li class="requisite__item"><span>КПП:</span> 770 501 001</li>
+                    <li class="requisite__item"><span>ОГРН:</span> 1197 7000 08780</li>
+                    <li class="requisite__item"><span>Расчетный счет:</span> 4070 3810 3000 2000 0058</li>
+                    <li class="requisite__item"><span>Корр. счет:</span> 3010 1810 4000 0000 0225</li>
+                    <li class="requisite__item"><span>БИК:</span> 044 525 225</li>
+                    <li class="requisite__item">ПАО Сбербанк России, г. Москва</li>
+                  </ul>
+                  <p class="requisite__caption">Назначение платежа</p>
+                  <p class="requisite__appointment">Благотворительный взнос на уставную деятельность фонда «Огромное сердце»</p>
+                </div>
+                <div class="change-bank__content requisite" data-target="raiffaizen">
+                  <p class="requisite__caption">Реквизиты Фонда в АО «Райффайзенбанк»</p>
+                  <ul class="requisite__list">
+                    <li class="requisite__item">Благотворительный фонд помощи взрослым онкобольным «Огромное сердце» Ольги
+                      Сергеенко
+                    </li>
+                    <li class="requisite__item"><span>ИНН:</span> 7703 4770 54</li>
+                    <li class="requisite__item"><span>КПП:</span> 770 501 001</li>
+                    <li class="requisite__item"><span>ОГРН:</span> 1197 7000 08780</li>
+                    <li class="requisite__item"><span>Расчетный счет:</span> 4070 3810 7000 0000 2720</li>
+                    <li class="requisite__item"><span>Корр. счет:</span> 3010 1810 2000 0000 0700</li>
+                    <li class="requisite__item"><span>БИК:</span> 044 525 700</li>
+                    <li class="requisite__item">АО «Райффайзенбанк», г. Москва</li>
+                  </ul>
+                  <p class="requisite__caption">Назначение платежа</p>
+                  <p class="requisite__appointment">Благотворительный взнос на уставную деятельность фонда «Огромное сердце»</p>
+                </div>
+                <div class="change-bank__content requisite" data-target="reco">
+                  <p class="requisite__caption">Реквизиты Фонда в АО «Ресо»</p>
+                  <ul class="requisite__list">
+                    <li class="requisite__item">Благотворительный фонд помощи взрослым онкобольным «Огромное сердце» Ольги
+                      Сергеенко
+                    </li>
+                    <li class="requisite__item"><span>ИНН:</span></li>
+                    <li class="requisite__item"><span>КПП:</span></li>
+                    <li class="requisite__item"><span>ОГРН:</span></li>
+                    <li class="requisite__item"><span>Расчетный счет:</span></li>
+                    <li class="requisite__item"><span>Корр. счет:</span></li>
+                    <li class="requisite__item"><span>БИК:</span></li>
+                    <li class="requisite__item">АО «Ресо», г. Москва</li>
+                  </ul>
+                  <p class="requisite__caption">Назначение платежа</p>
+                  <p class="requisite__appointment">Благотворительный взнос на уставную деятельность фонда «Огромное сердце»</p>
+                </div>
+              </div>
+              <div class="col-sm-5 col-md-5 col-lg-3 col-xl-3 order-sm-2 order-lg-0">
+                <div class="pay__decor">
+                  <picture>
+                    <source srcset="assets/img/design-arrow-vertical.png" media="(max-width: 600px)">
+                    <source srcset="assets/img/design-arrow-1200.png" media="(max-width: 1200px)">
+                    <img src="assets/img/design-arrow.png" alt="">
+                  </picture>
+        
+                  <span class="js-sum-decor">Станьте чуточку <br/> счастливее</span>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                <p class="change-bank__description">Услуги Фонда для всех, обратившихся к нему за помощью, оказываются
+                  бесплатно. Основной источник финансирования нашей деятельности — благотворительные пожертвования.</p>
+              </div>
+            </div>
+            <div class="row mt-5 pay-tabs__content tabs__content tabs__content_flex" data-target="sms">
+              <div class="col-lg-5 col-xl-5 pay-sms">
+                <p class="pay-sms__title">Отправьте сообщение на номер <span>900</span> с суммой пожертвования</p>
+                <p class="pay-sms__descr">Напишите в СМС слово «сердце» и через пробел сумму перевода.</p>
+                <p class="pay-sms__descr">Допустимый размер пожертвования — от 10 до 8 000 рублей в день. В случае,
+                  если вы хотите перевести сумму больше, воспользуйтесь другими способами пожертвования.</p>
+              </div>
+              <div class="col-sm-5 col-md-5 col-lg-3 col-xl-2 order-sm-2 order-lg-0">
+        
+              </div>
+              <div class="col-sm-6 col-md-6 col-lg-4 col-xl-5">
+                <div class="pay-sms__example sms-example">
+                  <p class="sms-example__caption">Правильно</p>
+                  <p class="sms-example__good">Сердце 100</p>
+                  <p class="sms-example__caption">Не правильно</p>
+                  <div class="sms-example__wr">
+                    <p class="sms-example__bad">❤️ 100</p>
+                    <p class="sms-example__bad">Сердце сто</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-5 pay-tabs__content tabs__content tabs__content_flex pay-fck" data-target="fsc">
+              <div class="col-lg-5 col-xl-5">
+                <h3 class="pay-fck__title">Фонд целевого капитала</h3>
+                <p class="pay-fck__descr">Это фонд, инвестиционные активы которого направлены на поддержку БФ «Огромное сердце»
+                  и достижение уставных целей БФ «Огромное сердце». Бесконечная работа вашего пожертвования позволит Фонду стать
+                  финансово устойчивее для помощи взрослым в борьбе с онкологическими заболеваниями по всей России</p>
+                <button class="pay-fck__btn btn-reset">Поддержать ФЦК «Огромное сердце»</button>
+              </div>
+              <div class="col-sm-5 col-md-5 col-lg-3 col-xl-3 order-sm-2 order-lg-0">
+                <div class="pay__decor">
+                  <picture>
+                    <source srcset="assets/img/design-arrow-vertical.png" media="(max-width: 600px)">
+                    <source srcset="assets/img/design-arrow-1200.png" media="(max-width: 1200px)">
+                    <img src="assets/img/design-arrow-fck.png" alt="">
+                  </picture>
+                  <span class="">Сделайте бесконечный вклад</span>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-5 pay-tabs__content tabs__content tabs__content_flex is-active" data-target="volunteer">
+              <div class="col-10">
+                <form action="#" method="" class="vol-form" id="vol-form">
+                  <h3 class="vol-form__title">Заполните анкету</h3>
+                  <div id="wizard">
+        
+                    <h2>Данные</h2>
+                    <section>
+                      <div class="vol-form__group">
+                        <label for="vol-fio" class="vol-form__label">
+                          ФИО
+                          <input type="text" id="vol-fio" name="vol-fio" placeholder="Иванов Иван Иванович"
+                                 class="vol-form__input required">
+                        </label>
+                        <label for="vol-date" class="vol-form__label">
+                          Дата рождения
+                          <input type="date" id="vol-date" name="vol-date" class="vol-form__input required">
+                        </label>
+                      </div>
+                      <label for="vol-city" class="vol-form__label">
+                        Город проживания
+                        <input type="text" id="vol-city" name="vol-city" placeholder="Начните вводить"
+                               class="vol-form__input required">
+                      </label>
+                    </section>
+        
+                    <h2>Контакты</h2>
+                    <section>
+                      <div class="vol-form__group">
+                        <label for="vol-phone" class="vol-form__label">
+                          Телефон
+                          <input type="number" id="vol-phone" name="vol-phone" placeholder="+7"
+                                 class="vol-form__input required">
+                        </label>
+                        <label for="vol-date" class="vol-form__label">
+                          Email
+                          <input type="email" id="vol-email" name="vol-email" placeholder="mail@greatheart.ru"
+                                 class="vol-form__input required">
+                        </label>
+                        <label for="vol-tlg" class="vol-form__label">
+                          Telegram <span>необязательно</span>
+                          <input type="text" id="vol-tlg" name="vol-tlg" class="vol-form__input">
+                        </label>
+                      </div>
+                      <div class="vol-form__group">
+                        <label for="vol-vk" class="vol-form__label">
+                          VK <span>необязательно</span>
+                          <input type="text" id="vol-vk" name="vol-vk" class="vol-form__input">
+                        </label>
+                        <label for="vol-inst" class="vol-form__label">
+                          Instagram <span>необязательно</span>
+                          <input type="text" id="vol-inst" name="vol-inst" class="vol-form__input">
+                        </label>
+                      </div>
+                    </section>
+        
+                    <h2>Работа и образование</h2>
+                    <section>
+                      <div class="vol-form__group">
+                        <label for="vol-work" class="vol-form__label">
+                          Место работы
+                          <input type="text" id="vol-work" name="vol-work" class="vol-form__input required">
+                        </label>
+                        <label for="vol-position" class="vol-form__label">
+                          Должность
+                          <input type="text" id="vol-position" name="vol-position" class="vol-form__input required">
+                        </label>
+                        <label for="vol-no-work" class="vol-form__label vol-form__label_check">
+                          <input type="checkbox" id="vol-no-work" name="vol-no-work" class="vol-form__checkbox">
+                          <span class="vol-form__check-pane"></span>
+                          Не работаю
+                        </label>
+                      </div>
+                      <div class="vol-form__group">
+                        <label for="vol-education" class="vol-form__label">
+                          Образование
+                          <input type="text" id="vol-education" name="vol-education" class="vol-form__input required">
+                        </label>
+                        <label for="vol-speciality" class="vol-form__label">
+                          Специальность <span>необязательно</span>
+                          <input type="text" id="vol-speciality" name="vol-speciality" class="vol-form__input">
+                        </label>
+                      </div>
+                    </section>
+        
+                    <h2>Доп. информация</h2>
+                    <section>
+                      <div class="vol-form__group">
+                        <label for="vol-accessibility" class="vol-form__label">
+                          Доступность
+                          <select type="text" id="vol-accessibility" name="vol-accessibility" class="vol-form__select required">
+                            <option value="">Без ограничений</option>
+                            <option value="">C ограничениями</option>
+                          </select>
+                        </label>
+                        <label for="vol-lang" class="vol-form__label">
+                          Владение языками
+                          <input type="text" id="vol-lang" name="vol-lang" class="vol-form__input required">
+                        </label>
+                      </div>
+                      <div class="vol-form__group">
+                        <label for="vol-hobbies" class="vol-form__label">
+                          Увлечения <span>необязательно</span>
+                          <input type="text" id="vol-hobbies" name="vol-hobbies" class="vol-form__input">
+                        </label>
+                        <label for="vol-want" class="vol-form__label">
+                          Чем хотите помогать?
+                          <input type="text" id="vol-want" name="vol-want" class="vol-form__input required">
+                        </label>
+                      </div>
+                    </section>
+                  </div>
+                </form>
+              </div>
+              <div class="col-2">
+                <div id="vol-progress" class="vol-progress" data-percent="5">
+                  <div id="myBar" class="vol-progress__bar diagram progress">
+                    <div class="piece left"></div>
+                    <div class="piece right"></div>
+                    <div class="text">
+                      <p class="vol-progress__title">Заполнено</p>
+                      <p class="vol-progress__percent">50%</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn-reset vol-form__submit" type="submit" disabled>Отправить анкету</button>
+              </div>
+            </div>
+          </div>
         </section>
-
-
+        
+        
     </main>
     <div class="js-stop-header"></div>
     <footer class="footer footer_desktop">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-lg-3 col-xl-3">
-                    <a href="" class="footer-logo d-flex">
-                        <svg class="footer-logo__img">
-                            <use xlink:href="assets/img/sprite.svg#footer-logo"></use>
-                        </svg>
-                        <p class="footer-logo__text">Огромное сердце</p>
-                    </a>
-                    <ul class="social footer__social">
-                        <li class="social__item">
-                            <a href="" class="social__link">
-                                <svg width="21" height="21">
-                                    <use xlink:href="assets/img/sprite.svg#icon-inst"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="social__item">
-                            <a href="" class="social__link">
-                                <svg width="12" height="21">
-                                    <use xlink:href="assets/img/sprite.svg#icon-fb"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="social__item">
-                            <a href="" class="social__link">
-                                <svg width="24" height="14">
-                                    <use xlink:href="assets/img/sprite.svg#icon-vk"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="social__item">
-                            <a href="" class="social__link">
-                                <svg width="24" height="16">
-                                    <use xlink:href="assets/img/sprite.svg#icon-yt"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="social__item">
-                            <a href="" class="social__link">
-                                <svg width="18" height="21">
-                                    <use xlink:href="assets/img/sprite.svg#icon-tt"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="social__item">
-                            <a href="" class="social__link">
-                                <svg width="18" height="21">
-                                    <use xlink:href="assets/img/sprite.svg#icon-ok"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="social__item">
-                            <a href="" class="social__link">
-                                <svg width="20" height="20">
-                                    <use xlink:href="assets/img/sprite.svg#icon-dz"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                    <p class="footer__copy">
-                        &copy; 2019–2021 БФ «Огромное сердце»
-                    </p>
-                </div>
-                <div class="col-6 col-sm-3 col-md-3 col-lg-2 col-xl-2 footer-nav_wr">
-                    <nav class="footer-nav ml-lg-4">
-                        <ul class="footer-nav__list">
-                            <li class="footer-nav__item">
-                                <a href="" class="footer-nav__link">Фонд</a>
-                            </li>
-                            <li class="footer-nav__item">
-                                <a href="" class="footer-nav__link">Виды помощи</a>
-                            </li>
-                            <li class="footer-nav__item">
-                                <a href="" class="footer-nav__link">Статьи</a>
-                            </li>
-                            <li class="footer-nav__item">
-                                <a href="" class="footer-nav__link">Отчеты</a>
-                            </li>
-                        </ul>
-                        <div class="desktop-only">
-                            <p class="footer__caption">По всем вопросам</p>
-                            <a href="mailto:info@greatheart.ru" class="footer__email">info@greatheart.ru</a>
-                        </div>
-                    </nav>
-                </div>
-                <div class="col-6 col-sm-3 col-md-3 col-lg-2 col-xl-2 offset-sm-0 offset-md-1 footer-nav_wr pl-0 pl-sm-1">
-                    <nav class="footer-nav">
-                        <ul class="footer-nav__list">
-                            <li class="footer-nav__item">
-                                <a href="" class="footer-nav__link">Волонтерам</a>
-                            </li>
-                            <li class="footer-nav__item">
-                                <a href="" class="footer-nav__link">Партнерам</a>
-                            </li>
-                            <li class="footer-nav__item">
-                                <a href="" class="footer-nav__link">Контакты</a>
-                            </li>
-                            <li class="footer-nav__item">
-                                <a href="" class="footer-nav__link">Частые вопросы</a>
-                            </li>
-                        </ul>
-                        <div class="desktop-only">
-                            <p class="footer__caption">Партнерам</p>
-                            <a href="mailto:partners@greatheart.ru" class="footer__email">partners@greatheart.ru</a>
-                        </div>
-                    </nav>
-                </div>
-                <div class="col-sm-5 col-md-4 col-lg-3 col-xl-3 offset-1 footer-contacts">
-                    <p class="footer__phone">Горячая линия <span>08:00–22:00 мск</span></p>
-                    <a href="tel:88003505785" class="footer__phone">8 800 350 57 85 <span>По всей России</span></a>
-                    <a href="tel:84951980899" class="footer__phone">8 495 198 08 99 <span>По Москве</span></a>
-                    <a href="tel:*5785" class="footer__phone footer__phone_pl"><i></i>5785 <span>Бесплатно с мобильного</span></a>
-                    <button class="btn-reset footer__btn">Написать президенту фонда</button>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-lg-3 col-xl-3">
+            <a href="" class="footer-logo d-flex">
+              <svg class="footer-logo__img">
+                <use xlink:href="assets/img/sprite.svg#footer-logo"></use>
+              </svg>
+              <p
+                class="footer-logo__text">Огромное сердце</p>
+            </a>
+            <ul class="social footer__social">
+              <li class="social__item">
+                <a href="" class="social__link">
+                  <svg width="21" height="21">
+                    <use xlink:href="assets/img/sprite.svg#icon-inst"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="" class="social__link">
+                  <svg width="12" height="21">
+                    <use xlink:href="assets/img/sprite.svg#icon-fb"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="" class="social__link">
+                  <svg width="24" height="14">
+                    <use xlink:href="assets/img/sprite.svg#icon-vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="" class="social__link">
+                  <svg width="24" height="16">
+                    <use xlink:href="assets/img/sprite.svg#icon-yt"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="" class="social__link">
+                  <svg width="18" height="21">
+                    <use xlink:href="assets/img/sprite.svg#icon-tt"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="" class="social__link">
+                  <svg width="18" height="21">
+                    <use xlink:href="assets/img/sprite.svg#icon-ok"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="" class="social__link">
+                  <svg width="20" height="20">
+                    <use xlink:href="assets/img/sprite.svg#icon-dz"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            <p class="footer__copy">
+              &copy; 2019–2021 БФ «Огромное сердце»
+            </p>
+          </div>
+          <div class="col-6 col-sm-3 col-md-3 col-lg-2 col-xl-2 footer-nav_wr">
+            <nav class="footer-nav ml-lg-4">
+              <ul class="footer-nav__list">
+                <li class="footer-nav__item">
+                  <a href="" class="footer-nav__link">Фонд</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="" class="footer-nav__link">Виды помощи</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="" class="footer-nav__link">Статьи</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="" class="footer-nav__link">Отчеты</a>
+                </li>
+              </ul>
+              <div class="desktop-only">
+                <p class="footer__caption">По всем вопросам</p>
+                <a href="mailto:info@greatheart.ru" class="footer__email">info@greatheart.ru</a>
+              </div>
+            </nav>
+          </div>
+          <div class="col-6 col-sm-3 col-md-3 col-lg-2 col-xl-2 offset-sm-0 offset-md-1 footer-nav_wr pl-0 pl-sm-1">
+            <nav class="footer-nav">
+              <ul class="footer-nav__list">
+                <li class="footer-nav__item">
+                  <a href="" class="footer-nav__link">Волонтерам</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="" class="footer-nav__link">Партнерам</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="" class="footer-nav__link">Контакты</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="" class="footer-nav__link">Частые вопросы</a>
+                </li>
+              </ul>
+              <div class="desktop-only">
+                <p class="footer__caption">Партнерам</p>
+                <a href="mailto:partners@greatheart.ru" class="footer__email">partners@greatheart.ru</a>
+              </div>
+            </nav>
+          </div>
+          <div class="col-sm-5 col-md-4 col-lg-3 col-xl-3 offset-1 footer-contacts">
+            <p class="footer__phone">Горячая линия <span>08:00–22:00 мск</span></p>
+            <a href="tel:88003505785" class="footer__phone">8 800 350 57 85 <span>По всей России</span></a>
+            <a href="tel:84951980899" class="footer__phone">8 495 198 08 99 <span>По Москве</span></a>
+            <a href="tel:*5785" class="footer__phone footer__phone_pl"><i></i>5785 <span>Бесплатно с мобильного</span></a>
+            <button class="btn-reset footer__btn">Написать президенту фонда</button>
+          </div>
         </div>
+      </div>
     </footer>
     <footer class="footer footer_mobile">
-        <div class="container">
-            <div class="row">
-                <div class="col-6 col-sm-3 col-md-3 col-lg-2 col-xl-2 footer-nav_wr">
-                    <nav class="footer-nav ml-lg-4">
-                        <ul class="footer-nav__list">
-                            <li class="footer-nav__item">
-                                <a href="" class="footer-nav__link">Фонд</a>
-                            </li>
-                            <li class="footer-nav__item">
-                                <a href="" class="footer-nav__link">Виды помощи</a>
-                            </li>
-                            <li class="footer-nav__item">
-                                <a href="" class="footer-nav__link">Статьи</a>
-                            </li>
-                            <li class="footer-nav__item">
-                                <a href="" class="footer-nav__link">Отчеты</a>
-                            </li>
-                        </ul>
-                        <div class="desktop-only">
-                            <p class="footer__caption">По всем вопросам</p>
-                            <a href="mailto:info@greatheart.ru" class="footer__email">info@greatheart.ru</a>
-                        </div>
-                    </nav>
-                </div>
-                <div class="col-6 col-sm-3 col-md-3 col-lg-2 col-xl-2 offset-sm-0 offset-md-1 footer-nav_wr pl-0 pl-sm-1">
-                    <nav class="footer-nav">
-                        <ul class="footer-nav__list">
-                            <li class="footer-nav__item">
-                                <a href="" class="footer-nav__link">Волонтерам</a>
-                            </li>
-                            <li class="footer-nav__item">
-                                <a href="" class="footer-nav__link">Партнерам</a>
-                            </li>
-                            <li class="footer-nav__item">
-                                <a href="" class="footer-nav__link">Контакты</a>
-                            </li>
-                            <li class="footer-nav__item">
-                                <a href="" class="footer-nav__link">Частые вопросы</a>
-                            </li>
-                        </ul>
-                        <div class="desktop-only">
-                            <p class="footer__caption">Партнерам</p>
-                            <a href="mailto:partners@greatheart.ru" class="footer__email">partners@greatheart.ru</a>
-                        </div>
-                    </nav>
-                </div>
-                <div class="col-sm-5 col-md-4 col-lg-3 col-xl-3 offset-1 footer-contacts">
-                    <p class="footer__phone">Горячая линия <span>08:00–22:00 мск</span></p>
-                    <a href="tel:88003505785" class="footer__phone">8 800 350 57 85 <span>По всей России</span></a>
-                    <a href="tel:84951980899" class="footer__phone">8 495 198 08 99 <span>По Москве</span></a>
-                    <a href="tel:*5785" class="footer__phone footer__phone_pl"><i></i>5785 <span>Бесплатно с мобильного</span></a>
-                    <button class="btn-reset footer__btn">Написать президенту фонда</button>
-                </div>
-                <div class="col-sm-6 col-md-6">
-                    <ul class="social footer__social">
-                        <li class="social__item">
-                            <a href="" class="social__link">
-                                <svg width="21" height="21">
-                                    <use xlink:href="assets/img/sprite.svg#icon-inst"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="social__item">
-                            <a href="" class="social__link">
-                                <svg width="12" height="21">
-                                    <use xlink:href="assets/img/sprite.svg#icon-fb"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="social__item">
-                            <a href="" class="social__link">
-                                <svg width="24" height="14">
-                                    <use xlink:href="assets/img/sprite.svg#icon-vk"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="social__item">
-                            <a href="" class="social__link">
-                                <svg width="24" height="16">
-                                    <use xlink:href="assets/img/sprite.svg#icon-yt"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="social__item">
-                            <a href="" class="social__link">
-                                <svg width="18" height="21">
-                                    <use xlink:href="assets/img/sprite.svg#icon-tt"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="social__item">
-                            <a href="" class="social__link">
-                                <svg width="18" height="21">
-                                    <use xlink:href="assets/img/sprite.svg#icon-ok"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="social__item">
-                            <a href="" class="social__link">
-                                <svg width="20" height="20">
-                                    <use xlink:href="assets/img/sprite.svg#icon-dz"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="mobile-only col-6">
-                    <p class="footer__caption">По всем вопросам</p>
-                    <a href="mailto:info@greatheart.ru" class="footer__email">info@greatheart.ru</a>
-                </div>
-                <div class="mobile-only col-6 pl-0 pl-sm-1">
-                    <p class="footer__caption">Партнерам</p>
-                    <a href="mailto:partners@greatheart.ru" class="footer__email">partners@greatheart.ru</a>
-                </div>
-                <div class="col-sm-6 col-md-6 desktop-only">
-                    <p class="footer__copy">
-                        &copy; 2019–2021 БФ «Огромное сердце»
-                    </p>
-                </div>
-                <div class="col-sm-4 col-md-4 offset-sm-4 col-lg-3 col-xl-3 mt-3">
-                    <a href="" class="footer-logo d-flex">
-                        <svg class="footer-logo__img">
-                            <use xlink:href="assets/img/sprite.svg#footer-logo"></use>
-                        </svg>
-                        <p class="footer-logo__text">Огромное сердце</p>
-                    </a>
-                </div>
-                <div class="col-sm-6 col-md-6 mobile-only">
-                    <p class="footer__copy">
-                        &copy; 2019–2021 БФ «Огромное сердце»
-                    </p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-6 col-sm-3 col-md-3 col-lg-2 col-xl-2 footer-nav_wr">
+            <nav class="footer-nav ml-lg-4">
+              <ul class="footer-nav__list">
+                <li class="footer-nav__item">
+                  <a href="" class="footer-nav__link">Фонд</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="" class="footer-nav__link">Виды помощи</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="" class="footer-nav__link">Статьи</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="" class="footer-nav__link">Отчеты</a>
+                </li>
+              </ul>
+              <div class="desktop-only">
+                <p class="footer__caption">По всем вопросам</p>
+                <a href="mailto:info@greatheart.ru" class="footer__email">info@greatheart.ru</a>
+              </div>
+            </nav>
+          </div>
+          <div class="col-6 col-sm-3 col-md-3 col-lg-2 col-xl-2 offset-sm-0 offset-md-1 footer-nav_wr pl-0 pl-sm-1">
+            <nav class="footer-nav">
+              <ul class="footer-nav__list">
+                <li class="footer-nav__item">
+                  <a href="" class="footer-nav__link">Волонтерам</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="" class="footer-nav__link">Партнерам</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="" class="footer-nav__link">Контакты</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="" class="footer-nav__link">Частые вопросы</a>
+                </li>
+              </ul>
+              <div class="desktop-only">
+                <p class="footer__caption">Партнерам</p>
+                <a href="mailto:partners@greatheart.ru" class="footer__email">partners@greatheart.ru</a>
+              </div>
+            </nav>
+          </div>
+          <div class="col-sm-5 col-md-4 col-lg-3 col-xl-3 offset-1 footer-contacts">
+            <p class="footer__phone">Горячая линия <span>08:00–22:00 мск</span></p>
+            <a href="tel:88003505785" class="footer__phone">8 800 350 57 85 <span>По всей России</span></a>
+            <a href="tel:84951980899" class="footer__phone">8 495 198 08 99 <span>По Москве</span></a>
+            <a href="tel:*5785" class="footer__phone footer__phone_pl"><i></i>5785 <span>Бесплатно с мобильного</span></a>
+            <button class="btn-reset footer__btn">Написать президенту фонда</button>
+          </div>
+          <div class="col-sm-6 col-md-6">
+            <ul class="social footer__social">
+              <li class="social__item">
+                <a href="" class="social__link">
+                  <svg width="21" height="21">
+                    <use xlink:href="assets/img/sprite.svg#icon-inst"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="" class="social__link">
+                  <svg width="12" height="21">
+                    <use xlink:href="assets/img/sprite.svg#icon-fb"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="" class="social__link">
+                  <svg width="24" height="14">
+                    <use xlink:href="assets/img/sprite.svg#icon-vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="" class="social__link">
+                  <svg width="24" height="16">
+                    <use xlink:href="assets/img/sprite.svg#icon-yt"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="" class="social__link">
+                  <svg width="18" height="21">
+                    <use xlink:href="assets/img/sprite.svg#icon-tt"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="" class="social__link">
+                  <svg width="18" height="21">
+                    <use xlink:href="assets/img/sprite.svg#icon-ok"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="" class="social__link">
+                  <svg width="20" height="20">
+                    <use xlink:href="assets/img/sprite.svg#icon-dz"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="mobile-only col-6">
+            <p class="footer__caption">По всем вопросам</p>
+            <a href="mailto:info@greatheart.ru" class="footer__email">info@greatheart.ru</a>
+          </div>
+          <div class="mobile-only col-6 pl-0 pl-sm-1">
+            <p class="footer__caption">Партнерам</p>
+            <a href="mailto:partners@greatheart.ru" class="footer__email">partners@greatheart.ru</a>
+          </div>
+          <div class="col-sm-6 col-md-6 desktop-only">
+            <p class="footer__copy">
+              &copy; 2019–2021 БФ «Огромное сердце»
+            </p>
+          </div>
+          <div class="col-sm-4 col-md-4 offset-sm-4 col-lg-3 col-xl-3 mt-3">
+            <a href="" class="footer-logo d-flex">
+              <svg class="footer-logo__img">
+                <use xlink:href="assets/img/sprite.svg#footer-logo"></use>
+              </svg>
+              <p
+                class="footer-logo__text">Огромное сердце</p>
+            </a>
+          </div>
+          <div class="col-sm-6 col-md-6 mobile-only">
+            <p class="footer__copy">
+              &copy; 2019–2021 БФ «Огромное сердце»
+            </p>
+          </div>
         </div>
+      </div>
     </footer>
-
+    
     <!-- build:js -->
     <script src="assets/vendor/js/jquery.js"></script>
     <script src="assets/vendor/js/popper.js"></script>
@@ -830,7 +856,7 @@
     <script src="assets/js/pay.js"></script>
     <script src="assets/js/app.js"></script>
     <!-- endbuild -->
-
+    
 </body>
 
 </html>
