@@ -360,7 +360,7 @@ bannerImg: assets/img/volunteers
                 <label for="vol-fio" class="vol-form__label">
                   ФИО
                   <input type="text" id="vol-fio" name="vol-fio" placeholder="Иванов Иван Иванович"
-                         class="vol-form__input required">
+                         class="vol-form__input required" >
                 </label>
                 <label for="vol-date" class="vol-form__label">
                   Дата рождения
@@ -438,7 +438,7 @@ bannerImg: assets/img/volunteers
               <div class="vol-form__group">
                 <label for="vol-accessibility" class="vol-form__label">
                   Доступность
-                  <select type="text" id="vol-accessibility" name="vol-accessibility" class="vol-form__select required">
+                  <select type="text" id="vol-accessibility" name="vol-accessibility" class="vol-form__select ">
                     <option value="">Без ограничений</option>
                     <option value="">C ограничениями</option>
                   </select>
@@ -458,8 +458,10 @@ bannerImg: assets/img/volunteers
                   <input type="text" id="vol-want" name="vol-want" class="vol-form__input required">
                 </label>
               </div>
+
             </section>
           </div>
+
         </form>
       </div>
       <div class="col-2">
@@ -469,10 +471,11 @@ bannerImg: assets/img/volunteers
             <div class="piece right"></div>
             <div class="text">
               <p class="vol-progress__title">Заполнено</p>
-              <p class="vol-progress__percent">50%</p>
+              <p class="vol-progress__percent">0%</p>
             </div>
           </div>
         </div>
+        <button class="btn-reset vol-form__submit" type="submit" disabled form="vol-form">Отправить анкету</button>
       </div>
     </div>
   </div>
