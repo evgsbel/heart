@@ -2,19 +2,21 @@
 
 console.log('main'); // tabs
 
-document.addEventListener('DOMContentLoaded', function () {
-  var tabsBtn = document.querySelectorAll('.tabs__btn');
-  tabsBtn.forEach(function (el) {
-    el.addEventListener('click', function (event) {
-      tabsBtn.forEach(function (tabsBtn) {
-        tabsBtn.classList.remove('is-active');
+$(document).ready(function () {
+  document.addEventListener('DOMContentLoaded', function () {
+    var tabsBtn = document.querySelectorAll('.tabs__btn');
+    tabsBtn.forEach(function (el) {
+      el.addEventListener('click', function (event) {
+        tabsBtn.forEach(function (tabsBtn) {
+          tabsBtn.classList.remove('is-active');
+        });
+        var path = event.currentTarget.dataset.path;
+        document.querySelectorAll('.tabs__content').forEach(function (tabContent) {
+          tabContent.classList.remove('is-active');
+        });
+        document.querySelector("[data-target=\"".concat(path, "\"]")).classList.add('is-active');
+        el.classList.add('is-active');
       });
-      var path = event.currentTarget.dataset.path;
-      document.querySelectorAll('.tabs__content').forEach(function (tabContent) {
-        tabContent.classList.remove('is-active');
-      });
-      document.querySelector("[data-target=\"".concat(path, "\"]")).classList.add('is-active');
-      el.classList.add('is-active');
     });
   });
 }); // hero slider

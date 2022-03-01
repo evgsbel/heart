@@ -312,9 +312,9 @@
     min-height: 55em;
   }
 }
-.wizard > .content > .body {
-  position: absolute;
-}
+//.wizard > .content > .body {
+//  position: absolute;
+//}
 
 .wizard > .actions > ul,
 .wizard > .steps > ul {
@@ -334,7 +334,7 @@
   margin-bottom: 40px;
 }
 .wizard > .steps > ul > li {
-  flex: 0 0 calc(100% / 4 - 3 * 8px);
+  flex: 1 1 calc(100% / 4 - 3 * 8px);
   padding-bottom: 16px;
   padding-left: 16px;
   line-height: 1.4;
@@ -390,9 +390,9 @@
     border-radius: 12px;
     font-weight: 600;
   }
-  //&:nth-child(3) {
-  //  visibility: hidden;
-  //}
+  &:nth-child(3) {
+    visibility: hidden;
+  }
 }
 
 .vol-form {
@@ -404,13 +404,22 @@
     @include r(1440) {
       flex-wrap: wrap;
     }
+    &_checkboxes {
+      flex-wrap: wrap;
+      gap: 0 32px;
+      label {
+        margin-top: 24px;
+        width: 30%;
+      }
+    }
   }
   &__label {
     position: relative;
     font-weight: 500;
     font-size: 1.25em;
     line-height: 1.4;
-    &_check {
+    &_check,
+    &_radio {
       margin-top: 50px;
       padding-left: 30px;
       cursor: pointer;
@@ -443,6 +452,40 @@
       font-size: 20px;
       line-height: 1.4;
       color: #6D7276;
+    }
+    &[type="number"]::-webkit-outer-spin-button,
+    &[type="number"]::-webkit-inner-spin-button {
+      display: none;
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    &[name="vol-day"],
+    &[name="vol-time"] {
+      min-width: 110px;
+      max-width: 110px;
+    }
+  }
+  &__textarea {
+    display: block;
+    margin-top: 16px;
+    padding: 18px 24px 12px;
+    font-size: 1.25em;
+    line-height: 1.4;
+    color: #000;
+    max-width: 1030px;
+    width: 100%;
+    height: 180px;
+    border: none;
+    background-color: #F5F8FB;
+    border-radius: 12px;
+    resize: none;
+    @include r(1024) {
+      max-width: 100%;
+    }
+    &::placeholder {
+      font-size: 20px;
+      line-height: 1.4;
+      color: #7B8086;
     }
   }
   &__checkbox {
@@ -480,6 +523,41 @@
       transition: opacity .3s ease-in-out;
     }
   }
+  &__radio {
+    display: none;
+    &:checked + .vol-form__radio-pane {
+      border-color: #127CE1;
+    }
+    &:checked + .vol-form__radio-pane::before {
+      opacity: 1;
+    }
+  }
+  &__radio-pane {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #6D7276;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: border-color .3s ease-in-out;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+      width: 10px;
+      height: 8px;
+      background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='4.99999' cy='5.00011' r='4.44444' fill='%23127CE1'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0;
+      transition: opacity .3s ease-in-out;
+    }
+  }
   &__select {
     display: block;
     background-image: url("data:image/svg+xml,%3Csvg width='17' height='8' viewBox='0 0 17 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L8.5 7L16 1' stroke='%23939CA5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A"), linear-gradient(to bottom, #F5F8FB 0%,#F5F8FB 100%);
@@ -501,6 +579,10 @@
     &::-ms-expand {
       display: none;
     }
+    &[name="vol-month"] {
+      min-width: 180px;
+      max-width: 180px;
+    }
   }
   &__submit {
     display: block;
@@ -519,6 +601,9 @@
       color: #AEC1D2;
       background-color: #F5F8FB;
     }
+  }
+  &__subcaption {
+    margin-bottom: -32px;
   }
 }
 
@@ -644,4 +729,203 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+
+.change-psychology {
+  &__list {
+    display: flex;
+    margin-top: 16px;
+    gap: 16px;
+  }
+  &__item {
+    cursor: pointer;
+    img {
+      padding: 3px;
+      border: 1px solid transparent;
+      border-radius: 50%;
+      transition: border-color .3s ease-in-out;
+    }
+    &.is-active,
+    &:hover {
+      img {
+        border-color: #2688E5;
+      }
+    }
+  }
+  &__wr {
+    gap: 32px;
+    margin-top: 60px;
+  }
+  &__info {
+    text-align: center;
+  }
+  &__image {
+    margin-bottom: 24px;
+  }
+  &__name {
+    font-weight: 500;
+    font-size: 1.375em;
+    line-height: 1.4;
+    color: #6D7276;
+  }
+  &__experience {
+    margin-top: 16px;
+    color: #6D7276;
+  }
+  &__overlay {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 20%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 72.73%);
+    opacity: .75;
+  }
+  &__description {
+    position: relative;
+    margin: 16px 0;
+    max-height: 125px;
+    overflow: hidden;
+    transition: max-height .3s ease-in-out;
+    &.is-open {
+      max-height: 100%;
+      .change-psychology__overlay {
+        background: none;
+      }
+    }
+    p {
+      font-size: 1.125em;
+      line-height: 1.4;
+    }
+  }
+  &__read-more {
+    margin-top: 16px;
+    font-size: 1.125em;
+    line-height: 1.4;
+    color: #2688E5;
+  }
+}
+
+
+.change-date {
+  margin-top: 24px;
+  &__caption {
+    margin-bottom: 16px;
+    font-size: 1.25em;
+    line-height: 1.4;
+  }
+  &__item {
+    margin-bottom: 24px;
+  }
+  &__label {
+    position: relative;
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+  &__input {
+    display: none;
+    &:checked + .change-date__pane {
+      border-color: #2688E5;
+    }
+  }
+  &__pane {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 104px;
+    height: 56px;
+    background-color: #F5F8FB;
+    border: 1px solid #F5F8FB;
+    border-radius: 12px;
+    font-size: 20px;
+    line-height: 1.4;
+    color: #000;
+    font-feature-settings: 'salt' on, 'ss01' on;
+    cursor: pointer;
+  }
+}
+
+// dropzone
+
+.dz-clickable {
+  position: relative;
+  margin-top: 16px;
+  min-height: 176px;
+  max-width: 1030px;
+  width: 100%;
+  border: none;
+  background-color: #F5F8FB;
+  border-radius: 16px;
+  @include r(1024) {
+    max-width: 100%;
+  }
+}
+.dz-message {
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #6D7276;
+  span {
+    color: #127CE1;
+  }
+}
+.dropzone.dz-started {
+  padding-bottom: 70px;
+  .dz-message {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 24px;
+    display: block;
+    margin: 0;
+  }
+}
+
+.dropzone .dz-preview.dz-error .dz-error-message,
+.dropzone .dz-preview.dz-error .dz-error-mark,
+.dropzone .dz-preview.dz-file-preview .dz-image,
+.dz-size {
+  display: none; // unlock in backend
+}
+
+.dropzone .dz-preview .dz-details {
+  padding: 0;
+  transform: translateY(-16px);
+  top: calc(100% - 16px);
+}
+
+.dropzone .dz-preview .dz-details .dz-filename span, .dropzone .dz-preview .dz-details .dz-size span {
+  font-size: 14px;
+  line-height: 1.2;
+  color: #000;
+}
+
+.dropzone .dz-preview {
+  margin: 0 0 8px;
+  padding: 16px;
+  position: relative;
+  width: 156px;
+  height: 90px;
+  background: #fff;
+  border-radius: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg width='30' height='32' viewBox='0 0 30 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M29 15.064L15.7622 28.4406C14.1405 30.0794 11.941 31 9.64752 31C7.35406 31 5.15452 30.0794 3.5328 28.4406C1.91108 26.8019 1 24.5793 1 22.2618C1 19.9442 1.91108 17.7216 3.5328 16.0829L16.7706 2.70625C17.8517 1.61376 19.3181 1 20.847 1C22.376 1 23.8424 1.61376 24.9235 2.70625C26.0047 3.79874 26.6121 5.28048 26.6121 6.82549C26.6121 8.37051 26.0047 9.85225 24.9235 10.9447L11.6714 24.3214C11.1308 24.8676 10.3976 25.1745 9.63312 25.1745C8.86863 25.1745 8.13545 24.8676 7.59488 24.3214C7.0543 23.7751 6.75061 23.0343 6.75061 22.2618C6.75061 21.4892 7.0543 20.7484 7.59488 20.2021L19.8243 7.85895' stroke='black' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center 16px;
+  display: inline-flex;
+  flex-direction: column;
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+.dropzone .dz-preview .dz-remove {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 10;
+  cursor: pointer;
+  svg {
+    cursor: pointer;
+  }
 }

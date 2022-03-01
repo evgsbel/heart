@@ -1,29 +1,28 @@
 console.log('main');
 
 // tabs
+$(document).ready(function () {
+  document.addEventListener('DOMContentLoaded', function () {
+    const tabsBtn = document.querySelectorAll('.tabs__btn');
+    tabsBtn.forEach(function (el) {
+      el.addEventListener('click', function (event) {
 
-document.addEventListener('DOMContentLoaded', function () {
-  const tabsBtn = document.querySelectorAll('.tabs__btn');
-  tabsBtn.forEach(function (el) {
-    el.addEventListener('click', function (event) {
+        tabsBtn.forEach(tabsBtn => {
+          tabsBtn.classList.remove('is-active');
+        });
 
-      tabsBtn.forEach(tabsBtn => {
-        tabsBtn.classList.remove('is-active');
+        const path = event.currentTarget.dataset.path;
+
+        document.querySelectorAll('.tabs__content').forEach(function (tabContent) {
+          tabContent.classList.remove('is-active');
+        });
+        document.querySelector(`[data-target="${path}"]`).classList.add('is-active');
+        el.classList.add('is-active');
+
       });
-
-      const path = event.currentTarget.dataset.path;
-
-      document.querySelectorAll('.tabs__content').forEach(function (tabContent) {
-        tabContent.classList.remove('is-active');
-      });
-      document.querySelector(`[data-target="${path}"]`).classList.add('is-active');
-      el.classList.add('is-active');
-
     });
   });
 });
-
-
 
 
 // hero slider
@@ -119,7 +118,6 @@ const swiperCommunity = new Swiper('.community__swiper', {
 });
 
 
-
 $(() => {
   function checkWidth() {
     let windowWidth = $('body').innerWidth()
@@ -148,8 +146,7 @@ $(() => {
         }
       });
 
-    }
-    else {
+    } else {
       // face slider
       const swiperFaceDesk = new Swiper('.face__swiper', {
         // Optional parameters
@@ -184,13 +181,12 @@ $(() => {
       });
     }
   }
-    checkWidth();
-    $(window).resize(function () {
-      checkWidth(); // проверит при изменении размера окна клиента
-    });
+
+  checkWidth();
+  $(window).resize(function () {
+    checkWidth(); // проверит при изменении размера окна клиента
+  });
 });
-
-
 
 
 // pay form
@@ -258,7 +254,6 @@ triggers.forEach(a => a.addEventListener('click', highlightLink));
 
 // From https://codepen.io/SJF
 triggers.forEach(a => a.addEventListener('focus', highlightLink));
-
 
 
 

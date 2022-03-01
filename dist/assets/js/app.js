@@ -269,7 +269,7 @@ $(function () {
   });
 
   function checkPercent() {
-    var inputsRequired = $('.vol-form__input.required');
+    var inputsRequired = $('.vol-form .required');
     var pEl = 100 / inputsRequired.length;
     var pAll = 0;
     var filled = true;
@@ -299,8 +299,8 @@ $(function () {
     }
 
     progressView();
-    $('.vol-progress__percent').html(pAll + '%');
-    $(".progress").attr("data-percent", "".concat(pAll));
+    $('.vol-progress__percent').html(Math.round(pAll) + '%');
+    $(".progress").attr("data-percent", "".concat(Math.round(pAll)));
 
     if (filled) {
       document.querySelector(".vol-form__submit").disabled = false;
@@ -329,5 +329,52 @@ $(function () {
     date: "Please enter a valid date.",
     dateISO: "Please enter a valid date (ISO).",
     number: "Please enter a valid number."
+  });
+}); // tabs
+
+$(document).ready(function () {
+  // document.addEventListener('DOMContentLoaded', function () {
+  var tabsBtn = document.querySelectorAll('.tabs__btn');
+  tabsBtn.forEach(function (el) {
+    el.addEventListener('click', function (event) {
+      tabsBtn.forEach(function (tabsBtn) {
+        tabsBtn.classList.remove('is-active');
+      });
+      var path = event.currentTarget.dataset.path;
+      document.querySelectorAll('.tabs__content').forEach(function (tabContent) {
+        tabContent.classList.remove('is-active');
+      });
+      document.querySelector("[data-target=\"".concat(path, "\"]")).classList.add('is-active');
+      el.classList.add('is-active');
+    });
+  }); //});
+}); // read more on psyhology form
+
+$(document).ready(function () {
+  var status = "less";
+  var toggleButton = document.querySelectorAll('.change-psychology__read-more');
+  toggleButton.forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      if (status == "less") {
+        el.previousElementSibling.classList.add('is-open');
+        el.innerText = "Скрыть";
+        status = "more";
+      } else if (status == "more") {
+        el.previousElementSibling.classList.remove('is-open');
+        el.innerText = "Читать полностью";
+        status = "less";
+      }
+    });
+  });
+}); // input files
+
+$(document).ready(function () {
+  var dropzone = new Dropzone("div.dropzone", {
+    url: "../files",
+    createImageThumbnails: false,
+    addRemoveLinks: true,
+    dictRemoveFile: "<svg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M13 1L1 13M1 1L13 13' stroke='#6D7276' stroke-linecap='round' stroke-linejoin='round'/></svg>"
   });
 });

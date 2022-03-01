@@ -58,6 +58,7 @@
     "@fancyapps/fancybox": "^3.5.7",
     "animate.css": "^4.1.1",
     "bootstrap": "^4.6.0",
+    "dropzone": "^6.0.0-beta.2",
     "gulp-svg-sprite": "^1.5.0",
     "jquery": "^3.6.0",
     "jquery-steps": "^1.1.0",

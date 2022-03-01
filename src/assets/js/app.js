@@ -7,6 +7,7 @@
 //   //endRemoveIf(production)
 // });
 
+
 // mobile menu
 $(() => {
   const btnMenu = document.querySelector('.burger');
@@ -44,7 +45,7 @@ var acc = document.getElementsByClassName("sub");
 var i;
 
 for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
+  acc[i].addEventListener("click", function () {
     this.classList.toggle("is-open");
   });
 }
@@ -54,7 +55,7 @@ if (CSS && 'paintWorklet' in CSS) CSS.paintWorklet.addModule('https://unpkg.com/
 
 // fixed header
 
-$(document).ready(function() {
+$(document).ready(function () {
 
   // function stickySidebar() {
   //   var scrollDistance = $(document).scrollTop(),
@@ -84,18 +85,18 @@ $(document).ready(function() {
   var header = $('.header'),
     scrollPrev = 0;
 
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     var scrolled = $(window).scrollTop();
 
-    if ( scrolled > 50 && scrolled > scrollPrev ) {
+    if (scrolled > 50 && scrolled > scrollPrev) {
       header.addClass('out header_fixed');
     } else {
       header.removeClass('out');
     }
-    if ( scrolled < 50) {
+    if (scrolled < 50) {
       header.removeClass('header_fixed');
     }
-      scrollPrev = scrolled;
+    scrollPrev = scrolled;
   });
 });
 
@@ -269,8 +270,9 @@ $(() => {
   })
 
   function checkPercent() {
-    let inputsRequired = $('.vol-form__input.required');
+    let inputsRequired = $('.vol-form .required');
     let pEl = 100 / inputsRequired.length;
+
     let pAll = 0;
     let filled = true;
     inputsRequired.attr('data', pEl);
@@ -281,21 +283,23 @@ $(() => {
         pAll += pEl
       }
     }
-    function progressView(){
+
+    function progressView() {
       let diagramBox = document.querySelectorAll('.diagram.progress');
       diagramBox.forEach((box) => {
         let deg = (360 * box.dataset.percent / 100) + 180;
-        if(box.dataset.percent >= 50){
+        if (box.dataset.percent >= 50) {
           box.classList.add('over_50');
-        }else{
+        } else {
           box.classList.remove('over_50');
         }
-        box.querySelector('.piece.right').style.transform = 'rotate('+deg+'deg)';
+        box.querySelector('.piece.right').style.transform = 'rotate(' + deg + 'deg)';
       });
     }
+
     progressView();
-    $('.vol-progress__percent').html(pAll + '%');
-    $(".progress").attr("data-percent", `${pAll}`)
+    $('.vol-progress__percent').html(Math.round(pAll) + '%');
+    $(".progress").attr("data-percent", `${Math.round(pAll)}`)
 
     if (filled) {
       document.querySelector(".vol-form__submit").disabled = false;
@@ -329,3 +333,57 @@ $(() => {
   });
 });
 
+// tabs
+$(document).ready(function () {
+  // document.addEventListener('DOMContentLoaded', function () {
+  var tabsBtn = document.querySelectorAll('.tabs__btn');
+  tabsBtn.forEach(function (el) {
+    el.addEventListener('click', function (event) {
+
+      tabsBtn.forEach(tabsBtn => {
+        tabsBtn.classList.remove('is-active');
+      });
+
+      var path = event.currentTarget.dataset.path;
+
+      document.querySelectorAll('.tabs__content').forEach(function (tabContent) {
+        tabContent.classList.remove('is-active');
+      });
+      document.querySelector(`[data-target="${path}"]`).classList.add('is-active');
+      el.classList.add('is-active');
+
+    });
+  });
+  //});
+});
+
+// read more on psyhology form
+$(document).ready(function () {
+  var status = "less";
+  let toggleButton = document.querySelectorAll('.change-psychology__read-more');
+  toggleButton.forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault()
+      if (status == "less") {
+      el.previousElementSibling.classList.add('is-open')
+      el.innerText = "Скрыть";
+      status = "more";
+    } else if (status == "more") {
+      el.previousElementSibling.classList.remove('is-open');
+      el.innerText = "Читать полностью";
+      status = "less"
+    }
+    })
+  })
+});
+
+
+// input files
+$(document).ready(function () {
+  const dropzone = new Dropzone("div.dropzone", {
+    url: "../files",
+    createImageThumbnails: false,
+    addRemoveLinks: true,
+    dictRemoveFile: "<svg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M13 1L1 13M1 1L13 13' stroke='#6D7276' stroke-linecap='round' stroke-linejoin='round'/></svg>"
+  });
+})

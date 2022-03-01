@@ -11,9 +11,11 @@
     <link rel="stylesheet" href="assets/vendor/css/animate.css">
     <link rel="stylesheet" href="assets/vendor/css/swiper.min.css">
     <link rel="stylesheet" href="assets/vendor/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="assets/vendor/css/dropzone.css">
 		<link rel="stylesheet" href="assets/css/main.css">
 		<!-- endbuild -->
     <link rel="stylesheet" href="assets/css/rtl.css">
+  <script src="assets/vendor/js/dropzone-min.js"></script>
 </head>
 
 <body class="is-lawyer-page is-inner-page">
@@ -746,6 +748,102 @@
           </div>
         </section>
         
+        <section id="volunteering-questionnaire" class="volunteering-questionnaire">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10">
+                <form action="#" method="" class="vol-form" id="vol-form">
+                  <h2 class="title-h2 vol-form__title">Оформление заявки</h2>
+                  <div id="wizard">
+        
+                    <h2>Данные</h2>
+                    <section>
+                      <div class="vol-form__group">
+                        <label for="vol-fio" class="vol-form__label">
+                          ФИО
+                          <input type="text" id="vol-fio" name="vol-fio" placeholder="Иванов Иван Иванович"
+                                 class="vol-form__input required">
+                        </label>
+                        <label for="vol-date" class="vol-form__label">
+                          Дата рождения
+                          <input type="date" id="vol-date" name="vol-date" class="vol-form__input required">
+                        </label>
+                      </div>
+                      <div class="vol-form__group">
+                        <label for="diagnosis" class="vol-form__label">
+                          Диагноз
+                          <input type="text" id="diagnosis" name="diagnosis" placeholder="Ваш или вашего близкого"
+                                 class="vol-form__input required">
+                        </label>
+                        <label for="vol-accessibility" class="vol-form__label">
+                          Состояние
+                          <select type="text" id="vol-accessibility" name="vol-accessibility" class="vol-form__select">
+                            <option value="" selected>Выберите</option>
+                            <option value="">Без ограничений</option>
+                            <option value="">C ограничениями</option>
+                          </select>
+                        </label>
+                      </div>
+                    </section>
+        
+                    <h2>Контакты</h2>
+                    <section>
+                      <div class="vol-form__group">
+                        <label for="vol-phone" class="vol-form__label">
+                          Телефон
+                          <input type="number" id="vol-phone" name="vol-phone" placeholder="+7"
+                                 class="vol-form__input required">
+                        </label>
+                        <label for="vol-date" class="vol-form__label">
+                          Email
+                          <input type="email" id="vol-email" name="vol-email" placeholder="mail@greatheart.ru"
+                                 class="vol-form__input required">
+                        </label>
+                      </div>
+                    </section>
+        
+                    <h2>Основной вопрос</h2>
+                    <section>
+                      <div class="vol-form__group">
+                        <label for="vol-question" class="vol-form__label">
+                          Основной вопрос
+                          <input type="text" id="vol-question" name="vol-question" class="vol-form__input required"  placeholder="Опишите в двух словах">
+                        </label>
+                      </div>
+                      <div class="vol-form__group">
+                        <label for="vol-comment" class="vol-form__label w-100">
+                          Комментарий
+                          <textarea name="vol-comment" id="vol-comment" class="vol-form__textarea required"
+                                    placeholder="Опишите подробно вашу ситуацию, чтобы мы смогли в кратчайшие сроки отреагировать на ваш запрос (подобрать подходящего специалиста, подготовить полный ответ)" required></textarea>
+                        </label>
+                      </div>
+                      <p class="vol-form__label">Любые документы <span>необязательно</span></p>
+                      <div class="div vol-form__group">
+                        <div class="dropzone">
+                          <p class="dz-message">Перетащите или <span>выберите файлы</span></p>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </form>
+              </div>
+              <div class="col-2">
+                <div id="vol-progress" class="vol-progress" data-percent="5">
+                  <div id="myBar" class="vol-progress__bar diagram progress">
+                    <div class="piece left"></div>
+                    <div class="piece right"></div>
+                    <div class="text">
+                      <p class="vol-progress__title">Заполнено</p>
+                      <p class="vol-progress__percent">0%</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn-reset vol-form__submit" type="submit" disabled form="vol-form">Оставить заявку</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        
     </main>
     <div class="js-stop-header"></div>
     <footer class="footer footer_desktop">
@@ -1087,6 +1185,7 @@
     <script src="assets/vendor/js/jquery.fancybox.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.js"></script>
     <script src="assets/vendor/js/jquery.steps.min.js"></script>
+    
     <!--<script src="assets/js/util/autoPadding.js"></script>-->
     <script src="assets/js/util/crossPlatform.js"></script>
     <script src="assets/js/wards.js"></script>

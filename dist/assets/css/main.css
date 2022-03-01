@@ -21592,11 +21592,6 @@ h3 {
   }
 }
 
-/* line 315, src/assets/scss/pages/_pay.scss */
-.wizard > .content > .body {
-  position: absolute;
-}
-
 /* line 319, src/assets/scss/pages/_pay.scss */
 .wizard > .actions > ul,
 .wizard > .steps > ul {
@@ -21632,9 +21627,9 @@ h3 {
 
 /* line 336, src/assets/scss/pages/_pay.scss */
 .wizard > .steps > ul > li {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 calc(100% / 4 - 3 * 8px);
-          flex: 0 0 calc(100% / 4 - 3 * 8px);
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 calc(100% / 4 - 3 * 8px);
+          flex: 1 1 calc(100% / 4 - 3 * 8px);
   padding-bottom: 16px;
   padding-left: 16px;
   line-height: 1.4;
@@ -21729,6 +21724,11 @@ h3 {
   font-weight: 600;
 }
 
+/* line 393, src/assets/scss/pages/_pay.scss */
+.wizard > .actions > ul > li:nth-child(3) {
+  visibility: hidden;
+}
+
 /* line 399, src/assets/scss/pages/_pay.scss */
 .vol-form__group {
   display: -webkit-box;
@@ -21749,7 +21749,20 @@ h3 {
   }
 }
 
-/* line 408, src/assets/scss/pages/_pay.scss */
+/* line 407, src/assets/scss/pages/_pay.scss */
+.vol-form__group_checkboxes {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0 32px;
+}
+
+/* line 410, src/assets/scss/pages/_pay.scss */
+.vol-form__group_checkboxes label {
+  margin-top: 24px;
+  width: 30%;
+}
+
+/* line 416, src/assets/scss/pages/_pay.scss */
 .vol-form__label {
   position: relative;
   font-weight: 500;
@@ -21757,26 +21770,26 @@ h3 {
   line-height: 1.4;
 }
 
-/* line 413, src/assets/scss/pages/_pay.scss */
-.vol-form__label_check {
+/* line 421, src/assets/scss/pages/_pay.scss */
+.vol-form__label_check, .vol-form__label_radio {
   margin-top: 50px;
   padding-left: 30px;
   cursor: pointer;
 }
 
-/* line 418, src/assets/scss/pages/_pay.scss */
+/* line 427, src/assets/scss/pages/_pay.scss */
 .vol-form__label span {
   font-size: 16px;
   color: #939ca5;
 }
 
-/* line 422, src/assets/scss/pages/_pay.scss */
+/* line 431, src/assets/scss/pages/_pay.scss */
 .vol-form__label span.vol-form__error {
   color: #ff3111;
   font-size: 14px;
 }
 
-/* line 427, src/assets/scss/pages/_pay.scss */
+/* line 436, src/assets/scss/pages/_pay.scss */
 .vol-form__input {
   display: block;
   margin-top: 16px;
@@ -21792,13 +21805,13 @@ h3 {
 }
 
 @media only screen and (max-width: 1200px) {
-  /* line 427, src/assets/scss/pages/_pay.scss */
+  /* line 436, src/assets/scss/pages/_pay.scss */
   .vol-form__input {
     min-width: auto;
   }
 }
 
-/* line 442, src/assets/scss/pages/_pay.scss */
+/* line 451, src/assets/scss/pages/_pay.scss */
 .vol-form__input::-webkit-input-placeholder {
   font-size: 20px;
   line-height: 1.4;
@@ -21825,22 +21838,86 @@ h3 {
   color: #6D7276;
 }
 
-/* line 448, src/assets/scss/pages/_pay.scss */
+/* line 456, src/assets/scss/pages/_pay.scss */
+.vol-form__input[type="number"]::-webkit-outer-spin-button, .vol-form__input[type="number"]::-webkit-inner-spin-button {
+  display: none;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* line 462, src/assets/scss/pages/_pay.scss */
+.vol-form__input[name="vol-day"], .vol-form__input[name="vol-time"] {
+  min-width: 110px;
+  max-width: 110px;
+}
+
+/* line 468, src/assets/scss/pages/_pay.scss */
+.vol-form__textarea {
+  display: block;
+  margin-top: 16px;
+  padding: 18px 24px 12px;
+  font-size: 1.25em;
+  line-height: 1.4;
+  color: #000;
+  max-width: 1030px;
+  width: 100%;
+  height: 180px;
+  border: none;
+  background-color: #F5F8FB;
+  border-radius: 12px;
+  resize: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  /* line 468, src/assets/scss/pages/_pay.scss */
+  .vol-form__textarea {
+    max-width: 100%;
+  }
+}
+
+/* line 485, src/assets/scss/pages/_pay.scss */
+.vol-form__textarea::-webkit-input-placeholder {
+  font-size: 20px;
+  line-height: 1.4;
+  color: #7B8086;
+}
+.vol-form__textarea::-moz-placeholder {
+  font-size: 20px;
+  line-height: 1.4;
+  color: #7B8086;
+}
+.vol-form__textarea:-ms-input-placeholder {
+  font-size: 20px;
+  line-height: 1.4;
+  color: #7B8086;
+}
+.vol-form__textarea::-ms-input-placeholder {
+  font-size: 20px;
+  line-height: 1.4;
+  color: #7B8086;
+}
+.vol-form__textarea::placeholder {
+  font-size: 20px;
+  line-height: 1.4;
+  color: #7B8086;
+}
+
+/* line 491, src/assets/scss/pages/_pay.scss */
 .vol-form__checkbox {
   display: none;
 }
 
-/* line 450, src/assets/scss/pages/_pay.scss */
+/* line 493, src/assets/scss/pages/_pay.scss */
 .vol-form__checkbox:checked + .vol-form__check-pane {
   border-color: #127CE1;
 }
 
-/* line 453, src/assets/scss/pages/_pay.scss */
+/* line 496, src/assets/scss/pages/_pay.scss */
 .vol-form__checkbox:checked + .vol-form__check-pane::before {
   opacity: 1;
 }
 
-/* line 457, src/assets/scss/pages/_pay.scss */
+/* line 500, src/assets/scss/pages/_pay.scss */
 .vol-form__check-pane {
   position: absolute;
   top: 50%;
@@ -21855,7 +21932,7 @@ h3 {
   transition: border-color .3s ease-in-out;
 }
 
-/* line 467, src/assets/scss/pages/_pay.scss */
+/* line 510, src/assets/scss/pages/_pay.scss */
 .vol-form__check-pane::before {
   content: '';
   position: absolute;
@@ -21873,7 +21950,55 @@ h3 {
   transition: opacity .3s ease-in-out;
 }
 
-/* line 483, src/assets/scss/pages/_pay.scss */
+/* line 526, src/assets/scss/pages/_pay.scss */
+.vol-form__radio {
+  display: none;
+}
+
+/* line 528, src/assets/scss/pages/_pay.scss */
+.vol-form__radio:checked + .vol-form__radio-pane {
+  border-color: #127CE1;
+}
+
+/* line 531, src/assets/scss/pages/_pay.scss */
+.vol-form__radio:checked + .vol-form__radio-pane::before {
+  opacity: 1;
+}
+
+/* line 535, src/assets/scss/pages/_pay.scss */
+.vol-form__radio-pane {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #6D7276;
+  border-radius: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: border-color .3s ease-in-out;
+  transition: border-color .3s ease-in-out;
+}
+
+/* line 545, src/assets/scss/pages/_pay.scss */
+.vol-form__radio-pane::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 10px;
+  height: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='4.99999' cy='5.00011' r='4.44444' fill='%23127CE1'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  -webkit-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+}
+
+/* line 561, src/assets/scss/pages/_pay.scss */
 .vol-form__select {
   display: block;
   background-image: url("data:image/svg+xml,%3Csvg width='17' height='8' viewBox='0 0 17 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L8.5 7L16 1' stroke='%23939CA5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A"), -webkit-gradient(linear, left top, left bottom, from(#F5F8FB), to(#F5F8FB));
@@ -21895,12 +22020,18 @@ h3 {
   max-width: 100%;
 }
 
-/* line 501, src/assets/scss/pages/_pay.scss */
+/* line 579, src/assets/scss/pages/_pay.scss */
 .vol-form__select::-ms-expand {
   display: none;
 }
 
-/* line 505, src/assets/scss/pages/_pay.scss */
+/* line 582, src/assets/scss/pages/_pay.scss */
+.vol-form__select[name="vol-month"] {
+  min-width: 180px;
+  max-width: 180px;
+}
+
+/* line 587, src/assets/scss/pages/_pay.scss */
 .vol-form__submit {
   display: block;
   padding: 16px 10px 20px;
@@ -21914,19 +22045,24 @@ h3 {
 }
 
 @media only screen and (max-width: 768px) {
-  /* line 505, src/assets/scss/pages/_pay.scss */
+  /* line 587, src/assets/scss/pages/_pay.scss */
   .vol-form__submit {
     font-size: 18px;
   }
 }
 
-/* line 518, src/assets/scss/pages/_pay.scss */
+/* line 600, src/assets/scss/pages/_pay.scss */
 .vol-form__submit:disabled {
   color: #AEC1D2;
   background-color: #F5F8FB;
 }
 
-/* line 525, src/assets/scss/pages/_pay.scss */
+/* line 605, src/assets/scss/pages/_pay.scss */
+.vol-form__subcaption {
+  margin-bottom: -32px;
+}
+
+/* line 610, src/assets/scss/pages/_pay.scss */
 .vol-progress {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -21950,7 +22086,7 @@ h3 {
 }
 
 @media only screen and (max-width: 1366px) {
-  /* line 525, src/assets/scss/pages/_pay.scss */
+  /* line 610, src/assets/scss/pages/_pay.scss */
   .vol-progress {
     width: 200px;
     height: 200px;
@@ -21958,13 +22094,13 @@ h3 {
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 525, src/assets/scss/pages/_pay.scss */
+  /* line 610, src/assets/scss/pages/_pay.scss */
   .vol-progress {
     display: none;
   }
 }
 
-/* line 544, src/assets/scss/pages/_pay.scss */
+/* line 629, src/assets/scss/pages/_pay.scss */
 .vol-progress__title {
   display: block;
   margin-bottom: 4px;
@@ -21973,7 +22109,7 @@ h3 {
   color: #6D7276;
 }
 
-/* line 551, src/assets/scss/pages/_pay.scss */
+/* line 636, src/assets/scss/pages/_pay.scss */
 .vol-progress__percent {
   font-weight: 500;
   font-size: 24px;
@@ -21981,7 +22117,7 @@ h3 {
   color: #6D7276;
 }
 
-/* line 559, src/assets/scss/pages/_pay.scss */
+/* line 644, src/assets/scss/pages/_pay.scss */
 .diagram {
   width: 240px;
   height: 240px;
@@ -21992,14 +22128,14 @@ h3 {
 }
 
 @media only screen and (max-width: 1366px) {
-  /* line 559, src/assets/scss/pages/_pay.scss */
+  /* line 644, src/assets/scss/pages/_pay.scss */
   .diagram {
     width: 200px;
     height: 200px;
   }
 }
 
-/* line 572, src/assets/scss/pages/_pay.scss */
+/* line 657, src/assets/scss/pages/_pay.scss */
 .diagram::before {
   content: '';
   display: block;
@@ -22014,7 +22150,7 @@ h3 {
   opacity: 1;
 }
 
-/* line 586, src/assets/scss/pages/_pay.scss */
+/* line 671, src/assets/scss/pages/_pay.scss */
 .diagram .piece {
   width: 100%;
   height: 100%;
@@ -22024,7 +22160,7 @@ h3 {
   position: absolute;
 }
 
-/* line 595, src/assets/scss/pages/_pay.scss */
+/* line 680, src/assets/scss/pages/_pay.scss */
 .diagram .piece::before {
   content: '';
   display: block;
@@ -22033,7 +22169,7 @@ h3 {
   height: 100%;
 }
 
-/* line 603, src/assets/scss/pages/_pay.scss */
+/* line 688, src/assets/scss/pages/_pay.scss */
 .diagram .piece.left {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
@@ -22042,13 +22178,13 @@ h3 {
   /* only FireFox < 75.0v (fix bug)*/
 }
 
-/* line 609, src/assets/scss/pages/_pay.scss */
+/* line 694, src/assets/scss/pages/_pay.scss */
 .diagram.over_50 .piece.left {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-/* line 613, src/assets/scss/pages/_pay.scss */
+/* line 698, src/assets/scss/pages/_pay.scss */
 .diagram .piece.right {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -22057,28 +22193,28 @@ h3 {
   /* only FireFox < 75.0v (fix bug)*/
 }
 
-/* line 619, src/assets/scss/pages/_pay.scss */
+/* line 704, src/assets/scss/pages/_pay.scss */
 .diagram.over_50 .piece.right {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
 
-/* line 623, src/assets/scss/pages/_pay.scss */
+/* line 708, src/assets/scss/pages/_pay.scss */
 .diagram .left::before {
   background: #EDF4FA;
 }
 
-/* line 627, src/assets/scss/pages/_pay.scss */
+/* line 712, src/assets/scss/pages/_pay.scss */
 .diagram.over_50 .left::before {
   background: #2688E5;
 }
 
-/* line 630, src/assets/scss/pages/_pay.scss */
+/* line 715, src/assets/scss/pages/_pay.scss */
 .diagram .right::before {
   background: #EDF4FA;
 }
 
-/* line 634, src/assets/scss/pages/_pay.scss */
+/* line 719, src/assets/scss/pages/_pay.scss */
 .diagram .text {
   position: absolute;
   z-index: 3;
@@ -22101,6 +22237,280 @@ h3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+/* line 736, src/assets/scss/pages/_pay.scss */
+.change-psychology__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 16px;
+  gap: 16px;
+}
+
+/* line 741, src/assets/scss/pages/_pay.scss */
+.change-psychology__item {
+  cursor: pointer;
+}
+
+/* line 743, src/assets/scss/pages/_pay.scss */
+.change-psychology__item img {
+  padding: 3px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  -webkit-transition: border-color .3s ease-in-out;
+  transition: border-color .3s ease-in-out;
+}
+
+/* line 751, src/assets/scss/pages/_pay.scss */
+.change-psychology__item.is-active img, .change-psychology__item:hover img {
+  border-color: #2688E5;
+}
+
+/* line 756, src/assets/scss/pages/_pay.scss */
+.change-psychology__wr {
+  gap: 32px;
+  margin-top: 60px;
+}
+
+/* line 760, src/assets/scss/pages/_pay.scss */
+.change-psychology__info {
+  text-align: center;
+}
+
+/* line 763, src/assets/scss/pages/_pay.scss */
+.change-psychology__image {
+  margin-bottom: 24px;
+}
+
+/* line 766, src/assets/scss/pages/_pay.scss */
+.change-psychology__name {
+  font-weight: 500;
+  font-size: 1.375em;
+  line-height: 1.4;
+  color: #6D7276;
+}
+
+/* line 772, src/assets/scss/pages/_pay.scss */
+.change-psychology__experience {
+  margin-top: 16px;
+  color: #6D7276;
+}
+
+/* line 776, src/assets/scss/pages/_pay.scss */
+.change-psychology__overlay {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 20%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(72.73%, #FFFFFF));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 72.73%);
+  opacity: .75;
+}
+
+/* line 785, src/assets/scss/pages/_pay.scss */
+.change-psychology__description {
+  position: relative;
+  margin: 16px 0;
+  max-height: 125px;
+  overflow: hidden;
+  -webkit-transition: max-height .3s ease-in-out;
+  transition: max-height .3s ease-in-out;
+}
+
+/* line 791, src/assets/scss/pages/_pay.scss */
+.change-psychology__description.is-open {
+  max-height: 100%;
+}
+
+/* line 793, src/assets/scss/pages/_pay.scss */
+.change-psychology__description.is-open .change-psychology__overlay {
+  background: none;
+}
+
+/* line 797, src/assets/scss/pages/_pay.scss */
+.change-psychology__description p {
+  font-size: 1.125em;
+  line-height: 1.4;
+}
+
+/* line 802, src/assets/scss/pages/_pay.scss */
+.change-psychology__read-more {
+  margin-top: 16px;
+  font-size: 1.125em;
+  line-height: 1.4;
+  color: #2688E5;
+}
+
+/* line 811, src/assets/scss/pages/_pay.scss */
+.change-date {
+  margin-top: 24px;
+}
+
+/* line 813, src/assets/scss/pages/_pay.scss */
+.change-date__caption {
+  margin-bottom: 16px;
+  font-size: 1.25em;
+  line-height: 1.4;
+}
+
+/* line 818, src/assets/scss/pages/_pay.scss */
+.change-date__item {
+  margin-bottom: 24px;
+}
+
+/* line 821, src/assets/scss/pages/_pay.scss */
+.change-date__label {
+  position: relative;
+}
+
+/* line 823, src/assets/scss/pages/_pay.scss */
+.change-date__label:not(:last-child) {
+  margin-right: 16px;
+}
+
+/* line 827, src/assets/scss/pages/_pay.scss */
+.change-date__input {
+  display: none;
+}
+
+/* line 829, src/assets/scss/pages/_pay.scss */
+.change-date__input:checked + .change-date__pane {
+  border-color: #2688E5;
+}
+
+/* line 833, src/assets/scss/pages/_pay.scss */
+.change-date__pane {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 104px;
+  height: 56px;
+  background-color: #F5F8FB;
+  border: 1px solid #F5F8FB;
+  border-radius: 12px;
+  font-size: 20px;
+  line-height: 1.4;
+  color: #000;
+  -webkit-font-feature-settings: 'salt' on, 'ss01' on;
+          font-feature-settings: 'salt' on, 'ss01' on;
+  cursor: pointer;
+}
+
+/* line 852, src/assets/scss/pages/_pay.scss */
+.dz-clickable {
+  position: relative;
+  margin-top: 16px;
+  min-height: 176px;
+  max-width: 1030px;
+  width: 100%;
+  border: none;
+  background-color: #F5F8FB;
+  border-radius: 16px;
+}
+
+@media only screen and (max-width: 1024px) {
+  /* line 852, src/assets/scss/pages/_pay.scss */
+  .dz-clickable {
+    max-width: 100%;
+  }
+}
+
+/* line 865, src/assets/scss/pages/_pay.scss */
+.dz-message {
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #6D7276;
+}
+
+/* line 869, src/assets/scss/pages/_pay.scss */
+.dz-message span {
+  color: #127CE1;
+}
+
+/* line 873, src/assets/scss/pages/_pay.scss */
+.dropzone.dz-started {
+  padding-bottom: 70px;
+}
+
+/* line 875, src/assets/scss/pages/_pay.scss */
+.dropzone.dz-started .dz-message {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 24px;
+  display: block;
+  margin: 0;
+}
+
+/* line 885, src/assets/scss/pages/_pay.scss */
+.dropzone .dz-preview.dz-error .dz-error-message,
+.dropzone .dz-preview.dz-error .dz-error-mark,
+.dropzone .dz-preview.dz-file-preview .dz-image,
+.dz-size {
+  display: none;
+}
+
+/* line 892, src/assets/scss/pages/_pay.scss */
+.dropzone .dz-preview .dz-details {
+  padding: 0;
+  -webkit-transform: translateY(-16px);
+          transform: translateY(-16px);
+  top: calc(100% - 16px);
+}
+
+/* line 898, src/assets/scss/pages/_pay.scss */
+.dropzone .dz-preview .dz-details .dz-filename span, .dropzone .dz-preview .dz-details .dz-size span {
+  font-size: 14px;
+  line-height: 1.2;
+  color: #000;
+}
+
+/* line 904, src/assets/scss/pages/_pay.scss */
+.dropzone .dz-preview {
+  margin: 0 0 8px;
+  padding: 16px;
+  position: relative;
+  width: 156px;
+  height: 90px;
+  background: #fff;
+  border-radius: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg width='30' height='32' viewBox='0 0 30 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M29 15.064L15.7622 28.4406C14.1405 30.0794 11.941 31 9.64752 31C7.35406 31 5.15452 30.0794 3.5328 28.4406C1.91108 26.8019 1 24.5793 1 22.2618C1 19.9442 1.91108 17.7216 3.5328 16.0829L16.7706 2.70625C17.8517 1.61376 19.3181 1 20.847 1C22.376 1 23.8424 1.61376 24.9235 2.70625C26.0047 3.79874 26.6121 5.28048 26.6121 6.82549C26.6121 8.37051 26.0047 9.85225 24.9235 10.9447L11.6714 24.3214C11.1308 24.8676 10.3976 25.1745 9.63312 25.1745C8.86863 25.1745 8.13545 24.8676 7.59488 24.3214C7.0543 23.7751 6.75061 23.0343 6.75061 22.2618C6.75061 21.4892 7.0543 20.7484 7.59488 20.2021L19.8243 7.85895' stroke='black' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center 16px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* line 917, src/assets/scss/pages/_pay.scss */
+.dropzone .dz-preview:not(:last-child) {
+  margin-right: 8px;
+}
+
+/* line 922, src/assets/scss/pages/_pay.scss */
+.dropzone .dz-preview .dz-remove {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+/* line 928, src/assets/scss/pages/_pay.scss */
+.dropzone .dz-preview .dz-remove svg {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=../../../scss */

@@ -122,6 +122,7 @@ function jsVendor() {
       'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
       'node_modules/jquery-steps/build/jquery.steps.min.js',
       'node_modules/jquery-validation/dist/jquery.validate.min.js',
+      'node_modules/dropzone/dist/dropzone-min.js',
     ])
     .pipe(dest('dist/assets/vendor/js'))
     .pipe(browserSync.stream());
@@ -134,6 +135,7 @@ function cssVendor() {
     'node_modules/animate.css/animate.css',
     'node_modules/swiper/swiper.min.css',
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css',
+    'node_modules/dropzone/dist/dropzone.css'
   ])
     .pipe(dest('dist/assets/vendor/css'))
     .pipe(browserSync.stream());
@@ -305,6 +307,7 @@ function concatScripts() {
       'dist/assets/vendor/js/jquery.fancybox.min.js',
       'dist/assets/vendor/js/jquery.steps.min.js',
       'dist/assets/vendor/js/jquery.validate.min.js',
+      'dist/assets/vendor/js/dropzone-min.js',
       'src/assets/js/util/*',
       'src/assets/js/*'
     ])
