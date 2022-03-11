@@ -22062,7 +22062,73 @@ h3 {
   margin-bottom: -32px;
 }
 
-/* line 610, src/assets/scss/pages/_pay.scss */
+/* line 608, src/assets/scss/pages/_pay.scss */
+.vol-form__file {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+  overflow: hidden;
+  width: 0.4px;
+  height: 0.4px;
+}
+
+/* line 616, src/assets/scss/pages/_pay.scss */
+.vol-form__file-inner {
+  position: relative;
+  margin-top: 16px;
+  padding: 14px 24px 17px;
+  width: 355px;
+  max-width: 100%;
+  background: #F5F8FB;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* line 626, src/assets/scss/pages/_pay.scss */
+.vol-form__file-label {
+  margin-bottom: 0;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #6D7276;
+}
+
+/* line 631, src/assets/scss/pages/_pay.scss */
+.vol-form__file-label.is-active {
+  color: #000;
+}
+
+/* line 634, src/assets/scss/pages/_pay.scss */
+.vol-form__file-label span {
+  color: #127CE1;
+}
+
+/* line 638, src/assets/scss/pages/_pay.scss */
+.vol-form__file-remove {
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  width: 12px;
+  height: 12px;
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 1L1 13M1 1L13 13' stroke='%236D7276' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transform: translateY(-60%);
+          transform: translateY(-60%);
+  opacity: 0;
+}
+
+/* line 649, src/assets/scss/pages/_pay.scss */
+.vol-form__file-remove.is-visible {
+  opacity: 1;
+}
+
+/* line 653, src/assets/scss/pages/_pay.scss */
+.vol-form__file-remove, .vol-form__file-label {
+  -webkit-transition: .25s ease;
+  transition: .25s ease;
+}
+
+/* line 661, src/assets/scss/pages/_pay.scss */
 .vol-progress {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22086,7 +22152,7 @@ h3 {
 }
 
 @media only screen and (max-width: 1366px) {
-  /* line 610, src/assets/scss/pages/_pay.scss */
+  /* line 661, src/assets/scss/pages/_pay.scss */
   .vol-progress {
     width: 200px;
     height: 200px;
@@ -22094,13 +22160,13 @@ h3 {
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 610, src/assets/scss/pages/_pay.scss */
+  /* line 661, src/assets/scss/pages/_pay.scss */
   .vol-progress {
     display: none;
   }
 }
 
-/* line 629, src/assets/scss/pages/_pay.scss */
+/* line 680, src/assets/scss/pages/_pay.scss */
 .vol-progress__title {
   display: block;
   margin-bottom: 4px;
@@ -22109,7 +22175,7 @@ h3 {
   color: #6D7276;
 }
 
-/* line 636, src/assets/scss/pages/_pay.scss */
+/* line 687, src/assets/scss/pages/_pay.scss */
 .vol-progress__percent {
   font-weight: 500;
   font-size: 24px;
@@ -22117,7 +22183,7 @@ h3 {
   color: #6D7276;
 }
 
-/* line 644, src/assets/scss/pages/_pay.scss */
+/* line 695, src/assets/scss/pages/_pay.scss */
 .diagram {
   width: 240px;
   height: 240px;
@@ -22128,14 +22194,14 @@ h3 {
 }
 
 @media only screen and (max-width: 1366px) {
-  /* line 644, src/assets/scss/pages/_pay.scss */
+  /* line 695, src/assets/scss/pages/_pay.scss */
   .diagram {
     width: 200px;
     height: 200px;
   }
 }
 
-/* line 657, src/assets/scss/pages/_pay.scss */
+/* line 708, src/assets/scss/pages/_pay.scss */
 .diagram::before {
   content: '';
   display: block;
@@ -22150,7 +22216,7 @@ h3 {
   opacity: 1;
 }
 
-/* line 671, src/assets/scss/pages/_pay.scss */
+/* line 722, src/assets/scss/pages/_pay.scss */
 .diagram .piece {
   width: 100%;
   height: 100%;
@@ -22160,7 +22226,7 @@ h3 {
   position: absolute;
 }
 
-/* line 680, src/assets/scss/pages/_pay.scss */
+/* line 731, src/assets/scss/pages/_pay.scss */
 .diagram .piece::before {
   content: '';
   display: block;
@@ -22169,7 +22235,7 @@ h3 {
   height: 100%;
 }
 
-/* line 688, src/assets/scss/pages/_pay.scss */
+/* line 739, src/assets/scss/pages/_pay.scss */
 .diagram .piece.left {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
@@ -22178,13 +22244,13 @@ h3 {
   /* only FireFox < 75.0v (fix bug)*/
 }
 
-/* line 694, src/assets/scss/pages/_pay.scss */
+/* line 745, src/assets/scss/pages/_pay.scss */
 .diagram.over_50 .piece.left {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-/* line 698, src/assets/scss/pages/_pay.scss */
+/* line 749, src/assets/scss/pages/_pay.scss */
 .diagram .piece.right {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -22193,28 +22259,28 @@ h3 {
   /* only FireFox < 75.0v (fix bug)*/
 }
 
-/* line 704, src/assets/scss/pages/_pay.scss */
+/* line 755, src/assets/scss/pages/_pay.scss */
 .diagram.over_50 .piece.right {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
 
-/* line 708, src/assets/scss/pages/_pay.scss */
+/* line 759, src/assets/scss/pages/_pay.scss */
 .diagram .left::before {
   background: #EDF4FA;
 }
 
-/* line 712, src/assets/scss/pages/_pay.scss */
+/* line 763, src/assets/scss/pages/_pay.scss */
 .diagram.over_50 .left::before {
   background: #2688E5;
 }
 
-/* line 715, src/assets/scss/pages/_pay.scss */
+/* line 766, src/assets/scss/pages/_pay.scss */
 .diagram .right::before {
   background: #EDF4FA;
 }
 
-/* line 719, src/assets/scss/pages/_pay.scss */
+/* line 770, src/assets/scss/pages/_pay.scss */
 .diagram .text {
   position: absolute;
   z-index: 3;
@@ -22239,7 +22305,7 @@ h3 {
           justify-content: center;
 }
 
-/* line 736, src/assets/scss/pages/_pay.scss */
+/* line 787, src/assets/scss/pages/_pay.scss */
 .change-psychology__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22248,12 +22314,12 @@ h3 {
   gap: 16px;
 }
 
-/* line 741, src/assets/scss/pages/_pay.scss */
+/* line 792, src/assets/scss/pages/_pay.scss */
 .change-psychology__item {
   cursor: pointer;
 }
 
-/* line 743, src/assets/scss/pages/_pay.scss */
+/* line 794, src/assets/scss/pages/_pay.scss */
 .change-psychology__item img {
   padding: 3px;
   border: 1px solid transparent;
@@ -22262,28 +22328,28 @@ h3 {
   transition: border-color .3s ease-in-out;
 }
 
-/* line 751, src/assets/scss/pages/_pay.scss */
+/* line 802, src/assets/scss/pages/_pay.scss */
 .change-psychology__item.is-active img, .change-psychology__item:hover img {
   border-color: #2688E5;
 }
 
-/* line 756, src/assets/scss/pages/_pay.scss */
+/* line 807, src/assets/scss/pages/_pay.scss */
 .change-psychology__wr {
   gap: 32px;
   margin-top: 60px;
 }
 
-/* line 760, src/assets/scss/pages/_pay.scss */
+/* line 811, src/assets/scss/pages/_pay.scss */
 .change-psychology__info {
   text-align: center;
 }
 
-/* line 763, src/assets/scss/pages/_pay.scss */
+/* line 814, src/assets/scss/pages/_pay.scss */
 .change-psychology__image {
   margin-bottom: 24px;
 }
 
-/* line 766, src/assets/scss/pages/_pay.scss */
+/* line 817, src/assets/scss/pages/_pay.scss */
 .change-psychology__name {
   font-weight: 500;
   font-size: 1.375em;
@@ -22291,13 +22357,13 @@ h3 {
   color: #6D7276;
 }
 
-/* line 772, src/assets/scss/pages/_pay.scss */
+/* line 823, src/assets/scss/pages/_pay.scss */
 .change-psychology__experience {
   margin-top: 16px;
   color: #6D7276;
 }
 
-/* line 776, src/assets/scss/pages/_pay.scss */
+/* line 827, src/assets/scss/pages/_pay.scss */
 .change-psychology__overlay {
   position: absolute;
   width: 100%;
@@ -22309,7 +22375,7 @@ h3 {
   opacity: .75;
 }
 
-/* line 785, src/assets/scss/pages/_pay.scss */
+/* line 836, src/assets/scss/pages/_pay.scss */
 .change-psychology__description {
   position: relative;
   margin: 16px 0;
@@ -22319,23 +22385,23 @@ h3 {
   transition: max-height .3s ease-in-out;
 }
 
-/* line 791, src/assets/scss/pages/_pay.scss */
+/* line 842, src/assets/scss/pages/_pay.scss */
 .change-psychology__description.is-open {
   max-height: 100%;
 }
 
-/* line 793, src/assets/scss/pages/_pay.scss */
+/* line 844, src/assets/scss/pages/_pay.scss */
 .change-psychology__description.is-open .change-psychology__overlay {
   background: none;
 }
 
-/* line 797, src/assets/scss/pages/_pay.scss */
+/* line 848, src/assets/scss/pages/_pay.scss */
 .change-psychology__description p {
   font-size: 1.125em;
   line-height: 1.4;
 }
 
-/* line 802, src/assets/scss/pages/_pay.scss */
+/* line 853, src/assets/scss/pages/_pay.scss */
 .change-psychology__read-more {
   margin-top: 16px;
   font-size: 1.125em;
@@ -22343,44 +22409,44 @@ h3 {
   color: #2688E5;
 }
 
-/* line 811, src/assets/scss/pages/_pay.scss */
+/* line 862, src/assets/scss/pages/_pay.scss */
 .change-date {
   margin-top: 24px;
 }
 
-/* line 813, src/assets/scss/pages/_pay.scss */
+/* line 864, src/assets/scss/pages/_pay.scss */
 .change-date__caption {
   margin-bottom: 16px;
   font-size: 1.25em;
   line-height: 1.4;
 }
 
-/* line 818, src/assets/scss/pages/_pay.scss */
+/* line 869, src/assets/scss/pages/_pay.scss */
 .change-date__item {
   margin-bottom: 24px;
 }
 
-/* line 821, src/assets/scss/pages/_pay.scss */
+/* line 872, src/assets/scss/pages/_pay.scss */
 .change-date__label {
   position: relative;
 }
 
-/* line 823, src/assets/scss/pages/_pay.scss */
+/* line 874, src/assets/scss/pages/_pay.scss */
 .change-date__label:not(:last-child) {
   margin-right: 16px;
 }
 
-/* line 827, src/assets/scss/pages/_pay.scss */
+/* line 878, src/assets/scss/pages/_pay.scss */
 .change-date__input {
   display: none;
 }
 
-/* line 829, src/assets/scss/pages/_pay.scss */
+/* line 880, src/assets/scss/pages/_pay.scss */
 .change-date__input:checked + .change-date__pane {
   border-color: #2688E5;
 }
 
-/* line 833, src/assets/scss/pages/_pay.scss */
+/* line 884, src/assets/scss/pages/_pay.scss */
 .change-date__pane {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22404,7 +22470,7 @@ h3 {
   cursor: pointer;
 }
 
-/* line 852, src/assets/scss/pages/_pay.scss */
+/* line 903, src/assets/scss/pages/_pay.scss */
 .dz-clickable {
   position: relative;
   margin-top: 16px;
@@ -22417,30 +22483,30 @@ h3 {
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 852, src/assets/scss/pages/_pay.scss */
+  /* line 903, src/assets/scss/pages/_pay.scss */
   .dz-clickable {
     max-width: 100%;
   }
 }
 
-/* line 865, src/assets/scss/pages/_pay.scss */
+/* line 916, src/assets/scss/pages/_pay.scss */
 .dz-message {
   font-weight: 500;
   font-size: 1.125em;
   color: #6D7276;
 }
 
-/* line 869, src/assets/scss/pages/_pay.scss */
+/* line 920, src/assets/scss/pages/_pay.scss */
 .dz-message span {
   color: #127CE1;
 }
 
-/* line 873, src/assets/scss/pages/_pay.scss */
+/* line 924, src/assets/scss/pages/_pay.scss */
 .dropzone.dz-started {
   padding-bottom: 70px;
 }
 
-/* line 875, src/assets/scss/pages/_pay.scss */
+/* line 926, src/assets/scss/pages/_pay.scss */
 .dropzone.dz-started .dz-message {
   position: absolute;
   left: 0;
@@ -22450,7 +22516,7 @@ h3 {
   margin: 0;
 }
 
-/* line 885, src/assets/scss/pages/_pay.scss */
+/* line 936, src/assets/scss/pages/_pay.scss */
 .dropzone .dz-preview.dz-error .dz-error-message,
 .dropzone .dz-preview.dz-error .dz-error-mark,
 .dropzone .dz-preview.dz-file-preview .dz-image,
@@ -22458,7 +22524,7 @@ h3 {
   display: none;
 }
 
-/* line 892, src/assets/scss/pages/_pay.scss */
+/* line 943, src/assets/scss/pages/_pay.scss */
 .dropzone .dz-preview .dz-details {
   padding: 0;
   -webkit-transform: translateY(-16px);
@@ -22466,14 +22532,14 @@ h3 {
   top: calc(100% - 16px);
 }
 
-/* line 898, src/assets/scss/pages/_pay.scss */
+/* line 949, src/assets/scss/pages/_pay.scss */
 .dropzone .dz-preview .dz-details .dz-filename span, .dropzone .dz-preview .dz-details .dz-size span {
   font-size: 14px;
   line-height: 1.2;
   color: #000;
 }
 
-/* line 904, src/assets/scss/pages/_pay.scss */
+/* line 955, src/assets/scss/pages/_pay.scss */
 .dropzone .dz-preview {
   margin: 0 0 8px;
   padding: 16px;
@@ -22494,12 +22560,12 @@ h3 {
           flex-direction: column;
 }
 
-/* line 917, src/assets/scss/pages/_pay.scss */
+/* line 968, src/assets/scss/pages/_pay.scss */
 .dropzone .dz-preview:not(:last-child) {
   margin-right: 8px;
 }
 
-/* line 922, src/assets/scss/pages/_pay.scss */
+/* line 973, src/assets/scss/pages/_pay.scss */
 .dropzone .dz-preview .dz-remove {
   position: absolute;
   top: 8px;
@@ -22508,9 +22574,66 @@ h3 {
   cursor: pointer;
 }
 
-/* line 928, src/assets/scss/pages/_pay.scss */
+/* line 979, src/assets/scss/pages/_pay.scss */
 .dropzone .dz-preview .dz-remove svg {
   cursor: pointer;
+}
+
+/* line 987, src/assets/scss/pages/_pay.scss */
+.need-doc {
+  margin-top: 24px;
+}
+
+/* line 989, src/assets/scss/pages/_pay.scss */
+.need-doc__title {
+  margin-bottom: 24px;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+/* line 994, src/assets/scss/pages/_pay.scss */
+.need-doc__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+/* line 999, src/assets/scss/pages/_pay.scss */
+.need-doc__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 16px 24px;
+  background: #eff7ff;
+  border-radius: 16px;
+}
+
+/* line 1007, src/assets/scss/pages/_pay.scss */
+.need-doc__icon {
+  margin-right: 16px;
+  width: 34px;
+  height: 41px;
+}
+
+/* line 1012, src/assets/scss/pages/_pay.scss */
+.need-doc__caption {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+/* line 1016, src/assets/scss/pages/_pay.scss */
+.need-doc__caption span {
+  display: block;
+  color: #6D7276;
 }
 
 /*# sourceMappingURL=../../../scss */

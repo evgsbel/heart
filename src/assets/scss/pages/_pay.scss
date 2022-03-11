@@ -605,7 +605,58 @@
   &__subcaption {
     margin-bottom: -32px;
   }
+  &__file {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+    width: 0.4px;
+    height: 0.4px;
+  }
+  &__file-inner {
+    position: relative;
+    margin-top: 16px;
+    padding: 14px 24px 17px;
+    width: 355px;
+    max-width: 100%;
+    background: #F5F8FB;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  &__file-label {
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 1.4;
+    color: #6D7276;
+    &.is-active {
+      color: #000;
+    }
+    span {
+      color: #127CE1;
+    }
+  }
+  &__file-remove {
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    width: 12px;
+    height: 12px;
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 1L1 13M1 1L13 13' stroke='%236D7276' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translateY(-60%);
+    opacity: 0;
+    &.is-visible {
+      opacity: 1;
+    }
+  }
+  &__file-remove,
+  &__file-label {
+    transition: .25s ease;
+  }
 }
+
+
 
 .vol-progress {
   display: flex;
@@ -927,5 +978,44 @@
   cursor: pointer;
   svg {
     cursor: pointer;
+  }
+}
+
+
+// need documents
+
+.need-doc {
+  margin-top: 24px;
+  &__title {
+    margin-bottom: 24px;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+  &__list {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 16px 24px;
+    background: #eff7ff;
+    border-radius: 16px;
+  }
+  &__icon {
+    margin-right: 16px;
+    width: 34px;
+    height: 41px;
+  }
+  &__caption {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.4;
+    span {
+      display: block;
+      color: #6D7276;
+    }
   }
 }

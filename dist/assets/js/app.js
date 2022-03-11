@@ -240,9 +240,15 @@ $(function () {
       return form.valid();
     },
     onStepChanged: function onStepChanged(event, currentIndex, priorIndex) {
-      // setProgressBar(currentIndex);
+      if (currentIndex > 0) {
+        $('.need-doc').fadeOut();
+      } else {
+        $('.need-doc').fadeIn();
+      } // setProgressBar(currentIndex);
       // progressView();
       // Used to skip the "Warning" step if the user is old enough.
+
+
       if (currentIndex === 2 && Number($("#age-2").val()) >= 18) {
         form.steps("next");
       } // Used to skip the "Warning" step if the user is old enough and wants to the previous step.
@@ -368,13 +374,69 @@ $(document).ready(function () {
       }
     });
   });
-}); // input files
+});
+$(document).ready(function () {
+  var inputFile = document.querySelectorAll('.vol-form__file'); /////////// Кнопка «Прикрепить файл» ///////////
+
+  inputFile.forEach(function (el) {
+    var textSelector = el.nextElementSibling;
+    var btnRemove = el.parentNode.lastElementChild;
+    var fileList; // Событие выбора файла(ов)
+
+    el.addEventListener('change', function (e) {
+      // создаём массив файлов
+      fileList = [];
+
+      for (var _i = 0; _i < el.files.length; _i++) {
+        fileList.push(el.files[_i]);
+      } // вызов функции для каждого файла
+
+
+      fileList.forEach(function (file) {
+        uploadFile(file);
+      });
+    }); // Проверяем размер файлов и выводим название
+
+    var uploadFile = function uploadFile(file) {
+      // файла <5 Мб
+      if (file.size > 5 * 1024 * 1024) {
+        alert('Файл должен быть не более 5 МБ.');
+        return;
+      } // Показ загружаемых файлов
+
+
+      if (file && file.length > 1) {
+        if (file.length <= 4) {
+          textSelector.textContent = "\u0412\u044B\u0431\u0440\u0430\u043D\u043E ".concat(file.length, " \u0444\u0430\u0439\u043B\u0430");
+        }
+
+        if (file.length > 4) {
+          textSelector.textContent = "\u0412\u044B\u0431\u0440\u0430\u043D\u043E ".concat(file.length, " \u0444\u0430\u0439\u043B\u043E\u0432");
+        }
+      } else {
+        textSelector.innerHTML = file.name;
+        textSelector.classList.add('is-active');
+        btnRemove.classList.add('is-visible');
+      } // удаление файла
+
+
+      btnRemove.addEventListener('click', function (b) {
+        this.classList.remove('is-visible');
+        textSelector.classList.remove('is-active');
+        textSelector.innerHTML = 'Перетащите или <span>выберите файл</span>';
+        el.value = '';
+      });
+    };
+  });
+}); // input files multiple
 
 $(document).ready(function () {
-  var dropzone = new Dropzone("div.dropzone", {
-    url: "../files",
-    createImageThumbnails: false,
-    addRemoveLinks: true,
-    dictRemoveFile: "<svg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M13 1L1 13M1 1L13 13' stroke='#6D7276' stroke-linecap='round' stroke-linejoin='round'/></svg>"
-  });
+  if ($('div.dropzone').length) {
+    var dropzone = new Dropzone("div.dropzone", {
+      url: "../files",
+      createImageThumbnails: false,
+      addRemoveLinks: true,
+      dictRemoveFile: "<svg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M13 1L1 13M1 1L13 13' stroke='#6D7276' stroke-linecap='round' stroke-linejoin='round'/></svg>"
+    });
+  }
 });

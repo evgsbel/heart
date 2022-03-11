@@ -231,6 +231,7 @@ $(() => {
       if (newIndex === 3 && Number($("#age-2").val()) < 18) {
         return false;
       }
+
       // Needed in some cases if the user went back (clean up)
       if (currentIndex < newIndex) {
         // To remove error styles
@@ -241,6 +242,13 @@ $(() => {
       return form.valid();
     },
     onStepChanged: function (event, currentIndex, priorIndex) {
+
+      if (currentIndex > 0) {
+        $('.need-doc').fadeOut()
+      } else {
+        $('.need-doc').fadeIn()
+      }
+
       // setProgressBar(currentIndex);
       // progressView();
       // Used to skip the "Warning" step if the user is old enough.
@@ -365,25 +373,89 @@ $(document).ready(function () {
     el.addEventListener('click', function (e) {
       e.preventDefault()
       if (status == "less") {
-      el.previousElementSibling.classList.add('is-open')
-      el.innerText = "Скрыть";
-      status = "more";
-    } else if (status == "more") {
-      el.previousElementSibling.classList.remove('is-open');
-      el.innerText = "Читать полностью";
-      status = "less"
-    }
+        el.previousElementSibling.classList.add('is-open')
+        el.innerText = "Скрыть";
+        status = "more";
+      } else if (status == "more") {
+        el.previousElementSibling.classList.remove('is-open');
+        el.innerText = "Читать полностью";
+        status = "less"
+      }
     })
   })
 });
 
 
-// input files
 $(document).ready(function () {
-  const dropzone = new Dropzone("div.dropzone", {
-    url: "../files",
-    createImageThumbnails: false,
-    addRemoveLinks: true,
-    dictRemoveFile: "<svg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M13 1L1 13M1 1L13 13' stroke='#6D7276' stroke-linecap='round' stroke-linejoin='round'/></svg>"
+
+  const inputFile = document.querySelectorAll('.vol-form__file');
+
+  /////////// Кнопка «Прикрепить файл» ///////////
+  inputFile.forEach(function(el) {
+    let textSelector = el.nextElementSibling;
+    let btnRemove = el.parentNode.lastElementChild;
+    let fileList;
+
+    // Событие выбора файла(ов)
+    el.addEventListener('change', function (e) {
+
+      // создаём массив файлов
+      fileList = [];
+      for (let i = 0; i < el.files.length; i++) {
+        fileList.push(el.files[i]);
+      }
+
+      // вызов функции для каждого файла
+      fileList.forEach(file => {
+        uploadFile(file);
+      });
+    });
+
+    // Проверяем размер файлов и выводим название
+    const uploadFile = (file) => {
+
+      // файла <5 Мб
+      if (file.size > 5 * 1024 * 1024) {
+        alert('Файл должен быть не более 5 МБ.');
+        return;
+      }
+
+      // Показ загружаемых файлов
+      if (file && file.length > 1) {
+        if ( file.length <= 4 ) {
+          textSelector.textContent = `Выбрано ${file.length} файла`;
+        }
+        if ( file.length > 4 ) {
+          textSelector.textContent = `Выбрано ${file.length} файлов`;
+        }
+      } else {
+        textSelector.innerHTML = file.name;
+        textSelector.classList.add('is-active');
+        btnRemove.classList.add('is-visible');
+      }
+
+      // удаление файла
+      btnRemove.addEventListener('click', function (b) {
+        this.classList.remove('is-visible')
+        textSelector.classList.remove('is-active')
+        textSelector.innerHTML = 'Перетащите или <span>выберите файл</span>'
+        el.value = '';
+      })
+    }
   });
-})
+});
+
+
+
+
+// input files multiple
+$(document).ready(function () {
+  if ($('div.dropzone').length) {
+    const dropzone = new Dropzone("div.dropzone", {
+      url: "../files",
+      createImageThumbnails: false,
+      addRemoveLinks: true,
+      dictRemoveFile: "<svg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M13 1L1 13M1 1L13 13' stroke='#6D7276' stroke-linecap='round' stroke-linejoin='round'/></svg>"
+    });
+  }
+});
