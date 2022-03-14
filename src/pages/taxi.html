@@ -390,8 +390,8 @@ bannerImg: assets/img/taxi
               <div class="vol-form__group">
                 <label for="vol-phone" class="vol-form__label">
                   Телефон
-                  <input type="number" id="vol-phone" name="vol-phone" placeholder="+7"
-                         class="vol-form__input required">
+                  <input type="tel" id="vol-phone" name="vol-phone" placeholder="+7"
+                         class="vol-form__input required phone-mask">
                 </label>
                 <label for="vol-email" class="vol-form__label">
                   Email
@@ -416,13 +416,13 @@ bannerImg: assets/img/taxi
                 </label>
                 <label for="vol-day" class="vol-form__label ml-3">
                   Дата поездки
-                  <input type="number" id="vol-day" name="vol-day"
-                         class="vol-form__input required" placeholder="День">
+                  <input type="text" id="vol-day" name="vol-day"
+                         class="vol-form__input day-mask required" placeholder="_._._">
                 </label>
                 <label for="vol-time" class="vol-form__label ml-3">
                   Время отправления
-                  <input type="number" id="vol-time" name="vol-time"
-                         class="vol-form__input required" placeholder="00:00">
+                  <input type="text" id="vol-time" name="vol-time"
+                         class="vol-form__input required time-mask" placeholder="00:00">
                 </label>
               </div>
               <div class="vol-form__group">

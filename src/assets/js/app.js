@@ -487,3 +487,14 @@ $(document).ready(function () {
 });
 
 
+//masked inputs
+
+jQuery(function($){
+  $(".day-mask").mask("99.99.99");
+  $(".phone-mask").mask("+7 (999) 999-99-99");
+  $(".time-mask").mask("99:99");
+  $(".date-mask").mask("99.99.99");
+});
+
+
+

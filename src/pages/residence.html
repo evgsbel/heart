@@ -411,8 +411,8 @@ bannerImg: assets/img/residence
               <div class="vol-form__group">
                 <label for="vol-phone" class="vol-form__label">
                   Телефон
-                  <input type="number" id="vol-phone" name="vol-phone" placeholder="+7"
-                         class="vol-form__input required">
+                  <input type="phone" id="vol-phone" name="vol-phone" placeholder="+7"
+                         class="vol-form__input required phone-mask">
                 </label>
                 <label for="vol-email" class="vol-form__label">
                   Email
@@ -431,13 +431,13 @@ bannerImg: assets/img/residence
                 </label>
                 <label for="vol-date-arrival" class="vol-form__label">
                   Дата заселения
-                  <input type="date" id="vol-date-arrival" name="vol-date-arrival" class="vol-form__input required"
-                         placeholder="Полных лет">
+                  <input type="text" id="vol-date-arrival" name="vol-date-arrival" class="vol-form__input required date-mask"
+                         placeholder="_._._">
                 </label>
                 <label for="vol-departure" class="vol-form__label">
                   Дата выезда
-                  <input type="date" id="vol-departure" name="vol-departure" class="vol-form__input required"
-                         placeholder="Полных лет">
+                  <input type="text" id="vol-departure" name="vol-departure" class="vol-form__input required date-mask"
+                         placeholder="_._._">
                 </label>
               </div>
               <p class="vol-form__label vol-form__subcaption w-100">У вас есть билеты на поезд или самолет?</p>

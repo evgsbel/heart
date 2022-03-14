@@ -364,7 +364,7 @@ bannerImg: assets/img/volunteers
                 </label>
                 <label for="vol-date" class="vol-form__label">
                   Дата рождения
-                  <input type="date" id="vol-date" name="vol-date" class="vol-form__input required">
+                  <input type="text" id="vol-date" name="vol-date" class="vol-form__input required date-mask" placeholder="_._._">
                 </label>
               </div>
               <label for="vol-city" class="vol-form__label">
@@ -379,8 +379,8 @@ bannerImg: assets/img/volunteers
               <div class="vol-form__group">
                 <label for="vol-phone" class="vol-form__label">
                   Телефон
-                  <input type="number" id="vol-phone" name="vol-phone" placeholder="+7"
-                         class="vol-form__input required">
+                  <input type="phone" id="vol-phone" name="vol-phone" placeholder="+7"
+                         class="vol-form__input required phone-mask">
                 </label>
                 <label for="vol-date" class="vol-form__label">
                   Email

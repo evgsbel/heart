@@ -123,6 +123,7 @@ function jsVendor() {
       'node_modules/jquery-steps/build/jquery.steps.min.js',
       'node_modules/jquery-validation/dist/jquery.validate.min.js',
       'node_modules/dropzone/dist/dropzone-min.js',
+      'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
     ])
     .pipe(dest('dist/assets/vendor/js'))
     .pipe(browserSync.stream());
@@ -308,6 +309,7 @@ function concatScripts() {
       'dist/assets/vendor/js/jquery.steps.min.js',
       'dist/assets/vendor/js/jquery.validate.min.js',
       'dist/assets/vendor/js/dropzone-min.js',
+      'dist/assets/vendor/js/jquery.maskedinput.js',
       'src/assets/js/util/*',
       'src/assets/js/*'
     ])

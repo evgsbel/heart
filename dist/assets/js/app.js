@@ -460,4 +460,11 @@ $(document).ready(function () {
       dictRemoveFile: "<svg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M13 1L1 13M1 1L13 13' stroke='#6D7276' stroke-linecap='round' stroke-linejoin='round'/></svg>"
     });
   }
+}); //masked inputs
+
+jQuery(function ($) {
+  $(".day-mask").mask("99.99.99");
+  $(".phone-mask").mask("+7 (999) 999-99-99");
+  $(".time-mask").mask("99:99");
+  $(".date-mask").mask("99.99.99");
 });
