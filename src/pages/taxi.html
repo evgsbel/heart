@@ -11,8 +11,10 @@ bannerImg: assets/img/taxi
     <div class="row banner__inner">
       <div class="col-12 col-sm-6 col-lg-6 col-xl-4">
         <h1 class="banner__title title-h2">{{title}}</h1>
-        <p class="banner__text">Подопечные фонда с онкологическим диагнозом могут бесплатно приезжать в медицинские организации по профилю заболевания с целью консультаций, обследований, лечения.</p>
-        <p class="banner__text">Поездки для иногородних граждан от вокзала и аэропорта до места лечения или проживания и обратно.</p>
+        <p class="banner__text">Подопечные фонда с онкологическим диагнозом могут бесплатно приезжать в медицинские
+          организации по профилю заболевания с целью консультаций, обследований, лечения.</p>
+        <p class="banner__text">Поездки для иногородних граждан от вокзала и аэропорта до места лечения или проживания
+          и обратно.</p>
         <button class="btn-reset banner__btn">Оставить заявку</button>
         <a href="" class="banner__link">Обратный трансфер</a>
       </div>
@@ -324,3 +326,202 @@ bannerImg: assets/img/taxi
     </div>
   </div>
 </section>
+
+
+<section id="volunteering-questionnaire" class="volunteering-questionnaire">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-10">
+        <h2 class="title-h2 vol-form__title">Оформление заявки <span class="vol-form__label"><span>Оформить заявку нужно не позднее чем за 24 часа до выезда в промежутке с 8:00 до 21:50 по Москве</span></span>
+        </h2>
+        <div class="vol-form__wraning vol-form-warning ">
+          <p class="vol-form-warning__text">Ресурсы фонда ограничены, если в этом месяце будет повышенный спрос
+            на такси, мы будем вынуждены ввести временные ограничения на количество поездок в день.</p>
+          <p class="vol-form-warning__text">Сейчас таких ограничений нет. Приятной вам поездки!</p>
+        </div>
+      </div>
+    </div>
+    <div class="row position-relative">
+      <div class="check-taxi">
+        <div class="check-taxi__wrapper">
+          <button class="btn-reset check-taxi__btn check-taxi__btn_query js-taxi-query">Оставить заявку</button>
+          <p class="check-taxi__description">Если нужно добраться до медорганизации, вокзала, аэропорта или отеля</p>
+          <button class="btn-reset check-taxi__btn check-taxi__btn_back js-taxi-back">Обратный трансфер</button>
+          <p class="check-taxi__description">Если сегодня вы уже пользовались такси и нужно отправиться обратно</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-10">
+        <div class="need-doc">
+          <p class="need-doc__title">Для оформления вам понадобятся фотографии или сканы следующих документов:</p>
+          <ul class="need-doc__list">
+            <li class="need-doc__item">
+              <svg class="need-doc__icon">
+                <use xlink:href="assets/img/sprite.svg#nd-icon-pass"></use>
+              </svg>
+              <p class="need-doc__caption">Паспорт <span>1-я страница и страница с регистрацией</span></p>
+            </li>
+            <li class="need-doc__item">
+              <svg class="need-doc__icon">
+                <use xlink:href="assets/img/sprite.svg#nd-icon-doc"></use>
+              </svg>
+              <p class="need-doc__caption">Направление на прием <span>например, справка 057/у</span></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-12 col-md-10">
+        <form action="#" method="" class="vol-form" id="vol-form">
+          <div id="wizard">
+
+            <h2>Данные</h2>
+            <section>
+              <div class="vol-form__group">
+                <label for="vol-fio" class="vol-form__label">
+                  ФИО
+                  <input type="text" id="vol-fio" name="vol-fio" placeholder="Иванов Иван Иванович"
+                         class="vol-form__input required">
+                </label>
+                <label for="vol-city" class="vol-form__label">
+                  Город проживания
+                  <input type="text" id="vol-city" name="vol-city" placeholder="Начните вводить"
+                         class="vol-form__input required">
+                </label>
+              </div>
+              <div class="vol-form__group">
+                <label for="vol-phone" class="vol-form__label">
+                  Телефон
+                  <input type="number" id="vol-phone" name="vol-phone" placeholder="+7"
+                         class="vol-form__input required">
+                </label>
+                <label for="vol-email" class="vol-form__label">
+                  Email
+                  <input type="email" id="vol-email" name="vol-email" placeholder="mail@greatheart.ru"
+                         class="vol-form__input required">
+                </label>
+              </div>
+            </section>
+
+            <h2>Поездка</h2>
+            <section>
+              <div class="vol-form__group">
+                <label for="vol-region" class="vol-form__label">
+                  Регион поездки
+                  <select type="text" id="vol-region" name="vol-region" class="vol-form__select">
+                    <option value="" selected>Выберите регион</option>
+                    <option value="">Москва</option>
+                    <option value="">Санкт-Петербург</option>
+                    <option value="">Самара</option>
+                    <option value="">Казань</option>
+                  </select>
+                </label>
+                <label for="vol-day" class="vol-form__label ml-3">
+                  Дата поездки
+                  <input type="number" id="vol-day" name="vol-day"
+                         class="vol-form__input required" placeholder="День">
+                </label>
+                <label for="vol-time" class="vol-form__label ml-3">
+                  Время отправления
+                  <input type="number" id="vol-time" name="vol-time"
+                         class="vol-form__input required" placeholder="00:00">
+                </label>
+              </div>
+              <div class="vol-form__group">
+                <label for="vol-from" class="vol-form__label">
+                  Откуда
+                  <input type="text" id="vol-from" name="vol-from" placeholder="Введите адрес"
+                         class="vol-form__input required">
+                </label>
+                <label for="vol-to" class="vol-form__label">
+                  Куда
+                  <input type="text" id="vol-to" name="vol-to" placeholder="Введите адрес"
+                         class="vol-form__input required">
+                </label>
+              </div>
+              <div class="js-not-show-on-back">
+                <p class="vol-form__label">Обратный трансфер</p>
+                <div class="vol-form__group">
+                  <label for="vol-back-transfer-1" class="vol-form__label vol-form__label_radio mt-2">
+                    <input type="radio" name="vol-back-transfer[]" id="vol-back-transfer-1" class="vol-form__radio">
+                    <span class="vol-form__radio-pane"></span>
+                    Не нужен
+                  </label>
+                  <label for="vol-back-transfer-2" class="vol-form__label vol-form__label_radio mt-2">
+                    <input type="radio" name="vol-back-transfer[]" id="vol-back-transfer-2" class="vol-form__radio"
+                           checked>
+                    <span class="vol-form__radio-pane"></span>
+                    Нужен
+                  </label>
+                </div>
+              </div>
+            </section>
+
+            <h2>Комментарий</h2>
+            <section>
+              <div class="vol-form__group">
+                <label for="vol-comment" class="vol-form__label w-100">
+                  Комментарий водителю <span>необязательно</span>
+                  <textarea name="vol-comment" id="vol-comment" class="vol-form__textarea"
+                            placeholder="Например, нужен свободный багажник"></textarea>
+                </label>
+              </div>
+            </section>
+            <h2 class="js-not-show-on-back-title">Документы</h2>
+            <section class="js-not-show-on-back-section">
+              <div class="vol-form__group">
+                <div class="vol-form__file-wrapper">
+                  <p class="vol-form__label">Первая страница паспорта</p>
+                  <div class="vol-form__file-inner">
+                    <input type="file" name="upload-file__input_1" id="upload-file__input_1"
+                           class="required vol-form__file" required>
+                    <label class="vol-form__file-label" for="upload-file__input_1">
+                      Перетащите или <span>выберите файл</span>
+                    </label>
+                    <button class="js-remove-file vol-form__file-remove btn-reset" type="button"></button>
+                  </div>
+                </div>
+                <div class="vol-form__file-wrapper">
+                  <p class="vol-form__label">Страница паспорта с регистрацией</p>
+                  <div class="vol-form__file-inner">
+                    <input type="file" name="upload-file__input_2" id="upload-file__input_2"
+                           class="required vol-form__file" required>
+                    <label class="vol-form__file-label" for="upload-file__input_2">
+                      Перетащите или <span>выберите файл</span>
+                    </label>
+                    <button class="js-remove-file vol-form__file-remove btn-reset" type="button"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="vol-form__group">
+                <div class="vol-form__file-wrapper">
+                  <p class="vol-form__label">Направление на прием <span>например, справка 057/у</span></p>
+                  <div class="vol-form__file-inner">
+                    <input type="file" name="upload-file__input_3" id="upload-file__input_3"
+                           class="required vol-form__file" required>
+                    <label class="vol-form__file-label" for="upload-file__input_3">
+                      Перетащите или <span>выберите файл</span>
+                    </label>
+                    <button class="js-remove-file vol-form__file-remove btn-reset" type="button"></button>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </form>
+      </div>
+      <div class="col-2">
+        <div id="vol-progress" class="vol-progress" data-percent="5">
+          <div id="myBar" class="vol-progress__bar diagram progress">
+            <div class="piece left"></div>
+            <div class="piece right"></div>
+            <div class="text">
+              <p class="vol-progress__title">Заполнено</p>
+              <p class="vol-progress__percent">0%</p>
+            </div>
+          </div>
+        </div>
+        <button class="btn-reset vol-form__submit" type="submit" disabled form="vol-form">Оставить заявку</button>
+      </div>
+    </div>
+  </div>
+</section>
+

@@ -184,6 +184,24 @@ $('.js-close-popup').click(function () {
   $.fancybox.close();
 })
 
+// check taxi
+
+$('.js-taxi-query').click(function () {
+  $('.check-taxi').fadeOut();
+  $('.vol-form-warning').fadeIn();
+});
+
+$('.js-taxi-back').click(function () {
+  $('.check-taxi').fadeOut();
+  $('.vol-form-warning').fadeIn();
+  $('.vol-form-warning').addClass('is-active');
+  $('.need-doc').remove();
+  $('.js-not-show-on-back').hide();
+  $('#wizard .steps  .last').remove();
+  $('.js-not-show-on-back-section').remove();
+  $('.vol-form-warning').html('<p>В этом месяце был повышен спрос на такси, поэтому мы вынуждены ввести временные ограничения на количество поездок в день.</p><p>Ограничения продлятся до 1 сентября.</p><p>Дождитесь ответа на почту о статусе вашей заявки.</p>');
+})
+
 
 // vol form
 
@@ -245,8 +263,10 @@ $(() => {
 
       if (currentIndex > 0) {
         $('.need-doc').fadeOut()
+        $('.vol-form-warning').fadeOut()
       } else {
         $('.need-doc').fadeIn()
+        $('.vol-form-warning').fadeIn()
       }
 
       // setProgressBar(currentIndex);
@@ -340,6 +360,8 @@ $(() => {
     number: "Please enter a valid number.",
   });
 });
+
+
 
 // tabs
 $(document).ready(function () {
@@ -463,3 +485,5 @@ $(document).ready(function () {
     });
   }
 });
+
+
