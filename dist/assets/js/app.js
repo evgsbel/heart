@@ -407,11 +407,15 @@ $(document).ready(function () {
 
       if (file && file.length > 1) {
         if (file.length <= 4) {
-          textSelector.textContent = "\u0412\u044B\u0431\u0440\u0430\u043D\u043E ".concat(file.length, " \u0444\u0430\u0439\u043B\u0430");
+          textSelector.innerHTML = "\u0412\u044B\u0431\u0440\u0430\u043D\u043E ".concat(file.length, " \u0444\u0430\u0439\u043B\u0430");
+          textSelector.classList.add('is-active');
+          btnRemove.classList.add('is-visible');
         }
 
         if (file.length > 4) {
-          textSelector.textContent = "\u0412\u044B\u0431\u0440\u0430\u043D\u043E ".concat(file.length, " \u0444\u0430\u0439\u043B\u043E\u0432");
+          textSelector.innerHTML = "\u0412\u044B\u0431\u0440\u0430\u043D\u043E ".concat(file.length, " \u0444\u0430\u0439\u043B\u043E\u0432");
+          textSelector.classList.add('is-active');
+          btnRemove.classList.add('is-visible');
         }
       } else {
         textSelector.innerHTML = file.name;

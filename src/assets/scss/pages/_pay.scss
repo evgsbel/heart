@@ -628,6 +628,7 @@
     font-size: 18px;
     line-height: 1.4;
     color: #6D7276;
+    cursor: pointer;
     &.is-active {
       color: #000;
     }
@@ -653,6 +654,11 @@
   &__file-remove,
   &__file-label {
     transition: .25s ease;
+  }
+  &__regular-text {
+    margin-top: 8px;
+    font-size: 18px;
+    font-weight: 400;
   }
 }
 
@@ -995,12 +1001,13 @@
     display: flex;
     gap: 16px;
     margin-bottom: 40px;
+    flex-wrap: wrap;
   }
   &__item {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 16px 24px;
+    padding: 16px;
     background: #eff7ff;
     border-radius: 16px;
   }
@@ -1015,6 +1022,7 @@
     line-height: 1.4;
     span {
       display: block;
+      font-size: 16px;
       color: #6D7276;
     }
   }

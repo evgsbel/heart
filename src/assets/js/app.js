@@ -423,10 +423,14 @@ $(document).ready(function () {
       // Показ загружаемых файлов
       if (file && file.length > 1) {
         if ( file.length <= 4 ) {
-          textSelector.textContent = `Выбрано ${file.length} файла`;
+          textSelector.innerHTML = `Выбрано ${file.length} файла`;
+          textSelector.classList.add('is-active');
+          btnRemove.classList.add('is-visible');
         }
         if ( file.length > 4 ) {
-          textSelector.textContent = `Выбрано ${file.length} файлов`;
+          textSelector.innerHTML = `Выбрано ${file.length} файлов`;
+          textSelector.classList.add('is-active');
+          btnRemove.classList.add('is-visible');
         }
       } else {
         textSelector.innerHTML = file.name;
