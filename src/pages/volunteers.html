@@ -349,7 +349,7 @@ bannerImg: assets/img/volunteers
 <section id="volunteering-questionnaire" class="volunteering-questionnaire">
   <div class="container">
     <div class="row" >
-      <div class="col-12 col-md-10">
+      <div class="col-12 col-md-9 col-xl-10">
         <form action="#" method="" class="vol-form" id="vol-form">
           <h2 class="title-h2 vol-form__title">Заполните анкету</h2>
           <div id="wizard">
@@ -364,12 +364,12 @@ bannerImg: assets/img/volunteers
                 </label>
                 <label for="vol-date" class="vol-form__label">
                   Дата рождения
-                  <input type="text" id="vol-date" name="vol-date" class="vol-form__input required date-mask" placeholder="_._._">
+                  <input type="text" id="vol-date" name="vol-date" class="vol-form__input required date-mask" placeholder="__.__.___">
                 </label>
               </div>
               <label for="vol-city" class="vol-form__label">
                 Город проживания
-                <input type="text" id="vol-city" name="vol-city" placeholder="Начните вводить"
+                <input type="text" id="vol-city" name="vol-city" placeholder=""
                        class="vol-form__input required">
               </label>
             </section>
@@ -464,8 +464,8 @@ bannerImg: assets/img/volunteers
 
         </form>
       </div>
-      <div class="col-2">
-        <div id="vol-progress" class="vol-progress" data-percent="5">
+      <div class="col-2 col-md-3 col-xl-2">
+      <div id="vol-progress" class="vol-progress" data-percent="5">
           <div id="myBar" class="vol-progress__bar diagram progress">
             <div class="piece left"></div>
             <div class="piece right"></div>
@@ -475,7 +475,6 @@ bannerImg: assets/img/volunteers
             </div>
           </div>
         </div>
-        <button class="btn-reset vol-form__submit" type="submit" disabled form="vol-form">Отправить анкету</button>
       </div>
     </div>
   </div>

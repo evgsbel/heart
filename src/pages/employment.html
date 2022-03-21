@@ -353,12 +353,9 @@ bannerImg: assets/img/employment
           </ul>
         </div>
       </div>
-      <div class="col-12 col-md-10">
+      <div class="col-12 col-md-9 col-xl-10">
         <form action="#" method="" class="vol-form" id="vol-form">
           <div id="wizard">
-
-
-
             <h2>Данные</h2>
             <section>
               <div class="vol-form__group">
@@ -369,7 +366,7 @@ bannerImg: assets/img/employment
                 </label>
                 <label for="vol-city" class="vol-form__label">
                   Город проживания
-                  <input type="text" id="vol-city" name="vol-city" placeholder="Начните вводить"
+                  <input type="text" id="vol-city" name="vol-city" placeholder=""
                          class="vol-form__input required">
                 </label>
               </div>
@@ -381,10 +378,13 @@ bannerImg: assets/img/employment
                 </label>
                 <label for="vol-accessibility" class="vol-form__label">
                   Состояние
-                  <select type="text" id="vol-accessibility" name="vol-accessibility" class="vol-form__select">
-                    <option value="" selected>Выберите</option>
-                    <option value="">Без ограничений</option>
-                    <option value="">C ограничениями</option>
+                  <select type="text" id="vol-accessibility" name="vol-accessibility" class="vol-form__select ">
+                    <option value="" selected>Ваше состояние</option>
+                    <option value="">Здоров</option>
+                    <option value="">Диганостированна болезнь</option>
+                    <option value="">На лечении</option>
+                    <option value="">Реабилитация</option>
+                    <option value="">Ремиссия</option>
                   </select>
                 </label>
               </div>
@@ -411,13 +411,7 @@ bannerImg: assets/img/employment
               <div class="vol-form__group">
                 <label for="vol-vacancies" class="vol-form__label">
                   Какая вакансия вас интересует?
-                  <select type="text" id="vol-vacancies" name="vol-vacancies" class="vol-form__select">
-                    <option value="" selected>Выберите из списка</option>
-                    <option value="">вакансия 1</option>
-                    <option value="">вакансия 2</option>
-                    <option value="">вакансия 3</option>
-                    <option value="">вакансия 4</option>
-                  </select>
+                  <input type="text" id="vol-vacancies" name="vol-vacancies" class="vol-form__input required">
                 </label>
               </div>
               <div class="vol-form__group">
@@ -469,7 +463,7 @@ bannerImg: assets/img/employment
           </div>
         </form>
       </div>
-      <div class="col-2">
+      <div class="col-2 col-md-3 col-xl-2">
         <div id="vol-progress" class="vol-progress" data-percent="5">
           <div id="myBar" class="vol-progress__bar diagram progress">
             <div class="piece left"></div>
@@ -480,7 +474,7 @@ bannerImg: assets/img/employment
             </div>
           </div>
         </div>
-        <button class="btn-reset vol-form__submit" type="submit" disabled form="vol-form">Оставить заявку</button>
+
       </div>
     </div>
   </div>

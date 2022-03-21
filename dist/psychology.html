@@ -539,9 +539,13 @@
         <section id="volunteering-questionnaire" class="volunteering-questionnaire">
           <div class="container">
             <div class="row">
-              <div class="col-12 col-md-10">
+              <div class="col-12">
+                <h2 class="title-h2 vol-form__title">Запись на консультацию</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-md-9 col-xl-10">
                 <form action="#" method="" class="vol-form" id="vol-form">
-                  <h2 class="title-h2 vol-form__title">Запись на консультацию</h2>
                   <div id="wizard">
                     <h2>Данные</h2>
                     <section>
@@ -553,7 +557,7 @@
                           Онкопациент
                         </label>
                         <label for="vol-status-2" class="vol-form__label vol-form__label_radio mt-2">
-                          <input type="radio" name="vol-status[]" id="vol-status-2" class="vol-form__radio" checked>
+                          <input type="radio" name="vol-status[]" id="vol-status-2" class="vol-form__radio">
                           <span class="vol-form__radio-pane"></span>
                           Родственник онкопациента
                         </label>
@@ -571,11 +575,9 @@
                         </label>
                         <label for="vol-city" class="vol-form__label">
                           Город проживания
-                          <input type="text" id="vol-city" name="vol-city" placeholder="Начните вводить"
+                          <input type="text" id="vol-city" name="vol-city" placeholder=""
                                  class="vol-form__input required">
                         </label>
-                      </div>
-                      <div class="vol-form__group">
                         <label for="vol-diagnoz" class="vol-form__label">
                           Диагноз
                           <input type="text" id="vol-diagnoz" name="vol-diagnoz"
@@ -584,9 +586,12 @@
                         <label for="vol-accessibility" class="vol-form__label">
                           Состяние
                           <select type="text" id="vol-accessibility" name="vol-accessibility" class="vol-form__select ">
-                            <option value="">Вариант 1</option>
-                            <option value="">Вариант 2</option>
-                            <option value="">Вариант 3</option>
+                            <option value="" selected>Ваше состояние</option>
+                            <option value="">Здоров</option>
+                            <option value="">Диганостированна болезнь</option>
+                            <option value="">На лечении</option>
+                            <option value="">Реабилитация</option>
+                            <option value="">Ремиссия</option>
                           </select>
                         </label>
                       </div>
@@ -614,7 +619,7 @@
                       </p>
                       <div class="vol-form__group vol-form__group_checkboxes">
                         <label for="vol-anxiety" class="vol-form__label vol-form__label_check">
-                          <input type="checkbox" id="vol-anxiety" name="vol-anxiety" class="vol-form__checkbox" checked>
+                          <input type="checkbox" id="vol-anxiety" name="vol-anxiety" class="vol-form__checkbox" >
                           <span class="vol-form__check-pane"></span>
                           Тревожность или панические атаки
                         </label>
@@ -634,7 +639,7 @@
                           Раздражительность
                         </label>
                         <label for="vol-depression" class="vol-form__label vol-form__label_check">
-                          <input type="checkbox" id="vol-depression" name="vol-depression" class="vol-form__checkbox" checked>
+                          <input type="checkbox" id="vol-depression" name="vol-depression" class="vol-form__checkbox" >
                           <span class="vol-form__check-pane"></span>
                           Депрессия или апатия
                         </label>
@@ -644,7 +649,7 @@
                           Упадок сил
                         </label>
                         <label for="vol-loneliness" class="vol-form__label vol-form__label_check">
-                          <input type="checkbox" id="vol-loneliness" name="vol-loneliness" class="vol-form__checkbox" checked>
+                          <input type="checkbox" id="vol-loneliness" name="vol-loneliness" class="vol-form__checkbox" >
                           <span class="vol-form__check-pane"></span>
                           Одиночество
                         </label>
@@ -663,7 +668,7 @@
                       <div class="vol-form__group vol-form__group_checkboxes">
                         <label for="vol-accompanying-relative-with-cancer" class="vol-form__label vol-form__label_check w-100">
                           <input type="checkbox" id="vol-accompanying-relative-with-cancer"
-                                 name="vol-accompanying-relative-with-cancer" class="vol-form__checkbox" checked>
+                                 name="vol-accompanying-relative-with-cancer" class="vol-form__checkbox" >
                           <span class="vol-form__check-pane"></span>
                           Сопровождение онкобольного родственника
                         </label>
@@ -698,7 +703,7 @@
                           Поиск жизненных ресурсов
                         </label>
                         <label for="vol-career" class="vol-form__label vol-form__label_check">
-                          <input type="checkbox" id="vol-career" name="vol-career" class="vol-form__checkbox" checked>
+                          <input type="checkbox" id="vol-career" name="vol-career" class="vol-form__checkbox" >
                           <span class="vol-form__check-pane"></span>
                           Карьера
                         </label>
@@ -728,7 +733,7 @@
                           Дистанционно
                         </label>
                         <label for="vol-const-type-2" class="vol-form__label vol-form__label_radio">
-                          <input type="radio" name="vol-const-type[]" id="vol-const-type-2" class="vol-form__radio" checked>
+                          <input type="radio" name="vol-const-type[]" id="vol-const-type-2" class="vol-form__radio">
                           <span class="vol-form__radio-pane"></span>
                           Очно
                         </label>
@@ -761,10 +766,10 @@
                         </label>
                       </div>
         
-                      <div class="">
+                      <div class="" style="">
                         <div class="change-psychology">
                           <p class="vol-form__label">Выберите психолога</p>
-                          <div class="change-psychology__slider">
+                          <div class="change-psychology__slider js-show-psychology-list">
                             <ul class="change-psychology__list">
                               <li class="tabs__btn btn-reset change-psychology__item is-active" data-path="one">
                                 <img src="assets/img/chp-01.png" alt="" class="change-psychology__preview">
@@ -2330,7 +2335,7 @@
                   </div>
                 </form>
               </div>
-              <div class="col-2">
+              <div class="col-2 col-md-3 col-xl-2">
                 <div id="vol-progress" class="vol-progress" data-percent="5">
                   <div id="myBar" class="vol-progress__bar diagram progress">
                     <div class="piece left"></div>
@@ -2341,7 +2346,6 @@
                     </div>
                   </div>
                 </div>
-                <button class="btn-reset vol-form__submit" type="submit" disabled  form="vol-form">Отправить анкету</button>
               </div>
             </div>
           </div>

@@ -679,7 +679,7 @@
                       <svg class="need-doc__icon">
                         <use xlink:href="assets/img/sprite.svg#nd-icon-doc"></use>
                       </svg>
-                      <p class="need-doc__caption">Направление</p>
+                      <p class="need-doc__caption">Медицинская справка</p>
                     </li>
                     <li class="need-doc__item">
                       <svg class="need-doc__icon">
@@ -690,11 +690,9 @@
                   </ul>
                 </div>
               </div>
-              <div class="col-12 col-md-10">
+              <div class="col-12 col-md-9 col-xl-10">
                 <form action="#" method="" class="vol-form" id="vol-form">
                   <div id="wizard">
-        
-        
         
                     <h2>Данные</h2>
                     <section>
@@ -713,10 +711,13 @@
                         </label>
                         <label for="vol-accessibility" class="vol-form__label">
                           Состояние
-                          <select type="text" id="vol-accessibility" name="vol-accessibility" class="vol-form__select">
-                            <option value="" selected>Выберите</option>
-                            <option value="">Без ограничений</option>
-                            <option value="">C ограничениями</option>
+                          <select type="text" id="vol-accessibility" name="vol-accessibility" class="vol-form__select ">
+                            <option value="" selected>Ваше состояние</option>
+                            <option value="">Здоров</option>
+                            <option value="">Диганостированна болезнь</option>
+                            <option value="">На лечении</option>
+                            <option value="">Реабилитация</option>
+                            <option value="">Ремиссия</option>
                           </select>
                         </label>
                       </div>
@@ -742,8 +743,8 @@
                     <section>
                       <div class="vol-form__group">
                         <label for="vol-city" class="vol-form__label">
-                          Город проживания
-                          <input type="text" id="vol-city" name="vol-city" placeholder="Начните вводить"
+                          Город или регион поиска
+                          <input type="text" id="vol-city" name="vol-city" placeholder=""
                                  class="vol-form__input required">
                         </label>
                         <div>
@@ -820,7 +821,7 @@
                   </div>
                 </form>
               </div>
-              <div class="col-2">
+              <div class="col-2 col-md-3 col-xl-2">
                 <div id="vol-progress" class="vol-progress" data-percent="5">
                   <div id="myBar" class="vol-progress__bar diagram progress">
                     <div class="piece left"></div>
@@ -831,7 +832,6 @@
                     </div>
                   </div>
                 </div>
-                <button class="btn-reset vol-form__submit" type="submit" disabled form="vol-form">Оставить заявку</button>
               </div>
             </div>
           </div>

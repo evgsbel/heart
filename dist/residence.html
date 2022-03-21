@@ -473,12 +473,6 @@
                       <svg class="need-doc__icon">
                         <use xlink:href="assets/img/sprite.svg#nd-icon-doc"></use>
                       </svg>
-                      <p class="need-doc__caption">ИНН</p>
-                    </li>
-                    <li class="need-doc__item">
-                      <svg class="need-doc__icon">
-                        <use xlink:href="assets/img/sprite.svg#nd-icon-doc"></use>
-                      </svg>
                       <p class="need-doc__caption">Выписной эпикриз <span>форма 027/у, сроком не больше 3-х месяцев</span></p>
                     </li>
                     <li class="need-doc__item">
@@ -497,12 +491,18 @@
                       <svg class="need-doc__icon">
                         <use xlink:href="assets/img/sprite.svg#nd-icon-doc"></use>
                       </svg>
+                      <p class="need-doc__caption">Справка о доходах супруга <span>при наличии</span></p>
+                    </li>
+                    <li class="need-doc__item">
+                      <svg class="need-doc__icon">
+                        <use xlink:href="assets/img/sprite.svg#nd-icon-doc"></use>
+                      </svg>
                       <p class="need-doc__caption">Справка об инвалидности <span>при наличии</span></p>
                     </li>
                   </ul>
                 </div>
               </div>
-              <div class="col-12 col-md-10">
+              <div class="col-12 col-md-9 col-xl-10">
                 <form action="#" method="" class="vol-form" id="vol-form">
                   <div id="wizard">
         
@@ -516,7 +516,7 @@
                         </label>
                         <label for="vol-city" class="vol-form__label">
                           Город проживания
-                          <input type="text" id="vol-city" name="vol-city" placeholder="Начните вводить"
+                          <input type="text" id="vol-city" name="vol-city" placeholder=""
                                  class="vol-form__input required">
                         </label>
                       </div>
@@ -528,10 +528,13 @@
                         </label>
                         <label for="vol-accessibility" class="vol-form__label">
                           Состояние
-                          <select type="text" id="vol-accessibility" name="vol-accessibility" class="vol-form__select">
-                            <option value="" selected>Выберите</option>
-                            <option value="">Без ограничений</option>
-                            <option value="">C ограничениями</option>
+                          <select type="text" id="vol-accessibility" name="vol-accessibility" class="vol-form__select ">
+                            <option value="" selected>Ваше состояние</option>
+                            <option value="">Здоров</option>
+                            <option value="">Диганостированна болезнь</option>
+                            <option value="">На лечении</option>
+                            <option value="">Реабилитация</option>
+                            <option value="">Ремиссия</option>
                           </select>
                         </label>
                       </div>
@@ -557,16 +560,16 @@
                       <div class="vol-form__group">
                         <label for="vol-city-to" class="vol-form__label">
                           Город проживания
-                          <input type="text" id="vol-city-to" name="vol-city-to" placeholder="Начните вводить"
+                          <input type="text" id="vol-city-to" name="vol-city-to" placeholder=""
                                  class="vol-form__input required">
                         </label>
                         <label for="vol-date-arrival" class="vol-form__label">
-                          Дата заселения
+                          Прибытие
                           <input type="text" id="vol-date-arrival" name="vol-date-arrival" class="vol-form__input required date-mask"
                                  placeholder="_._._">
                         </label>
                         <label for="vol-departure" class="vol-form__label">
-                          Дата выезда
+                          Выезд
                           <input type="text" id="vol-departure" name="vol-departure" class="vol-form__input required date-mask"
                                  placeholder="_._._">
                         </label>
@@ -662,16 +665,7 @@
                         </div>
                       </div>
                       <div class="vol-form__group">
-                        <div class="vol-form__file-wrapper">
-                          <p class="vol-form__label">ИНН</p>
-                          <div class="vol-form__file-inner">
-                            <input type="file" name="upload-file__input_inn" id="upload-file__input_inn" class="required vol-form__file" required>
-                            <label class="vol-form__file-label" for="upload-file__input_inn">
-                              Перетащите или <span>выберите файл</span>
-                            </label>
-                            <button class="js-remove-file vol-form__file-remove btn-reset" type="button"></button>
-                          </div>
-                        </div>
+        
                         <div class="vol-form__file-wrapper">
                           <p class="vol-form__label">Направление на прием</p>
                           <div class="vol-form__file-inner">
@@ -692,13 +686,23 @@
                             <button class="js-remove-file vol-form__file-remove btn-reset" type="button"></button>
                           </div>
                         </div>
+                        <div class="vol-form__file-wrapper">
+                          <p class="vol-form__label">Справка о доходах супруга <span>при наличии</span></p>
+                          <div class="vol-form__file-inner">
+                            <input type="file" name="upload-file__input_inn" id="upload-file__input_inn" class="required vol-form__file">
+                            <label class="vol-form__file-label" for="upload-file__input_inn">
+                              Перетащите или <span>выберите файл</span>
+                            </label>
+                            <button class="js-remove-file vol-form__file-remove btn-reset" type="button"></button>
+                          </div>
+                        </div>
                       </div>
                     </section>
                   </div>
                 </form>
               </div>
-              <div class="col-2">
-                <div id="vol-progress" class="vol-progress" data-percent="5">
+              <div class="col-2 col-md-3 col-xl-2">
+              <div id="vol-progress" class="vol-progress" data-percent="5">
                   <div id="myBar" class="vol-progress__bar diagram progress">
                     <div class="piece left"></div>
                     <div class="piece right"></div>
@@ -708,7 +712,6 @@
                     </div>
                   </div>
                 </div>
-                <button class="btn-reset vol-form__submit" type="submit" disabled form="vol-form">Оставить заявку</button>
               </div>
             </div>
           </div>

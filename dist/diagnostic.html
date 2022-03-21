@@ -529,13 +529,19 @@
                       <svg class="need-doc__icon">
                         <use xlink:href="assets/img/sprite.svg#nd-icon-pass"></use>
                       </svg>
-                      <p class="need-doc__caption">Паспорт</p>
+                      <p class="need-doc__caption">Паспорт <span>1-я страница, регистрация, семейное положение, дети</span></p>
                     </li>
                     <li class="need-doc__item">
                       <svg class="need-doc__icon">
                         <use xlink:href="assets/img/sprite.svg#nd-icon-doc"></use>
                       </svg>
                       <p class="need-doc__caption">ИНН</p>
+                    </li>
+                    <li class="need-doc__item">
+                      <svg class="need-doc__icon">
+                        <use xlink:href="assets/img/sprite.svg#nd-icon-doc"></use>
+                      </svg>
+                      <p class="need-doc__caption">Медицинская справка</p>
                     </li>
                     <li class="need-doc__item">
                       <svg class="need-doc__icon">
@@ -553,18 +559,18 @@
                       <svg class="need-doc__icon">
                         <use xlink:href="assets/img/sprite.svg#nd-icon-doc"></use>
                       </svg>
-                      <p class="need-doc__caption">Справка об инвалидности <span>при наличии</span></p>
+                      <p class="need-doc__caption">Справка о доходах супруга <span>при наличии</span></p>
                     </li>
                     <li class="need-doc__item">
                       <svg class="need-doc__icon">
                         <use xlink:href="assets/img/sprite.svg#nd-icon-doc"></use>
                       </svg>
-                      <p class="need-doc__caption">Направление</p>
+                      <p class="need-doc__caption">Справка об инвалидности <span>при наличии</span></p>
                     </li>
                   </ul>
                 </div>
               </div>
-              <div class="col-12 col-md-10">
+              <div class="col-md-9 col-xl-10">
                 <form action="#" method="" class="vol-form" id="vol-form">
                   <div id="wizard">
         
@@ -585,10 +591,13 @@
                         </label>
                         <label for="vol-accessibility" class="vol-form__label">
                           Состояние
-                          <select type="text" id="vol-accessibility" name="vol-accessibility" class="vol-form__select">
-                            <option value="" selected>Выберите</option>
-                            <option value="">Без ограничений</option>
-                            <option value="">C ограничениями</option>
+                          <select type="text" id="vol-accessibility" name="vol-accessibility" class="vol-form__select ">
+                            <option value="" selected>Ваше состояние</option>
+                            <option value="">Здоров</option>
+                            <option value="">Диганостированна болезнь</option>
+                            <option value="">На лечении</option>
+                            <option value="">Реабилитация</option>
+                            <option value="">Ремиссия</option>
                           </select>
                         </label>
                       </div>
@@ -627,7 +636,8 @@
                         <div class="vol-form__file-wrapper">
                           <p class="vol-form__label">Первая страница паспорта</p>
                           <div class="vol-form__file-inner">
-                            <input type="file" name="upload-file__input_1" id="upload-file__input_1" class="required vol-form__file" required>
+                            <input type="file" name="upload-file__input_1" id="upload-file__input_1"
+                                   class="required vol-form__file" required>
                             <label class="vol-form__file-label" for="upload-file__input_1">
                               Перетащите или <span>выберите файл</span>
                             </label>
@@ -637,7 +647,8 @@
                         <div class="vol-form__file-wrapper">
                           <p class="vol-form__label">Страница паспорта с регистрацией</p>
                           <div class="vol-form__file-inner">
-                            <input type="file" name="upload-file__input_2" id="upload-file__input_2" class="required vol-form__file" required>
+                            <input type="file" name="upload-file__input_2" id="upload-file__input_2"
+                                   class="required vol-form__file" required>
                             <label class="vol-form__file-label" for="upload-file__input_2">
                               Перетащите или <span>выберите файл</span>
                             </label>
@@ -645,22 +656,61 @@
                           </div>
                         </div>
                         <div class="vol-form__file-wrapper">
-                          <p class="vol-form__label">ИНН</p>
+                          <p class="vol-form__label">Страница паспорта с семейное положение</p>
                           <div class="vol-form__file-inner">
-                            <input type="file" name="upload-file__input_inn" id="upload-file__input_inn" class="required vol-form__file" required>
-                            <label class="vol-form__file-label" for="upload-file__input_inn">
+                            <input type="file" name="upload-file__input_3" id="upload-file__input_3"
+                                   class="required vol-form__file" required>
+                            <label class="vol-form__file-label" for="upload-file__input_3">
                               Перетащите или <span>выберите файл</span>
                             </label>
                             <button class="js-remove-file vol-form__file-remove btn-reset" type="button"></button>
                           </div>
                         </div>
+                        <div class="vol-form__file-wrapper">
+                          <p class="vol-form__label">Страница паспорта дети</p>
+                          <div class="vol-form__file-inner">
+                            <input type="file" name="upload-file__input_5" id="upload-file__input_5"
+                                   class="required vol-form__file" required>
+                            <label class="vol-form__file-label" for="upload-file__input_5">
+                              Перетащите или <span>выберите файл</span>
+                            </label>
+                            <button class="js-remove-file vol-form__file-remove btn-reset" type="button"></button>
+                          </div>
+                        </div>
+                        <div class="vol-form__group">
+                          <div class="vol-form__file-wrapper">
+                            <p class="vol-form__label">ИНН</p>
+                            <div class="vol-form__file-inner">
+                              <input type="file" name="upload-file__input_inn" id="upload-file__input_inn"
+                                     class="required vol-form__file" required>
+                              <label class="vol-form__file-label" for="upload-file__input_inn">
+                                Перетащите или <span>выберите файл</span>
+                              </label>
+                              <button class="js-remove-file vol-form__file-remove btn-reset" type="button"></button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="vol-form__group">
+                          <div class="vol-form__file-wrapper">
+                            <p class="vol-form__label">Медицинская справка</p>
+                            <div class="vol-form__file-inner">
+                              <input type="file" name="upload-file__input_med" id="upload-file__input_med"
+                                     class="required vol-form__file" required>
+                              <label class="vol-form__file-label" for="upload-file__input_med">
+                                Перетащите или <span>выберите файл</span>
+                              </label>
+                              <button class="js-remove-file vol-form__file-remove btn-reset" type="button"></button>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                       <div class="vol-form__group">
                         <div class="vol-form__file-wrapper">
-                          <p class="vol-form__label">Направление <span>при наличии</span></p>
+                          <p class="vol-form__label">Выписной эпикриз <span>форма 027/у, сроком не больше 3-х месяцев</span></p>
                           <div class="vol-form__file-inner">
-                            <input type="file" name="upload-file__input_3" id="upload-file__input_3" class="vol-form__file">
-                            <label class="vol-form__file-label" for="upload-file__input_3">
+                            <input type="file" name="upload-file__input_4" id="upload-file__input_4"
+                                   class="required vol-form__file" required>
+                            <label class="vol-form__file-label" for="upload-file__input_4">
                               Перетащите или <span>выберите файл</span>
                             </label>
                             <button class="js-remove-file vol-form__file-remove btn-reset" type="button"></button>
@@ -669,18 +719,9 @@
                         <div class="vol-form__file-wrapper">
                           <p class="vol-form__label">Справка о доходах</p>
                           <div class="vol-form__file-inner">
-                            <input type="file" name="upload-file__input_income" id="upload-file__input_income" class="required vol-form__file" required>
-                            <label class="vol-form__file-label" for="upload-file__input_income">
-                              Перетащите или <span>выберите файл</span>
-                            </label>
-                            <button class="js-remove-file vol-form__file-remove btn-reset" type="button"></button>
-                          </div>
-                        </div>
-                        <div class="vol-form__file-wrapper">
-                          <p class="vol-form__label">Выписной эпикриз <span>форма 027/у, сроком не больше 3-х месяцев</span></p>
-                          <div class="vol-form__file-inner">
-                            <input type="file" name="upload-file__input_4" id="upload-file__input_4" class="required vol-form__file" required>
-                            <label class="vol-form__file-label" for="upload-file__input_4">
+                            <input type="file" name="upload-file__input_dohod" id="upload-file__input_dohod"
+                                   class="required vol-form__file" required>
+                            <label class="vol-form__file-label" for="upload-file__input_dohod">
                               Перетащите или <span>выберите файл</span>
                             </label>
                             <button class="js-remove-file vol-form__file-remove btn-reset" type="button"></button>
@@ -689,10 +730,22 @@
                       </div>
                       <div class="vol-form__group">
                         <div class="vol-form__file-wrapper">
-                          <p class="vol-form__label">Справка об инвалидности <span>при наличии</span></p>
+                          <p class="vol-form__label">Справка о доходах супруга <span>при наличии</span></span></p>
                           <div class="vol-form__file-inner">
-                            <input type="file" name="upload-file__disability" id="upload-file__disability" class="vol-form__file">
-                            <label class="vol-form__file-label" for="upload-file__disability">
+                            <input type="file" name="upload-file__input_dohod-spr" id="upload-file__input_dohod-spr"
+                                   class="required vol-form__file">
+                            <label class="vol-form__file-label" for="upload-file__input_dohod-spr">
+                              Перетащите или <span>выберите файл</span>
+                            </label>
+                            <button class="js-remove-file vol-form__file-remove btn-reset" type="button"></button>
+                          </div>
+                        </div>
+                        <div class="vol-form__file-wrapper">
+                          <p class="vol-form__label">Справка об инвалидности <span>при наличии</span></span></p>
+                          <div class="vol-form__file-inner">
+                            <input type="file" name="upload-file__input_inv" id="upload-file__input_inv"
+                                   class="required vol-form__file">
+                            <label class="vol-form__file-label" for="upload-file__input_inv">
                               Перетащите или <span>выберите файл</span>
                             </label>
                             <button class="js-remove-file vol-form__file-remove btn-reset" type="button"></button>
@@ -703,7 +756,7 @@
                   </div>
                 </form>
               </div>
-              <div class="col-2">
+              <div class="col-2 col-md-3 col-xl-2">
                 <div id="vol-progress" class="vol-progress" data-percent="5">
                   <div id="myBar" class="vol-progress__bar diagram progress">
                     <div class="piece left"></div>
@@ -714,7 +767,7 @@
                     </div>
                   </div>
                 </div>
-                <button class="btn-reset vol-form__submit" type="submit" disabled form="vol-form">Оставить заявку</button>
+        
               </div>
             </div>
           </div>

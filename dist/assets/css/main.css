@@ -21550,46 +21550,13 @@ h3 {
   left: -999em;
 }
 
-/* line 293, src/assets/scss/pages/_pay.scss */
-.wizard {
-  margin-top: 32px;
-}
-
 /* line 296, src/assets/scss/pages/_pay.scss */
 .wizard > .content {
   display: block;
-  min-height: 20em;
+  min-height: auto;
   overflow: hidden;
   position: relative;
   width: auto;
-}
-
-@media only screen and (max-width: 1440px) {
-  /* line 296, src/assets/scss/pages/_pay.scss */
-  .wizard > .content {
-    min-height: 30em;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  /* line 296, src/assets/scss/pages/_pay.scss */
-  .wizard > .content {
-    min-height: 35em;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  /* line 296, src/assets/scss/pages/_pay.scss */
-  .wizard > .content {
-    min-height: 40em;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  /* line 296, src/assets/scss/pages/_pay.scss */
-  .wizard > .content {
-    min-height: 55em;
-  }
 }
 
 /* line 319, src/assets/scss/pages/_pay.scss */
@@ -21674,14 +21641,9 @@ h3 {
   border-color: currentColor;
 }
 
-/* line 362, src/assets/scss/pages/_pay.scss */
-.wizard > .steps > ul > li.error {
-  color: #ff3111;
-  border-color: currentColor;
-}
-
 /* line 368, src/assets/scss/pages/_pay.scss */
 .wizard > .actions > ul > li {
+  position: relative;
   padding: 16px 24px 20px;
   color: #2688E5;
   font-size: 20px;
@@ -21699,24 +21661,24 @@ h3 {
   }
 }
 
-/* line 378, src/assets/scss/pages/_pay.scss */
+/* line 379, src/assets/scss/pages/_pay.scss */
 .wizard > .actions > ul > li.disabled {
   display: none;
 }
 
-/* line 381, src/assets/scss/pages/_pay.scss */
+/* line 382, src/assets/scss/pages/_pay.scss */
 .wizard > .actions > ul > li:first-child {
   margin-right: 24px;
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 381, src/assets/scss/pages/_pay.scss */
+  /* line 382, src/assets/scss/pages/_pay.scss */
   .wizard > .actions > ul > li:first-child {
     margin-right: 0;
   }
 }
 
-/* line 387, src/assets/scss/pages/_pay.scss */
+/* line 388, src/assets/scss/pages/_pay.scss */
 .wizard > .actions > ul > li:nth-child(2) {
   color: #fff;
   background-color: #2688E5;
@@ -21724,12 +21686,63 @@ h3 {
   font-weight: 600;
 }
 
-/* line 393, src/assets/scss/pages/_pay.scss */
-.wizard > .actions > ul > li:nth-child(3) {
-  visibility: hidden;
+/* line 395, src/assets/scss/pages/_pay.scss */
+.wizard > .actions > ul > li:nth-child(3) > a {
+  background: #2688E5;
+  border-radius: 12px;
+  color: #fff;
+  padding: 16px 68px 20px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.4;
 }
 
-/* line 399, src/assets/scss/pages/_pay.scss */
+/* line 403, src/assets/scss/pages/_pay.scss */
+.wizard > .actions > ul > li:nth-child(3) > a.not-active {
+  color: #AEC1D2;
+  background-color: #F5F8FB;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* line 410, src/assets/scss/pages/_pay.scss */
+.wizard > .actions > ul > li:nth-child(3) > span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 24px;
+  color: #848484;
+  font-size: 14px;
+  line-height: 1.4;
+  max-width: 290px;
+  opacity: 1;
+}
+
+/* line 419, src/assets/scss/pages/_pay.scss */
+.wizard > .actions > ul > li:nth-child(3) > span.not-active {
+  opacity: 0;
+}
+
+/* line 422, src/assets/scss/pages/_pay.scss */
+.wizard > .actions > ul > li:nth-child(3) > span a {
+  color: #127CE1;
+}
+
+/* line 429, src/assets/scss/pages/_pay.scss */
+.wizard > .actions > ul > li a:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 440, src/assets/scss/pages/_pay.scss */
+.vol-form__title {
+  margin-bottom: 32px;
+}
+
+/* line 443, src/assets/scss/pages/_pay.scss */
 .vol-form__group {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -21739,30 +21752,32 @@ h3 {
           align-items: center;
   gap: 32px;
   margin-bottom: 40px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 @media only screen and (max-width: 1440px) {
-  /* line 399, src/assets/scss/pages/_pay.scss */
+  /* line 443, src/assets/scss/pages/_pay.scss */
   .vol-form__group {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
 }
 
-/* line 407, src/assets/scss/pages/_pay.scss */
+/* line 452, src/assets/scss/pages/_pay.scss */
 .vol-form__group_checkboxes {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 0 32px;
 }
 
-/* line 410, src/assets/scss/pages/_pay.scss */
+/* line 455, src/assets/scss/pages/_pay.scss */
 .vol-form__group_checkboxes label {
   margin-top: 24px;
   width: 30%;
 }
 
-/* line 416, src/assets/scss/pages/_pay.scss */
+/* line 461, src/assets/scss/pages/_pay.scss */
 .vol-form__label {
   position: relative;
   font-weight: 500;
@@ -21770,26 +21785,32 @@ h3 {
   line-height: 1.4;
 }
 
-/* line 421, src/assets/scss/pages/_pay.scss */
+/* line 466, src/assets/scss/pages/_pay.scss */
 .vol-form__label_check, .vol-form__label_radio {
   margin-top: 50px;
   padding-left: 30px;
   cursor: pointer;
+  font-weight: 400;
 }
 
-/* line 427, src/assets/scss/pages/_pay.scss */
+/* line 473, src/assets/scss/pages/_pay.scss */
 .vol-form__label span {
   font-size: 16px;
   color: #939ca5;
 }
 
-/* line 431, src/assets/scss/pages/_pay.scss */
+/* line 477, src/assets/scss/pages/_pay.scss */
 .vol-form__label span.vol-form__error {
   color: #ff3111;
   font-size: 14px;
 }
 
-/* line 436, src/assets/scss/pages/_pay.scss */
+/* line 481, src/assets/scss/pages/_pay.scss */
+.vol-form__label[for="vol-month"] {
+  margin-left: -35px;
+}
+
+/* line 485, src/assets/scss/pages/_pay.scss */
 .vol-form__input {
   display: block;
   margin-top: 16px;
@@ -21798,20 +21819,20 @@ h3 {
   line-height: 1.4;
   color: #000;
   border: none;
-  background-color: #F5F8FB;
+  background-color: #F2F5F9;
   border-radius: 12px;
   min-width: 425px;
   max-width: 100%;
 }
 
 @media only screen and (max-width: 1200px) {
-  /* line 436, src/assets/scss/pages/_pay.scss */
+  /* line 485, src/assets/scss/pages/_pay.scss */
   .vol-form__input {
     min-width: auto;
   }
 }
 
-/* line 451, src/assets/scss/pages/_pay.scss */
+/* line 500, src/assets/scss/pages/_pay.scss */
 .vol-form__input::-webkit-input-placeholder {
   font-size: 20px;
   line-height: 1.4;
@@ -21838,20 +21859,37 @@ h3 {
   color: #6D7276;
 }
 
-/* line 456, src/assets/scss/pages/_pay.scss */
+/* line 505, src/assets/scss/pages/_pay.scss */
+.vol-form__input:focus {
+  outline: none;
+}
+
+/* line 508, src/assets/scss/pages/_pay.scss */
 .vol-form__input[type="number"]::-webkit-outer-spin-button, .vol-form__input[type="number"]::-webkit-inner-spin-button {
   display: none;
   -webkit-appearance: none;
   margin: 0;
 }
 
-/* line 462, src/assets/scss/pages/_pay.scss */
+/* line 514, src/assets/scss/pages/_pay.scss */
 .vol-form__input[name="vol-day"], .vol-form__input[name="vol-time"], .vol-form__input[name="vol-date"], .vol-form__input[name="vol-date-arrival"], .vol-form__input[name="vol-departure"] {
-  min-width: 140px;
-  max-width: 140px;
+  min-width: 150px;
+  max-width: 150px;
 }
 
-/* line 471, src/assets/scss/pages/_pay.scss */
+/* line 522, src/assets/scss/pages/_pay.scss */
+.vol-form__input[name="vol-year"] {
+  min-width: 195px;
+  max-width: 195px;
+}
+
+/* line 526, src/assets/scss/pages/_pay.scss */
+.vol-form__input[name="vol-phone"] {
+  min-width: 225px;
+  max-width: 225px;
+}
+
+/* line 531, src/assets/scss/pages/_pay.scss */
 .vol-form__textarea {
   display: block;
   margin-top: 16px;
@@ -21863,19 +21901,19 @@ h3 {
   width: 100%;
   height: 180px;
   border: none;
-  background-color: #F5F8FB;
+  background-color: #F2F5F9;
   border-radius: 12px;
   resize: none;
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 471, src/assets/scss/pages/_pay.scss */
+  /* line 531, src/assets/scss/pages/_pay.scss */
   .vol-form__textarea {
     max-width: 100%;
   }
 }
 
-/* line 488, src/assets/scss/pages/_pay.scss */
+/* line 548, src/assets/scss/pages/_pay.scss */
 .vol-form__textarea::-webkit-input-placeholder {
   font-size: 20px;
   line-height: 1.4;
@@ -21902,22 +21940,27 @@ h3 {
   color: #7B8086;
 }
 
-/* line 494, src/assets/scss/pages/_pay.scss */
+/* line 553, src/assets/scss/pages/_pay.scss */
+.vol-form__textarea:focus {
+  outline: none;
+}
+
+/* line 557, src/assets/scss/pages/_pay.scss */
 .vol-form__checkbox {
   display: none;
 }
 
-/* line 496, src/assets/scss/pages/_pay.scss */
+/* line 559, src/assets/scss/pages/_pay.scss */
 .vol-form__checkbox:checked + .vol-form__check-pane {
   border-color: #127CE1;
 }
 
-/* line 499, src/assets/scss/pages/_pay.scss */
+/* line 562, src/assets/scss/pages/_pay.scss */
 .vol-form__checkbox:checked + .vol-form__check-pane::before {
   opacity: 1;
 }
 
-/* line 503, src/assets/scss/pages/_pay.scss */
+/* line 566, src/assets/scss/pages/_pay.scss */
 .vol-form__check-pane {
   position: absolute;
   top: 50%;
@@ -21932,7 +21975,7 @@ h3 {
   transition: border-color .3s ease-in-out;
 }
 
-/* line 513, src/assets/scss/pages/_pay.scss */
+/* line 576, src/assets/scss/pages/_pay.scss */
 .vol-form__check-pane::before {
   content: '';
   position: absolute;
@@ -21950,22 +21993,22 @@ h3 {
   transition: opacity .3s ease-in-out;
 }
 
-/* line 529, src/assets/scss/pages/_pay.scss */
+/* line 592, src/assets/scss/pages/_pay.scss */
 .vol-form__radio {
   display: none;
 }
 
-/* line 531, src/assets/scss/pages/_pay.scss */
+/* line 594, src/assets/scss/pages/_pay.scss */
 .vol-form__radio:checked + .vol-form__radio-pane {
   border-color: #127CE1;
 }
 
-/* line 534, src/assets/scss/pages/_pay.scss */
+/* line 597, src/assets/scss/pages/_pay.scss */
 .vol-form__radio:checked + .vol-form__radio-pane::before {
   opacity: 1;
 }
 
-/* line 538, src/assets/scss/pages/_pay.scss */
+/* line 601, src/assets/scss/pages/_pay.scss */
 .vol-form__radio-pane {
   position: absolute;
   top: 50%;
@@ -21980,7 +22023,7 @@ h3 {
   transition: border-color .3s ease-in-out;
 }
 
-/* line 548, src/assets/scss/pages/_pay.scss */
+/* line 611, src/assets/scss/pages/_pay.scss */
 .vol-form__radio-pane::before {
   content: '';
   position: absolute;
@@ -21998,16 +22041,16 @@ h3 {
   transition: opacity .3s ease-in-out;
 }
 
-/* line 564, src/assets/scss/pages/_pay.scss */
+/* line 627, src/assets/scss/pages/_pay.scss */
 .vol-form__select {
   display: block;
-  background-image: url("data:image/svg+xml,%3Csvg width='17' height='8' viewBox='0 0 17 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L8.5 7L16 1' stroke='%23939CA5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A"), -webkit-gradient(linear, left top, left bottom, from(#F5F8FB), to(#F5F8FB));
-  background-image: url("data:image/svg+xml,%3Csvg width='17' height='8' viewBox='0 0 17 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L8.5 7L16 1' stroke='%23939CA5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A"), linear-gradient(to bottom, #F5F8FB 0%, #F5F8FB 100%);
+  background-image: url("data:image/svg+xml,%3Csvg width='17' height='8' viewBox='0 0 17 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L8.5 7L16 1' stroke='%23939CA5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A"), -webkit-gradient(linear, left top, left bottom, from(#F2F5F9), to(#F2F5F9));
+  background-image: url("data:image/svg+xml,%3Csvg width='17' height='8' viewBox='0 0 17 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L8.5 7L16 1' stroke='%23939CA5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A"), linear-gradient(to bottom, #F2F5F9 0%, #F2F5F9 100%);
   background-repeat: no-repeat, repeat;
   background-position: right .7em top 50%, 0 0;
   margin-top: 16px;
   padding: 12px 24px 16px;
-  font-size: 1.25em;
+  font-size: 20px;
   line-height: 1.4;
   color: #000;
   border: none;
@@ -22020,18 +22063,18 @@ h3 {
   max-width: 100%;
 }
 
-/* line 582, src/assets/scss/pages/_pay.scss */
+/* line 645, src/assets/scss/pages/_pay.scss */
 .vol-form__select::-ms-expand {
   display: none;
 }
 
-/* line 585, src/assets/scss/pages/_pay.scss */
+/* line 648, src/assets/scss/pages/_pay.scss */
 .vol-form__select[name="vol-month"] {
   min-width: 180px;
   max-width: 180px;
 }
 
-/* line 590, src/assets/scss/pages/_pay.scss */
+/* line 653, src/assets/scss/pages/_pay.scss */
 .vol-form__submit {
   display: block;
   padding: 16px 10px 20px;
@@ -22045,24 +22088,24 @@ h3 {
 }
 
 @media only screen and (max-width: 768px) {
-  /* line 590, src/assets/scss/pages/_pay.scss */
+  /* line 653, src/assets/scss/pages/_pay.scss */
   .vol-form__submit {
     font-size: 18px;
   }
 }
 
-/* line 603, src/assets/scss/pages/_pay.scss */
+/* line 666, src/assets/scss/pages/_pay.scss */
 .vol-form__submit:disabled {
   color: #AEC1D2;
   background-color: #F5F8FB;
 }
 
-/* line 608, src/assets/scss/pages/_pay.scss */
+/* line 671, src/assets/scss/pages/_pay.scss */
 .vol-form__subcaption {
   margin-bottom: -32px;
 }
 
-/* line 611, src/assets/scss/pages/_pay.scss */
+/* line 674, src/assets/scss/pages/_pay.scss */
 .vol-form__file {
   opacity: 0;
   position: absolute;
@@ -22072,7 +22115,7 @@ h3 {
   height: 0.4px;
 }
 
-/* line 619, src/assets/scss/pages/_pay.scss */
+/* line 682, src/assets/scss/pages/_pay.scss */
 .vol-form__file-inner {
   position: relative;
   margin-top: 16px;
@@ -22084,7 +22127,7 @@ h3 {
   cursor: pointer;
 }
 
-/* line 629, src/assets/scss/pages/_pay.scss */
+/* line 692, src/assets/scss/pages/_pay.scss */
 .vol-form__file-label {
   margin-bottom: 0;
   font-size: 18px;
@@ -22093,17 +22136,17 @@ h3 {
   cursor: pointer;
 }
 
-/* line 635, src/assets/scss/pages/_pay.scss */
+/* line 698, src/assets/scss/pages/_pay.scss */
 .vol-form__file-label.is-active {
   color: #000;
 }
 
-/* line 638, src/assets/scss/pages/_pay.scss */
+/* line 701, src/assets/scss/pages/_pay.scss */
 .vol-form__file-label span {
   color: #127CE1;
 }
 
-/* line 642, src/assets/scss/pages/_pay.scss */
+/* line 705, src/assets/scss/pages/_pay.scss */
 .vol-form__file-remove {
   position: absolute;
   top: 50%;
@@ -22118,25 +22161,25 @@ h3 {
   opacity: 0;
 }
 
-/* line 653, src/assets/scss/pages/_pay.scss */
+/* line 716, src/assets/scss/pages/_pay.scss */
 .vol-form__file-remove.is-visible {
   opacity: 1;
 }
 
-/* line 657, src/assets/scss/pages/_pay.scss */
+/* line 720, src/assets/scss/pages/_pay.scss */
 .vol-form__file-remove, .vol-form__file-label {
   -webkit-transition: .25s ease;
   transition: .25s ease;
 }
 
-/* line 661, src/assets/scss/pages/_pay.scss */
+/* line 724, src/assets/scss/pages/_pay.scss */
 .vol-form__regular-text {
   margin-top: 8px;
   font-size: 18px;
   font-weight: 400;
 }
 
-/* line 670, src/assets/scss/pages/_pay.scss */
+/* line 733, src/assets/scss/pages/_pay.scss */
 .vol-progress {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22151,7 +22194,7 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 32px;
+  margin: 0 auto;
   text-align: center;
   width: 240px;
   height: 240px;
@@ -22160,7 +22203,7 @@ h3 {
 }
 
 @media only screen and (max-width: 1366px) {
-  /* line 670, src/assets/scss/pages/_pay.scss */
+  /* line 733, src/assets/scss/pages/_pay.scss */
   .vol-progress {
     width: 200px;
     height: 200px;
@@ -22168,13 +22211,13 @@ h3 {
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 670, src/assets/scss/pages/_pay.scss */
+  /* line 733, src/assets/scss/pages/_pay.scss */
   .vol-progress {
     display: none;
   }
 }
 
-/* line 689, src/assets/scss/pages/_pay.scss */
+/* line 752, src/assets/scss/pages/_pay.scss */
 .vol-progress__title {
   display: block;
   margin-bottom: 4px;
@@ -22183,7 +22226,7 @@ h3 {
   color: #6D7276;
 }
 
-/* line 696, src/assets/scss/pages/_pay.scss */
+/* line 759, src/assets/scss/pages/_pay.scss */
 .vol-progress__percent {
   font-weight: 500;
   font-size: 24px;
@@ -22191,7 +22234,7 @@ h3 {
   color: #6D7276;
 }
 
-/* line 704, src/assets/scss/pages/_pay.scss */
+/* line 767, src/assets/scss/pages/_pay.scss */
 .diagram {
   width: 240px;
   height: 240px;
@@ -22202,14 +22245,14 @@ h3 {
 }
 
 @media only screen and (max-width: 1366px) {
-  /* line 704, src/assets/scss/pages/_pay.scss */
+  /* line 767, src/assets/scss/pages/_pay.scss */
   .diagram {
     width: 200px;
     height: 200px;
   }
 }
 
-/* line 717, src/assets/scss/pages/_pay.scss */
+/* line 780, src/assets/scss/pages/_pay.scss */
 .diagram::before {
   content: '';
   display: block;
@@ -22224,7 +22267,7 @@ h3 {
   opacity: 1;
 }
 
-/* line 731, src/assets/scss/pages/_pay.scss */
+/* line 794, src/assets/scss/pages/_pay.scss */
 .diagram .piece {
   width: 100%;
   height: 100%;
@@ -22234,7 +22277,7 @@ h3 {
   position: absolute;
 }
 
-/* line 740, src/assets/scss/pages/_pay.scss */
+/* line 803, src/assets/scss/pages/_pay.scss */
 .diagram .piece::before {
   content: '';
   display: block;
@@ -22243,7 +22286,7 @@ h3 {
   height: 100%;
 }
 
-/* line 748, src/assets/scss/pages/_pay.scss */
+/* line 811, src/assets/scss/pages/_pay.scss */
 .diagram .piece.left {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
@@ -22252,13 +22295,13 @@ h3 {
   /* only FireFox < 75.0v (fix bug)*/
 }
 
-/* line 754, src/assets/scss/pages/_pay.scss */
+/* line 817, src/assets/scss/pages/_pay.scss */
 .diagram.over_50 .piece.left {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-/* line 758, src/assets/scss/pages/_pay.scss */
+/* line 821, src/assets/scss/pages/_pay.scss */
 .diagram .piece.right {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -22267,28 +22310,28 @@ h3 {
   /* only FireFox < 75.0v (fix bug)*/
 }
 
-/* line 764, src/assets/scss/pages/_pay.scss */
+/* line 827, src/assets/scss/pages/_pay.scss */
 .diagram.over_50 .piece.right {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
 
-/* line 768, src/assets/scss/pages/_pay.scss */
+/* line 831, src/assets/scss/pages/_pay.scss */
 .diagram .left::before {
   background: #EDF4FA;
 }
 
-/* line 772, src/assets/scss/pages/_pay.scss */
+/* line 835, src/assets/scss/pages/_pay.scss */
 .diagram.over_50 .left::before {
   background: #2688E5;
 }
 
-/* line 775, src/assets/scss/pages/_pay.scss */
+/* line 838, src/assets/scss/pages/_pay.scss */
 .diagram .right::before {
   background: #EDF4FA;
 }
 
-/* line 779, src/assets/scss/pages/_pay.scss */
+/* line 842, src/assets/scss/pages/_pay.scss */
 .diagram .text {
   position: absolute;
   z-index: 3;
@@ -22313,7 +22356,7 @@ h3 {
           justify-content: center;
 }
 
-/* line 796, src/assets/scss/pages/_pay.scss */
+/* line 859, src/assets/scss/pages/_pay.scss */
 .change-psychology__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22322,12 +22365,12 @@ h3 {
   gap: 16px;
 }
 
-/* line 801, src/assets/scss/pages/_pay.scss */
+/* line 864, src/assets/scss/pages/_pay.scss */
 .change-psychology__item {
   cursor: pointer;
 }
 
-/* line 803, src/assets/scss/pages/_pay.scss */
+/* line 866, src/assets/scss/pages/_pay.scss */
 .change-psychology__item img {
   padding: 3px;
   border: 1px solid transparent;
@@ -22336,28 +22379,28 @@ h3 {
   transition: border-color .3s ease-in-out;
 }
 
-/* line 811, src/assets/scss/pages/_pay.scss */
+/* line 874, src/assets/scss/pages/_pay.scss */
 .change-psychology__item.is-active img, .change-psychology__item:hover img {
   border-color: #2688E5;
 }
 
-/* line 816, src/assets/scss/pages/_pay.scss */
+/* line 879, src/assets/scss/pages/_pay.scss */
 .change-psychology__wr {
   gap: 32px;
   margin-top: 60px;
 }
 
-/* line 820, src/assets/scss/pages/_pay.scss */
+/* line 883, src/assets/scss/pages/_pay.scss */
 .change-psychology__info {
   text-align: center;
 }
 
-/* line 823, src/assets/scss/pages/_pay.scss */
+/* line 886, src/assets/scss/pages/_pay.scss */
 .change-psychology__image {
   margin-bottom: 24px;
 }
 
-/* line 826, src/assets/scss/pages/_pay.scss */
+/* line 889, src/assets/scss/pages/_pay.scss */
 .change-psychology__name {
   font-weight: 500;
   font-size: 1.375em;
@@ -22365,13 +22408,13 @@ h3 {
   color: #6D7276;
 }
 
-/* line 832, src/assets/scss/pages/_pay.scss */
+/* line 895, src/assets/scss/pages/_pay.scss */
 .change-psychology__experience {
   margin-top: 16px;
   color: #6D7276;
 }
 
-/* line 836, src/assets/scss/pages/_pay.scss */
+/* line 899, src/assets/scss/pages/_pay.scss */
 .change-psychology__overlay {
   position: absolute;
   width: 100%;
@@ -22383,7 +22426,7 @@ h3 {
   opacity: .75;
 }
 
-/* line 845, src/assets/scss/pages/_pay.scss */
+/* line 908, src/assets/scss/pages/_pay.scss */
 .change-psychology__description {
   position: relative;
   margin: 16px 0;
@@ -22393,23 +22436,23 @@ h3 {
   transition: max-height .3s ease-in-out;
 }
 
-/* line 851, src/assets/scss/pages/_pay.scss */
+/* line 914, src/assets/scss/pages/_pay.scss */
 .change-psychology__description.is-open {
   max-height: 100%;
 }
 
-/* line 853, src/assets/scss/pages/_pay.scss */
+/* line 916, src/assets/scss/pages/_pay.scss */
 .change-psychology__description.is-open .change-psychology__overlay {
   background: none;
 }
 
-/* line 857, src/assets/scss/pages/_pay.scss */
+/* line 920, src/assets/scss/pages/_pay.scss */
 .change-psychology__description p {
   font-size: 1.125em;
   line-height: 1.4;
 }
 
-/* line 862, src/assets/scss/pages/_pay.scss */
+/* line 925, src/assets/scss/pages/_pay.scss */
 .change-psychology__read-more {
   margin-top: 16px;
   font-size: 1.125em;
@@ -22417,44 +22460,44 @@ h3 {
   color: #2688E5;
 }
 
-/* line 871, src/assets/scss/pages/_pay.scss */
+/* line 934, src/assets/scss/pages/_pay.scss */
 .change-date {
   margin-top: 24px;
 }
 
-/* line 873, src/assets/scss/pages/_pay.scss */
+/* line 936, src/assets/scss/pages/_pay.scss */
 .change-date__caption {
   margin-bottom: 16px;
   font-size: 1.25em;
   line-height: 1.4;
 }
 
-/* line 878, src/assets/scss/pages/_pay.scss */
+/* line 941, src/assets/scss/pages/_pay.scss */
 .change-date__item {
   margin-bottom: 24px;
 }
 
-/* line 881, src/assets/scss/pages/_pay.scss */
+/* line 944, src/assets/scss/pages/_pay.scss */
 .change-date__label {
   position: relative;
 }
 
-/* line 883, src/assets/scss/pages/_pay.scss */
+/* line 946, src/assets/scss/pages/_pay.scss */
 .change-date__label:not(:last-child) {
   margin-right: 16px;
 }
 
-/* line 887, src/assets/scss/pages/_pay.scss */
+/* line 950, src/assets/scss/pages/_pay.scss */
 .change-date__input {
   display: none;
 }
 
-/* line 889, src/assets/scss/pages/_pay.scss */
+/* line 952, src/assets/scss/pages/_pay.scss */
 .change-date__input:checked + .change-date__pane {
   border-color: #2688E5;
 }
 
-/* line 893, src/assets/scss/pages/_pay.scss */
+/* line 956, src/assets/scss/pages/_pay.scss */
 .change-date__pane {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22478,7 +22521,7 @@ h3 {
   cursor: pointer;
 }
 
-/* line 912, src/assets/scss/pages/_pay.scss */
+/* line 975, src/assets/scss/pages/_pay.scss */
 .dz-clickable {
   position: relative;
   margin-top: 16px;
@@ -22491,30 +22534,30 @@ h3 {
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 912, src/assets/scss/pages/_pay.scss */
+  /* line 975, src/assets/scss/pages/_pay.scss */
   .dz-clickable {
     max-width: 100%;
   }
 }
 
-/* line 925, src/assets/scss/pages/_pay.scss */
+/* line 988, src/assets/scss/pages/_pay.scss */
 .dz-message {
   font-weight: 500;
   font-size: 1.125em;
   color: #6D7276;
 }
 
-/* line 929, src/assets/scss/pages/_pay.scss */
+/* line 992, src/assets/scss/pages/_pay.scss */
 .dz-message span {
   color: #127CE1;
 }
 
-/* line 933, src/assets/scss/pages/_pay.scss */
+/* line 996, src/assets/scss/pages/_pay.scss */
 .dropzone.dz-started {
   padding-bottom: 70px;
 }
 
-/* line 935, src/assets/scss/pages/_pay.scss */
+/* line 998, src/assets/scss/pages/_pay.scss */
 .dropzone.dz-started .dz-message {
   position: absolute;
   left: 0;
@@ -22524,7 +22567,7 @@ h3 {
   margin: 0;
 }
 
-/* line 945, src/assets/scss/pages/_pay.scss */
+/* line 1008, src/assets/scss/pages/_pay.scss */
 .dropzone .dz-preview.dz-error .dz-error-message,
 .dropzone .dz-preview.dz-error .dz-error-mark,
 .dropzone .dz-preview.dz-file-preview .dz-image,
@@ -22532,7 +22575,7 @@ h3 {
   display: none;
 }
 
-/* line 952, src/assets/scss/pages/_pay.scss */
+/* line 1015, src/assets/scss/pages/_pay.scss */
 .dropzone .dz-preview .dz-details {
   padding: 0;
   -webkit-transform: translateY(-16px);
@@ -22540,14 +22583,14 @@ h3 {
   top: calc(100% - 16px);
 }
 
-/* line 958, src/assets/scss/pages/_pay.scss */
+/* line 1021, src/assets/scss/pages/_pay.scss */
 .dropzone .dz-preview .dz-details .dz-filename span, .dropzone .dz-preview .dz-details .dz-size span {
   font-size: 14px;
   line-height: 1.2;
   color: #000;
 }
 
-/* line 964, src/assets/scss/pages/_pay.scss */
+/* line 1027, src/assets/scss/pages/_pay.scss */
 .dropzone .dz-preview {
   margin: 0 0 8px;
   padding: 16px;
@@ -22568,12 +22611,12 @@ h3 {
           flex-direction: column;
 }
 
-/* line 977, src/assets/scss/pages/_pay.scss */
+/* line 1040, src/assets/scss/pages/_pay.scss */
 .dropzone .dz-preview:not(:last-child) {
   margin-right: 8px;
 }
 
-/* line 982, src/assets/scss/pages/_pay.scss */
+/* line 1045, src/assets/scss/pages/_pay.scss */
 .dropzone .dz-preview .dz-remove {
   position: absolute;
   top: 8px;
@@ -22582,24 +22625,24 @@ h3 {
   cursor: pointer;
 }
 
-/* line 988, src/assets/scss/pages/_pay.scss */
+/* line 1051, src/assets/scss/pages/_pay.scss */
 .dropzone .dz-preview .dz-remove svg {
   cursor: pointer;
 }
 
-/* line 996, src/assets/scss/pages/_pay.scss */
+/* line 1059, src/assets/scss/pages/_pay.scss */
 .need-doc {
   margin-top: 24px;
 }
 
-/* line 998, src/assets/scss/pages/_pay.scss */
+/* line 1061, src/assets/scss/pages/_pay.scss */
 .need-doc__title {
   margin-bottom: 24px;
   font-size: 18px;
   line-height: 1.4;
 }
 
-/* line 1003, src/assets/scss/pages/_pay.scss */
+/* line 1066, src/assets/scss/pages/_pay.scss */
 .need-doc__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22610,7 +22653,7 @@ h3 {
       flex-wrap: wrap;
 }
 
-/* line 1009, src/assets/scss/pages/_pay.scss */
+/* line 1072, src/assets/scss/pages/_pay.scss */
 .need-doc__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22626,28 +22669,28 @@ h3 {
   border-radius: 16px;
 }
 
-/* line 1017, src/assets/scss/pages/_pay.scss */
+/* line 1080, src/assets/scss/pages/_pay.scss */
 .need-doc__icon {
   margin-right: 16px;
   width: 34px;
   height: 41px;
 }
 
-/* line 1022, src/assets/scss/pages/_pay.scss */
+/* line 1085, src/assets/scss/pages/_pay.scss */
 .need-doc__caption {
   font-weight: 500;
   font-size: 18px;
   line-height: 1.4;
 }
 
-/* line 1026, src/assets/scss/pages/_pay.scss */
+/* line 1089, src/assets/scss/pages/_pay.scss */
 .need-doc__caption span {
   display: block;
   font-size: 16px;
   color: #6D7276;
 }
 
-/* line 1036, src/assets/scss/pages/_pay.scss */
+/* line 1099, src/assets/scss/pages/_pay.scss */
 .vol-form-warning {
   margin-top: 24px;
   margin-bottom: 40px;
@@ -22660,30 +22703,30 @@ h3 {
   display: none;
 }
 
-/* line 1046, src/assets/scss/pages/_pay.scss */
+/* line 1109, src/assets/scss/pages/_pay.scss */
 .vol-form-warning.is-open {
   display: block;
 }
 
-/* line 1049, src/assets/scss/pages/_pay.scss */
+/* line 1112, src/assets/scss/pages/_pay.scss */
 .vol-form-warning.is-active {
   background: #FBF5F5;
   border: 1px solid #EC1515;
 }
 
-/* line 1053, src/assets/scss/pages/_pay.scss */
+/* line 1116, src/assets/scss/pages/_pay.scss */
 .vol-form-warning p, .vol-form-warning__text {
   font-size: 18px;
   line-height: 1.4;
   color: #000;
 }
 
-/* line 1058, src/assets/scss/pages/_pay.scss */
+/* line 1121, src/assets/scss/pages/_pay.scss */
 .vol-form-warning p:not(:last-child), .vol-form-warning__text:not(:last-child) {
   margin-bottom: 40px;
 }
 
-/* line 1067, src/assets/scss/pages/_pay.scss */
+/* line 1130, src/assets/scss/pages/_pay.scss */
 .check-taxi {
   position: absolute;
   z-index: 80;
@@ -22701,7 +22744,7 @@ h3 {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-/* line 1076, src/assets/scss/pages/_pay.scss */
+/* line 1139, src/assets/scss/pages/_pay.scss */
 .check-taxi__wrapper {
   padding: 40px 40px 32px;
   width: 472px;
@@ -22712,7 +22755,7 @@ h3 {
   border-radius: 16px;
 }
 
-/* line 1084, src/assets/scss/pages/_pay.scss */
+/* line 1147, src/assets/scss/pages/_pay.scss */
 .check-taxi__btn {
   margin-bottom: 16px;
   padding: 16px 0 20px;
@@ -22727,13 +22770,13 @@ h3 {
   transition: .3s color ease-in-out, .3s background-color ease-in-out;
 }
 
-/* line 1095, src/assets/scss/pages/_pay.scss */
+/* line 1158, src/assets/scss/pages/_pay.scss */
 .check-taxi__btn:hover, .check-taxi__btn.is-active {
   color: #fff;
   background-color: #2688E5;
 }
 
-/* line 1101, src/assets/scss/pages/_pay.scss */
+/* line 1164, src/assets/scss/pages/_pay.scss */
 .check-taxi__description {
   display: block;
   font-weight: 500;
@@ -22743,12 +22786,12 @@ h3 {
   text-align: center;
 }
 
-/* line 1108, src/assets/scss/pages/_pay.scss */
+/* line 1171, src/assets/scss/pages/_pay.scss */
 .check-taxi__description:not(:last-child) {
   margin-bottom: 32px;
 }
 
-/* line 1114, src/assets/scss/pages/_pay.scss */
+/* line 1177, src/assets/scss/pages/_pay.scss */
 .taxi-back {
   display: none;
 }

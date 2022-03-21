@@ -620,7 +620,7 @@ bannerImg: assets/img/lawyer
 <section id="volunteering-questionnaire" class="volunteering-questionnaire">
   <div class="container">
     <div class="row">
-      <div class="col-12 col-md-10">
+      <div class="col-12 col-md-9 col-xl-10">
         <form action="#" method="" class="vol-form" id="vol-form">
           <h2 class="title-h2 vol-form__title">Оформление заявки</h2>
           <div id="wizard">
@@ -635,7 +635,7 @@ bannerImg: assets/img/lawyer
                 </label>
                 <label for="vol-date" class="vol-form__label">
                   Дата рождения
-                  <input type="text" id="vol-date" name="vol-date" class="vol-form__input required date-mask" placeholder="_._._">
+                  <input type="text" id="vol-date" name="vol-date" class="vol-form__input required date-mask" placeholder="__.__.____">
                 </label>
               </div>
               <div class="vol-form__group">
@@ -646,10 +646,13 @@ bannerImg: assets/img/lawyer
                 </label>
                 <label for="vol-accessibility" class="vol-form__label">
                   Состояние
-                  <select type="text" id="vol-accessibility" name="vol-accessibility" class="vol-form__select">
-                    <option value="" selected>Выберите</option>
-                    <option value="">Без ограничений</option>
-                    <option value="">C ограничениями</option>
+                  <select type="text" id="vol-accessibility" name="vol-accessibility" class="vol-form__select ">
+                    <option value="" selected>Ваше состояние</option>
+                    <option value="">Здоров</option>
+                    <option value="">Диганостированна болезнь</option>
+                    <option value="">На лечении</option>
+                    <option value="">Реабилитация</option>
+                    <option value="">Ремиссия</option>
                   </select>
                 </label>
               </div>
@@ -696,7 +699,7 @@ bannerImg: assets/img/lawyer
           </div>
         </form>
       </div>
-      <div class="col-2">
+      <div class="col-2 col-md-3 col-xl-2">
         <div id="vol-progress" class="vol-progress" data-percent="5">
           <div id="myBar" class="vol-progress__bar diagram progress">
             <div class="piece left"></div>
@@ -707,7 +710,6 @@ bannerImg: assets/img/lawyer
             </div>
           </div>
         </div>
-        <button class="btn-reset vol-form__submit" type="submit" disabled form="vol-form">Оставить заявку</button>
       </div>
     </div>
   </div>

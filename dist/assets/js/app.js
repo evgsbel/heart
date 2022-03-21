@@ -229,7 +229,8 @@ $(function () {
     titleTemplate: '#title#',
     labels: {
       next: "Далее <svg width='21' height='16' viewBox='0 0 21 16' fill='none' xmlns='http://www.w3.org/2000/svg'>\n" + "  <path d='M1 8H20M20 8L13 1M20 8L13 15' stroke='white' stroke-linecap='round' stroke-linejoin='round'/>\n" + "</svg>",
-      previous: "<svg width='21' height='16' viewBox='0 0 21 16' fill='none' xmlns='http://www.w3.org/2000/svg'>\n" + "  <path d='M20 8H1M1 8L8 1M1 8L8 15' stroke='#2688E5' stroke-linecap='round' stroke-linejoin='round'/>\n" + "</svg> Вернуться"
+      previous: "<svg width='21' height='16' viewBox='0 0 21 16' fill='none' xmlns='http://www.w3.org/2000/svg'>\n" + "  <path d='M20 8H1M1 8L8 1M1 8L8 15' stroke='#2688E5' stroke-linecap='round' stroke-linejoin='round'/>\n" + "</svg> Вернуться",
+      finish: "Отправить анкету"
     },
     onInit: function onInit(event, currentIndex) {// setProgressBar(currentIndex);
     },
@@ -275,11 +276,11 @@ $(function () {
         form.steps("previous");
       }
 
-      if (currentIndex === 3) {
-        // $('.vol-form__submit').removeAttr('disabled')
+      if (currentIndex === 3 || currentIndex === 4) {// $('.vol-form__submit').removeAttr('disabled')
         //remove default #finish button
-        $('#wizard').find('a[href="#finish"]').remove(); //append a submit type button
-        // $('#wizard .actions li:last-child').append('<button class="btn-reset vol-form__submit" type="submit">Отправить анкету</button>');
+        //$('#wizard').find('a[href="#finish"]').remove();
+        //append a submit type button
+        //$('#wizard .actions li:last-child').append('<button class="btn-reset vol-form__submit" type="submit">Отправить анкету</button>');
       }
     },
     onFinishing: function onFinishing(event, currentIndex) {
@@ -288,6 +289,7 @@ $(function () {
     },
     onFinished: function onFinished(event, currentIndex) {
       alert("Submitted!");
+      $('#vol-form').submit();
     }
   });
 
@@ -326,9 +328,11 @@ $(function () {
     $(".progress").attr("data-percent", "".concat(Math.round(pAll)));
 
     if (filled) {
-      document.querySelector(".vol-form__submit").disabled = false;
+      $('.wizard > .actions > ul > li:last-child a').removeClass('not-active');
+      $('.wizard > .actions > ul > li:last-child span').removeClass('not-active'); // document.querySelector(".vol-form__submit").disabled = false;
     } else {
-      document.querySelector(".vol-form__submit").disabled = true;
+      $('.wizard > .actions > ul > li:last-child a').addClass('not-active');
+      $('.wizard > .actions > ul > li:last-child span').addClass('not-active'); //document.querySelector(".vol-form__submit").disabled = true;
     }
   }
 
@@ -345,14 +349,17 @@ $(function () {
   //   }
 
   jQuery.extend(jQuery.validator.messages, {
-    required: "Поле обязательно для заполнения",
+    required: "Обязательно",
     remote: "Please fix this field.",
-    email: "Введите корректный email-адрес",
+    email: "Введите корректный email",
     url: "Please enter a valid URL.",
     date: "Please enter a valid date.",
     dateISO: "Please enter a valid date (ISO).",
     number: "Please enter a valid number."
   });
+});
+$(document).ready(function () {
+  $('.wizard > .actions > ul > li:last-child').append('<span class="">Нажимая на кнопку, вы даете согласие на обработку <a href="/">персональных данных</a></span>');
 }); // tabs
 
 $(document).ready(function () {
@@ -391,6 +398,37 @@ $(document).ready(function () {
       }
     });
   });
+});
+$(document).ready(function () {
+  function toggle() {
+    var psList = document.querySelector('.js-show-psychology-list');
+    if (this.checked) psList.style.display = 'block';else psList.style.display = 'none';
+  }
+
+  document.getElementById('vol-const-type-1').onchange = toggle;
+
+  function toggleTwo() {
+    var psList = document.querySelector('.js-show-psychology-list');
+    if (this.checked) psList.style.display = 'none';else psList.style.display = 'block';
+  }
+
+  document.getElementById('vol-const-type-2').onchange = toggleTwo;
+});
+$(document).ready(function () {
+  function toggleThree() {
+    var workPlaceInput = document.getElementById('vol-work');
+    var workPositionInput = document.getElementById('vol-position');
+
+    if (this.checked) {
+      workPlaceInput.setAttribute("disabled", "disabled");
+      workPositionInput.setAttribute("disabled", "disabled");
+    } else {
+      workPlaceInput.removeAttribute("disabled");
+      workPositionInput.removeAttribute("disabled");
+    }
+  }
+
+  document.getElementById('vol-no-work').onchange = toggleThree;
 });
 $(document).ready(function () {
   var inputFile = document.querySelectorAll('.vol-form__file'); /////////// Кнопка «Прикрепить файл» ///////////
@@ -463,8 +501,8 @@ $(document).ready(function () {
 }); //masked inputs
 
 jQuery(function ($) {
-  $(".day-mask").mask("99.99.99");
+  $(".day-mask").mask("99.99.9999");
   $(".phone-mask").mask("+7 (999) 999-99-99");
   $(".time-mask").mask("99:99");
-  $(".date-mask").mask("99.99.99");
+  $(".date-mask").mask("99.99.9999");
 });
