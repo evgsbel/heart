@@ -341,8 +341,10 @@
   color: #6D7276;
   border-bottom: 1px solid #d9d9d9;
   @include r(480) {
-    display: none;
-    flex: 0 0 100%;
+    flex: 0 0 3%;
+    & > a {
+      display: none;
+    }
   }
   @include r(1024) {
     padding-left: 0;
@@ -352,7 +354,11 @@
     color: #000;
     border-color: currentColor;
     @include r(480) {
-      display: block;
+      flex: 0 0 88%;
+      display: block !important;
+      & > a {
+        display: block !important;
+      }
     }
   }
   &.done {
@@ -373,8 +379,6 @@
   line-height: 1.4;
   @include r(600) {
     flex: 0 0 45%;
-    font-size: 14px;
-    padding: 5px;
   }
   &.disabled {
     display: none;
@@ -422,6 +426,15 @@
       a {
         color: #127CE1;
       }
+      @include r(600) {
+        text-align: center;
+        margin: 0 auto;
+      }
+    }
+    @include r(600) {
+      flex: 0 0 100%;
+      text-align: center;
+      margin: 0 auto;
     }
   }
 }
@@ -449,12 +462,21 @@
     @include r(1440) {
       flex-wrap: wrap;
     }
+    @include r(768) {
+       gap: 24px;
+     }
     &_checkboxes {
       flex-wrap: wrap;
       gap: 0 32px;
       label {
         margin-top: 24px;
         width: 30%;
+        @include r(1440) {
+          width: 48%;
+        }
+        @include r(560) {
+          width: 100%;
+        }
       }
     }
   }
@@ -463,6 +485,10 @@
     font-weight: 500;
     font-size: 1.25em;
     line-height: 1.4;
+    @include r(560) {
+      width: 100%;
+      margin-left: 0 !important;
+    }
     &_check,
     &_radio {
       margin-top: 50px;
@@ -480,6 +506,15 @@
     }
     &[for="vol-month"] {
       margin-left: -35px;
+      @include r(1024) {
+        margin-left: 0;
+      }
+    }
+    &[for="vol-day"] {
+      margin-left: -35px;
+      @include r(1024) {
+        margin-top: 5px;
+      }
     }
   }
   &__input {
@@ -496,6 +531,9 @@
     max-width: 100%;
     @include r(1200) {
       min-width: auto;
+    }
+    @include r(560) {
+      min-width: 100% !important;
     }
     &::placeholder {
       font-size: 20px;
@@ -544,6 +582,10 @@
     resize: none;
     @include r(1024) {
       max-width: 100%;
+    }
+    @include r(560) {
+      min-width: 100%;
+      height: 250px;
     }
     &::placeholder {
       font-size: 20px;
@@ -642,12 +684,18 @@
     cursor: pointer;
     min-width: 425px;
     max-width: 100%;
+    @include r(560) {
+      min-width: 100%;
+    }
     &::-ms-expand {
       display: none;
     }
     &[name="vol-month"] {
       min-width: 180px;
       max-width: 180px;
+    }
+    &:focus {
+      outline: none;
     }
   }
   &__submit {
@@ -856,10 +904,18 @@
 
 
 .change-psychology {
+  &__wr {
+    @include r(1024) {
+      flex-wrap:wrap;
+    }
+  }
   &__list {
     display: flex;
     margin-top: 16px;
     gap: 16px;
+    @include r(1024) {
+      flex-wrap:wrap;
+    }
   }
   &__item {
     cursor: pointer;
@@ -882,6 +938,20 @@
   }
   &__info {
     text-align: center;
+    @include r(600) {
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      img {
+        width: 48%;
+      }
+    }
+    @include r(325) {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
   }
   &__image {
     margin-bottom: 24px;
@@ -1076,6 +1146,9 @@
     padding: 16px;
     background: #eff7ff;
     border-radius: 16px;
+    @include r(768) {
+      flex-basis: 100%;
+    }
   }
   &__icon {
     margin-right: 16px;
