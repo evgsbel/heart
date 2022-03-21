@@ -184,23 +184,6 @@ $('.js-close-popup').click(function () {
   $.fancybox.close();
 })
 
-// check taxi
-
-$('.js-taxi-query').click(function () {
-  $('.check-taxi').fadeOut();
-  $('.vol-form-warning').fadeIn();
-});
-
-$('.js-taxi-back').click(function () {
-  $('.check-taxi').fadeOut();
-  $('.vol-form-warning').fadeIn();
-  $('.vol-form-warning').addClass('is-active');
-  $('.need-doc').remove();
-  $('.js-not-show-on-back').hide();
-  $('#wizard .steps  .last').remove();
-  $('.js-not-show-on-back-section').remove();
-  $('.vol-form-warning').html('<p>В этом месяце был повышен спрос на такси, поэтому мы вынуждены ввести временные ограничения на количество поездок в день.</p><p>Ограничения продлятся до 1 сентября.</p><p>Дождитесь ответа на почту о статусе вашей заявки.</p>');
-})
 
 
 // vol form
@@ -365,6 +348,28 @@ $(() => {
     dateISO: "Please enter a valid date (ISO).",
     number: "Please enter a valid number.",
   });
+
+
+// check taxi
+
+  $('.js-taxi-query').click(function () {
+    $('.check-taxi').fadeOut();
+    $('.vol-form-warning').fadeIn();
+  });
+
+  $('.js-taxi-back').click(function () {
+    $('.check-taxi').fadeOut();
+    $('.vol-form-warning').fadeIn();
+    $('.vol-form-warning').addClass('is-active');
+    $('.need-doc').remove();
+    $('.js-not-show-on-back').hide();
+    $('#wizard .steps  .last').remove();
+    $('.js-not-show-on-back-section').remove();
+    $('.js-not-show-on-back-title').remove();
+    wizardLength = wizardLength - 1;
+    console.log(wizardLength)
+    $('.vol-form-warning').html('<p>В этом месяце был повышен спрос на такси, поэтому мы вынуждены ввести временные ограничения на количество поездок в день.</p><p>Ограничения продлятся до 1 сентября.</p><p>Дождитесь ответа на почту о статусе вашей заявки.</p>');
+  })
 });
 $(document).ready(function () {
   $('.wizard > .actions > ul > li:last-child').append('<span class="">Нажимая на кнопку, вы даете согласие на обработку <a href="/">персональных данных</a></span>')
@@ -500,10 +505,11 @@ $(document).ready(function () {
           btnRemove.classList.add('is-visible');
         }
       } else {
-        textSelector.innerHTML = file.name;
+        textSelector.innerHTML = file.name.slice(0, 15) + "...";
         textSelector.classList.add('is-active');
         btnRemove.classList.add('is-visible');
       }
+
 
       // удаление файла
       btnRemove.addEventListener('click', function (b) {

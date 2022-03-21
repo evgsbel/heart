@@ -538,7 +538,7 @@
                         <label for="vol-region" class="vol-form__label">
                           Регион поездки
                           <select type="text" id="vol-region" name="vol-region" class="vol-form__select">
-                            <option value="" selected>Выберите регион</option>
+                            <option value="" disabled selected>Выберите регион</option>
                             <option value="">Москва и МО</option>
                             <option value="">Санкт-Петербург</option>
                             <option value="">Екатеринбург</option>
@@ -565,12 +565,12 @@
                             <option value="">Йошкар-Ола</option>
                           </select>
                         </label>
-                        <label for="vol-day" class="vol-form__label ml-3">
+                        <label for="vol-day-taxi" class="vol-form__label vol-form__label_other">
                           Дата поездки
-                          <input type="text" id="vol-day" name="vol-day"
+                          <input type="text" id="vol-day-taxi" name="vol-day-taxi"
                                  class="vol-form__input day-mask required" placeholder="_._._">
                         </label>
-                        <label for="vol-time" class="vol-form__label ml-3">
+                        <label for="vol-time" class="vol-form__label vol-form__label_other">
                           Время отправления
                           <input type="text" id="vol-time" name="vol-time"
                                  class="vol-form__input required time-mask" placeholder="00:00">

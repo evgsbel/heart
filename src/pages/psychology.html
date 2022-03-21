@@ -419,13 +419,13 @@ bannerImg: assets/img/psihology
             <h2>Данные</h2>
             <section>
               <p class="vol-form__label">Ваш статус</p>
-              <div class="vol-form__group">
-                <label for="vol-status-1" class="vol-form__label vol-form__label_radio mt-2">
+              <div class="vol-form__group vol-form__group_radio vol-form__group_gap-0">
+                <label for="vol-status-1" class="vol-form__label vol-form__label_radio">
                   <input type="radio" name="vol-status[]" id="vol-status-1" class="vol-form__radio" checked>
                   <span class="vol-form__radio-pane"></span>
                   Онкопациент
                 </label>
-                <label for="vol-status-2" class="vol-form__label vol-form__label_radio mt-2">
+                <label for="vol-status-2" class="vol-form__label vol-form__label_radio">
                   <input type="radio" name="vol-status[]" id="vol-status-2" class="vol-form__radio">
                   <span class="vol-form__radio-pane"></span>
                   Родственник онкопациента
@@ -455,7 +455,7 @@ bannerImg: assets/img/psihology
                 <label for="vol-accessibility" class="vol-form__label">
                   Состяние
                   <select type="text" id="vol-accessibility" name="vol-accessibility" class="vol-form__select ">
-                    <option value="" selected>Ваше состояние</option>
+                    <option value="" selected disabled>Ваше состояние</option>
                     <option value="">Здоров</option>
                     <option value="">Диганостированна болезнь</option>
                     <option value="">На лечении</option>
@@ -595,7 +595,7 @@ bannerImg: assets/img/psihology
 
             <section>
               <p class="vol-form__label vol-form__subcaption w-100">Вид консультации</p>
-              <div class="vol-form__group">
+              <div class="vol-form__group vol-form__group_radio">
                 <label for="vol-const-type-1" class="vol-form__label vol-form__label_radio">
                   <input type="radio" name="vol-const-type[]" id="vol-const-type-1" class="vol-form__radio" checked>
                   <span class="vol-form__radio-pane"></span>
@@ -606,12 +606,12 @@ bannerImg: assets/img/psihology
                   <span class="vol-form__radio-pane"></span>
                   Очно
                 </label>
-                <label for="vol-day" class="vol-form__label ml-3">
+                <label for="vol-day" class="vol-form__label vol-form__label_other ml-md-3">
                   Желаемая дата
                   <input type="number" id="vol-day" name="vol-day"
                          class="vol-form__input required" placeholder="День">
                 </label>
-                <label for="vol-month" class="vol-form__label">
+                <label for="vol-month" class="vol-form__label vol-form__label_other">
                   &nbsp;
                   <select type="text" id="vol-month" name="vol-month" class="vol-form__select">
                     <option value="">Январь</option>
@@ -628,7 +628,7 @@ bannerImg: assets/img/psihology
                     <option value="">Декабрь</option>
                   </select>
                 </label>
-                <label for="vol-time" class="vol-form__label ml-3">
+                <label for="vol-time" class="vol-form__label ml-md-3">
                   Время
                   <input type="text" id="vol-time" name="vol-time"
                          class="vol-form__input required  time-mask" placeholder="00:00">
@@ -714,7 +714,7 @@ bannerImg: assets/img/psihology
                       obcaecati, quam, quia reprehenderit repudiandae sint soluta vero voluptate!</p>
                   </div>
                   <a href="" class="change-psychology__read-more">Читать полностью</a>
-                  <div class="d-flex justify-content-between mt-5">
+                  <div class="change-psychology__time-zone">
                     <p class="vol-form__label">Выберите дату и время сессии</p>
                     <p class="vol-form__label"><span class="text-right">часовой пояс: Москва</span></p>
                   </div>

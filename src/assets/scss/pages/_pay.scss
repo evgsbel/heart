@@ -332,6 +332,9 @@
 .wizard > .steps > ul {
   gap: 8px;
   margin-bottom: 40px;
+  @include r(480) {
+    gap: 2px;
+  }
 }
 .wizard > .steps > ul > li {
   flex: 1 1 calc(100% / 4 - 3 * 8px);
@@ -341,20 +344,20 @@
   color: #6D7276;
   border-bottom: 1px solid #d9d9d9;
   @include r(480) {
-    flex: 0 0 3%;
+    flex: 0 0 2.5%;
     & > a {
       display: none;
     }
   }
   @include r(1024) {
     padding-left: 0;
-    text-align: center;
+    font-size: 16px;
   }
   &.current {
     color: #000;
     border-color: currentColor;
     @include r(480) {
-      flex: 0 0 88%;
+      flex: 0 0 calc(92% - 3 * 2px);
       display: block !important;
       & > a {
         display: block !important;
@@ -379,6 +382,9 @@
   line-height: 1.4;
   @include r(600) {
     flex: 0 0 45%;
+    font-size: 16px;
+    padding-right: 19px;
+    padding-left: 19px;
   }
   &.disabled {
     display: none;
@@ -404,6 +410,9 @@
       font-weight: 600;
       font-size: 20px;
       line-height: 1.4;
+      @include r(600) {
+        font-size: 16px;
+      }
       &.not-active {
         color: #AEC1D2;
         background-color: #F5F8FB;
@@ -427,14 +436,19 @@
         color: #127CE1;
       }
       @include r(600) {
+        margin: 32px auto 0;
+        max-width: 100%;
         text-align: center;
-        margin: 0 auto;
       }
     }
     @include r(600) {
       flex: 0 0 100%;
       text-align: center;
       margin: 0 auto;
+      font-size: 16px;
+      padding-left: 0;
+      padding-right: 0;
+      width: 100%;
     }
   }
 }
@@ -452,6 +466,9 @@
 .vol-form {
   &__title {
     margin-bottom: 32px;
+    @include r(560) {
+      font-size: 20px;
+    }
   }
   &__group {
     display: flex;
@@ -464,7 +481,9 @@
     }
     @include r(768) {
        gap: 24px;
+       margin-bottom: 24px;
      }
+
     &_checkboxes {
       flex-wrap: wrap;
       gap: 0 32px;
@@ -479,22 +498,39 @@
         }
       }
     }
+    &_radio {
+      @include r(480) {
+        gap: 16px;
+      }
+    }
+    &_gap-0 {
+      gap: 0 16px;
+    }
   }
   &__label {
     position: relative;
     font-weight: 500;
     font-size: 1.25em;
     line-height: 1.4;
-    @include r(560) {
-      width: 100%;
-      margin-left: 0 !important;
+    margin-bottom: 0;
+     @include r(600) {
+       width: 100%;
     }
     &_check,
     &_radio {
-      margin-top: 50px;
+      margin-top: 16px;
       padding-left: 30px;
       cursor: pointer;
       font-weight: 400;
+      @include r(560) {
+        width: auto;
+      }
+
+    }
+    &_other {
+      @include r(560) {
+        width: auto;
+      }
     }
     span {
       font-size: 16px;
@@ -509,11 +545,14 @@
       @include r(1024) {
         margin-left: 0;
       }
+      @include r(560) {
+        margin-left: -35px;
+      }
     }
     &[for="vol-day"] {
       margin-left: -35px;
       @include r(1024) {
-        margin-top: 5px;
+        margin-left: 0;
       }
     }
   }
@@ -529,16 +568,21 @@
     border-radius: 12px;
     min-width: 425px;
     max-width: 100%;
-    @include r(1200) {
-      min-width: auto;
-    }
     @include r(560) {
-      min-width: 100% !important;
+      min-width: auto;
+      width: 100%;
+      font-size: 16px;
+    }
+    &:disabled {
+      background-color: #FAFCFD;
     }
     &::placeholder {
       font-size: 20px;
       line-height: 1.4;
       color: #6D7276;
+      @include r(560) {
+        font-size: 16px;
+      }
     }
     &:focus {
       outline: none;
@@ -550,20 +594,39 @@
       margin: 0;
     }
     &[name="vol-day"],
+    &[name="vol-day-taxi"],
     &[name="vol-time"],
     &[name="vol-date"],
     &[name="vol-date-arrival"],
     &[name="vol-departure"] {
       min-width: 150px;
       max-width: 150px;
+      @include r(600) {
+        min-width: 95px;
+        max-width: 95px;
+      }
+    }
+    &[name="vol-birth"] {
+      min-width: 150px;
+      max-width: 150px;
     }
     &[name="vol-year"] {
       min-width: 195px;
       max-width: 195px;
+      @include r(560) {
+        min-width: auto;
+        width: 100%;
+        max-width: 100%;
+      }
     }
     &[name="vol-phone"] {
       min-width: 225px;
       max-width: 225px;
+      @include r(560) {
+        min-width: auto;
+        width: 100%;
+        max-width: 100%;
+      }
     }
   }
   &__textarea {
@@ -586,11 +649,15 @@
     @include r(560) {
       min-width: 100%;
       height: 250px;
+      font-size: 16px;
     }
     &::placeholder {
       font-size: 20px;
       line-height: 1.4;
       color: #7B8086;
+      @include r(560) {
+        font-size: 16px;
+      }
     }
     &:focus {
       outline: none;
@@ -686,6 +753,7 @@
     max-width: 100%;
     @include r(560) {
       min-width: 100%;
+      font-size: 16px;
     }
     &::-ms-expand {
       display: none;
@@ -718,6 +786,9 @@
   }
   &__subcaption {
     margin-bottom: -32px;
+    @include r(600) {
+      margin-bottom: 0;
+    }
   }
   &__file {
     opacity: 0;
@@ -736,6 +807,9 @@
     background: #F5F8FB;
     border-radius: 8px;
     cursor: pointer;
+    @include r(480) {
+      width: 100%;
+    }
   }
   &__file-label {
     margin-bottom: 0;
@@ -743,6 +817,9 @@
     line-height: 1.4;
     color: #6D7276;
     cursor: pointer;
+    @include r(480) {
+      font-size: 16px;
+    }
     &.is-active {
       color: #000;
     }
@@ -998,11 +1075,27 @@
     line-height: 1.4;
     color: #2688E5;
   }
+  &__time-zone {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+    @include r(600) {
+      flex-wrap: wrap;
+      gap: 8px 0;
+    }
+  }
 }
 
 
 .change-date {
   margin-top: 24px;
+  &__wr {
+    @include r(600) {
+      display: flex;
+      flex-wrap: wrap;
+      gap:8px;
+    }
+  }
   &__caption {
     margin-bottom: 16px;
     font-size: 1.25em;
@@ -1015,6 +1108,9 @@
     position: relative;
     &:not(:last-child) {
       margin-right: 16px;
+      @include r(600) {
+        margin: 0;
+      }
     }
   }
   &__input {
@@ -1037,6 +1133,10 @@
     color: #000;
     font-feature-settings: 'salt' on, 'ss01' on;
     cursor: pointer;
+    @include r(600) {
+      width: 95px;
+      height: 50px;
+    }
   }
 }
 
@@ -1055,10 +1155,11 @@
     max-width: 100%;
   }
 }
-.dz-message {
+.dropzone .dz-message {
   font-weight: 500;
   font-size: 1.125em;
   color: #6D7276;
+  margin: 68px 0;
   span {
     color: #127CE1;
   }
