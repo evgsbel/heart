@@ -403,35 +403,38 @@ $(document).ready(function () {
   });
 });
 $(document).ready(function () {
-  function toggle() {
-    var psList = document.querySelector('.js-show-psychology-list');
-    if (this.checked) psList.style.display = 'block';else psList.style.display = 'none';
+  if ($('div.js-show-psychology-list').length) {
+    var toggle = function toggle() {
+      var psList = document.querySelector('.js-show-psychology-list');
+      if (this.checked) psList.style.display = 'block';else psList.style.display = 'none';
+    };
+
+    var toggleTwo = function toggleTwo() {
+      var psList = document.querySelector('.js-show-psychology-list');
+      if (this.checked) psList.style.display = 'none';else psList.style.display = 'block';
+    };
+
+    document.getElementById('vol-const-type-1').onchange = toggle;
+    document.getElementById('vol-const-type-2').onchange = toggleTwo;
   }
-
-  document.getElementById('vol-const-type-1').onchange = toggle;
-
-  function toggleTwo() {
-    var psList = document.querySelector('.js-show-psychology-list');
-    if (this.checked) psList.style.display = 'none';else psList.style.display = 'block';
-  }
-
-  document.getElementById('vol-const-type-2').onchange = toggleTwo;
 });
 $(document).ready(function () {
-  function toggleThree() {
-    var workPlaceInput = document.getElementById('vol-work');
-    var workPositionInput = document.getElementById('vol-position');
+  if ($('div.js-show-psychology-list').length) {
+    var toggleThree = function toggleThree() {
+      var workPlaceInput = document.getElementById('vol-work');
+      var workPositionInput = document.getElementById('vol-position');
 
-    if (this.checked) {
-      workPlaceInput.setAttribute("disabled", "disabled");
-      workPositionInput.setAttribute("disabled", "disabled");
-    } else {
-      workPlaceInput.removeAttribute("disabled");
-      workPositionInput.removeAttribute("disabled");
-    }
+      if (this.checked) {
+        workPlaceInput.setAttribute("disabled", "disabled");
+        workPositionInput.setAttribute("disabled", "disabled");
+      } else {
+        workPlaceInput.removeAttribute("disabled");
+        workPositionInput.removeAttribute("disabled");
+      }
+    };
+
+    document.getElementById('vol-no-work').onchange = toggleThree;
   }
-
-  document.getElementById('vol-no-work').onchange = toggleThree;
 });
 $(document).ready(function () {
   var inputFile = document.querySelectorAll('.vol-form__file'); /////////// Кнопка «Прикрепить файл» ///////////
@@ -508,4 +511,27 @@ jQuery(function ($) {
   $(".phone-mask").mask("+7 (999) 999-99-99");
   $(".time-mask").mask("99:99");
   $(".date-mask").mask("99.99.9999");
+});
+$(document).ready(function () {
+  // change psychology slider
+  var changePsychologySlider = new Swiper('.change-psychology-slider', {
+    // Optional parameters
+    speed: 500,
+    navigation: {
+      nextEl: ".change-psychology__button_next",
+      prevEl: ".change-psychology__button_prev"
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 4.5,
+        spaceBetween: 16
+      },
+      1024: {
+        slidesPerView: 7
+      },
+      1400: {
+        slidesPerView: 'auto'
+      }
+    }
+  });
 });

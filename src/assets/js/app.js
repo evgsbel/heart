@@ -419,6 +419,7 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
+  if ($('div.js-show-psychology-list').length) {
   function toggle() {
     var psList = document.querySelector('.js-show-psychology-list');
     if (this.checked)
@@ -438,21 +439,25 @@ $(document).ready(function () {
   }
 
   document.getElementById('vol-const-type-2').onchange = toggleTwo;
-
-})
-$(document).ready(function () {
-function toggleThree() {
-  var workPlaceInput = document.getElementById('vol-work');
-  var workPositionInput = document.getElementById('vol-position');
-  if (this.checked) {
-    workPlaceInput.setAttribute("disabled", "disabled");
-    workPositionInput.setAttribute("disabled", "disabled");
-  } else {
-    workPlaceInput.removeAttribute("disabled");
-    workPositionInput.removeAttribute("disabled");
   }
-}
-  document.getElementById('vol-no-work').onchange = toggleThree;
+})
+
+$(document).ready(function () {
+  if ($('div.js-show-psychology-list').length) {
+    function toggleThree() {
+      var workPlaceInput = document.getElementById('vol-work');
+      var workPositionInput = document.getElementById('vol-position');
+      if (this.checked) {
+        workPlaceInput.setAttribute("disabled", "disabled");
+        workPositionInput.setAttribute("disabled", "disabled");
+      } else {
+        workPlaceInput.removeAttribute("disabled");
+        workPositionInput.removeAttribute("disabled");
+      }
+    }
+
+    document.getElementById('vol-no-work').onchange = toggleThree;
+  }
 })
 
 
@@ -546,4 +551,27 @@ jQuery(function ($) {
 });
 
 
+$(document).ready(function () {
+  // change psychology slider
+  const changePsychologySlider = new Swiper('.change-psychology-slider', {
+    // Optional parameters
+    speed: 500,
 
+    navigation: {
+      nextEl: ".change-psychology__button_next",
+      prevEl: ".change-psychology__button_prev",
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 4.5,
+        spaceBetween: 16,
+      },
+      1024: {
+        slidesPerView: 7,
+      },
+      1400: {
+        slidesPerView: 'auto',
+      }
+    }
+  });
+});

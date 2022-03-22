@@ -373,7 +373,15 @@
   //  border-color: currentColor;
   //}
 }
-
+.psychology-form .wizard > .actions > ul > li:nth-child(3) {
+  margin-left: 165px;
+  @include r(1440) {
+    margin-left: 65px;
+  }
+  @include r(1366) {
+    margin-left: 0;
+  }
+}
 .wizard > .actions > ul > li {
   position: relative;
   padding: 16px 24px 20px;
@@ -989,13 +997,11 @@
   &__list {
     display: flex;
     margin-top: 16px;
-    gap: 16px;
-    @include r(1024) {
-      flex-wrap:wrap;
-    }
+    gap: 18px;
   }
   &__item {
     cursor: pointer;
+    flex: 0 0 max-content;
     img {
       padding: 3px;
       border: 1px solid transparent;
@@ -1082,6 +1088,36 @@
     @include r(600) {
       flex-wrap: wrap;
       gap: 8px 0;
+    }
+  }
+  &__slider {
+    max-width: 70%;
+    margin: 0;
+    @include r(1024) {
+      max-width: 100%;
+    }
+  }
+  &__button {
+    width: 64px;
+    height: 64px;
+    background-color: #EFF7FF;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+
+    &_prev {
+      display: none;
+    }
+    &_next {
+      position: absolute;
+      top: 19%;
+      right: 24%;
+      z-index: 50;
+      transform: translateY(-45%);
+      background-image: url("data:image/svg+xml,%3Csvg width='14' height='25' viewBox='0 0 14 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 24L13 12.5L1 1' stroke='%23AEC1D2' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      @include r(1024) {
+        display: none;
+      }
     }
   }
 }
