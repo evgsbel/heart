@@ -363,11 +363,9 @@ $(() => {
     $('.vol-form-warning').addClass('is-active');
     $('.need-doc').remove();
     $('.js-not-show-on-back').hide();
-    $('#wizard .steps  .last').remove();
     $('.js-not-show-on-back-section').remove();
-    $('.js-not-show-on-back-title').remove();
-    wizardLength = wizardLength - 1;
-    console.log(wizardLength)
+    $('#wizard').steps('remove', 3)
+    $("#wizard").steps("reset");
     $('.vol-form-warning').html('<p>В этом месяце был повышен спрос на такси, поэтому мы вынуждены ввести временные ограничения на количество поездок в день.</p><p>Ограничения продлятся до 1 сентября.</p><p>Дождитесь ответа на почту о статусе вашей заявки.</p>');
   })
 });

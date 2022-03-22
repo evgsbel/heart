@@ -6,827 +6,825 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>Events Page</title>
+    <title>Events Page</title>
     <!-- build:css -->
     <link rel="stylesheet" href="assets/vendor/css/animate.css">
     <link rel="stylesheet" href="assets/vendor/css/swiper.min.css">
     <link rel="stylesheet" href="assets/vendor/css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="assets/vendor/css/dropzone.css">
-		<link rel="stylesheet" href="assets/css/main.css">
-		<!-- endbuild -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- endbuild -->
     <link rel="stylesheet" href="assets/css/rtl.css">
-  <script src="assets/vendor/js/dropzone-min.js"></script>
+    <script src="assets/vendor/js/dropzone-min.js"></script>
 </head>
 
 <body class="is-events-page is--page">
     <header class="header js-header">
-      <div class="container">
-        <div class="row header__inner">
-          <div class="col-sm-3 col-md-3 col-lg-6 col-xl-6">
-            <div class="header__left">
-            <a href="/" class="logo">
-              <svg class="logo__img">
-                <use xlink:href="assets/img/sprite.svg#logo"></use>
-              </svg>
-              <p class="logo__text">Огромное сердце</p>
-            </a>
-            <nav class="nav">
-                <ul class="nav__list d-flex">
-                  <li class="nav__item"><a href="" class="nav__link">Фонд</a></li>
-                  <li class="nav__item"><a href="/wards.html" class="nav__link">Подопечным</a></li>
-                  <li class="nav__item"><a href="" class="nav__link">Волонтерам</a></li>
-                  <li class="nav__item"><a href="" class="nav__link">Статьи</a></li>
-                  <li class="nav__item"><a href="" class="nav__link">Сборы</a></li>
-                  <li class="nav__item"><a href="" class="nav__link">Контакты</a></li>
-                </ul>
-            </nav>
+        <div class="container">
+            <div class="row header__inner">
+                <div class="col-sm-3 col-md-3 col-lg-6 col-xl-6">
+                    <div class="header__left">
+                        <a href="/" class="logo">
+                            <svg class="logo__img">
+                                <use xlink:href="assets/img/sprite.svg#logo"></use>
+                            </svg>
+                            <p class="logo__text">Огромное сердце</p>
+                        </a>
+                        <nav class="nav">
+                            <ul class="nav__list d-flex">
+                                <li class="nav__item"><a href="" class="nav__link">Фонд</a></li>
+                                <li class="nav__item"><a href="/wards.html" class="nav__link">Подопечным</a></li>
+                                <li class="nav__item"><a href="" class="nav__link">Волонтерам</a></li>
+                                <li class="nav__item"><a href="" class="nav__link">Статьи</a></li>
+                                <li class="nav__item"><a href="" class="nav__link">Сборы</a></li>
+                                <li class="nav__item"><a href="" class="nav__link">Контакты</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+                    <div class="header__right">
+                        <div class="search">
+                            <button class="btn-reset search__btn">
+                                <svg class="search__icon">
+                                    <use xlink:href="assets/img/sprite.svg#icon-search"></use>
+                                </svg>
+                            </button>
+                            <label for="search" class="mobile-nav__label">
+                                <input type="search" class="mobile-nav__input" id="search" placeholder="Поиск по сайту">
+                            </label>
+                        </div>
+                        <a href="tel:88003505785" class="header__phone">8 800 350 57 85</a>
+                        <button class="btn-reset button header__btn-help" data-fancybox="" data-src="#popup-help">Нужна помощь</button>
+                        <a href="pay-card.html" class="btn-reset button header__btn">Хочу помочь</a>
+                    </div>
+                </div>
+                <button class="btn-reset burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-          </div>
-          <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
-            <div class="header__right">
-              <div class="search">
-              <button class="btn-reset search__btn">
-                <svg class="search__icon">
-                  <use xlink:href="assets/img/sprite.svg#icon-search"></use>
-                </svg>
-              </button>
-                <label for="search" class="mobile-nav__label">
-                  <input type="search" class="mobile-nav__input" id="search" placeholder="Поиск по сайту">
-                </label>
-              </div>
-              <a href="tel:88003505785" class="header__phone">8 800 350 57 85</a>
-              <button class="btn-reset button header__btn-help" data-fancybox="" data-src="#popup-help">Нужна помощь</button>
-              <a href="pay-card.html" class="btn-reset button header__btn">Хочу помочь</a>
-            </div>
-          </div>
-          <button class="btn-reset burger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
         </div>
-      </div>
     </header>
     <div class="mobile-nav">
-      <div class="d-flex mobile-nav__top">
-        <a href="/" class="logo d-flex">
-          <svg class="logo__img">
-            <use xlink:href="assets/img/sprite.svg#logo"></use>
-          </svg>
-          <p class="logo__text">Огромное сердце</p>
-        </a>
-        <div class="search">
-        <button class="btn-reset search__btn">
-          <svg class="search__icon">
-            <use xlink:href="assets/img/sprite.svg#icon-search"></use>
-          </svg>
-        </button>
-          <label for="search" class="mobile-nav__label">
-            <input type="search" class="mobile-nav__input" id="search" placeholder="Поиск по сайту">
-          </label>
+        <div class="d-flex mobile-nav__top">
+            <a href="/" class="logo d-flex">
+                <svg class="logo__img">
+                    <use xlink:href="assets/img/sprite.svg#logo"></use>
+                </svg>
+                <p class="logo__text">Огромное сердце</p>
+            </a>
+            <div class="search">
+                <button class="btn-reset search__btn">
+                    <svg class="search__icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-search"></use>
+                    </svg>
+                </button>
+                <label for="search" class="mobile-nav__label">
+                    <input type="search" class="mobile-nav__input" id="search" placeholder="Поиск по сайту">
+                </label>
+            </div>
+            <a href="tel:88003505785" class="header__phone">8 800 350 57 85 <span>горячая линия</span></a>
+            <button class="btn-reset close mobile-nav__close">
+                <svg width="16" height="16">
+                    <use xlink:href="assets/img/sprite.svg#icon-close"></use>
+                </svg>
+            </button>
         </div>
-        <a href="tel:88003505785" class="header__phone">8 800 350 57 85 <span>горячая линия</span></a>
-        <button class="btn-reset close mobile-nav__close">
-          <svg width="16" height="16">
-            <use xlink:href="assets/img/sprite.svg#icon-close"></use>
-          </svg>
-        </button>
-      </div>
-      <ul class="nav__list d-flex">
-        <li class="nav__item sub">
-          <a href="" class="nav__link">Фонд</a>
-          <ul class="sub__list">
-            <li class="sub__item">
-              <a href="" class="sub__link">История</a>
-            </li>
-            <li class="sub__item">
-              <a href="" class="sub__link">Публикации</a>
-            </li>
-            <li class="sub__item">
-              <a href="" class="sub__link">Отчеты</a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav__item sub">
-          <a href="wards.html" class="nav__link">Подопечным</a>
-          <ul class="sub__list">
-            <li class="sub__item">
-              <a href="wards.html" class="sub__link">Виды помощи</a>
-            </li>
-            <li class="sub__item">
-              <a href="events.html" class="sub__link">Мероприятия</a>
-            </li>
-            <li class="sub__item">
-              <a href="faq.html" class="sub__link">FAQ</a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav__item"><a href="" class="nav__link">Волонтерам</a></li>
-        <li class="nav__item"><a href="" class="nav__link">Сборы</a></li>
-        <li class="nav__item"><a href="" class="nav__link">Контакты</a></li>
-      </ul>
-    
-      <div class="mobile-nav__btns">
-        <button class="btn-reset button mobile-nav__btn mobile-nav__btn_blue">Хочу помочь</button>
-        <button class="btn-reset button mobile-nav__btn">Нужна помощь</button>
-      </div>
-    
-    </div>
-    
-    
-    
-    <main role="main" class="main">
-        
-        <section class="wards-nav">
-          <div class="container">
-            <div class="row">
-              <nav class="col-md-10 col-12">
-                <div class="swiper wards-nav__swiper">
-                  <ul class="wards-nav__list swiper-wrapper">
-                    <li class="wards-nav__item swiper-slide is-active">
-                      <a href="" class="btn-reset wards-nav__link wards-nav__link_active ">Виды помощи</a>
+        <ul class="nav__list d-flex">
+            <li class="nav__item sub">
+                <a href="" class="nav__link">Фонд</a>
+                <ul class="sub__list">
+                    <li class="sub__item">
+                        <a href="" class="sub__link">История</a>
                     </li>
-        <!--            <li class="wards-nav__item swiper-slide">-->
-        <!--              <a href="events.html" class="btn-reset wards-nav__link is-active">Мероприятия</a>-->
-        <!--            </li>-->
-                    <li class="wards-nav__item swiper-slide">
-                      <a href="faq.html" class="btn-reset wards-nav__link ">Часто задаваемые вопросы</a>
+                    <li class="sub__item">
+                        <a href="" class="sub__link">Публикации</a>
                     </li>
-                  </ul>
-                </div>
-              </nav>
-              <div class="col-md-2 d-md-block d-none">
-                <a href="" class="wards-nav__review-link">Оставить отзыв</a>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        <section class="calendar">
-          <div class="container">
-            <div class="row">
-              <div class="col-xl-12">
-                <h2 class="title-h2 calendar__title">Календарь мероприятий</h2>
-              </div>
-              <div class="col-xl-5 col-lg-6 col-md-12">
-                <div class="calendar__inner">
-        
-                  <!-- Месяц/год -->
-                  <div class="calendar__swiper swiper">
-                    <ul class="calendar__month-list swiper-wrapper">
-                      <li class="calendar__month-item swiper-slide">
-                        <span class="calendar__month">Январь</span>
-                        <span class="calendar__year">2021</span>
-                      </li>
-                      <li class="calendar__month-item swiper-slide ">
-                        <span class="calendar__month">Февраль</span>
-                        <span class="calendar__year">2021</span>
-                      </li>
-                      <li class="calendar__month-item swiper-slide">
-                        <span class="calendar__month">Март</span>
-                        <span class="calendar__year">2021</span>
-                      </li>
-                      <li class="calendar__month-item swiper-slide">
-                        <span class="calendar__month">Апрель</span>
-                        <span class="calendar__year">2021</span>
-                      </li>
-                      <li class="calendar__month-item swiper-slide ">
-                        <span class="calendar__month">Май</span>
-                        <span class="calendar__year">2021</span>
-                      </li>
-                      <li class="calendar__month-item swiper-slide">
-                        <span class="calendar__month">Июнь</span>
-                        <span class="calendar__year">2021</span>
-                      </li>
-                      <li class="calendar__month-item swiper-slide">
-                        <span class="calendar__month">Июль</span>
-                        <span class="calendar__year">2021</span>
-                      </li>
-                      <li class="calendar__month-item swiper-slide ">
-                        <span class="calendar__month">Август</span>
-                        <span class="calendar__year">2021</span>
-                      </li>
-                      <li class="calendar__month-item swiper-slide">
-                        <span class="calendar__month">Сентябрь</span>
-                        <span class="calendar__year">2021</span>
-                      </li>
-                      <li class="calendar__month-item swiper-slide">
-                        <span class="calendar__month">Октябрь</span>
-                        <span class="calendar__year">2021</span>
-                      </li>
-                      <li class="calendar__month-item swiper-slide">
-                        <span class="calendar__month">Ноябрь</span>
-                        <span class="calendar__year">2021</span>
-                      </li>
-                      <li class="calendar__month-item swiper-slide">
-                        <span class="calendar__month">Декабрь</span>
-                        <span class="calendar__year">2021</span>
-                      </li>
-                    </ul>
-                    <div class="calendar-button-next calendar__month-next">
-                      <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 13L7 7L1 1" stroke="#6D7276" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </div>
-                    <div class="calendar-button-prev calendar__month-prev">
-                      <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7 13L1 7L7 1" stroke="#6D7276" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </div>
-                  </div>
-                  <!-- Месяц/год END-->
-        
-                  <!-- День -->
-                  <ul class="calendar__day-list">
-                    <li class="calendar__day">пн</li>
-                    <li class="calendar__day">вт</li>
-                    <li class="calendar__day">ср</li>
-                    <li class="calendar__day">чт</li>
-                    <li class="calendar__day">пт</li>
-                    <li class="calendar__day">сб</li>
-                    <li class="calendar__day">вс</li>
-                  </ul>
-                  <!-- День END-->
-        
-                  <!-- Недели -->
-                  <ul class="calendar__week">
-                    <li class="calendar__number">&nbsp;</li>
-                    <li class="calendar__number">&nbsp;</li>
-                    <li class="calendar__number">&nbsp;</li>
-                    <li class="calendar__number">&nbsp;</li>
-                    <li class="calendar__number">1</li>
-                    <li class="calendar__number">2</li>
-                    <li class="calendar__number">3</li>
-                  </ul>
-                  <ul class="calendar__week">
-                    <li class="calendar__number is-active is-focus ">4</li>
-                    <li class="calendar__number">5</li>
-                    <li class="calendar__number">6</li>
-                    <li class="calendar__number">7</li>
-                    <li class="calendar__number">8</li>
-                    <li class="calendar__number">9</li>
-                    <li class="calendar__number">10</li>
-                  </ul>
-                  <ul class="calendar__week">
-                    <li class="calendar__number">11</li>
-                    <li class="calendar__number">12</li>
-                    <li class="calendar__number">13</li>
-                    <li class="calendar__number">14</li>
-                    <li class="calendar__number is-active">15</li>
-                    <li class="calendar__number">16</li>
-                    <li class="calendar__number">17</li>
-                  </ul>
-                  <ul class="calendar__week">
-                    <li class="calendar__number">18</li>
-                    <li class="calendar__number">19</li>
-                    <li class="calendar__number">20</li>
-                    <li class="calendar__number">21</li>
-                    <li class="calendar__number">22</li>
-                    <li class="calendar__number is-active">23</li>
-                    <li class="calendar__number">24</li>
-                  </ul>
-                  <ul class="calendar__week">
-                    <li class="calendar__number">25</li>
-                    <li class="calendar__number is-active">26</li>
-                    <li class="calendar__number">27</li>
-                    <li class="calendar__number">28</li>
-                    <li class="calendar__number">29</li>
-                    <li class="calendar__number">30</li>
-                    <li class="calendar__number">31</li>
-                  </ul>
-                  <!-- Недели END-->
-                </div>
-              </div>
-              <div class="col-xl-5 col-lg-5 col-md-12 offset-lg-1">
-                <div class="calendar__date">События на <span>4 октября</span></div>
-                <ul class="calendar__events-list">
-                  <li class="calendar__events-item">
-                    <p class="calendar__time">
-                      12:00–13:00
-                      <span class="calendar__place">мск</span>
-                      <span class="calendar__area">Zoom</span>
-                    </p>
-                    <p class="calendar__caption">Онлайн встреча группы взаимопомощи</p>
-                    <p class="calendar__theme">Тема: «Самооценка»</p>
-                    <a href="" class="calendar__link">
-                      О мероприятии
-                      <svg>
-                        <use xlink:href="assets/img/sprite.svg#link-arrow"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="calendar__events-item">
-                    <p class="calendar__time">
-                      12:00–13:00
-                      <span class="calendar__place">мск</span>
-                      <span class="calendar__area">Zoom</span>
-                    </p>
-                    <p class="calendar__caption">Онлайн встреча группы взаимопомощи</p>
-                    <p class="calendar__theme">Тема: «Самооценка»</p>
-                    <a href="" class="calendar__link">
-                      О мероприятии
-                      <svg>
-                        <use xlink:href="assets/img/sprite.svg#link-arrow"></use>
-                      </svg>
-                    </a>
-                  </li>
+                    <li class="sub__item">
+                        <a href="" class="sub__link">Отчеты</a>
+                    </li>
                 </ul>
-              </div>
+            </li>
+            <li class="nav__item sub">
+                <a href="wards.html" class="nav__link">Подопечным</a>
+                <ul class="sub__list">
+                    <li class="sub__item">
+                        <a href="wards.html" class="sub__link">Виды помощи</a>
+                    </li>
+                    <li class="sub__item">
+                        <a href="events.html" class="sub__link">Мероприятия</a>
+                    </li>
+                    <li class="sub__item">
+                        <a href="faq.html" class="sub__link">FAQ</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav__item"><a href="" class="nav__link">Волонтерам</a></li>
+            <li class="nav__item"><a href="" class="nav__link">Сборы</a></li>
+            <li class="nav__item"><a href="" class="nav__link">Контакты</a></li>
+        </ul>
+
+        <div class="mobile-nav__btns">
+            <button class="btn-reset button mobile-nav__btn mobile-nav__btn_blue">Хочу помочь</button>
+            <button class="btn-reset button mobile-nav__btn">Нужна помощь</button>
+        </div>
+
+    </div>
+
+
+
+    <main role="main" class="main">
+
+        <section class="wards-nav">
+            <div class="container">
+                <div class="row">
+                    <nav class="col-md-10 col-12">
+                        <div class="swiper wards-nav__swiper">
+                            <ul class="wards-nav__list swiper-wrapper">
+                                <li class="wards-nav__item swiper-slide is-active">
+                                    <a href="" class="btn-reset wards-nav__link wards-nav__link_active ">Виды помощи</a>
+                                </li>
+                                <!--            <li class="wards-nav__item swiper-slide">-->
+                                <!--              <a href="events.html" class="btn-reset wards-nav__link is-active">Мероприятия</a>-->
+                                <!--            </li>-->
+                                <li class="wards-nav__item swiper-slide">
+                                    <a href="faq.html" class="btn-reset wards-nav__link ">Часто задаваемые вопросы</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="col-md-2 d-md-block d-none">
+                        <a href="" class="wards-nav__review-link">Оставить отзыв</a>
+                    </div>
+                </div>
             </div>
-          </div>
         </section>
-        
+
+        <section class="calendar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <h2 class="title-h2 calendar__title">Календарь мероприятий</h2>
+                    </div>
+                    <div class="col-xl-5 col-lg-6 col-md-12">
+                        <div class="calendar__inner">
+
+                            <!-- Месяц/год -->
+                            <div class="calendar__swiper swiper">
+                                <ul class="calendar__month-list swiper-wrapper">
+                                    <li class="calendar__month-item swiper-slide">
+                                        <span class="calendar__month">Январь</span>
+                                        <span class="calendar__year">2021</span>
+                                    </li>
+                                    <li class="calendar__month-item swiper-slide ">
+                                        <span class="calendar__month">Февраль</span>
+                                        <span class="calendar__year">2021</span>
+                                    </li>
+                                    <li class="calendar__month-item swiper-slide">
+                                        <span class="calendar__month">Март</span>
+                                        <span class="calendar__year">2021</span>
+                                    </li>
+                                    <li class="calendar__month-item swiper-slide">
+                                        <span class="calendar__month">Апрель</span>
+                                        <span class="calendar__year">2021</span>
+                                    </li>
+                                    <li class="calendar__month-item swiper-slide ">
+                                        <span class="calendar__month">Май</span>
+                                        <span class="calendar__year">2021</span>
+                                    </li>
+                                    <li class="calendar__month-item swiper-slide">
+                                        <span class="calendar__month">Июнь</span>
+                                        <span class="calendar__year">2021</span>
+                                    </li>
+                                    <li class="calendar__month-item swiper-slide">
+                                        <span class="calendar__month">Июль</span>
+                                        <span class="calendar__year">2021</span>
+                                    </li>
+                                    <li class="calendar__month-item swiper-slide ">
+                                        <span class="calendar__month">Август</span>
+                                        <span class="calendar__year">2021</span>
+                                    </li>
+                                    <li class="calendar__month-item swiper-slide">
+                                        <span class="calendar__month">Сентябрь</span>
+                                        <span class="calendar__year">2021</span>
+                                    </li>
+                                    <li class="calendar__month-item swiper-slide">
+                                        <span class="calendar__month">Октябрь</span>
+                                        <span class="calendar__year">2021</span>
+                                    </li>
+                                    <li class="calendar__month-item swiper-slide">
+                                        <span class="calendar__month">Ноябрь</span>
+                                        <span class="calendar__year">2021</span>
+                                    </li>
+                                    <li class="calendar__month-item swiper-slide">
+                                        <span class="calendar__month">Декабрь</span>
+                                        <span class="calendar__year">2021</span>
+                                    </li>
+                                </ul>
+                                <div class="calendar-button-next calendar__month-next">
+                                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 13L7 7L1 1" stroke="#6D7276" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div class="calendar-button-prev calendar__month-prev">
+                                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7 13L1 7L7 1" stroke="#6D7276" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- Месяц/год END-->
+
+                            <!-- День -->
+                            <ul class="calendar__day-list">
+                                <li class="calendar__day">пн</li>
+                                <li class="calendar__day">вт</li>
+                                <li class="calendar__day">ср</li>
+                                <li class="calendar__day">чт</li>
+                                <li class="calendar__day">пт</li>
+                                <li class="calendar__day">сб</li>
+                                <li class="calendar__day">вс</li>
+                            </ul>
+                            <!-- День END-->
+
+                            <!-- Недели -->
+                            <ul class="calendar__week">
+                                <li class="calendar__number">&nbsp;</li>
+                                <li class="calendar__number">&nbsp;</li>
+                                <li class="calendar__number">&nbsp;</li>
+                                <li class="calendar__number">&nbsp;</li>
+                                <li class="calendar__number">1</li>
+                                <li class="calendar__number">2</li>
+                                <li class="calendar__number">3</li>
+                            </ul>
+                            <ul class="calendar__week">
+                                <li class="calendar__number is-active is-focus ">4</li>
+                                <li class="calendar__number">5</li>
+                                <li class="calendar__number">6</li>
+                                <li class="calendar__number">7</li>
+                                <li class="calendar__number">8</li>
+                                <li class="calendar__number">9</li>
+                                <li class="calendar__number">10</li>
+                            </ul>
+                            <ul class="calendar__week">
+                                <li class="calendar__number">11</li>
+                                <li class="calendar__number">12</li>
+                                <li class="calendar__number">13</li>
+                                <li class="calendar__number">14</li>
+                                <li class="calendar__number is-active">15</li>
+                                <li class="calendar__number">16</li>
+                                <li class="calendar__number">17</li>
+                            </ul>
+                            <ul class="calendar__week">
+                                <li class="calendar__number">18</li>
+                                <li class="calendar__number">19</li>
+                                <li class="calendar__number">20</li>
+                                <li class="calendar__number">21</li>
+                                <li class="calendar__number">22</li>
+                                <li class="calendar__number is-active">23</li>
+                                <li class="calendar__number">24</li>
+                            </ul>
+                            <ul class="calendar__week">
+                                <li class="calendar__number">25</li>
+                                <li class="calendar__number is-active">26</li>
+                                <li class="calendar__number">27</li>
+                                <li class="calendar__number">28</li>
+                                <li class="calendar__number">29</li>
+                                <li class="calendar__number">30</li>
+                                <li class="calendar__number">31</li>
+                            </ul>
+                            <!-- Недели END-->
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-5 col-md-12 offset-lg-1">
+                        <div class="calendar__date">События на <span>4 октября</span></div>
+                        <ul class="calendar__events-list">
+                            <li class="calendar__events-item">
+                                <p class="calendar__time">
+                                    12:00–13:00
+                                    <span class="calendar__place">мск</span>
+                                    <span class="calendar__area">Zoom</span>
+                                </p>
+                                <p class="calendar__caption">Онлайн встреча группы взаимопомощи</p>
+                                <p class="calendar__theme">Тема: «Самооценка»</p>
+                                <a href="" class="calendar__link">
+                                    О мероприятии
+                                    <svg>
+                                        <use xlink:href="assets/img/sprite.svg#link-arrow"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="calendar__events-item">
+                                <p class="calendar__time">
+                                    12:00–13:00
+                                    <span class="calendar__place">мск</span>
+                                    <span class="calendar__area">Zoom</span>
+                                </p>
+                                <p class="calendar__caption">Онлайн встреча группы взаимопомощи</p>
+                                <p class="calendar__theme">Тема: «Самооценка»</p>
+                                <a href="" class="calendar__link">
+                                    О мероприятии
+                                    <svg>
+                                        <use xlink:href="assets/img/sprite.svg#link-arrow"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="gallery">
-          <div class="container">
-            <div class="row">
-              <div class="col-xl-12">
-                <h2 class="title-h2">Галерея</h2>
-              </div>
-            </div>
-            <!--    Item -->
-            <div class="row gallery__item">
-              <div class="col-xl-12">
-                <div class="gallery__heading">
-                  <h3 class="gallery__caption">Beauty Day</h3>
-                  <p class="gallery__date">24 ноября 2019</p>
-                </div>
-                <div class="swiper gallery__swiper">
-                  <div class="galley__wrapper galley__wrapper-01 swiper-wrapper">
-                    <img src="assets/img/ev-01.jpg" alt="" class="gallery__img swiper-slide">
-                    <img src="assets/img/ev-02.jpg" alt="" class="gallery__img swiper-slide">
-                    <img src="assets/img/ev-03.jpg" alt="" class="gallery__img swiper-slide">
-                    <img src="assets/img/ev-04.jpg" alt="" class="gallery__img swiper-slide">
-                    <img src="assets/img/ev-05.jpg" alt="" class="gallery__img swiper-slide">
-                    <img src="assets/img/ev-06.jpg" alt="" class="gallery__img swiper-slide">
-                    <img src="assets/img/ev-07.jpg" alt="" class="gallery__img swiper-slide">
-                    <img src="assets/img/ev-08.jpg" alt="" class="gallery__img swiper-slide">
-                  </div>
-                  <div class="gallery__bottom">
-                    <a href="" class="gallery__link">
-                      К мероприятию
-                      <svg>
-                        <use xlink:href="assets/img/sprite.svg#link-arrow"></use>
-                      </svg>
-                    </a>
-                    <div class="gallery__navigation">
-                      <div class="gallery-button-prev slider-navigation slider-navigation_prev">
-                        <svg>
-                          <use xlink:href="assets/img/sprite.svg#sl-prev"></use>
-                        </svg>
-                      </div>
-                      <div class="gallery-button-next slider-navigation slider-navigation_next">
-                        <svg>
-                          <use xlink:href="assets/img/sprite.svg#sl-next"></use>
-                        </svg>
-                      </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <h2 class="title-h2">Галерея</h2>
                     </div>
-                  </div>
                 </div>
-              </div>
-            </div>
-            <!--    Item END -->
-            <!--    Item -->
-            <div class="row gallery__item">
-              <div class="col-xl-12">
-                <div class="gallery__heading">
-                  <h3 class="gallery__caption">Психологическая группа</h3>
-                  <p class="gallery__date">23 июня 2019</p>
-                </div>
-                <div class="swiper gallery__swiper">
-                  <div class="galley__wrapper galley__wrapper-02 swiper-wrapper">
-                    <img src="assets/img/ev-09.jpg" alt="" class="gallery__img swiper-slide">
-                    <img src="assets/img/ev-010.jpg" alt="" class="gallery__img swiper-slide">
-                    <img src="assets/img/ev-011.jpg" alt="" class="gallery__img swiper-slide">
-                    <img src="assets/img/ev-012.jpg" alt="" class="gallery__img swiper-slide">
-                    <img src="assets/img/ev-013.jpg" alt="" class="gallery__img swiper-slide">
-                  </div>
-                  <div class="gallery__bottom">
-                    <a href="" class="gallery__link">
-                      К мероприятию
-                      <svg>
-                        <use xlink:href="assets/img/sprite.svg#link-arrow"></use>
-                      </svg>
-                    </a>
-                    <div class="gallery__navigation">
-                      <div class="gallery-button-prev slider-navigation slider-navigation_prev">
-                        <svg>
-                          <use xlink:href="assets/img/sprite.svg#sl-prev"></use>
-                        </svg>
-                      </div>
-                      <div class="gallery-button-next slider-navigation slider-navigation_next">
-                        <svg>
-                          <use xlink:href="assets/img/sprite.svg#sl-next"></use>
-                        </svg>
-                      </div>
+                <!--    Item -->
+                <div class="row gallery__item">
+                    <div class="col-xl-12">
+                        <div class="gallery__heading">
+                            <h3 class="gallery__caption">Beauty Day</h3>
+                            <p class="gallery__date">24 ноября 2019</p>
+                        </div>
+                        <div class="swiper gallery__swiper">
+                            <div class="galley__wrapper galley__wrapper-01 swiper-wrapper">
+                                <img src="assets/img/ev-01.jpg" alt="" class="gallery__img swiper-slide">
+                                <img src="assets/img/ev-02.jpg" alt="" class="gallery__img swiper-slide">
+                                <img src="assets/img/ev-03.jpg" alt="" class="gallery__img swiper-slide">
+                                <img src="assets/img/ev-04.jpg" alt="" class="gallery__img swiper-slide">
+                                <img src="assets/img/ev-05.jpg" alt="" class="gallery__img swiper-slide">
+                                <img src="assets/img/ev-06.jpg" alt="" class="gallery__img swiper-slide">
+                                <img src="assets/img/ev-07.jpg" alt="" class="gallery__img swiper-slide">
+                                <img src="assets/img/ev-08.jpg" alt="" class="gallery__img swiper-slide">
+                            </div>
+                            <div class="gallery__bottom">
+                                <a href="" class="gallery__link">
+                                    К мероприятию
+                                    <svg>
+                                        <use xlink:href="assets/img/sprite.svg#link-arrow"></use>
+                                    </svg>
+                                </a>
+                                <div class="gallery__navigation">
+                                    <div class="gallery-button-prev slider-navigation slider-navigation_prev">
+                                        <svg>
+                                            <use xlink:href="assets/img/sprite.svg#sl-prev"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="gallery-button-next slider-navigation slider-navigation_next">
+                                        <svg>
+                                            <use xlink:href="assets/img/sprite.svg#sl-next"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
-            </div>
-            <!--    Item END -->
-            <!--    Item -->
-            <div class="row gallery__item">
-              <div class="col-xl-12">
-                <div class="gallery__heading">
-                  <h3 class="gallery__caption">Мастер-класс по питанию</h3>
-                  <p class="gallery__date">3 мая 2019</p>
-                </div>
-                <div class="swiper gallery__swiper">
-                  <div class="galley__wrapper galley__wrapper-03 swiper-wrapper">
-                    <img src="assets/img/ev-014.jpg" alt="" class="gallery__img swiper-slide">
-                    <img src="assets/img/ev-015.jpg" alt="" class="gallery__img swiper-slide">
-                    <img src="assets/img/ev-016.jpg" alt="" class="gallery__img swiper-slide">
-                    <img src="assets/img/ev-017.jpg" alt="" class="gallery__img swiper-slide">
-                    <img src="assets/img/ev-018.jpg" alt="" class="gallery__img swiper-slide">
-                  </div>
-                  <div class="gallery__bottom">
-                    <a href="" class="gallery__link">
-                      К мероприятию
-                      <svg>
-                        <use xlink:href="assets/img/sprite.svg#link-arrow"></use>
-                      </svg>
-                    </a>
-                    <div class="gallery__navigation">
-                      <div class="gallery-button-prev slider-navigation slider-navigation_prev">
-                        <svg>
-                          <use xlink:href="assets/img/sprite.svg#sl-prev"></use>
-                        </svg>
-                      </div>
-                      <div class="gallery-button-next slider-navigation slider-navigation_next">
-                        <svg>
-                          <use xlink:href="assets/img/sprite.svg#sl-next"></use>
-                        </svg>
-                      </div>
+                <!--    Item END -->
+                <!--    Item -->
+                <div class="row gallery__item">
+                    <div class="col-xl-12">
+                        <div class="gallery__heading">
+                            <h3 class="gallery__caption">Психологическая группа</h3>
+                            <p class="gallery__date">23 июня 2019</p>
+                        </div>
+                        <div class="swiper gallery__swiper">
+                            <div class="galley__wrapper galley__wrapper-02 swiper-wrapper">
+                                <img src="assets/img/ev-09.jpg" alt="" class="gallery__img swiper-slide">
+                                <img src="assets/img/ev-010.jpg" alt="" class="gallery__img swiper-slide">
+                                <img src="assets/img/ev-011.jpg" alt="" class="gallery__img swiper-slide">
+                                <img src="assets/img/ev-012.jpg" alt="" class="gallery__img swiper-slide">
+                                <img src="assets/img/ev-013.jpg" alt="" class="gallery__img swiper-slide">
+                            </div>
+                            <div class="gallery__bottom">
+                                <a href="" class="gallery__link">
+                                    К мероприятию
+                                    <svg>
+                                        <use xlink:href="assets/img/sprite.svg#link-arrow"></use>
+                                    </svg>
+                                </a>
+                                <div class="gallery__navigation">
+                                    <div class="gallery-button-prev slider-navigation slider-navigation_prev">
+                                        <svg>
+                                            <use xlink:href="assets/img/sprite.svg#sl-prev"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="gallery-button-next slider-navigation slider-navigation_next">
+                                        <svg>
+                                            <use xlink:href="assets/img/sprite.svg#sl-next"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
+                <!--    Item END -->
+                <!--    Item -->
+                <div class="row gallery__item">
+                    <div class="col-xl-12">
+                        <div class="gallery__heading">
+                            <h3 class="gallery__caption">Мастер-класс по питанию</h3>
+                            <p class="gallery__date">3 мая 2019</p>
+                        </div>
+                        <div class="swiper gallery__swiper">
+                            <div class="galley__wrapper galley__wrapper-03 swiper-wrapper">
+                                <img src="assets/img/ev-014.jpg" alt="" class="gallery__img swiper-slide">
+                                <img src="assets/img/ev-015.jpg" alt="" class="gallery__img swiper-slide">
+                                <img src="assets/img/ev-016.jpg" alt="" class="gallery__img swiper-slide">
+                                <img src="assets/img/ev-017.jpg" alt="" class="gallery__img swiper-slide">
+                                <img src="assets/img/ev-018.jpg" alt="" class="gallery__img swiper-slide">
+                            </div>
+                            <div class="gallery__bottom">
+                                <a href="" class="gallery__link">
+                                    К мероприятию
+                                    <svg>
+                                        <use xlink:href="assets/img/sprite.svg#link-arrow"></use>
+                                    </svg>
+                                </a>
+                                <div class="gallery__navigation">
+                                    <div class="gallery-button-prev slider-navigation slider-navigation_prev">
+                                        <svg>
+                                            <use xlink:href="assets/img/sprite.svg#sl-prev"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="gallery-button-next slider-navigation slider-navigation_next">
+                                        <svg>
+                                            <use xlink:href="assets/img/sprite.svg#sl-next"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--    Item END -->
+                <div class="row">
+                    <div class="col-xl-12">
+                        <button class="btn-reset gallery__btn">Показать еще мероприятия</button>
+                    </div>
+                </div>
             </div>
-            <!--    Item END -->
-            <div class="row">
-              <div class="col-xl-12">
-                <button class="btn-reset gallery__btn">Показать еще мероприятия</button>
-              </div>
-            </div>
-          </div>
         </section>
-        
+
         <section class="bottom-btns">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-xl-12">
-                <div class="d-flex">
-                  <div class="bottom-btns__sum ">
-                    <button class="btn-reset bottom-btns__btn">500 <span>₽</span></button>
-                    <button class="btn-reset bottom-btns__btn">2400 <span>₽</span></button>
-                    <button class="btn-reset bottom-btns__btn">3200 <span>₽</span></button>
-                    <button class="btn-reset bottom-btns__btn">6000 <span>₽</span></button>
-                    <input type="number" name="other-sum" class="bottom-btns__input" placeholder="Другая сумма"></input>
-                  </div>
-                  <div class="bottom-btns__submit">
-                    <button class="btn-reset bottom-btns__btn bottom-btns__btn_blue">Хочу помочь</button>
-                    <button class="btn-reset bottom-btns__btn">Нужна помощь</button>
-                  </div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-12">
+                        <div class="d-flex">
+                            <div class="bottom-btns__sum ">
+                                <button class="btn-reset bottom-btns__btn">500 <span>₽</span></button>
+                                <button class="btn-reset bottom-btns__btn">2400 <span>₽</span></button>
+                                <button class="btn-reset bottom-btns__btn">3200 <span>₽</span></button>
+                                <button class="btn-reset bottom-btns__btn">6000 <span>₽</span></button>
+                                <input type="number" name="other-sum" class="bottom-btns__input" placeholder="Другая сумма"></input>
+                            </div>
+                            <div class="bottom-btns__submit">
+                                <button class="btn-reset bottom-btns__btn bottom-btns__btn_blue">Хочу помочь</button>
+                                <button class="btn-reset bottom-btns__btn">Нужна помощь</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        
-        
-        
+
+
+
     </main>
     <div class="js-stop-header"></div>
     <footer class="footer footer_desktop">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-lg-3 col-xl-3">
-            <a href="" class="footer-logo d-flex">
-              <svg class="footer-logo__img">
-                <use xlink:href="assets/img/sprite.svg#footer-logo"></use>
-              </svg>
-              <p
-                class="footer-logo__text">Огромное сердце</p>
-            </a>
-            <ul class="social footer__social">
-              <li class="social__item">
-                <a href="" class="social__link">
-                  <svg width="21" height="21">
-                    <use xlink:href="assets/img/sprite.svg#icon-inst"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a href="" class="social__link">
-                  <svg width="12" height="21">
-                    <use xlink:href="assets/img/sprite.svg#icon-fb"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a href="" class="social__link">
-                  <svg width="24" height="14">
-                    <use xlink:href="assets/img/sprite.svg#icon-vk"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a href="" class="social__link">
-                  <svg width="24" height="16">
-                    <use xlink:href="assets/img/sprite.svg#icon-yt"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a href="" class="social__link">
-                  <svg width="18" height="21">
-                    <use xlink:href="assets/img/sprite.svg#icon-tt"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a href="" class="social__link">
-                  <svg width="18" height="21">
-                    <use xlink:href="assets/img/sprite.svg#icon-ok"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a href="" class="social__link">
-                  <svg width="20" height="20">
-                    <use xlink:href="assets/img/sprite.svg#icon-dz"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-            <p class="footer__copy">
-              &copy; 2019–2021 БФ «Огромное сердце»
-            </p>
-          </div>
-          <div class="col-6 col-sm-3 col-md-3 col-lg-2 col-xl-2 footer-nav_wr">
-            <nav class="footer-nav ml-lg-4">
-              <ul class="footer-nav__list">
-                <li class="footer-nav__item">
-                  <a href="" class="footer-nav__link">Фонд</a>
-                </li>
-                <li class="footer-nav__item">
-                  <a href="" class="footer-nav__link">Виды помощи</a>
-                </li>
-                <li class="footer-nav__item">
-                  <a href="" class="footer-nav__link">Статьи</a>
-                </li>
-                <li class="footer-nav__item">
-                  <a href="" class="footer-nav__link">Отчеты</a>
-                </li>
-              </ul>
-              <div class="desktop-only">
-                <p class="footer__caption">По всем вопросам</p>
-                <a href="mailto:info@greatheart.ru" class="footer__email">info@greatheart.ru</a>
-              </div>
-            </nav>
-          </div>
-          <div class="col-6 col-sm-3 col-md-3 col-lg-2 col-xl-2 offset-sm-0 offset-md-1 footer-nav_wr pl-0 pl-sm-1">
-            <nav class="footer-nav">
-              <ul class="footer-nav__list">
-                <li class="footer-nav__item">
-                  <a href="" class="footer-nav__link">Волонтерам</a>
-                </li>
-                <li class="footer-nav__item">
-                  <a href="" class="footer-nav__link">Партнерам</a>
-                </li>
-                <li class="footer-nav__item">
-                  <a href="" class="footer-nav__link">Контакты</a>
-                </li>
-                <li class="footer-nav__item">
-                  <a href="" class="footer-nav__link">Частые вопросы</a>
-                </li>
-              </ul>
-              <div class="desktop-only">
-                <p class="footer__caption">Партнерам</p>
-                <a href="mailto:partners@greatheart.ru" class="footer__email">partners@greatheart.ru</a>
-              </div>
-            </nav>
-          </div>
-          <div class="col-sm-5 col-md-4 col-lg-3 col-xl-3 offset-1 footer-contacts">
-            <p class="footer__phone">Горячая линия <span>08:00–22:00 мск</span></p>
-            <a href="tel:88003505785" class="footer__phone">8 800 350 57 85 <span>По всей России</span></a>
-            <a href="tel:84951980899" class="footer__phone">8 495 198 08 99 <span>По Москве</span></a>
-            <a href="tel:*5785" class="footer__phone footer__phone_pl"><i></i>5785 <span>Бесплатно с мобильного</span></a>
-            <button class="btn-reset footer__btn">Написать президенту фонда</button>
-          </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-3 col-xl-3">
+                    <a href="" class="footer-logo d-flex">
+                        <svg class="footer-logo__img">
+                            <use xlink:href="assets/img/sprite.svg#footer-logo"></use>
+                        </svg>
+                        <p class="footer-logo__text">Огромное сердце</p>
+                    </a>
+                    <ul class="social footer__social">
+                        <li class="social__item">
+                            <a href="" class="social__link">
+                                <svg width="21" height="21">
+                                    <use xlink:href="assets/img/sprite.svg#icon-inst"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="" class="social__link">
+                                <svg width="12" height="21">
+                                    <use xlink:href="assets/img/sprite.svg#icon-fb"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="" class="social__link">
+                                <svg width="24" height="14">
+                                    <use xlink:href="assets/img/sprite.svg#icon-vk"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="" class="social__link">
+                                <svg width="24" height="16">
+                                    <use xlink:href="assets/img/sprite.svg#icon-yt"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="" class="social__link">
+                                <svg width="18" height="21">
+                                    <use xlink:href="assets/img/sprite.svg#icon-tt"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="" class="social__link">
+                                <svg width="18" height="21">
+                                    <use xlink:href="assets/img/sprite.svg#icon-ok"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="" class="social__link">
+                                <svg width="20" height="20">
+                                    <use xlink:href="assets/img/sprite.svg#icon-dz"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="footer__copy">
+                        &copy; 2019–2021 БФ «Огромное сердце»
+                    </p>
+                </div>
+                <div class="col-6 col-sm-3 col-md-3 col-lg-2 col-xl-2 footer-nav_wr">
+                    <nav class="footer-nav ml-lg-4">
+                        <ul class="footer-nav__list">
+                            <li class="footer-nav__item">
+                                <a href="" class="footer-nav__link">Фонд</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="" class="footer-nav__link">Виды помощи</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="" class="footer-nav__link">Статьи</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="" class="footer-nav__link">Отчеты</a>
+                            </li>
+                        </ul>
+                        <div class="desktop-only">
+                            <p class="footer__caption">По всем вопросам</p>
+                            <a href="mailto:info@greatheart.ru" class="footer__email">info@greatheart.ru</a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-6 col-sm-3 col-md-3 col-lg-2 col-xl-2 offset-sm-0 offset-md-1 footer-nav_wr pl-0 pl-sm-1">
+                    <nav class="footer-nav">
+                        <ul class="footer-nav__list">
+                            <li class="footer-nav__item">
+                                <a href="" class="footer-nav__link">Волонтерам</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="" class="footer-nav__link">Партнерам</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="" class="footer-nav__link">Контакты</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="" class="footer-nav__link">Частые вопросы</a>
+                            </li>
+                        </ul>
+                        <div class="desktop-only">
+                            <p class="footer__caption">Партнерам</p>
+                            <a href="mailto:partners@greatheart.ru" class="footer__email">partners@greatheart.ru</a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-sm-5 col-md-4 col-lg-3 col-xl-3 offset-1 footer-contacts">
+                    <p class="footer__phone">Горячая линия <span>08:00–22:00 мск</span></p>
+                    <a href="tel:88003505785" class="footer__phone">8 800 350 57 85 <span>По всей России</span></a>
+                    <a href="tel:84951980899" class="footer__phone">8 495 198 08 99 <span>По Москве</span></a>
+                    <a href="tel:*5785" class="footer__phone footer__phone_pl"><i></i>5785 <span>Бесплатно с мобильного</span></a>
+                    <button class="btn-reset footer__btn">Написать президенту фонда</button>
+                </div>
+            </div>
         </div>
-      </div>
     </footer>
     <footer class="footer footer_mobile">
-      <div class="container">
-        <div class="row">
-          <div class="col-6 col-sm-3 col-md-3 col-lg-2 col-xl-2 footer-nav_wr">
-            <nav class="footer-nav ml-lg-4">
-              <ul class="footer-nav__list">
-                <li class="footer-nav__item">
-                  <a href="" class="footer-nav__link">Фонд</a>
-                </li>
-                <li class="footer-nav__item">
-                  <a href="" class="footer-nav__link">Виды помощи</a>
-                </li>
-                <li class="footer-nav__item">
-                  <a href="" class="footer-nav__link">Статьи</a>
-                </li>
-                <li class="footer-nav__item">
-                  <a href="" class="footer-nav__link">Отчеты</a>
-                </li>
-              </ul>
-              <div class="desktop-only">
-                <p class="footer__caption">По всем вопросам</p>
-                <a href="mailto:info@greatheart.ru" class="footer__email">info@greatheart.ru</a>
-              </div>
-            </nav>
-          </div>
-          <div class="col-6 col-sm-3 col-md-3 col-lg-2 col-xl-2 offset-sm-0 offset-md-1 footer-nav_wr pl-0 pl-sm-1">
-            <nav class="footer-nav">
-              <ul class="footer-nav__list">
-                <li class="footer-nav__item">
-                  <a href="" class="footer-nav__link">Волонтерам</a>
-                </li>
-                <li class="footer-nav__item">
-                  <a href="" class="footer-nav__link">Партнерам</a>
-                </li>
-                <li class="footer-nav__item">
-                  <a href="" class="footer-nav__link">Контакты</a>
-                </li>
-                <li class="footer-nav__item">
-                  <a href="" class="footer-nav__link">Частые вопросы</a>
-                </li>
-              </ul>
-              <div class="desktop-only">
-                <p class="footer__caption">Партнерам</p>
-                <a href="mailto:partners@greatheart.ru" class="footer__email">partners@greatheart.ru</a>
-              </div>
-            </nav>
-          </div>
-          <div class="col-sm-5 col-md-4 col-lg-3 col-xl-3 offset-1 footer-contacts">
-            <p class="footer__phone">Горячая линия <span>08:00–22:00 мск</span></p>
-            <a href="tel:88003505785" class="footer__phone">8 800 350 57 85 <span>По всей России</span></a>
-            <a href="tel:84951980899" class="footer__phone">8 495 198 08 99 <span>По Москве</span></a>
-            <a href="tel:*5785" class="footer__phone footer__phone_pl"><i></i>5785 <span>Бесплатно с мобильного</span></a>
-            <button class="btn-reset footer__btn">Написать президенту фонда</button>
-          </div>
-          <div class="col-sm-6 col-md-6">
-            <ul class="social footer__social">
-              <li class="social__item">
-                <a href="" class="social__link">
-                  <svg width="21" height="21">
-                    <use xlink:href="assets/img/sprite.svg#icon-inst"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a href="" class="social__link">
-                  <svg width="12" height="21">
-                    <use xlink:href="assets/img/sprite.svg#icon-fb"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a href="" class="social__link">
-                  <svg width="24" height="14">
-                    <use xlink:href="assets/img/sprite.svg#icon-vk"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a href="" class="social__link">
-                  <svg width="24" height="16">
-                    <use xlink:href="assets/img/sprite.svg#icon-yt"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a href="" class="social__link">
-                  <svg width="18" height="21">
-                    <use xlink:href="assets/img/sprite.svg#icon-tt"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a href="" class="social__link">
-                  <svg width="18" height="21">
-                    <use xlink:href="assets/img/sprite.svg#icon-ok"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a href="" class="social__link">
-                  <svg width="20" height="20">
-                    <use xlink:href="assets/img/sprite.svg#icon-dz"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="mobile-only col-6">
-            <p class="footer__caption">По всем вопросам</p>
-            <a href="mailto:info@greatheart.ru" class="footer__email">info@greatheart.ru</a>
-          </div>
-          <div class="mobile-only col-6 pl-0 pl-sm-1">
-            <p class="footer__caption">Партнерам</p>
-            <a href="mailto:partners@greatheart.ru" class="footer__email">partners@greatheart.ru</a>
-          </div>
-          <div class="col-sm-6 col-md-6 desktop-only">
-            <p class="footer__copy">
-              &copy; 2019–2021 БФ «Огромное сердце»
-            </p>
-          </div>
-          <div class="col-sm-4 col-md-4 offset-sm-4 col-lg-3 col-xl-3 mt-3">
-            <a href="" class="footer-logo d-flex">
-              <svg class="footer-logo__img">
-                <use xlink:href="assets/img/sprite.svg#footer-logo"></use>
-              </svg>
-              <p
-                class="footer-logo__text">Огромное сердце</p>
-            </a>
-          </div>
-          <div class="col-sm-6 col-md-6 mobile-only">
-            <p class="footer__copy">
-              &copy; 2019–2021 БФ «Огромное сердце»
-            </p>
-          </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-sm-3 col-md-3 col-lg-2 col-xl-2 footer-nav_wr">
+                    <nav class="footer-nav ml-lg-4">
+                        <ul class="footer-nav__list">
+                            <li class="footer-nav__item">
+                                <a href="" class="footer-nav__link">Фонд</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="" class="footer-nav__link">Виды помощи</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="" class="footer-nav__link">Статьи</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="" class="footer-nav__link">Отчеты</a>
+                            </li>
+                        </ul>
+                        <div class="desktop-only">
+                            <p class="footer__caption">По всем вопросам</p>
+                            <a href="mailto:info@greatheart.ru" class="footer__email">info@greatheart.ru</a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-6 col-sm-3 col-md-3 col-lg-2 col-xl-2 offset-sm-0 offset-md-1 footer-nav_wr pl-0 pl-sm-1">
+                    <nav class="footer-nav">
+                        <ul class="footer-nav__list">
+                            <li class="footer-nav__item">
+                                <a href="" class="footer-nav__link">Волонтерам</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="" class="footer-nav__link">Партнерам</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="" class="footer-nav__link">Контакты</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="" class="footer-nav__link">Частые вопросы</a>
+                            </li>
+                        </ul>
+                        <div class="desktop-only">
+                            <p class="footer__caption">Партнерам</p>
+                            <a href="mailto:partners@greatheart.ru" class="footer__email">partners@greatheart.ru</a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-sm-5 col-md-4 col-lg-3 col-xl-3 offset-1 footer-contacts">
+                    <p class="footer__phone">Горячая линия <span>08:00–22:00 мск</span></p>
+                    <a href="tel:88003505785" class="footer__phone">8 800 350 57 85 <span>По всей России</span></a>
+                    <a href="tel:84951980899" class="footer__phone">8 495 198 08 99 <span>По Москве</span></a>
+                    <a href="tel:*5785" class="footer__phone footer__phone_pl"><i></i>5785 <span>Бесплатно с мобильного</span></a>
+                    <button class="btn-reset footer__btn">Написать президенту фонда</button>
+                </div>
+                <div class="col-sm-6 col-md-6">
+                    <ul class="social footer__social">
+                        <li class="social__item">
+                            <a href="" class="social__link">
+                                <svg width="21" height="21">
+                                    <use xlink:href="assets/img/sprite.svg#icon-inst"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="" class="social__link">
+                                <svg width="12" height="21">
+                                    <use xlink:href="assets/img/sprite.svg#icon-fb"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="" class="social__link">
+                                <svg width="24" height="14">
+                                    <use xlink:href="assets/img/sprite.svg#icon-vk"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="" class="social__link">
+                                <svg width="24" height="16">
+                                    <use xlink:href="assets/img/sprite.svg#icon-yt"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="" class="social__link">
+                                <svg width="18" height="21">
+                                    <use xlink:href="assets/img/sprite.svg#icon-tt"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="" class="social__link">
+                                <svg width="18" height="21">
+                                    <use xlink:href="assets/img/sprite.svg#icon-ok"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="" class="social__link">
+                                <svg width="20" height="20">
+                                    <use xlink:href="assets/img/sprite.svg#icon-dz"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mobile-only col-6">
+                    <p class="footer__caption">По всем вопросам</p>
+                    <a href="mailto:info@greatheart.ru" class="footer__email">info@greatheart.ru</a>
+                </div>
+                <div class="mobile-only col-6 pl-0 pl-sm-1">
+                    <p class="footer__caption">Партнерам</p>
+                    <a href="mailto:partners@greatheart.ru" class="footer__email">partners@greatheart.ru</a>
+                </div>
+                <div class="col-sm-6 col-md-6 desktop-only">
+                    <p class="footer__copy">
+                        &copy; 2019–2021 БФ «Огромное сердце»
+                    </p>
+                </div>
+                <div class="col-sm-4 col-md-4 offset-sm-4 col-lg-3 col-xl-3 mt-3">
+                    <a href="" class="footer-logo d-flex">
+                        <svg class="footer-logo__img">
+                            <use xlink:href="assets/img/sprite.svg#footer-logo"></use>
+                        </svg>
+                        <p class="footer-logo__text">Огромное сердце</p>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-6 mobile-only">
+                    <p class="footer__copy">
+                        &copy; 2019–2021 БФ «Огромное сердце»
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
     </footer>
-    
+
     <div id="popup-help" class="popup" style="display:none;">
-      <h2 class="title-h2 popup__title">Заполните форму</h2>
-      <form action="" class="popup__form">
-        <div class="popup__group">
-          <label for="popup-name" class="popup__label">
-            <p class="popup__caption">Ваше имя</p>
-            <input type="text" id="popup-name" name="popup-name" class="popup__input js-popup-help-input" required>
-          </label>
-          <label for="popup-email" class="popup__label">
-            <p class="popup__caption">Email</p>
-            <input type="email" id="popup-email" name="popup-email" class="popup__input js-popup-help-input popup__input_email" placeholder="mail@greatheart.ru" required>
-          </label>
-          <label for="popup-phone" class="popup__label">
-            <p class="popup__caption">Телефон</p>
-            <input type="tel" id="popup-phone" name="popup-phone" class="popup__input js-popup-help-input popup__input_phone" placeholder="+7" required>
-          </label>
-        </div>
-        <label for="popup-message" class="popup__label popup__label_message">
-          <p class="popup__caption">Ваш вопрос</p>
-          <textarea name="popup-message" id="popup-message" class="popup__textarea js-popup-help-textarea" placeholder="Вы можете задать любой вопрос" required></textarea>
-        </label>
-        <div class="popup__bottom">
-          <a class="btn-reset popup__close js-close-popup">
-            <svg>
-              <use xlink:href="assets/img/sprite.svg#arrow-left"></use>
-            </svg>
-            Закрыть форму
-          </a>
-          <p class="popup__conf js-popup-help-conf">Нажимая на кнопку, вы даете согласие на обработку <a href="">персональных данных</a></p>
-          <input class="btn-reset popup__btn js-popup-help-submit"  value="Отправить вопрос" type="submit" disabled="disabled">
-        </div>
-      </form>
+        <h2 class="title-h2 popup__title">Заполните форму</h2>
+        <form action="" class="popup__form">
+            <div class="popup__group">
+                <label for="popup-name" class="popup__label">
+                    <p class="popup__caption">Ваше имя</p>
+                    <input type="text" id="popup-name" name="popup-name" class="popup__input js-popup-help-input" required>
+                </label>
+                <label for="popup-email" class="popup__label">
+                    <p class="popup__caption">Email</p>
+                    <input type="email" id="popup-email" name="popup-email" class="popup__input js-popup-help-input popup__input_email" placeholder="mail@greatheart.ru" required>
+                </label>
+                <label for="popup-phone" class="popup__label">
+                    <p class="popup__caption">Телефон</p>
+                    <input type="tel" id="popup-phone" name="popup-phone" class="popup__input js-popup-help-input popup__input_phone" placeholder="+7" required>
+                </label>
+            </div>
+            <label for="popup-message" class="popup__label popup__label_message">
+                <p class="popup__caption">Ваш вопрос</p>
+                <textarea name="popup-message" id="popup-message" class="popup__textarea js-popup-help-textarea" placeholder="Вы можете задать любой вопрос" required></textarea>
+            </label>
+            <div class="popup__bottom">
+                <a class="btn-reset popup__close js-close-popup">
+                    <svg>
+                        <use xlink:href="assets/img/sprite.svg#arrow-left"></use>
+                    </svg>
+                    Закрыть форму
+                </a>
+                <p class="popup__conf js-popup-help-conf">Нажимая на кнопку, вы даете согласие на обработку <a href="">персональных данных</a></p>
+                <input class="btn-reset popup__btn js-popup-help-submit" value="Отправить вопрос" type="submit" disabled="disabled">
+            </div>
+        </form>
     </div>
-    
+
     <div id="popup-reviews" class="popup" style="display:none;">
-      <h2 class="title-h2 popup__title">Заполните форму</h2>
-      <form action="" class="popup__form">
-        <div class="popup__group">
-          <label for="reviews-name" class="popup__label">
-            <p class="popup__caption">Ваше имя</p>
-            <input type="text" id="reviews-name" name="reviews-name" class="popup__input js-popup-reviews-input" required>
-          </label>
-          <label for="reviews-email" class="popup__label">
-            <p class="popup__caption">Email</p>
-            <input type="email" id="reviews-email" name="reviews-email" class="popup__input js-popup-reviews-input popup__input_email" placeholder="mail@greatheart.ru" required>
-          </label>
-        </div>
-        <div class="popup__group">
-          <label for="reviews-city" class="popup__label">
-            <p class="popup__caption">Город проживания</p>
-            <input type="text" id="reviews-city" name="reviews-city" class="popup__input js-popup-reviews-input" placeholder="Начните вводить" required>
-          </label>
-          <label for="reviews-year" class="popup__label">
-            <p class="popup__caption">Возраст</p>
-            <input type="number" id="reviews-year" name="reviews-year" class="popup__input js-popup-reviews-input" placeholder="Полных лет" required>
-          </label>
-        </div>
-        <label for="popup-message" class="popup__label popup__label_message">
-          <p class="popup__caption">Отзыв</p>
-          <textarea name="reviews-message" id="reviews--message" class="popup__textarea js-popup-reviews-textarea" placeholder="Напишите отзыв о нас" ></textarea>
-        </label>
-        <div class="popup__bottom">
-          <a class="btn-reset popup__close js-close-popup">
-            <svg>
-              <use xlink:href="assets/img/sprite.svg#arrow-left"></use>
-            </svg>
-            Закрыть форму
-          </a>
-          <p class="popup__conf js-popup-reviews-conf">Нажимая на кнопку, вы даете согласие на обработку <a href="">персональных данных</a></p>
-          <input class="btn-reset popup__btn js-popup-reviews-submit"  value="Отправить вопрос" type="submit" disabled="disabled">
-        </div>
-      </form>
+        <h2 class="title-h2 popup__title">Заполните форму</h2>
+        <form action="" class="popup__form">
+            <div class="popup__group">
+                <label for="reviews-name" class="popup__label">
+                    <p class="popup__caption">Ваше имя</p>
+                    <input type="text" id="reviews-name" name="reviews-name" class="popup__input js-popup-reviews-input" required>
+                </label>
+                <label for="reviews-email" class="popup__label">
+                    <p class="popup__caption">Email</p>
+                    <input type="email" id="reviews-email" name="reviews-email" class="popup__input js-popup-reviews-input popup__input_email" placeholder="mail@greatheart.ru" required>
+                </label>
+            </div>
+            <div class="popup__group">
+                <label for="reviews-city" class="popup__label">
+                    <p class="popup__caption">Город проживания</p>
+                    <input type="text" id="reviews-city" name="reviews-city" class="popup__input js-popup-reviews-input" placeholder="Начните вводить" required>
+                </label>
+                <label for="reviews-year" class="popup__label">
+                    <p class="popup__caption">Возраст</p>
+                    <input type="number" id="reviews-year" name="reviews-year" class="popup__input js-popup-reviews-input" placeholder="Полных лет" required>
+                </label>
+            </div>
+            <label for="popup-message" class="popup__label popup__label_message">
+                <p class="popup__caption">Отзыв</p>
+                <textarea name="reviews-message" id="reviews--message" class="popup__textarea js-popup-reviews-textarea" placeholder="Напишите отзыв о нас"></textarea>
+            </label>
+            <div class="popup__bottom">
+                <a class="btn-reset popup__close js-close-popup">
+                    <svg>
+                        <use xlink:href="assets/img/sprite.svg#arrow-left"></use>
+                    </svg>
+                    Закрыть форму
+                </a>
+                <p class="popup__conf js-popup-reviews-conf">Нажимая на кнопку, вы даете согласие на обработку <a href="">персональных данных</a></p>
+                <input class="btn-reset popup__btn js-popup-reviews-submit" value="Отправить вопрос" type="submit" disabled="disabled">
+            </div>
+        </form>
     </div>
     <!-- build:js -->
     <script src="assets/vendor/js/jquery.js"></script>
@@ -835,15 +833,15 @@
     <script src="assets/vendor/js/swiper-bundle.js"></script>
     <script src="assets/vendor/js/jquery.fancybox.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.js"></script>
-    <script src="assets/vendor/js/jquery.steps.min.js"></script>
+    <script src="assets/vendor/js/jquery.steps.js"></script>
     <script src="assets/vendor/js/jquery.maskedinput.js"></script>
-    
+
     <!--<script src="assets/js/util/autoPadding.js"></script>-->
     <script src="assets/js/util/crossPlatform.js"></script>
     <script src="assets/js/wards.js"></script>
     <script src="assets/js/app.js"></script>
     <!-- endbuild -->
-    
+
 </body>
 
 </html>
