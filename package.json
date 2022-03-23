@@ -60,6 +60,7 @@
     "bootstrap": "^4.6.0",
     "dropzone": "^6.0.0-beta.2",
     "gulp-svg-sprite": "^1.5.0",
+    "inputmask": "^5.0.7",
     "jquery": "^3.6.0",
     "jquery-steps": "^1.1.0",
     "jquery-validation": "^1.19.3",

@@ -286,7 +286,7 @@ $(function () {
     inputsRequired.attr('data', pEl);
 
     for (var i = 0; i < inputsRequired.length; i++) {
-      if (!inputsRequired[i].value) {
+      if (!inputsRequired[i].value && !inputsRequired[i].disabled) {
         filled = false;
       } else {
         pAll += pEl;
@@ -296,9 +296,9 @@ $(function () {
     function progressView() {
       var diagramBox = document.querySelectorAll('.diagram.progress');
       diagramBox.forEach(function (box) {
-        var deg = 360 * box.dataset.percent / 100 + 180;
+        var deg = 360 * pAll / 100 + 180;
 
-        if (box.dataset.percent >= 50) {
+        if (pAll >= 50) {
           box.classList.add('over_50');
         } else {
           box.classList.remove('over_50');
@@ -322,17 +322,7 @@ $(function () {
   }
 
   window.addEventListener("input", checkPercent);
-  window.addEventListener("keyup", checkPercent); // Change progress bar action
-  //   function setProgressBar(currentIndex) {
-  //     var percent = parseFloat(100 / wizardLength) * (currentIndex + 1);
-  //     percent = percent.toFixed();
-  //     // $(".vol-progress__percent").html(percent + "%");
-  //     // $(".diagram .text").html(percent + "%")
-  //     $(".progress").attr("data-percent", `${percent}`)
-  //     // $(".vol-progress__bar").css("width", percent + "%")
-  //
-  //   }
-
+  window.addEventListener("keyprup", checkPercent);
   jQuery.extend(jQuery.validator.messages, {
     required: "Обязательно",
     remote: "Please fix this field.",
@@ -341,6 +331,83 @@ $(function () {
     date: "Please enter a valid date.",
     dateISO: "Please enter a valid date (ISO).",
     number: "Please enter a valid number."
+  }); //masked inputs
+
+  Inputmask({
+    "mask": "+7 (999) 999-99-99"
+  }).mask('.phone-mask');
+  Inputmask({
+    "mask": "99.99.9999"
+  }).mask('.date-mask');
+  Inputmask({
+    "mask": "99:99"
+  }).mask('.time-mask');
+  Inputmask({
+    "mask": "99.99.9999"
+  }).mask('.day-mask'); // file input single
+
+  var inputFile = document.querySelectorAll('.vol-form__file'); /////////// Кнопка «Прикрепить файл» ///////////
+
+  inputFile.forEach(function (el) {
+    var textSelector = el.nextElementSibling;
+    var btnRemove = el.parentNode.lastElementChild;
+    var fileList; // Событие выбора файла(ов)
+
+    el.addEventListener('change', function (e) {
+      // создаём массив файлов
+      fileList = [];
+
+      for (var _i = 0; _i < el.files.length; _i++) {
+        fileList.push(el.files[_i]);
+      } // вызов функции для каждого файла
+
+
+      fileList.forEach(function (file) {
+        uploadFile(file);
+      });
+    }); // Проверяем размер файлов и выводим название
+
+    var uploadFile = function uploadFile(file) {
+      var ext = file.name.split('.').pop(); // файла <5 Мб
+
+      if (file.size > 5 * 1024 * 1024) {
+        alert('Файл должен быть не более 5 МБ.');
+        return;
+      } // Показ загружаемых файлов
+
+
+      if (file && file.length > 1) {
+        if (file.length <= 4) {
+          textSelector.innerHTML = "\u0412\u044B\u0431\u0440\u0430\u043D\u043E ".concat(file.length, " \u0444\u0430\u0439\u043B\u0430");
+          textSelector.classList.add('is-active');
+          btnRemove.classList.add('is-visible');
+        }
+
+        if (file.length > 4) {
+          textSelector.innerHTML = "\u0412\u044B\u0431\u0440\u0430\u043D\u043E ".concat(file.length, " \u0444\u0430\u0439\u043B\u043E\u0432");
+          textSelector.classList.add('is-active');
+          btnRemove.classList.add('is-visible');
+        }
+      } else {
+        if (file.name.length > 20) {
+          textSelector.innerHTML = file.name.slice(0, 10) + "..." + ext;
+        } else {
+          textSelector.innerHTML = file.name;
+        }
+
+        textSelector.classList.add('is-active');
+        btnRemove.classList.add('is-visible');
+      } // удаление файла
+
+
+      btnRemove.addEventListener('click', function (b) {
+        this.classList.remove('is-visible');
+        textSelector.classList.remove('is-active');
+        textSelector.innerHTML = 'Перетащите или <span>выберите файл</span>';
+        el.value = '';
+        checkPercent();
+      });
+    };
   }); // check taxi
 
   $('.js-taxi-query').click(function () {
@@ -417,7 +484,7 @@ $(document).ready(function () {
   }
 });
 $(document).ready(function () {
-  if ($('div.js-show-psychology-list').length) {
+  if ($('#vol-no-work').length) {
     var toggleThree = function toggleThree() {
       var workPlaceInput = document.getElementById('vol-work');
       var workPositionInput = document.getElementById('vol-position');
@@ -434,64 +501,7 @@ $(document).ready(function () {
     document.getElementById('vol-no-work').onchange = toggleThree;
   }
 });
-$(document).ready(function () {
-  var inputFile = document.querySelectorAll('.vol-form__file'); /////////// Кнопка «Прикрепить файл» ///////////
-
-  inputFile.forEach(function (el) {
-    var textSelector = el.nextElementSibling;
-    var btnRemove = el.parentNode.lastElementChild;
-    var fileList; // Событие выбора файла(ов)
-
-    el.addEventListener('change', function (e) {
-      // создаём массив файлов
-      fileList = [];
-
-      for (var _i = 0; _i < el.files.length; _i++) {
-        fileList.push(el.files[_i]);
-      } // вызов функции для каждого файла
-
-
-      fileList.forEach(function (file) {
-        uploadFile(file);
-      });
-    }); // Проверяем размер файлов и выводим название
-
-    var uploadFile = function uploadFile(file) {
-      // файла <5 Мб
-      if (file.size > 5 * 1024 * 1024) {
-        alert('Файл должен быть не более 5 МБ.');
-        return;
-      } // Показ загружаемых файлов
-
-
-      if (file && file.length > 1) {
-        if (file.length <= 4) {
-          textSelector.innerHTML = "\u0412\u044B\u0431\u0440\u0430\u043D\u043E ".concat(file.length, " \u0444\u0430\u0439\u043B\u0430");
-          textSelector.classList.add('is-active');
-          btnRemove.classList.add('is-visible');
-        }
-
-        if (file.length > 4) {
-          textSelector.innerHTML = "\u0412\u044B\u0431\u0440\u0430\u043D\u043E ".concat(file.length, " \u0444\u0430\u0439\u043B\u043E\u0432");
-          textSelector.classList.add('is-active');
-          btnRemove.classList.add('is-visible');
-        }
-      } else {
-        textSelector.innerHTML = file.name.slice(0, 15) + "...";
-        textSelector.classList.add('is-active');
-        btnRemove.classList.add('is-visible');
-      } // удаление файла
-
-
-      btnRemove.addEventListener('click', function (b) {
-        this.classList.remove('is-visible');
-        textSelector.classList.remove('is-active');
-        textSelector.innerHTML = 'Перетащите или <span>выберите файл</span>';
-        el.value = '';
-      });
-    };
-  });
-}); // input files multiple
+$(document).ready(function () {}); // input files multiple
 
 $(document).ready(function () {
   if ($('div.dropzone').length) {
@@ -502,13 +512,6 @@ $(document).ready(function () {
       dictRemoveFile: "<svg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M13 1L1 13M1 1L13 13' stroke='#6D7276' stroke-linecap='round' stroke-linejoin='round'/></svg>"
     });
   }
-}); //masked inputs
-
-jQuery(function ($) {
-  $(".day-mask").mask("99.99.9999");
-  $(".phone-mask").mask("+7 (999) 999-99-99");
-  $(".time-mask").mask("99:99");
-  $(".date-mask").mask("99.99.9999");
 });
 $(document).ready(function () {
   // change psychology slider

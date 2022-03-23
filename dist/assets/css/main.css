@@ -22091,8 +22091,8 @@ h3 {
 
 /* line 630, src/assets/scss/pages/_pay.scss */
 .vol-form__input[name="vol-phone"] {
-  min-width: 225px;
-  max-width: 225px;
+  min-width: 230px;
+  max-width: 230px;
 }
 
 @media only screen and (max-width: 560px) {

@@ -628,8 +628,8 @@
       }
     }
     &[name="vol-phone"] {
-      min-width: 225px;
-      max-width: 225px;
+      min-width: 230px;
+      max-width: 230px;
       @include r(560) {
         min-width: auto;
         width: 100%;
