@@ -328,7 +328,7 @@ bannerImg: assets/img/residence
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h2 class="title-h2 vol-form__title">Оформление заявки</h2>
+        <h2 class="title-h2 vol-form__title" id="anchor">Оформление заявки</h2>
         <div class="need-doc">
           <p class="need-doc__title">Для оформления вам понадобятся фотографии или сканы следующих документов:</p>
           <ul class="need-doc__list">
@@ -404,13 +404,13 @@ bannerImg: assets/img/residence
                 </label>
                 <label for="vol-accessibility" class="vol-form__label">
                   Состояние
-                  <select type="text" id="vol-accessibility" name="vol-accessibility" class="vol-form__select ">
-                    <option value="" disabled selected>Ваше состояние</option>
-                    <option value="">Здоров</option>
-                    <option value="">Диганостированна болезнь</option>
-                    <option value="">На лечении</option>
-                    <option value="">Реабилитация</option>
-                    <option value="">Ремиссия</option>
+                  <select type="text" id="vol-accessibility" name="vol-accessibility" class="vol-form__select required">
+                    <option value="default" disabled selected>Ваше состояние</option>
+                    <option value="Здоров">Здоров</option>
+                    <option value="Диганостированна болезнь">Диганостированна болезнь</option>
+                    <option value="На лечении">На лечении</option>
+                    <option value="Реабилитация">Реабилитация</option>
+                    <option value="Ремиссия">Ремиссия</option>
                   </select>
                 </label>
               </div>
@@ -450,7 +450,7 @@ bannerImg: assets/img/residence
                          placeholder="_._._">
                 </label>
               </div>
-              <p class="vol-form__label vol-form__subcaption w-100">У вас есть билеты на поезд или самолет?</p>
+              <p class="vol-form__label w-100">У вас есть билеты на поезд или самолет?</p>
               <div class="vol-form__group">
                 <label for="vol-plane-ticket-1" class="vol-form__label vol-form__label_radio">
                   <input type="radio" name="vol-plane-ticket[]" id="vol-plane-ticket-1" class="vol-form__radio" checked>
@@ -481,9 +481,9 @@ bannerImg: assets/img/residence
                   <p class="vol-form__label">Первая страница паспорта</p>
                   <div class="vol-form__file-inner">
                     <input type="file" name="upload-file__input_1" id="upload-file__input_1"
-                           class="required vol-form__file" required>
+                           class="required file_size_validate vol-form__file" required>
                     <label class="vol-form__file-label" for="upload-file__input_1">
-                      Перетащите или <span>выберите файл</span>
+                       <div class="vol-form__file-text"><span>Перетащите или</span> выберите файл</div>
                     </label>
                     <button class="js-remove-file vol-form__file-remove btn-reset" type="button"></button>
                   </div>
@@ -492,9 +492,9 @@ bannerImg: assets/img/residence
                   <p class="vol-form__label">Страница паспорта с регистрацией</p>
                   <div class="vol-form__file-inner">
                     <input type="file" name="upload-file__input_2" id="upload-file__input_2"
-                           class="required vol-form__file" required>
+                           class="required file_size_validate vol-form__file" required>
                     <label class="vol-form__file-label" for="upload-file__input_2">
-                      Перетащите или <span>выберите файл</span>
+                       <div class="vol-form__file-text"><span>Перетащите или</span> выберите файл</div>
                     </label>
                     <button class="js-remove-file vol-form__file-remove btn-reset" type="button"></button>
                   </div>
@@ -503,9 +503,9 @@ bannerImg: assets/img/residence
                   <p class="vol-form__label">Страница паспорта с семейное положение</p>
                   <div class="vol-form__file-inner">
                     <input type="file" name="upload-file__input_3" id="upload-file__input_3"
-                           class="required vol-form__file" required>
+                           class="required file_size_validate vol-form__file" required>
                     <label class="vol-form__file-label" for="upload-file__input_3">
-                      Перетащите или <span>выберите файл</span>
+                       <div class="vol-form__file-text"><span>Перетащите или</span> выберите файл</div>
                     </label>
                     <button class="js-remove-file vol-form__file-remove btn-reset" type="button"></button>
                   </div>
@@ -516,9 +516,9 @@ bannerImg: assets/img/residence
                   <p class="vol-form__label">Страница паспорта дети</p>
                   <div class="vol-form__file-inner">
                     <input type="file" name="upload-file__input_5" id="upload-file__input_5"
-                           class="required vol-form__file" required>
+                           class="required file_size_validate vol-form__file" required>
                     <label class="vol-form__file-label" for="upload-file__input_5">
-                      Перетащите или <span>выберите файл</span>
+                       <div class="vol-form__file-text"><span>Перетащите или</span> выберите файл</div>
                     </label>
                     <button class="js-remove-file vol-form__file-remove btn-reset" type="button"></button>
                   </div>
@@ -528,9 +528,9 @@ bannerImg: assets/img/residence
                   <p class="vol-form__label">ИНН</p>
                   <div class="vol-form__file-inner">
                     <input type="file" name="upload-file__input_inn" id="upload-file__input_inn"
-                           class="required vol-form__file" required>
+                           class="required file_size_validate vol-form__file" required>
                     <label class="vol-form__file-label" for="upload-file__input_inn">
-                      Перетащите или <span>выберите файл</span>
+                       <div class="vol-form__file-text"><span>Перетащите или</span> выберите файл</div>
                     </label>
                     <button class="js-remove-file vol-form__file-remove btn-reset" type="button"></button>
                   </div>
@@ -541,9 +541,9 @@ bannerImg: assets/img/residence
                   <p class="vol-form__label">Медицинская справка</p>
                   <div class="vol-form__file-inner">
                     <input type="file" name="upload-file__input_med" id="upload-file__input_med"
-                           class="required vol-form__file" required>
+                           class="required file_size_validate vol-form__file" required>
                     <label class="vol-form__file-label" for="upload-file__input_med">
-                      Перетащите или <span>выберите файл</span>
+                       <div class="vol-form__file-text"><span>Перетащите или</span> выберите файл</div>
                     </label>
                     <button class="js-remove-file vol-form__file-remove btn-reset" type="button"></button>
                   </div>
@@ -555,9 +555,9 @@ bannerImg: assets/img/residence
                   <p class="vol-form__label">Справка о доходах</p>
                   <div class="vol-form__file-inner">
                     <input type="file" name="upload-file__input_dohod" id="upload-file__input_dohod"
-                           class="required vol-form__file" required>
+                           class="required file_size_validate vol-form__file" required>
                     <label class="vol-form__file-label" for="upload-file__input_dohod">
-                      Перетащите или <span>выберите файл</span>
+                       <div class="vol-form__file-text"><span>Перетащите или</span> выберите файл</div>
                     </label>
                     <button class="js-remove-file vol-form__file-remove btn-reset" type="button"></button>
                   </div>
@@ -566,9 +566,9 @@ bannerImg: assets/img/residence
                   <p class="vol-form__label">Выписной эпикриз <span>форма 027/у, сроком не больше 3-х месяцев</span></p>
                   <div class="vol-form__file-inner">
                     <input type="file" name="upload-file__input_4" id="upload-file__input_4"
-                           class="required vol-form__file" required>
+                           class="required file_size_validate vol-form__file" required>
                     <label class="vol-form__file-label" for="upload-file__input_4">
-                      Перетащите или <span>выберите файл</span>
+                       <div class="vol-form__file-text"><span>Перетащите или</span> выберите файл</div>
                     </label>
                     <button class="js-remove-file vol-form__file-remove btn-reset" type="button"></button>
                   </div>
@@ -579,9 +579,9 @@ bannerImg: assets/img/residence
                   <p class="vol-form__label">Справка о доходах супруга <span>при наличии</span></span></p>
                   <div class="vol-form__file-inner">
                     <input type="file" name="upload-file__input_dohod-spr" id="upload-file__input_dohod-spr"
-                           class=" vol-form__file">
+                           class=" vol-for file_size_validate vol-form__file">
                     <label class="vol-form__file-label" for="upload-file__input_dohod-spr">
-                      Перетащите или <span>выберите файл</span>
+                       <div class="vol-form__file-text"><span>Перетащите или</span> выберите файл</div>
                     </label>
                     <button class="js-remove-file vol-form__file-remove btn-reset" type="button"></button>
                   </div>
@@ -590,9 +590,9 @@ bannerImg: assets/img/residence
                   <p class="vol-form__label">Справка об инвалидности <span>при наличии</span></span></p>
                   <div class="vol-form__file-inner">
                     <input type="file" name="upload-file__input_inv" id="upload-file__input_inv"
-                           class=" vol-form__file">
+                           class=" vol-for file_size_validate vol-form__file">
                     <label class="vol-form__file-label" for="upload-file__input_inv">
-                      Перетащите или <span>выберите файл</span>
+                       <div class="vol-form__file-text"><span>Перетащите или</span> выберите файл</div>
                     </label>
                     <button class="js-remove-file vol-form__file-remove btn-reset" type="button"></button>
                   </div>

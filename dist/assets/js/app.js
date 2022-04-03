@@ -58,31 +58,6 @@ for (i = 0; i < acc.length; i++) {
 if (CSS && 'paintWorklet' in CSS) CSS.paintWorklet.addModule('https://unpkg.com/smooth-corners'); // fixed header
 
 $(document).ready(function () {
-  // function stickySidebar() {
-  //   var scrollDistance = $(document).scrollTop(),
-  //     headerHeight = $('.header').outerHeight(true),
-  //     // sidebarHeight = $('aside').outerHeight(true),
-  //     footerOffsetTop = $('.js-stop-header').offset().top,
-  //     $header = $('header');
-  //
-  //   if( scrollDistance >= headerHeight) {
-  //     $header.addClass('header_fixed');
-  //     $header.removeClass('header_hide');
-  //   } else {
-  //     $header.removeClass('header_fixed');
-  //   }
-  //
-  //   if ( scrollDistance + headerHeight  >= footerOffsetTop) {
-  //     $header.removeClass('header_fixed');
-  //     $header.addClass('header_hide');
-  //   }
-  //
-  // }
-  // stickySidebar();
-  //
-  // $(document).scroll(function() {
-  //   stickySidebar();
-  // });
   var header = $('.header'),
       scrollPrev = 0;
   $(window).scroll(function () {
@@ -193,8 +168,16 @@ $('.js-close-popup').click(function () {
 $(function () {
   var currentIndex;
   var steps;
-  var wizardLength = $("#vol-form").find('h2').length;
+  var wizardLength = $("#vol-form").find('section').length;
   var form = $("#vol-form").show();
+  $.validator.addMethod('filesize', function (value, element, param) {
+    return this.optional(element) || element.files[0].size <= param * 1000000;
+  }, 'Размер файла не должен превышать {0} MB');
+  $.validator.addClassRules({
+    file_size_validate: {
+      filesize: 30
+    }
+  });
   form.validate({
     errorPlacement: function errorPlacement(error, element) {
       element.before(error);
@@ -215,7 +198,7 @@ $(function () {
     labels: {
       next: "Далее <svg width='21' height='16' viewBox='0 0 21 16' fill='none' xmlns='http://www.w3.org/2000/svg'>\n" + "  <path d='M1 8H20M20 8L13 1M20 8L13 15' stroke='white' stroke-linecap='round' stroke-linejoin='round'/>\n" + "</svg>",
       previous: "<svg width='21' height='16' viewBox='0 0 21 16' fill='none' xmlns='http://www.w3.org/2000/svg'>\n" + "  <path d='M20 8H1M1 8L8 1M1 8L8 15' stroke='#2688E5' stroke-linecap='round' stroke-linejoin='round'/>\n" + "</svg> Вернуться",
-      finish: "Отправить анкету"
+      finish: "Отправить <span>анкету</span>"
     },
     onInit: function onInit(event, currentIndex) {// setProgressBar(currentIndex);
     },
@@ -244,6 +227,10 @@ $(function () {
       if (currentIndex > 0) {
         $('.need-doc').fadeOut();
         $('.vol-form-warning').fadeOut();
+        document.getElementById('anchor').scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
       } else {
         $('.need-doc').fadeIn();
         $('.vol-form-warning').fadeIn();
@@ -313,11 +300,11 @@ $(function () {
     $(".progress").attr("data-percent", "".concat(Math.round(pAll)));
 
     if (filled) {
-      $('.wizard > .actions > ul > li:last-child a').removeClass('not-active');
-      $('.wizard > .actions > ul > li:last-child span').removeClass('not-active'); // document.querySelector(".vol-form__submit").disabled = false;
+      $('.wizard > .actions > ul > li:nth-child(3) a').removeClass('not-active');
+      $('.wizard > .actions > ul > .vol-form__policy').removeClass('not-active'); // document.querySelector(".vol-form__submit").disabled = false;
     } else {
-      $('.wizard > .actions > ul > li:last-child a').addClass('not-active');
-      $('.wizard > .actions > ul > li:last-child span').addClass('not-active'); //document.querySelector(".vol-form__submit").disabled = true;
+      $('.wizard > .actions > ul > li:nth-child(3) a').addClass('not-active');
+      $('.wizard > .actions > ul > .vol-form__policy').addClass('not-active'); //document.querySelector(".vol-form__submit").disabled = true;
     }
   }
 
@@ -330,7 +317,7 @@ $(function () {
     url: "Please enter a valid URL.",
     date: "Please enter a valid date.",
     dateISO: "Please enter a valid date (ISO).",
-    number: "Please enter a valid number."
+    number: "Введите корректное значение"
   }); //masked inputs
 
   Inputmask({
@@ -403,7 +390,7 @@ $(function () {
       btnRemove.addEventListener('click', function (b) {
         this.classList.remove('is-visible');
         textSelector.classList.remove('is-active');
-        textSelector.innerHTML = 'Перетащите или <span>выберите файл</span>';
+        textSelector.innerHTML = '<span>Перетащите или</span> выберите файл';
         el.value = '';
         checkPercent();
       });
@@ -427,7 +414,7 @@ $(function () {
   });
 });
 $(document).ready(function () {
-  $('.wizard > .actions > ul > li:last-child').append('<span class="">Нажимая на кнопку, вы даете согласие на обработку <a href="/">персональных данных</a></span>');
+  $('.wizard > .actions > ul ').append('<span class="vol-form__policy not-active">Нажимая на кнопку, вы даете согласие на обработку <a href="/">персональных данных</a></span>');
 }); // tabs
 
 $(document).ready(function () {
@@ -492,6 +479,8 @@ $(document).ready(function () {
       if (this.checked) {
         workPlaceInput.setAttribute("disabled", "disabled");
         workPositionInput.setAttribute("disabled", "disabled");
+        workPlaceInput.value = "";
+        workPositionInput.value = "";
       } else {
         workPlaceInput.removeAttribute("disabled");
         workPositionInput.removeAttribute("disabled");
@@ -500,8 +489,7 @@ $(document).ready(function () {
 
     document.getElementById('vol-no-work').onchange = toggleThree;
   }
-});
-$(document).ready(function () {}); // input files multiple
+}); // input files multiple
 
 $(document).ready(function () {
   if ($('div.dropzone').length) {
@@ -518,6 +506,7 @@ $(document).ready(function () {
   var changePsychologySlider = new Swiper('.change-psychology-slider', {
     // Optional parameters
     speed: 500,
+    slidesPerGroup: 3,
     navigation: {
       nextEl: ".change-psychology__button_next",
       prevEl: ".change-psychology__button_prev"
@@ -525,14 +514,36 @@ $(document).ready(function () {
     breakpoints: {
       320: {
         slidesPerView: 4.5,
-        spaceBetween: 16
+        spaceBetween: 11
       },
-      1024: {
-        slidesPerView: 7
+      576: {
+        slidesPerView: 9.5
       },
-      1400: {
-        slidesPerView: 'auto'
+      1200: {
+        slidesPerView: 11,
+        spaceBetween: 15
+      },
+      1441: {
+        slidesPerView: 14
       }
+    },
+    on: {
+      reachEnd: showPrev,
+      reachBeginning: showNext
     }
   });
+
+  function showPrev() {
+    $('.change-psychology__button_next').css('opacity', 0);
+    $('.change-psychology__button_prev').css('opacity', 1);
+    $('.change-psychology__button_prev').css('zIndex', 1);
+    $('.change-psychology').addClass('shift-left');
+  }
+
+  function showNext() {
+    $('.change-psychology__button_prev').css('opacity', 0);
+    $('.change-psychology__button_prev').css('zIndex', -10);
+    $('.change-psychology__button_next').css('opacity', 1);
+    $('.change-psychology').removeClass('shift-left');
+  }
 });

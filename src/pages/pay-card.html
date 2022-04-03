@@ -371,10 +371,6 @@ script: pay
                   VK <span>необязательно</span>
                   <input type="text" id="vol-vk" name="vol-vk" class="vol-form__input">
                 </label>
-                <label for="vol-inst" class="vol-form__label">
-                  Instagram <span>необязательно</span>
-                  <input type="text" id="vol-inst" name="vol-inst" class="vol-form__input">
-                </label>
               </div>
             </section>
 
@@ -413,8 +409,9 @@ script: pay
                 <label for="vol-accessibility" class="vol-form__label">
                   Доступность
                   <select type="text" id="vol-accessibility" name="vol-accessibility" class="vol-form__select required">
-                    <option value="">Без ограничений</option>
-                    <option value="">C ограничениями</option>
+                    <option value="default" selected disabled>Выбрать</option>
+                    <option value="Без ограничений">Без ограничений</option>
+                    <option value="С ограничением">C ограничениями</option>
                   </select>
                 </label>
                 <label for="vol-lang" class="vol-form__label">

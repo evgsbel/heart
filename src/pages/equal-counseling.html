@@ -387,7 +387,7 @@ bannerImg: assets/img/equal-counseling
   <div class="container">
     <div class="row">
       <div class="col-12 col-md-10">
-        <h2 class="title-h2 vol-form__title">Оформление заявки</h2>
+        <h2 class="title-h2 vol-form__title" id="anchor">Оформление заявки</h2>
         <div class="need-doc">
           <p class="need-doc__title">Для оформления вам понадобятся фотографии или сканы следующих документов:</p>
           <ul class="need-doc__list">
@@ -457,9 +457,9 @@ bannerImg: assets/img/equal-counseling
                 <div class="vol-form__file-wrapper">
                   <p class="vol-form__label">Выписка с анамнезом и диагнозом</p>
                   <div class="vol-form__file-inner">
-                    <input type="file" name="upload-file__input_1" id="upload-file__input_1" class="required vol-form__file" required>
+                    <input type="file" name="upload-file__input_1" id="upload-file__input_1" class="required file_size_validate vol-form__file" required>
                     <label class="vol-form__file-label" for="upload-file__input_1">
-                      Перетащите или <span>выберите файл</span>
+                      <div class="vol-form__file-text"><span>Перетащите или</span> выберите файл</div>
                     </label>
                     <button class="js-remove-file vol-form__file-remove btn-reset" type="button"></button>
                   </div>

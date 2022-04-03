@@ -622,7 +622,7 @@ bannerImg: assets/img/lawyer
     <div class="row">
       <div class="col-12 col-md-9 col-xl-10">
         <form action="#" method="" class="vol-form" id="vol-form">
-          <h2 class="title-h2 vol-form__title">Оформление заявки</h2>
+          <h2 class="title-h2 vol-form__title" id="anchor">Оформление заявки</h2>
           <div id="wizard">
 
             <h2>Данные</h2>
@@ -646,13 +646,13 @@ bannerImg: assets/img/lawyer
                 </label>
                 <label for="vol-accessibility" class="vol-form__label">
                   Состояние
-                  <select type="text" id="vol-accessibility" name="vol-accessibility" class="vol-form__select ">
-                    <option value="" disabled selected>Ваше состояние</option>
-                    <option value="">Здоров</option>
-                    <option value="">Диганостированна болезнь</option>
-                    <option value="">На лечении</option>
-                    <option value="">Реабилитация</option>
-                    <option value="">Ремиссия</option>
+                  <select type="text" id="vol-accessibility" name="vol-accessibility" class="vol-form__select required">
+                    <option value="default" disabled selected>Ваше состояние</option>
+                    <option value="Здоров">Здоров</option>
+                    <option value="Диганостированна болезнь">Диганостированна болезнь</option>
+                    <option value="На лечении">На лечении</option>
+                    <option value="Реабилитация">Реабилитация</option>
+                    <option value="Ремиссия">Ремиссия</option>
                   </select>
                 </label>
               </div>
@@ -692,7 +692,7 @@ bannerImg: assets/img/lawyer
               <p class="vol-form__label">Любые документы <span>необязательно</span></p>
               <div class="div vol-form__group">
                 <div class="dropzone">
-                  <p class="dz-message">Перетащите или <span>выберите файлы</span></p>
+                  <p class="dz-message"><span>Перетащите или </span><a>выберите файлы</a></p>
                 </div>
               </div>
             </section>

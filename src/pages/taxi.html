@@ -332,7 +332,7 @@ bannerImg: assets/img/taxi
   <div class="container">
     <div class="row">
       <div class="col-12 col-md-10">
-        <h2 class="title-h2 vol-form__title">Оформление заявки <span class="vol-form__label"><span>Оформить заявку нужно не позднее чем за 24 часа до выезда в промежутке с 8:00 до 21:50 по Москве</span></span>
+        <h2 class="title-h2 vol-form__title" id="anchor">Оформление заявки <span class="vol-form__label"><span>Оформить заявку нужно не позднее чем за 24 часа до выезда в промежутке с 8:00 до 21:50 по Москве</span></span>
         </h2>
         <div class="vol-form__wraning vol-form-warning ">
           <p class="vol-form-warning__text">Ресурсы фонда ограничены, если в этом месяце будет повышенный спрос
@@ -406,32 +406,32 @@ bannerImg: assets/img/taxi
               <div class="vol-form__group">
                 <label for="vol-region" class="vol-form__label">
                   Регион поездки
-                  <select type="text" id="vol-region" name="vol-region" class="vol-form__select">
-                    <option value="" disabled selected>Выберите регион</option>
-                    <option value="">Москва и МО</option>
-                    <option value="">Санкт-Петербург</option>
-                    <option value="">Екатеринбург</option>
-                    <option value="">Казань</option>
-                    <option value="">Краснодар</option>
-                    <option value="">Новосибирск</option>
-                    <option value="">Нижний Новгород</option>
-                    <option value="">Челябинск</option>
-                    <option value="">Тюмень</option>
-                    <option value="">Ростов-на-Дону</option>
-                    <option value="">Пермь</option>
-                    <option value="">Самара</option>
-                    <option value="">Омск</option>
-                    <option value="">Чебоксары</option>
-                    <option value="">Уфа</option>
-                    <option value="">Воронеж</option>
-                    <option value="">Киров</option>
-                    <option value="">Нижний Тагил</option>
-                    <option value="">Вологда</option>
-                    <option value="">Ижевск</option>
-                    <option value="">Набережные Челны</option>
-                    <option value="">Волгоград</option>
-                    <option value="">Пенза</option>
-                    <option value="">Йошкар-Ола</option>
+                  <select type="text" id="vol-region" name="vol-region" class="vol-form__select required">
+                    <option value="default" disabled selected>Выберите регион</option>
+                    <option value="Москва и МО">Москва и МО</option>
+                    <option value="Санкт-Петербург">Санкт-Петербург</option>
+                    <option value="Екатеринбург">Екатеринбург</option>
+                    <option value="Казань">Казань</option>
+                    <option value="Краснодар">Краснодар</option>
+                    <option value="Новосибирск">Новосибирск</option>
+                    <option value="Нижний Новгород">Нижний Новгород</option>
+                    <option value="Челябинск">Челябинск</option>
+                    <option value="Тюмень">Тюмень</option>
+                    <option value="Ростов-на-Дону">Ростов-на-Дону</option>
+                    <option value="Пермь">Пермь</option>
+                    <option value="Самара">Самара</option>
+                    <option value="Омск">Омск</option>
+                    <option value="Чебоксары">Чебоксары</option>
+                    <option value="Уфа">Уфа</option>
+                    <option value="Воронеж">Воронеж</option>
+                    <option value="Киров">Киров</option>
+                    <option value="Нижний Тагил">Нижний Тагил</option>
+                    <option value="Вологда">Вологда</option>
+                    <option value="Ижевск">Ижевск</option>
+                    <option value="Набережные Челны">Набережные Челны</option>
+                    <option value="Волгоград">Волгоград</option>
+                    <option value="Пенза">Пенза</option>
+                    <option value="Йошкар-Ола">Йошкар-Ола</option>
                   </select>
                 </label>
                 <label for="vol-day-taxi" class="vol-form__label vol-form__label_other">
@@ -492,9 +492,9 @@ bannerImg: assets/img/taxi
                   <p class="vol-form__label">Первая страница паспорта</p>
                   <div class="vol-form__file-inner">
                     <input type="file" name="upload-file__input_1" id="upload-file__input_1"
-                           class="required vol-form__file" required>
+                           class="required file_size_validate vol-form__file" required>
                     <label class="vol-form__file-label" for="upload-file__input_1">
-                      Перетащите или <span>выберите файл</span>
+                       <div class="vol-form__file-text"><span>Перетащите или</span> выберите файл</div>
                     </label>
                     <button class="js-remove-file vol-form__file-remove btn-reset" type="button"></button>
                   </div>
@@ -503,9 +503,9 @@ bannerImg: assets/img/taxi
                   <p class="vol-form__label">Страница паспорта с регистрацией</p>
                   <div class="vol-form__file-inner">
                     <input type="file" name="upload-file__input_2" id="upload-file__input_2"
-                           class="required vol-form__file" required>
+                           class="required file_size_validate vol-form__file" required>
                     <label class="vol-form__file-label" for="upload-file__input_2">
-                      Перетащите или <span>выберите файл</span>
+                       <div class="vol-form__file-text"><span>Перетащите или</span> выберите файл</div>
                     </label>
                     <button class="js-remove-file vol-form__file-remove btn-reset" type="button"></button>
                   </div>
@@ -516,9 +516,9 @@ bannerImg: assets/img/taxi
                   <p class="vol-form__label">Направление на прием <span>например, справка 057/у</span></p>
                   <div class="vol-form__file-inner">
                     <input type="file" name="upload-file__input_3" id="upload-file__input_3"
-                           class="required vol-form__file" required>
+                           class="required file_size_validate vol-form__file" required>
                     <label class="vol-form__file-label" for="upload-file__input_3">
-                      Перетащите или <span>выберите файл</span>
+                       <div class="vol-form__file-text"><span>Перетащите или</span> выберите файл</div>
                     </label>
                     <button class="js-remove-file vol-form__file-remove btn-reset" type="button"></button>
                   </div>
