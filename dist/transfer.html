@@ -534,10 +534,13 @@
                         </label>
                         <label for="vol-accessibility" class="vol-form__label">
                           Состояние
-                          <select type="text" id="vol-accessibility" name="vol-accessibility" class="vol-form__select reuiqred">
-                            <option value="default" disabled selected>Выберите</option>
-                            <option value="Без ограничений">Без ограничений</option>
-                            <option value="С ограничением">C ограничениями</option>
+                          <select type="text" id="vol-accessibility" name="vol-accessibility" class="vol-form__select required">
+                            <option value="default" disabled selected>Ваше состояние</option>
+                            <option value="Здоров">Здоров</option>
+                            <option value="Диганостированна болезнь">Диганостированна болезнь</option>
+                            <option value="На лечении">На лечении</option>
+                            <option value="Реабилитация">Реабилитация</option>
+                            <option value="Ремиссия">Ремиссия</option>
                           </select>
                         </label>
                       </div>
@@ -548,7 +551,7 @@
                       <div class="vol-form__group">
                         <label for="vol-phone" class="vol-form__label">
                           Телефон
-                          <input type="phone" id="vol-phone" name="vol-phone" placeholder="+7"
+                          <input type="tel" inputmode="numeric" id="vol-phone" name="vol-phone" placeholder="+7"
                                  class="vol-form__input required phone-mask">
                         </label>
                         <label for="vol-email" class="vol-form__label">

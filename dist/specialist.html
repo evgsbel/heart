@@ -693,6 +693,84 @@
               <div class="col-12 col-md-9 col-xl-10">
                 <form action="#" method="" class="vol-form" id="vol-form">
                   <div id="wizard">
+        
+                    <h2>Данные</h2>
+                    <section>
+                      <div class="vol-form__group">
+                        <label for="vol-fio" class="vol-form__label">
+                          ФИО
+                          <input type="text" id="vol-fio" name="vol-fio" placeholder="Иванов Иван Иванович"
+                                 class="vol-form__input required">
+                        </label>
+                      </div>
+                      <div class="vol-form__group">
+                        <label for="diagnosis" class="vol-form__label">
+                          Диагноз
+                          <input type="text" id="diagnosis" name="diagnosis" placeholder="Ваш или вашего близкого"
+                                 class="vol-form__input required">
+                        </label>
+                        <label for="vol-accessibility" class="vol-form__label">
+                          Состояние
+                          <select type="text" id="vol-accessibility" name="vol-accessibility" class="vol-form__select required">
+                            <option value="default" disabled selected>Ваше состояние</option>
+                            <option value="Здоров">Здоров</option>
+                            <option value="Диганостированна болезнь">Диганостированна болезнь</option>
+                            <option value="На лечении">На лечении</option>
+                            <option value="Реабилитация">Реабилитация</option>
+                            <option value="Ремиссия">Ремиссия</option>
+                          </select>
+                        </label>
+                      </div>
+                    </section>
+        
+                    <h2>Контакты</h2>
+                    <section>
+                      <div class="vol-form__group">
+                        <label for="vol-phone" class="vol-form__label">
+                          Телефон
+                          <input type="tel" inputmode="numeric" id="vol-phone" name="vol-phone" placeholder="+7"
+                                 class="vol-form__input required phone-mask">
+                        </label>
+                        <label for="vol-email" class="vol-form__label">
+                          Email
+                          <input type="email" id="vol-email" name="vol-email" placeholder="mail@greatheart.ru"
+                                 class="vol-form__input required">
+                        </label>
+                      </div>
+                    </section>
+        
+                    <h2>Обращение</h2>
+                    <section>
+                      <div class="vol-form__group align-items-start">
+                        <label for="vol-city" class="vol-form__label">
+                          Город или регион поиска
+                          <input type="text" id="vol-city" name="vol-city" placeholder=""
+                                 class="vol-form__input required">
+                        </label>
+                        <div>
+                          <p class="vol-form__label mb-lg-3"> Вид услуги</p>
+                          <label for="vol-type-pay" class="vol-form__label vol-form__label_check mr-3">
+                            <input type="checkbox" id="vol-type-pay" name="vol-type-pay" class="vol-form__checkbox" checked>
+                            <span class="vol-form__check-pane"></span>
+                            Платно
+                          </label>
+                          <label for="vol-type-oms" class="vol-form__label vol-form__label_check">
+                            <input type="checkbox" id="vol-type-oms" name="vol-type-oms" class="vol-form__checkbox">
+                            <span class="vol-form__check-pane"></span>
+                            По ОМС
+                          </label>
+                        </div>
+                      </div>
+                      <div class="vol-form__group">
+                        <label for="vol-comment" class="vol-form__label w-100">
+                          Комментарий
+                          <textarea name="vol-comment" id="vol-comment" class="vol-form__textarea required"
+                                    placeholder="Опишите подробно вашу ситуацию, чтобы мы смогли в кратчайшие сроки отреагировать на ваш запрос (подобрать подходящего специалиста, подготовить полный ответ)"
+                                    required></textarea>
+                        </label>
+                      </div>
+                    </section>
+        
                     <h2>Документы</h2>
                     <section>
                       <div class="vol-form__group">
@@ -742,82 +820,6 @@
                             <button class="js-remove-file vol-form__file-remove btn-reset" type="button"></button>
                           </div>
                         </div>
-                      </div>
-                    </section>
-                    <h2>Данные</h2>
-                    <section>
-                      <div class="vol-form__group">
-                        <label for="vol-fio" class="vol-form__label">
-                          ФИО
-                          <input type="text" id="vol-fio" name="vol-fio" placeholder="Иванов Иван Иванович"
-                                 class="vol-form__input required">
-                        </label>
-                      </div>
-                      <div class="vol-form__group">
-                        <label for="diagnosis" class="vol-form__label">
-                          Диагноз
-                          <input type="text" id="diagnosis" name="diagnosis" placeholder="Ваш или вашего близкого"
-                                 class="vol-form__input required">
-                        </label>
-                        <label for="vol-accessibility" class="vol-form__label">
-                          Состояние
-                          <select type="text" id="vol-accessibility" name="vol-accessibility" class="vol-form__select required">
-                            <option value="default" disabled selected>Ваше состояние</option>
-                            <option value="Здоров">Здоров</option>
-                            <option value="Диганостированна болезнь">Диганостированна болезнь</option>
-                            <option value="На лечении">На лечении</option>
-                            <option value="Реабилитация">Реабилитация</option>
-                            <option value="Ремиссия">Ремиссия</option>
-                          </select>
-                        </label>
-                      </div>
-                    </section>
-        
-                    <h2>Контакты</h2>
-                    <section>
-                      <div class="vol-form__group">
-                        <label for="vol-phone" class="vol-form__label">
-                          Телефон
-                          <input type="phone" id="vol-phone" name="vol-phone" placeholder="+7"
-                                 class="vol-form__input required phone-mask">
-                        </label>
-                        <label for="vol-email" class="vol-form__label">
-                          Email
-                          <input type="email" id="vol-email" name="vol-email" placeholder="mail@greatheart.ru"
-                                 class="vol-form__input required">
-                        </label>
-                      </div>
-                    </section>
-        
-                    <h2>Обращение</h2>
-                    <section>
-                      <div class="vol-form__group align-items-start">
-                        <label for="vol-city" class="vol-form__label">
-                          Город или регион поиска
-                          <input type="text" id="vol-city" name="vol-city" placeholder=""
-                                 class="vol-form__input required">
-                        </label>
-                        <div>
-                          <p class="vol-form__label mb-lg-3"> Вид услуги</p>
-                          <label for="vol-type-pay" class="vol-form__label vol-form__label_check mr-3">
-                            <input type="checkbox" id="vol-type-pay" name="vol-type-pay" class="vol-form__checkbox" checked>
-                            <span class="vol-form__check-pane"></span>
-                            Платно
-                          </label>
-                          <label for="vol-type-oms" class="vol-form__label vol-form__label_check">
-                            <input type="checkbox" id="vol-type-oms" name="vol-type-oms" class="vol-form__checkbox">
-                            <span class="vol-form__check-pane"></span>
-                            По ОМС
-                          </label>
-                        </div>
-                      </div>
-                      <div class="vol-form__group">
-                        <label for="vol-comment" class="vol-form__label w-100">
-                          Комментарий
-                          <textarea name="vol-comment" id="vol-comment" class="vol-form__textarea required"
-                                    placeholder="Опишите подробно вашу ситуацию, чтобы мы смогли в кратчайшие сроки отреагировать на ваш запрос (подобрать подходящего специалиста, подготовить полный ответ)"
-                                    required></textarea>
-                        </label>
                       </div>
                     </section>
         

@@ -528,13 +528,14 @@ $(document).ready(function () {
       }
     },
     on: {
-      reachEnd: showPrev,
-      reachBeginning: showNext
+      fromEdge: showPrev,
+      reachBeginning: showNext,
+      reachEnd: hideNext
     }
   });
 
   function showPrev() {
-    $('.change-psychology__button_next').css('opacity', 0);
+    $('.change-psychology__button_next').css('opacity', 1);
     $('.change-psychology__button_prev').css('opacity', 1);
     $('.change-psychology__button_prev').css('zIndex', 1);
     $('.change-psychology').addClass('shift-left');
@@ -545,5 +546,9 @@ $(document).ready(function () {
     $('.change-psychology__button_prev').css('zIndex', -10);
     $('.change-psychology__button_next').css('opacity', 1);
     $('.change-psychology').removeClass('shift-left');
+  }
+
+  function hideNext() {
+    $('.change-psychology__button_next').css('opacity', 0);
   }
 });
